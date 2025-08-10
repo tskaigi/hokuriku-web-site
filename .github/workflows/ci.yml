@@ -4,7 +4,7 @@ on:
   - push
 
 jobs:
-  ci:
+  pre-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -13,3 +13,15 @@ jobs:
         run: pnpm install
       - name: Check formatting
         run: pnpm prettier . --check
+      - name: Check linting
+        run: pnpm run lint
+  build:
+    needs: pre-build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build Next.js pages
+        run: pnpm run build
