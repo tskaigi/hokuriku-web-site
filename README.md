@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TSKaigi Hokuriku 2025 Web Site
 
-## Getting Started
+## Setup
 
-First, run the development server:
+パッケージマネージャーには [`pnpm`](https://pnpm.io/ja) を使用しています。
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone repository
+git clone git@github.com:tskaigi/hokuriku-web-site.git
+
+cd hokuriku-web-site
+
+# Install pnpm
+npm install -g pnpm
+
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Format
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+フォマッターには [`Prettier`](https://prettier.io) を使用しています。
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Check formatting
+pnpm prettier . --check
 
-## Learn More
+# Format
+pnpm run format
+```
 
-To learn more about Next.js, take a look at the following resources:
+Pull Request は各自フォーマットを行ってから作成するようにしてください。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Pull Request
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Pull Request を作成すると、自動的に Firebase Hosting のプレビューURLが発行されます。
 
-## Deploy on Vercel
+レビュー担当者は、このプレビューを参考にレビューを行なってください。
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Release
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`main` ブランチに Pull Request がマージされると、自動的に本番リリース（GitHub Pages へのデプロイ）が行われます。
