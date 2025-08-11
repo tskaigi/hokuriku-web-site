@@ -38,6 +38,6 @@ jobs:
       - name: Build Next.js pages
         run: pnpm run build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           path: ./out
