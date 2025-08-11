@@ -27,7 +27,7 @@ jobs:
         with:
           name: out
           path: ./out
-  deploy:
+  preview-deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
