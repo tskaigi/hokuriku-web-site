@@ -1,11 +1,11 @@
-name: CI Pipeline
+name: Code Check
 
 on:
   - push
   - workflow_call
 
 jobs:
-  pre-build:
+  code-check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
