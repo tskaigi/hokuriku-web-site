@@ -7,23 +7,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "This is PR Preview workflow"
-      # - uses: actions/checkout@v4
-      # - uses: pnpm/action-setup@v4
-      #   with:
-      #     version: 10.14.0
-      # - uses: actions/setup-node@v3
-      #   with:
-      #     node-version: 24.5.0
-      #     cache: pnpm
-      # - name: Install dependencies
-      #   run: pnpm install
-      # - name: Build Next.js pages
-      #   run: pnpm run build
-      # - name: Upload artifact
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     path: ./out
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.14.0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 24.5.0
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build Next.js pages
+        run: pnpm run build
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          path: ./out
 
   # preview-deploy:
   #   needs: build
