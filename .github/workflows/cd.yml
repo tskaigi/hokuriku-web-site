@@ -1,7 +1,9 @@
-name: PR Preview
+name: Production Deploy
 
 on:
-  - pull_request
+  push:
+    branches:
+      - main
 
 jobs:
   pre-build:
@@ -27,7 +29,7 @@ jobs:
         with:
           name: out
           path: ./out
-  preview-deploy:
+  deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -37,6 +39,7 @@ jobs:
         with:
           name: out
           path: ./out
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - uses: actions/upload-pages-artifact@v3
         with:
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          path: ./out
+      - uses: actions/deploy-pages@v4
