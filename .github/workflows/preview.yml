@@ -37,5 +37,6 @@ jobs:
         with:
           name: out
           path: ./out
-      - run: ls
-      - run: ls out
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
