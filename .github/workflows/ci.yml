@@ -22,7 +22,7 @@ jobs:
         run: pnpm prettier . --check
       - name: Check linting
         run: pnpm run lint
-  call-preview-workflow:
+  preview:
     needs: pre-build
     if: github.event_name == 'pull_request'
     uses: ./.github/workflows/preview.yml
