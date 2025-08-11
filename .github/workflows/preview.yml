@@ -1,42 +1,38 @@
 name: PR Preview
 
 on:
-  pull_request:
-  workflow_run:
-    workflows: ["CI Pipeline"]
-    types:
-      - completed
+  workflow_call:
 
 jobs:
   build:
-    if: github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 10.14.0
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 24.5.0
-          cache: pnpm
-      - name: Install dependencies
-        run: pnpm install
-      - name: Build Next.js pages
-        run: pnpm run build
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          path: ./out
+      - run: echo "This is PR Preview workflow"
+      # - uses: actions/checkout@v4
+      # - uses: pnpm/action-setup@v4
+      #   with:
+      #     version: 10.14.0
+      # - uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 24.5.0
+      #     cache: pnpm
+      # - name: Install dependencies
+      #   run: pnpm install
+      # - name: Build Next.js pages
+      #   run: pnpm run build
+      # - name: Upload artifact
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     path: ./out
 
-  preview-deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          path: ./out
-      - run: ls
-      - run: ls out
+  # preview-deploy:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: Download artifact
+  #       uses: actions/download-artifact@v4
+  #       with:
+  #         path: ./out
+  #     - run: ls
+  #     - run: ls out
