@@ -40,6 +40,8 @@ Pull Request を作成すると、自動的に Firebase Hosting のプレビュ�
 
 レビュー担当者は、このプレビューを参考にレビューを行なってください。
 
+(ここにPR作成時の画像を貼る)
+
 ## Release
 
 `main` ブランチに Pull Request がマージされると、自動的に本番リリース（GitHub Pages へのデプロイ）が行われます。
