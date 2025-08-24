@@ -1,4 +1,4 @@
-import { CountdownTimer } from "@/components/CountdownTimer";
+import { CountdownTimer } from "@/components/countdown-timer";
 
 export default function Home() {
   return (
