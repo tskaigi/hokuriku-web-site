@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #144bdb;
 }
 
 @theme inline {
@@ -10,6 +11,7 @@
   --color-foreground: var(--foreground);
   --font-outfit: var(--font-outfit);
   --font-noto: var(--font-noto);
+  --color-primary: var(--primary);
 }
 
 body {
