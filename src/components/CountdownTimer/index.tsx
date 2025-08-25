@@ -1,6 +1,6 @@
 "use client";
 
-import { useCountdown } from "./hooks";
+import { useCountdown } from "@/hooks/useCountdownTimer";
 
 const TimeLeft = ({ value, unit }: { value: number; unit: string }) => {
   return (
