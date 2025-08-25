@@ -1,8 +1,31 @@
 "use client";
 
-import { useCountdown } from "./hooks";
+import { useCountdown } from "@/hooks/useCountdownTimer";
 
-export function CountdownTimer() {
+const TimeLeft = ({ value, unit, duration }: { value: number; unit: string; duration: string }) => {
+  return (
+    <div className="w-[50px] text-center md:w-[100px]">
+      <time
+        dateTime={duration}
+        className={`block text-3xl font-semibold tracking-[-0.75%] md:text-5xl md:font-normal lg:text-6xl`}
+      >
+        {value}
+      </time>
+      <span className="mt-1 text-xs font-light">{unit}</span>
+    </div>
+  );
+};
+
+const Divider = () => {
+  return (
+    <span
+      className="mt-3 h-3.5 w-[1px] rotate-[15deg] bg-current md:h-7 lg:mt-4"
+      aria-hidden="true"
+    />
+  );
+};
+
+export const CountdownTimer = () => {
   const { days, hours, minutes, seconds } = useCountdown();
 
   return (
@@ -49,27 +72,4 @@ export function CountdownTimer() {
       </div>
     </div>
   );
-}
-
-function TimeLeft({ value, unit, duration }: { value: number; unit: string; duration: string }) {
-  return (
-    <div className="w-[50px] text-center md:w-[100px]">
-      <time
-        dateTime={duration}
-        className={`block text-3xl font-semibold tracking-[-0.75%] md:text-5xl md:font-normal lg:text-6xl`}
-      >
-        {value}
-      </time>
-      <span className="mt-1 text-xs font-light">{unit}</span>
-    </div>
-  );
-}
-
-function Divider() {
-  return (
-    <span
-      className="mt-3 h-3.5 w-[1px] rotate-[15deg] bg-current md:h-7 lg:mt-4"
-      aria-hidden="true"
-    />
-  );
-}
+};

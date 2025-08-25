@@ -1,7 +1,7 @@
 import { CountdownTimer } from "@/components/countdown-timer";
 import { ChevronDown } from "lucide-react";
 
-export default function Home() {
+const Home = () => {
   return (
     <main className="overflow-x-hidden pt-8">
       <div className="relative flex h-[674px] w-full flex-col items-center text-center lg:h-[790px]">
@@ -55,4 +55,6 @@ export default function Home() {
       </div>
     </main>
   );
-}
+};
+
+export default Home;

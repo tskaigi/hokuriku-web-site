@@ -17,8 +17,8 @@ const notoSansJP = Noto_Sans_JP({
 
 export const metadata: Metadata = {
   title: "TSKaigi Hokuriku",
-  description: "SKaigiは日本最大級のTypeScriptをテーマとした技術カンファレンスです。",
-  applicationName: "TSKaigi Hokuriku",
+  description:
+    "日本最大級のTypeScriptをテーマとした技術カンファレンスであるTSKaigiが金沢でも開催されます。",
   authors: [
     {
       name: "一般社団法人TSKaigi Association",
@@ -27,11 +27,11 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <html lang="ja">
       <body className={`${outfit.variable} ${notoSansJP.variable} antialiased`}>
@@ -42,4 +42,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
