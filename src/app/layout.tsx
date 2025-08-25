@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "TSKaigi Hokuriku",
-  description: "SKaigiは日本最大級のTypeScriptをテーマとした技術カンファレンスです。",
-  applicationName: "TSKaigi Hokuriku",
+  description:
+    "日本最大級のTypeScriptをテーマとした技術カンファレンスであるTSKaigiが金沢でも開催されます。",
   authors: [
     {
       name: "一般社団法人TSKaigi Association",
