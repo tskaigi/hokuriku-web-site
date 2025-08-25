@@ -2,7 +2,20 @@
 
 import { useCountdown } from "./hooks";
 
-export function CountdownTimer() {
+const TimeLeft = ({ value, unit }: { value: number; unit: string }) => {
+  return (
+    <div className="text-center">
+      <span className="block text-4xl font-bold">{value}</span>
+      <span className="text-xs">{unit}</span>
+    </div>
+  );
+};
+
+const Divider = () => {
+  return <span className="-mt-4 h-6 w-[1px] rotate-[15deg] bg-current" aria-hidden="true" />;
+};
+
+export const CountdownTimer = () => {
   const { days, hours, minutes, seconds } = useCountdown();
 
   return (
@@ -18,17 +31,4 @@ export function CountdownTimer() {
       </div>
     </div>
   );
-}
-
-function TimeLeft({ value, unit }: { value: number; unit: string }) {
-  return (
-    <div className="text-center">
-      <span className="block text-4xl font-bold">{value}</span>
-      <span className="text-xs">{unit}</span>
-    </div>
-  );
-}
-
-function Divider() {
-  return <span className="-mt-4 h-6 w-[1px] rotate-[15deg] bg-current" aria-hidden="true" />;
-}
+};

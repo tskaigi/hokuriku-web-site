@@ -7,7 +7,7 @@ type TimeLeft = {
   seconds: number;
 };
 
-export function useCountdown(): TimeLeft {
+export const useCountdown = (): TimeLeft => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
     hours: 0,
@@ -39,4 +39,4 @@ export function useCountdown(): TimeLeft {
   }, []);
 
   return timeLeft;
-}
+};
