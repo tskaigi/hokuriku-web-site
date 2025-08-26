@@ -42,8 +42,8 @@ const Home = () => {
             ホテル金沢
           </p>
         </div>
-        <h1 className="text-primary mt-[30px] w-96 text-[50px] leading-[50px] font-bold tracking-[0.2%] whitespace-nowrap lg:mt-[40px] lg:w-full lg:text-[59px]">
-          TSKaigi Hokuriku
+        <h1 className="text-primary mt-[30px] w-96 text-[50px] leading-[50px] font-bold tracking-[0.2%] lg:mt-[40px] lg:w-full lg:text-[59px]">
+          <tspan className="whitespace-nowrap">TSKaigi Hokuriku</tspan>
           <wbr /> Coming Soon
         </h1>
         <div className="mt-11 flex flex-col items-center lg:mt-16">
