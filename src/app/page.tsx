@@ -1,3 +1,4 @@
+import { CfpRecruitment } from "@/components/cfp-recruitment";
 import { CountdownTimer } from "@/components/countdown-timer";
 import { SponsorRecruitment } from "@/components/sponsor-recruitment";
 import { ChevronDown } from "lucide-react";
@@ -55,8 +56,8 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Sponsor Section */}
       <SponsorRecruitment />
+      <CfpRecruitment />
     </main>
   );
 };
