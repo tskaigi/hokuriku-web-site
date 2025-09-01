@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     },
   ],
   keywords: ["TypeScript", "TSKaigi", "TS会議", "カンファレンス", "イベント", "オンライン"],
-  publisher: "TSKaigi.org",
+  publisher: "一般社団法人TSKaigi Association",
   robots: "index, follow",
   twitter: {
     title: {
