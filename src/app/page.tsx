@@ -1,4 +1,6 @@
+import { CfpRecruitment } from "@/components/cfp-recruitment";
 import { CountdownTimer } from "@/components/countdown-timer";
+import { SponsorRecruitment } from "@/components/sponsor-recruitment";
 import { ChevronDown } from "lucide-react";
 
 const Home = () => {
@@ -53,6 +55,9 @@ const Home = () => {
           <ChevronDown className="text-primary h-4 w-4" />
         </div>
       </div>
+
+      <SponsorRecruitment />
+      <CfpRecruitment />
     </main>
   );
 };
