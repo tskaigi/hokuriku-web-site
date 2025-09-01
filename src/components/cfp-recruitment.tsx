@@ -16,14 +16,10 @@ export const CfpRecruitment = () => {
       <div className="mx-auto mt-10 max-w-[680px] space-y-10 text-left">
         <div>
           <div className="px-0 leading-[25px] font-bold tracking-[-0.75%]">
+            <p>TSKaigi Hokuriku では、TypeScript に関するあらゆるトークを募集しています。</p>
             <p>
-              私たちの願いは、フロントエンドからバックエンド、インフラに至るまで、多様な分野のTypeScriptエンジニアたちが集い、普段は交流の少ないエンジニアたちが、それぞれの得意分野や最新の知見を交換し合う交流の場を創り出すことです。
+              エンジニアに限らず、初心者、学生、非エンジニアなど多様な領域や立場の方々からのご応募もお待ちしております。
             </p>
-            <br />
-            <p>
-              あなたの発表が、誰かのキャリア、あるいはプロジェクトに新たな光をもたらすかもしれません。
-            </p>
-            <p>ぜひ一緒に日本のTypeScriptコミュニティを盛り上げましょう！</p>
           </div>
         </div>
 
