@@ -35,10 +35,10 @@ const Home = () => {
         </div>
         <div className="mt-[52px] space-y-1 text-2xl font-semibold">
           <time
-            dateTime="2025-11-03"
+            dateTime="2025-11-23"
             className="text-[28px] leading-[36px] font-semibold tracking-[-.75%] tabular-nums"
           >
-            11/3
+            11/23
           </time>
           <p className="font-noto text-[23px] leading-[36px] font-bold tracking-[-.75%]">
             ホテル金沢
