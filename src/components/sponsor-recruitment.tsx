@@ -29,6 +29,10 @@ export const SponsorRecruitment = () => {
                 TSKaigi Hokuriku 2025 協賛のご案内
               </Link>
             </p>
+            <p>
+              9/6 追記:
+              プラチナ・ゴールドプラン、オプションプランの募集を終了しました。シルバープランのみ継続して受け付けています。
+            </p>
           </div>
         </div>
 
