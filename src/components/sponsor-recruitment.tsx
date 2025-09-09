@@ -15,12 +15,12 @@ export const SponsorRecruitment = () => {
 
       <div className="mx-auto mt-10 max-w-[680px] space-y-10 text-left">
         <div>
-          <div className="px-0 leading-[25px] font-bold tracking-[-0.75%]">
+          <div className="flex flex-col gap-3 px-0 leading-[25px] font-bold tracking-[-0.75%]">
             <p>
               TypeScriptコミュニティの発展に共に取り組んでいただけるスポンサー企業を募集いたします。
               希望される企業様はスポンサー向け資料をご確認の上、お申し込みください。
             </p>
-            <p className="mt-4">
+            <p>
               スポンサー向け資料はこちら <br />
               <Link
                 href="https://docs.google.com/presentation/d/1O0dLT7VKXBaqZvMqzWPNW9bJScK3Kwz13nuXHrOnNyU/edit?slide=id.g2b17e06a1af_0_0#slide=id.g2b17e06a1af_0_0"
@@ -28,10 +28,6 @@ export const SponsorRecruitment = () => {
               >
                 TSKaigi Hokuriku 2025 協賛のご案内
               </Link>
-            </p>
-            <p>
-              9/6 追記:
-              プラチナ・ゴールドプラン、オプションプランの募集を終了しました。シルバープランのみ継続して受け付けています。
             </p>
           </div>
         </div>
@@ -44,6 +40,11 @@ export const SponsorRecruitment = () => {
             申し込む →
           </Link>
         </div>
+
+        <p className="text-sm font-bold">
+          9/6 追記:
+          プラチナ・ゴールドプラン、オプションプランの募集を終了しました。シルバープランのみ継続して受け付けています。
+        </p>
       </div>
     </section>
   );
