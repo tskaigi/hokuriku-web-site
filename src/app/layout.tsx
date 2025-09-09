@@ -41,16 +41,19 @@ export const metadata: Metadata = {
       "日本最大級のTypeScriptをテーマとした技術カンファレンスであるTSKaigiが金沢でも開催されます。",
     site: "@tskaigi",
     creator: "@tskaigi",
+    card: "summary_large_image",
+    images: ["https://hokuriku.tskaigi.org/twitter-card.png"],
   },
   openGraph: {
     title: {
       template: "%s | TSKaigi Hokuriku",
       default: "TSKaigi Hokuriku",
     },
-    url: "https://hokuriku.tskaigi.org/",
+    url: "https://hokuriku.tskaigi.org",
     description:
       "日本最大級のTypeScriptをテーマとした技術カンファレンスであるTSKaigiが金沢でも開催されます。",
     type: "website",
+    images: ["https://hokuriku.tskaigi.org/ogp.png"],
   },
 };
 
