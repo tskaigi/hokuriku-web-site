@@ -32,9 +32,15 @@ const SponsorsBoardItem = ({
   width: number;
   height: number;
   className: string;
+  wrapperClassName?: string;
 }) => {
   return (
-    <Link href={href} target="_blank" rel="noopener noreferrer" className="aspect-video w-full">
+    <Link
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`aspect-video w-full ${className}`}
+    >
       <Image
         src={src}
         alt={alt}
@@ -62,14 +68,14 @@ export const SponsorBoardSection = () => {
             Platinum Sponsors
           </h3>
         </SponsorsBoardTitle>
-        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 px-6 pt-6 md:grid-cols-2 md:px-0 lg:grid-cols-3">
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 px-6 pt-6 md:grid-cols-[0.5fr_1fr_0.5fr] md:px-0 lg:grid-cols-3">
           {sponsorList.platinum.map(
             (sponsor) =>
               // ロゴ画像がある場合アイテムを表示
               sponsor.logoImage && (
                 <SponsorsBoardItem
                   key={sponsor.id}
-                  className={"h-full w-full p-4"}
+                  className={"h-full w-full p-4 md:col-start-2 lg:col-start-2"}
                   src={sponsor.logoImage}
                   alt={sponsor.name}
                   href={sponsor.logoLink}

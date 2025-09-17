@@ -16,12 +16,12 @@ const LOGO_IMAGE_DIR = "/sponsors";
 
 export const sponsorList: SponsorList = {
   platinum: [
-    // {
-    //   id: "p01",
-    //   name: "トグルホールディングス株式会社",
-    //   logoImage: `${LOGO_IMAGE_DIR}/p01_toggl.png`,
-    //   logoLink: "https://toggle.co.jp",
-    // },
+    {
+      id: "p01",
+      name: "トグルホールディングス株式会社",
+      logoImage: `${LOGO_IMAGE_DIR}/p01_toggle.png`,
+      logoLink: "https://toggle.co.jp",
+    },
   ],
   gold: [
     {
