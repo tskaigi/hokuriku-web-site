@@ -1,3 +1,4 @@
+import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Outfit } from "next/font/google";
@@ -38,6 +39,7 @@ const RootLayout = ({
         <div className="flex min-h-screen flex-col">
           <Header />
           {children}
+          <Footer />
         </div>
       </body>
     </html>
