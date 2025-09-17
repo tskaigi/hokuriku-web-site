@@ -50,13 +50,6 @@
   --gray-400: #c9caca;
 }
 
-/**
-  platinum: "border-blue-purple-600",
-  gold: "border-yellow-600",
-  silver: "border-blue-light-500",
-  bronze: "border-orange-600",
- */
-
 @theme {
   /* スポンサー関連のcss変数 */
   --color-sponsor-background: var(--blue-light-100);
@@ -152,4 +145,8 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+
+/* footer用 */
+footer {
+  background: linear-gradient(180deg, #3a89c4 0%, #1071d3 100%);
 }
