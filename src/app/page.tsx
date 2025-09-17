@@ -46,7 +46,7 @@ const Home = () => {
           </p>
         </div>
         <h1 className="text-primary mt-[30px] w-96 text-[50px] leading-[50px] font-bold tracking-[0.2%] lg:mt-[40px] lg:w-full lg:text-[59px]">
-          <tspan className="whitespace-nowrap">TSKaigi Hokuriku</tspan>
+          <span className="whitespace-nowrap">TSKaigi Hokuriku</span>
           <wbr /> Coming Soon
         </h1>
         <div className="mt-11 flex flex-col items-center lg:mt-16">
