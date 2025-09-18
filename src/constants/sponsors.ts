@@ -135,11 +135,11 @@ export const sponsorList: SponsorList = {
       logoImage: `${LOGO_IMAGE_DIR}/s05_seed.png`,
       logoLink: "https://seed-it.jp",
     },
-    // {
-    //   id: "s06",
-    //   name: "フォルシア株式会社",
-    //   logoImage: `${LOGO_IMAGE_DIR}/.png`,
-    //   logoLink: "",
-    // },
+    {
+      id: "s06",
+      name: "フォルシア株式会社",
+      logoImage: `${LOGO_IMAGE_DIR}/s06_forcia.png`,
+      logoLink: "https://www.forcia.com",
+    },
   ],
 };

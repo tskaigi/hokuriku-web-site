@@ -26,6 +26,7 @@ const SponsorsBoardItem = ({
   width,
   height,
   className,
+  wrapperClassName,
 }: {
   href: string;
   src: string;
@@ -33,13 +34,14 @@ const SponsorsBoardItem = ({
   width: number;
   height: number;
   className: string;
+  wrapperClassName?: string;
 }) => {
   return (
     <Link
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={cn("w-full overflow-hidden", className)}
+      className={cn("aspect-video w-full", wrapperClassName)}
     >
       <Image
         src={src}
@@ -73,7 +75,8 @@ export const SponsorBoardSection = () => {
             return (
               <SponsorsBoardItem
                 key={sponsor.id}
-                className={"h-full w-full rounded-xl md:col-start-2 lg:col-start-2"}
+                className="h-full w-full rounded-xl"
+                wrapperClassName="md:col-start-2 lg:col-start-2"
                 src={sponsor.logoImage}
                 alt={sponsor.name}
                 href={sponsor.logoLink}
