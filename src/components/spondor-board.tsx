@@ -1,4 +1,5 @@
 import { sponsorList } from "@/constants/sponsors";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -32,14 +33,13 @@ const SponsorsBoardItem = ({
   width: number;
   height: number;
   className: string;
-  wrapperClassName?: string;
 }) => {
   return (
     <Link
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`aspect-video w-full ${className}`}
+      className={cn("w-full overflow-hidden", className)}
     >
       <Image
         src={src}
@@ -47,7 +47,7 @@ const SponsorsBoardItem = ({
         width={width}
         height={height}
         unoptimized
-        className={`rounded-[10px] bg-white object-contain ${className}`}
+        className={cn("bg-white object-contain", className)}
       />
     </Link>
   );
@@ -69,21 +69,19 @@ export const SponsorBoardSection = () => {
           </h3>
         </SponsorsBoardTitle>
         <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 px-6 pt-6 md:grid-cols-[0.5fr_1fr_0.5fr] md:px-0 lg:grid-cols-3">
-          {sponsorList.platinum.map(
-            (sponsor) =>
-              // ロゴ画像がある場合アイテムを表示
-              sponsor.logoImage && (
-                <SponsorsBoardItem
-                  key={sponsor.id}
-                  className={"h-full w-full p-4 md:col-start-2 lg:col-start-2"}
-                  src={sponsor.logoImage}
-                  alt={sponsor.name}
-                  href={sponsor.logoLink}
-                  width={389}
-                  height={192}
-                />
-              ),
-          )}
+          {sponsorList.platinum.map((sponsor) => {
+            return (
+              <SponsorsBoardItem
+                key={sponsor.id}
+                className={"h-full w-full rounded-xl md:col-start-2 lg:col-start-2"}
+                src={sponsor.logoImage}
+                alt={sponsor.name}
+                href={sponsor.logoLink}
+                width={389}
+                height={192}
+              />
+            );
+          })}
         </div>
       </div>
 
@@ -94,22 +92,20 @@ export const SponsorBoardSection = () => {
             Gold Sponsors
           </h3>
         </SponsorsBoardTitle>
-        <div className="mx-auto grid w-full max-w-7xl grid-cols-2 gap-4 px-6 pt-6 md:grid-cols-3 md:px-0 lg:grid-cols-4">
-          {sponsorList.gold.map(
-            (sponsor) =>
-              // ロゴ画像がある場合アイテムを表示
-              sponsor.logoImage && (
-                <SponsorsBoardItem
-                  key={sponsor.id}
-                  className={"h-full w-full p-4"}
-                  src={sponsor.logoImage}
-                  alt={sponsor.name}
-                  href={sponsor.logoLink}
-                  width={288}
-                  height={144}
-                />
-              ),
-          )}
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-2 gap-2 px-6 pt-6 md:grid-cols-3 md:gap-3 md:px-0 lg:grid-cols-4 lg:gap-4">
+          {sponsorList.gold.map((sponsor) => {
+            return (
+              <SponsorsBoardItem
+                key={sponsor.id}
+                className={"h-full w-full rounded-lg"}
+                src={sponsor.logoImage}
+                alt={sponsor.name}
+                href={sponsor.logoLink}
+                width={288}
+                height={144}
+              />
+            );
+          })}
         </div>
       </div>
 
@@ -120,22 +116,20 @@ export const SponsorBoardSection = () => {
             Silver Sponsors
           </h3>
         </SponsorsBoardTitle>
-        <div className="mx-auto grid w-full max-w-7xl grid-cols-3 gap-3 px-6 pt-6 md:grid-cols-4 md:gap-4 md:px-0 lg:grid-cols-5">
-          {sponsorList.silver.map(
-            (sponsor) =>
-              // ロゴ画像がある場合アイテムを表示
-              sponsor.logoImage && (
-                <SponsorsBoardItem
-                  key={sponsor.id}
-                  className={"h-full w-full p-2"}
-                  src={sponsor.logoImage}
-                  alt={sponsor.name}
-                  href={sponsor.logoLink}
-                  width={227}
-                  height={112}
-                />
-              ),
-          )}
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-3 gap-2 px-6 pt-6 md:grid-cols-4 md:gap-3 md:px-0 lg:grid-cols-5 lg:gap-4">
+          {sponsorList.silver.map((sponsor) => {
+            return (
+              <SponsorsBoardItem
+                key={sponsor.id}
+                className={"h-full w-full rounded"}
+                src={sponsor.logoImage}
+                alt={sponsor.name}
+                href={sponsor.logoLink}
+                width={227}
+                height={112}
+              />
+            );
+          })}
         </div>
       </div>
     </section>
