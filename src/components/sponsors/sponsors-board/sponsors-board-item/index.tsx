@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 type Props = {
@@ -9,10 +10,10 @@ type Props = {
   className: string;
 };
 
-export function SponsorsBoardItem({ href, src, alt, width, height, className }: Props) {
+export const SponsorsBoardItem = ({ href, src, alt, width, height, className }: Props) => {
   return (
     <Link href={href} target="_blank" rel="noopener noreferrer" className="aspect-video w-full">
-      <img
+      <Image
         src={src}
         alt={alt}
         width={width}
@@ -22,4 +23,4 @@ export function SponsorsBoardItem({ href, src, alt, width, height, className }: 
       />
     </Link>
   );
-}
+};

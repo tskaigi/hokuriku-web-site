@@ -1,35 +1,19 @@
-import type { Sponsor } from "@/constants/sponsor-list";
-import { sponsorList } from "@/constants/sponsor-list";
+import { sponsorList } from "@/constants/sponsors";
 import { notFound } from "next/navigation";
 
 /**
  * IDを元にスポンサー情報を取得する
- * WIPではないスポンサー詳細ページで使用するため、テナントのチェックが必要
- * @param id - スポンサーのID
+ * @param sponsorId - スポンサーのID
  * @returns スポンサー情報
  */
-export function getSponsor(id: string): Sponsor {
+export const getSponsor = (sponsorId: string) => {
   const sponsor = Object.values(sponsorList)
     .flat()
-    .find((sponsor) => sponsor.detailPageId === id && sponsor.isTenantChecked);
+    .find((sponsor) => sponsor.sponsorId === sponsorId);
 
-  if (!sponsor) notFound();
-
-  return sponsor;
-}
-
-/**
- * IDを元にスポンサー情報を取得する
- * WIPのスポンサー詳細ページで使用するため、テナントのチェックは不要
- * @param id - スポンサーのID
- * @returns スポンサー情報
- */
-export function getWipSponsor(id: string): Sponsor {
-  const sponsor = Object.values(sponsorList)
-    .flat()
-    .find((sponsor) => sponsor.detailPageId === id);
-
-  if (!sponsor) notFound();
+  if (!sponsor) {
+    notFound();
+  }
 
   return sponsor;
-}
+};

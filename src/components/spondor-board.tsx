@@ -73,8 +73,8 @@ export const SponsorBoardSection = () => {
             return (
               <SponsorsBoardItem
                 key={sponsor.id}
-                className={"h-full w-full rounded-xl md:col-start-2 lg:col-start-2"}
-                src={sponsor.logoImage}
+                className="h-full w-full rounded-xl md:col-start-2 lg:col-start-2"
+                src={`/sponsors/${sponsor.id}_${sponsor.sponsorId}.png`}
                 alt={sponsor.name}
                 href={sponsor.logoLink}
                 width={389}
@@ -97,8 +97,8 @@ export const SponsorBoardSection = () => {
             return (
               <SponsorsBoardItem
                 key={sponsor.id}
-                className={"h-full w-full rounded-lg"}
-                src={sponsor.logoImage}
+                className="h-full w-full rounded-lg"
+                src={`/sponsors/${sponsor.id}_${sponsor.sponsorId}.png`}
                 alt={sponsor.name}
                 href={sponsor.logoLink}
                 width={288}
@@ -121,8 +121,8 @@ export const SponsorBoardSection = () => {
             return (
               <SponsorsBoardItem
                 key={sponsor.id}
-                className={"h-full w-full rounded"}
-                src={sponsor.logoImage}
+                className="h-full w-full rounded"
+                src={`/sponsors/${sponsor.id}_${sponsor.sponsorId}.png`}
                 alt={sponsor.name}
                 href={sponsor.logoLink}
                 width={227}
