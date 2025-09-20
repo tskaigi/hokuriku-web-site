@@ -9,7 +9,7 @@ const coreStaffList = [
 export const CoreStaffSection = () => {
   return (
     <section className="bg-blue-light-100 pb-10 md:pb-20">
-      <h2 className="text-2xl lg:text-3xl pb-8 text-center leading-normal font-bold md:pb-10">
+      <h2 className="pb-8 text-center text-2xl leading-normal font-bold md:pb-10 lg:text-3xl">
         コアスタッフ
       </h2>
       <ul className="grid grid-cols-[repeat(2,120px)] justify-center gap-x-14 gap-y-8 px-10 md:grid-cols-[repeat(2,144px)] lg:grid-cols-[repeat(4,144px)]">

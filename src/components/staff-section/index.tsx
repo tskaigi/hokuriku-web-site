@@ -22,7 +22,7 @@ export const StaffSection = () => {
 
   return (
     <section className="bg-blue-light-100 pb-10 md:pb-20">
-      <h2 className="text-2xl lg:text-3xl pb-8 text-center leading-normal font-bold md:pb-10">
+      <h2 className="pb-8 text-center text-2xl leading-normal font-bold md:pb-10 lg:text-3xl">
         スタッフ一覧
       </h2>
       <ul className="grid grid-cols-[repeat(auto-fit,120px)] justify-center gap-x-14 gap-y-14 px-4 md:grid-cols-[repeat(4,120px)] md:gap-y-8 lg:grid-cols-[repeat(5,120px)]">
@@ -34,7 +34,7 @@ export const StaffSection = () => {
                 alt={`${name} アイコン`}
                 className="aspect-square h-full w-full overflow-hidden rounded-full object-cover"
               />
-              <p className="text-base text-center leading-7">{name}</p>
+              <p className="text-center text-base leading-7">{name}</p>
             </LinkOrBox>
           </li>
         ))}
