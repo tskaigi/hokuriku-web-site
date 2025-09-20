@@ -21,7 +21,7 @@ export const StaffSection = () => {
   }, []);
 
   return (
-    <section className="bg-blue-light-100 pb-10 md:pb-20">
+    <section className="bg-sky-50 pb-10 md:pb-20">
       <h2 className="pb-8 text-center text-2xl leading-normal font-bold md:pb-10 lg:text-3xl">
         スタッフ一覧
       </h2>
