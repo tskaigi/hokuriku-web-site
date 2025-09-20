@@ -2,6 +2,8 @@ import { CfpRecruitment } from "@/components/cfp-recruitment";
 import { CountdownTimer } from "@/components/countdown-timer";
 import { SponsorRecruitment } from "@/components/sponsor-recruitment";
 import { ChevronDown } from "lucide-react";
+import { CoreStaffSection } from "@/components/core-staff-section";
+import { StaffSection } from "@/components/staff-section";
 
 const Home = () => {
   return (
@@ -58,6 +60,8 @@ const Home = () => {
 
       <SponsorRecruitment />
       <CfpRecruitment />
+      <CoreStaffSection />
+      <StaffSection />
     </main>
   );
 };
