@@ -1,9 +1,9 @@
-type ExternalLinkProps = {
+export type ExternalLinkProps = {
   title: string;
   href: string;
 };
 
-type SponsorClass = "platinum" | "gold" | "silver";
+export type SponsorClass = "platinum" | "gold" | "silver";
 
 export type Sponsor = {
   id: `${"P" | "G" | "S"}${number}`;

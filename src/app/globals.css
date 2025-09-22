@@ -57,7 +57,7 @@
   --color-sponsor-link: var(--link-light);
   --color-sponsor-platinum: var(--blue-800);
   --color-sponsor-gold: var(--yellow-600);
-  --color-sponsor-silver: var(--gray-400);
+  --color-sponsor-silver: var(--blue-light-500);
 }
 
 @theme {

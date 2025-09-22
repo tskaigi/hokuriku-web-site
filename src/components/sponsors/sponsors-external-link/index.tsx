@@ -1,4 +1,4 @@
-import type { ExternalLinkProps } from "@/constants/sponsor-list";
+import { ExternalLinkProps } from "@/constants/sponsors";
 import { ArrowUpRightFromSquare } from "lucide-react";
 import Link from "next/link";
 

@@ -1,4 +1,3 @@
-import { SponsorsBoardItem } from "@/components/sponsors/sponsors-board/sponsors-board-item";
 import Company from "@/components/sponsors/sponsors-company";
 import SponsorHeading from "@/components/sponsors/sponsors-heading";
 import { sponsorList } from "@/constants/sponsors";
@@ -29,32 +28,14 @@ const SponsorsPage = () => {
           return (
             <div key={key} className="flex flex-col gap-12">
               <SponsorHeading variant={key} />
-
-              {key !== "bronze" ? (
-                <ul className="flex flex-col gap-6">
-                  {value.map((company, idx, value) => (
-                    <li key={company.name} className="flex flex-col gap-6">
-                      <Company {...company} />
-                      {idx !== value.length - 1 && <hr className="border-black-200 border-t-2" />}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <ul className="grid grid-cols-2 gap-4 md:grid-cols-5">
-                  {value.map((sponsor) => (
-                    <li key={sponsor.id}>
-                      <SponsorsBoardItem
-                        className="h-[96px] w-full"
-                        src={`/sponsors/${sponsor.sponsorId}.png`}
-                        alt={sponsor.name}
-                        href={sponsor.logoLink}
-                        width={211}
-                        height={96}
-                      />
-                    </li>
-                  ))}
-                </ul>
-              )}
+              <ul className="flex flex-col gap-6">
+                {value.map((company, idx, value) => (
+                  <li key={company.name} className="flex flex-col gap-6">
+                    <Company {...company} />
+                    {idx !== value.length - 1 && <hr className="border-black-200 border-t-2" />}
+                  </li>
+                ))}
+              </ul>
             </div>
           );
         })}

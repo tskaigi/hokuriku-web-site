@@ -9,7 +9,9 @@ export const generateStaticParams = () => {
   return Object.values(sponsorList)
     .flat()
     .map((sponsor) => {
-      return sponsor.sponsorId;
+      return {
+        sponsorId: sponsor.sponsorId,
+      };
     });
 };
 
@@ -63,7 +65,7 @@ const SponsorDetailPage = async ({ params }: { params: Promise<{ sponsorId: stri
             width="800"
             height="400"
             className="mx-auto h-auto max-h-[400px] w-full max-w-[800px] object-contain"
-            src={`/sponsors/${sponsor.sponsorId}.png`}
+            src={`/sponsors/${sponsor.id}_${sponsor.sponsorId}.png`}
             alt="logo"
           />
         </div>
