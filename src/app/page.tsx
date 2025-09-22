@@ -1,12 +1,13 @@
 import { CfpRecruitment } from "@/components/cfp-recruitment";
+import Hero from "@/components/hero";
 import { SponsorRecruitment } from "@/components/sponsor-recruitment";
-import Image from "next/image";
 
 const Home = () => {
   return (
     <main className="overflow-x-hidden">
       {/* ヒーローセクション */}
-      <section id="hero">
+      <Hero />
+      {/* <section id="hero">
         <Image
           src="/hero.png"
           alt="TSKaigi Hokurikuのメインビジュアル"
@@ -14,7 +15,7 @@ const Home = () => {
           height={960}
           className="w-full"
         />
-      </section>
+      </section> */}
 
       <SponsorRecruitment />
       <CfpRecruitment />
