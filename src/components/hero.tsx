@@ -13,14 +13,14 @@ const Hero = () => {
         alt="HOKURIKU"
         width={875}
         height={657}
-        className="absolute top-[9vw] right-0 w-[48vw] sm:top-[12vh]"
+        className="absolute top-[9vw] right-0 w-[48vw] sm:top-[6vw]"
       />
       <Image
         src="/kasumi-left.png"
         alt="HOKURIKU"
         width={584}
         height={374}
-        className="absolute top-[48vw] left-0 w-[30vw] sm:top-[60vh]"
+        className="absolute top-[48vw] left-0 w-[30vw] sm:top-[min(48vw,60vh)]"
       />
       <Image
         src="/logo-white.svg"
@@ -29,7 +29,7 @@ const Hero = () => {
         height={41}
         className="absolute top-[6vw] left-[50vw] w-[30vw] -translate-x-1/2 sm:top-[3vw] sm:w-[21vw]"
       />
-      <div className="absolute top-[max(15vh,18vw)] left-0 h-[67vw] w-full bg-[url('/HOKURIKU-v.png')] bg-contain bg-no-repeat sm:top-[max(24vh,12vw)] sm:h-[18vw] sm:bg-[url('/HOKURIKU-h.png')]">
+      <div className="absolute top-[max(15vh,18vw)] left-0 h-[67vw] w-full bg-[url('/HOKURIKU-v.png')] bg-contain bg-no-repeat sm:top-[18vw] sm:h-[18vw] sm:bg-[url('/HOKURIKU-h.png')] md:top-[15vw]">
         <Image
           src="/daruma-left.png"
           alt="HOKURIKU"
