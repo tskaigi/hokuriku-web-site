@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <main className="overflow-x-hidden">
       {/* ヒーローセクション */}
-      <section>
+      <section id="hero">
         <Image
           src="/hero.png"
           alt="TSKaigi Hokurikuのメインビジュアル"

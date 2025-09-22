@@ -1,9 +1,10 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Sheet,
   SheetContent,
@@ -33,9 +34,35 @@ const links: {
 
 export const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const heroSection = document.getElementById("hero");
+
+    if (!heroSection) return;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    });
+
+    observer.observe(heroSection);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
-    <header className="fixed z-50 flex w-full items-center justify-between p-4 md:px-6">
+    <header
+      className={cn(
+        "fixed z-50 flex w-full items-center justify-between p-4 duration-300 md:px-6",
+        isVisible ? "translate-y-0" : "-translate-y-full",
+      )}
+    >
       <Link href="/" className="text-xl font-bold text-blue-600">
         <Image
           src="/logo.svg"

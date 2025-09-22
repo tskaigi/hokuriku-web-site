@@ -3,7 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #144bdb;
+  --primary: #17a0fb;
 }
 
 @theme inline {
@@ -21,5 +21,13 @@ body {
 }
 
 footer {
-  background: linear-gradient(180deg, #3a89c4 0%, #1071d3 100%);
+  background: linear-gradient(180deg, #17a0fb 0%, #0077c7 100%);
+}
+
+@utility hoge {
+  @apply bg-amber-400;
+}
+
+.fuga {
+  @apply bg-amber-400;
 }
