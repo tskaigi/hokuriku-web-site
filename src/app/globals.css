@@ -4,6 +4,28 @@
   --background: #ffffff;
   --foreground: #171717;
   --primary: #144bdb;
+  /* スポンサー関連 */
+  --blue-light-100: #f1f8ff;
+  --blue-600: #0c7edc;
+  --link-light: #253edf;
+  --gray-100: #cccccc;
+  /* platinumcolor */
+  --blue-800: #0e24b8;
+  /* goldcolor */
+  --yellow-600: #c0ba02;
+  /* silvercolor */
+  --gray-400: #c9caca;
+}
+
+@theme {
+  /* スポンサー関連のcss変数 */
+  --color-sponsor-background: var(--blue-light-100);
+  --color-sponsor-title: var(--blue-600);
+  --color-sponsor-link: var(--link-light);
+  --color-sponsor-platinum: var(--blue-800);
+  --color-sponsor-gold: var(--yellow-600);
+  --color-sponsor-silver: var(--gray-400);
+  --color-sponsor-gray: var(--gray-100);
 }
 
 @theme inline {
@@ -20,6 +42,7 @@ body {
   font-family: var(--font-outfit), var(--font-noto);
 }
 
+/* footer用 */
 footer {
   background: linear-gradient(180deg, #3a89c4 0%, #1071d3 100%);
 }
