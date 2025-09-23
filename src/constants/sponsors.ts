@@ -16,26 +16,26 @@ const LOGO_IMAGE_DIR = "/sponsors";
 
 export const sponsorList: SponsorList = {
   platinum: [
-    // {
-    //   id: "p01",
-    //   name: "トグルホールディングス株式会社",
-    //   logoImage: `${LOGO_IMAGE_DIR}/p01_toggle.png`,
-    //   logoLink: "https://toggle.co.jp",
-    // },
+    {
+      id: "p01",
+      name: "トグルホールディングス株式会社",
+      logoImage: `${LOGO_IMAGE_DIR}/p01_toggle.png`,
+      logoLink: "https://toggle.co.jp",
+    },
   ],
   gold: [
-    // {
-    //   id: "g01",
-    //   name: "株式会社ココロザシ",
-    //   logoImage: `${LOGO_IMAGE_DIR}/g01_kokorozashi.png`,
-    //   logoLink: "https://www.wantedly.com/companies/company_299137",
-    // },
-    // {
-    //   id: "g02",
-    //   name: "株式会社LayerX",
-    //   logoImage: `${LOGO_IMAGE_DIR}/g02_layerx.png`,
-    //   logoLink: "https://layerx.co.jp",
-    // },
+    {
+      id: "g01",
+      name: "株式会社ココロザシ",
+      logoImage: `${LOGO_IMAGE_DIR}/g01_kokorozashi.png`,
+      logoLink: "https://www.wantedly.com/companies/company_299137",
+    },
+    {
+      id: "g02",
+      name: "株式会社LayerX",
+      logoImage: `${LOGO_IMAGE_DIR}/g02_layerx.png`,
+      logoLink: "https://layerx.co.jp",
+    },
     {
       id: "g03",
       name: "Agile Studio by 永和システムマネジメント",
@@ -48,13 +48,13 @@ export const sponsorList: SponsorList = {
       logoImage: `${LOGO_IMAGE_DIR}/g04_kaminashi.png`,
       logoLink: "https://corp.kaminashi.jp",
     },
-    // {
-    //   id: "g05",
-    //   name: "チームラボ",
-    //   logoImage: `${LOGO_IMAGE_DIR}/g05_team-lab.png`,
-    //   logoLink:
-    //     "https://www.team-lab.com/engineering/?utm_source=TSKaigi&utm_medium=web&utm_campaign=hokuriku",
-    // },
+    {
+      id: "g05",
+      name: "チームラボ",
+      logoImage: `${LOGO_IMAGE_DIR}/g05_team-lab.png`,
+      logoLink:
+        "https://www.team-lab.com/engineering/?utm_source=TSKaigi&utm_medium=web&utm_campaign=hokuriku",
+    },
     {
       id: "g06",
       name: "MOSH株式会社",
@@ -67,12 +67,12 @@ export const sponsorList: SponsorList = {
       logoImage: `${LOGO_IMAGE_DIR}/g07_tacoms.png`,
       logoLink: "https://www.tacoms-inc.com",
     },
-    // {
-    //   id: "g08",
-    //   name: "Nstock株式会社",
-    //   logoImage: `${LOGO_IMAGE_DIR}/g08_nstock.png`,
-    //   logoLink: "https://nstock.co.jp",
-    // },
+    {
+      id: "g08",
+      name: "Nstock株式会社",
+      logoImage: `${LOGO_IMAGE_DIR}/g08_nstock.png`,
+      logoLink: "https://nstock.co.jp",
+    },
     {
       id: "g09",
       name: "株式会社jig.jp",
@@ -85,12 +85,12 @@ export const sponsorList: SponsorList = {
       logoImage: `${LOGO_IMAGE_DIR}/g10_ascend.png`,
       logoLink: "https://www.ascendlogi.co.jp",
     },
-    // {
-    //   id: "g11",
-    //   name: "株式会社ALGO ARTIS",
-    //   logoImage: `${LOGO_IMAGE_DIR}/g11_algo-artis.png`,
-    //   logoLink: "https://www.algo-artis.com",
-    // },
+    {
+      id: "g11",
+      name: "株式会社ALGO ARTIS",
+      logoImage: `${LOGO_IMAGE_DIR}/g11_algo-artis.png`,
+      logoLink: "https://www.algo-artis.com",
+    },
     {
       id: "g12",
       name: "ファインディ株式会社",
@@ -105,12 +105,12 @@ export const sponsorList: SponsorList = {
     },
   ],
   silver: [
-    // {
-    //   id: "s01",
-    //   name: "株式会社Luup",
-    //   logoImage: `${LOGO_IMAGE_DIR}/s01_luup.png`,
-    //   logoLink: "https://luup.sc",
-    // },
+    {
+      id: "s01",
+      name: "株式会社Luup",
+      logoImage: `${LOGO_IMAGE_DIR}/s01_luup.png`,
+      logoLink: "https://luup.sc",
+    },
     {
       id: "s02",
       name: "株式会社kickflow",
@@ -135,11 +135,11 @@ export const sponsorList: SponsorList = {
       logoImage: `${LOGO_IMAGE_DIR}/s05_seed.png`,
       logoLink: "https://seed-it.jp",
     },
-    // {
-    //   id: "s06",
-    //   name: "フォルシア株式会社",
-    //   logoImage: `${LOGO_IMAGE_DIR}/s06_forcia.png`,
-    //   logoLink: "https://www.forcia.com",
-    // },
+    {
+      id: "s06",
+      name: "フォルシア株式会社",
+      logoImage: `${LOGO_IMAGE_DIR}/s06_forcia.png`,
+      logoLink: "https://www.forcia.com",
+    },
   ],
 };
