@@ -66,11 +66,3 @@ body {
 footer {
   background: linear-gradient(180deg, #17a0fb 0%, #0077c7 100%);
 }
-
-@utility hoge {
-  @apply bg-amber-400;
-}
-
-.fuga {
-  @apply bg-amber-400;
-}
