@@ -26,6 +26,7 @@ const SponsorsBoardItem = ({
   width,
   height,
   className,
+  wrapperClassName,
 }: {
   href: string;
   src: string;
@@ -33,13 +34,14 @@ const SponsorsBoardItem = ({
   width: number;
   height: number;
   className: string;
+  wrapperClassName?: string;
 }) => {
   return (
     <Link
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={cn("w-full overflow-hidden", className)}
+      className={cn("aspect-video w-full", wrapperClassName)}
     >
       <Image
         src={src}
