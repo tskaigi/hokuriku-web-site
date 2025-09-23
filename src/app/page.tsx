@@ -1,5 +1,6 @@
 import { CfpRecruitment } from "@/components/cfp-recruitment";
 import { CountdownTimer } from "@/components/countdown-timer";
+import { SponsorBoardSection } from "@/components/spondor-board";
 import { ChevronDown } from "lucide-react";
 
 const Home = () => {
@@ -43,8 +44,8 @@ const Home = () => {
             ホテル金沢
           </p>
         </div>
-        <h1 className="text-primary mt-[30px] w-96 text-[50px] leading-[50px] font-bold tracking-[0.2%] lg:mt-[40px] lg:w-full lg:text-[59px]">
-          <tspan className="whitespace-nowrap">TSKaigi Hokuriku</tspan>
+        <h1 className="text-primary mt-[30px] w-96 text-[48px] leading-[50px] font-bold tracking-[0.2%] lg:mt-[40px] lg:w-full lg:text-[59px]">
+          <span className="whitespace-nowrap">TSKaigi Hokuriku</span>
           <wbr /> Coming Soon
         </h1>
         <div className="mt-11 flex flex-col items-center lg:mt-16">
@@ -56,6 +57,7 @@ const Home = () => {
       </div>
 
       <CfpRecruitment />
+      <SponsorBoardSection />
     </main>
   );
 };
