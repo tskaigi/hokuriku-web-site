@@ -10,6 +10,7 @@ export type Sponsor = {
   sponsorId: string;
   name: string;
   logoLink: string;
+  logoImage?: string;
   overview?: string[];
   links?: ExternalLinkProps[];
 };
@@ -25,6 +26,7 @@ export const sponsorList: SponsorList = {
     //   sponsorId: "toggle",
     //   name: "トグルホールディングス株式会社",
     //   logoLink: "https://toggle.co.jp",
+    //   logoImage: "/sponsors/P01_toggle.png",
     //   overview: [
     //     `トグルホールディングスは、「すべてのまちと、まちをつくる人たちのために」というミッションを基に、「不動産」「建築」「金融」の3つの業界をひとつの産業インフラへと統合することを目指しています。日本の不動産業界はIT資本投資で米国の1/10に留まり、テクノロジーの活用が遅れています。 このギャップは「新しい仕組みで業界変革できる余地が多い」ということでもあり、エンジニアにとって大きなチャンスがあります。弊社ではプロダクトのコア技術の実装にはフロントエンドからバックエンド、さらにはインフラストラクチャの定義までTypeScriptを用いています。 TypeScriptの厳密な型チェック機能をフル活用することで複雑なドメインの実装を柔軟、かつ安全に行うことを実現しています。`,
     //   ],
@@ -50,6 +52,7 @@ export const sponsorList: SponsorList = {
     //   sponsorId: "kokorozashi",
     //   name: "株式会社ココロザシ",
     //   logoLink: "https://www.wantedly.com/companies/company_299137",
+    //   logoImage: "/sponsors/G01_kokorozashi.png",
     //   links: [
     //     {
     //       title: "ホームメージ",
@@ -66,6 +69,7 @@ export const sponsorList: SponsorList = {
     //   sponsorId: "layerx",
     //   name: "株式会社LayerX",
     //   logoLink: "https://layerx.co.jp",
+    //   logoImage: "/sponsors/G02_layerx.png",
     //   overview: [
     //     `LayerXは「すべての経済活動を、デジタル化する。」をミッションに掲げるSaaS+FinTechスタートアップです。 法人支出管理サービス「バクラク」を中心に、デジタルネイティブなアセットマネジメント会社を目指す合弁会社「三井物産デジタル・アセットマネジメント」、大規模言語モデル（LLM）関連技術を活用し企業や行政における業務効率化・データ活用を支援する「AI・LLM事業」などを開発・運営しています。LayerXは、今後のプロダクト戦略で重要なテーマとして「AI-UX（AIを前提とした利用体験）」を掲げています。そして、最高のAI-UXを作り上げるにはAI以外のソフトウェア体験の磨き込み、改善基盤の構築も重要です。昨年策定したバクラクフロントエンドVisionでは「お客様に最高の体験を届けたい」「Webフロントエンドを楽しくしたい」という渾身の想いを込めました。ぜひ一度ご覧ください`,
     //   ],
@@ -89,6 +93,7 @@ export const sponsorList: SponsorList = {
       sponsorId: "agile-studio",
       name: "Agile Studio by 永和システムマネジメント",
       logoLink: "https://www.agile-studio.jp",
+      logoImage: "/sponsors/G03_agile_studio.png",
       overview: [
         `「アジャイルで日本の組織を元気にしたい」アジャイルなソフトウェア開発の実践を通じて、組織にいるひとりひとりが主役となって活躍できる舞台をつくり、組織やチームを元気にしていくのが Agile Studio のミッションです。`,
       ],
@@ -108,6 +113,7 @@ export const sponsorList: SponsorList = {
       sponsorId: "kaminashi",
       name: "株式会社カミナシ",
       logoLink: "https://corp.kaminashi.jp",
+      logoImage: "/sponsors/G04_kaminashi.png",
       overview: [
         `カミナシは「ノンデスクワーカーの才能を解き放つ」をミッションに、PCやデスクのない現場で働くノンデスクワーカー3,900万人の働き方をITの力でスマートにすることを目指しています。`,
       ],
@@ -128,6 +134,7 @@ export const sponsorList: SponsorList = {
     //       name: "チームラボ",
     //       logoLink:
     //         "https://www.team-lab.com/engineering/?utm_source=TSKaigi&utm_medium=web&utm_campaign=hokuriku",
+    //       logoImage: "/sponsors/G05_teamlab.png",
     //       overview: [
     //         `チームラボは日本で随一のデジタルプラットフォーム構築・運用の高いノウハウをもった専門家集団です。
     // チームラボが構築運用しているサービスを合わせると、アプリでは累計1億6000万DL以上、アクティブユーザーは合計3000万人以上にのぼり、日本社会の様々な場面で生活者の体験を向上し続けています。`,
@@ -149,9 +156,9 @@ export const sponsorList: SponsorList = {
       sponsorId: "mosh",
       name: "MOSH株式会社",
       logoLink: "https://mosh.jp",
+      logoImage: "/sponsors/G06_mosh.png",
       overview: [
-        `
-        MOSH株式会社は「情熱がめぐる経済をつくる」をミッションに、クリエイター向け事業拡大プラットフォーム「MOSH」を開発・運営しています。TypeScriptを軸とした技術基盤で、サイト作成、予約、決済、顧客管理をワンストップ提供し、個人の情熱を事業へと成長させます。`,
+        `MOSH株式会社は「情熱がめぐる経済をつくる」をミッションに、クリエイター向け事業拡大プラットフォーム「MOSH」を開発・運営しています。TypeScriptを軸とした技術基盤で、サイト作成、予約、決済、顧客管理をワンストップ提供し、個人の情熱を事業へと成長させます。`,
       ],
       links: [
         {
@@ -169,6 +176,7 @@ export const sponsorList: SponsorList = {
       sponsorId: "tacoms",
       name: "株式会社tacoms",
       logoLink: "https://www.tacoms-inc.com",
+      logoImage: "/sponsors/G07_tacoms.png",
       overview: [
         `tacomsは「発明で、半径5mの人を幸せに」をミッションに、飲食店向けSaaSを展開しています。デリバリー一元管理「Camel」を中心に全国47都道府県、約10,000店舗でご利用いただいており、現在は飲食業界向けAll-in-One AI Platformの構築を目指し、AIネイティブな組織化と産業変革に取り組んでいます。`,
       ],
@@ -188,6 +196,7 @@ export const sponsorList: SponsorList = {
     //   sponsorId: "nstock",
     //   name: "Nstock株式会社",
     //   logoLink: "https://nstock.co.jp",
+    //   logoImage: "/sponsors/G08_nstock.png",
     //   overview: [
     //     `Nstockは、「スタートアップエコシステムをブーストし、日本からGoogle級の会社を生み出す」ことをミッションに掲げ、スタートアップが大きく育つための様々なプロダクトを提供しています。`,
     //   ],
@@ -207,6 +216,7 @@ export const sponsorList: SponsorList = {
       sponsorId: "jig",
       name: "株式会社jig.jp",
       logoLink: "https://jig.jp",
+      logoImage: "/sponsors/G09_jig.png",
       overview: [
         `jig.jpでは、「みんなのライブ配信」ふわっちを中心に、B2C/C2Cのソフトウェア・アプリのサービス開発を行っています。
 サービスのフロントエンド、バックエンド、IoT、ちょっとしたツールなど、様々な場所で TypeScript を活用しています。`,
@@ -227,6 +237,7 @@ export const sponsorList: SponsorList = {
       sponsorId: "ascend",
       name: "アセンド株式会社",
       logoLink: "https://www.ascendlogi.co.jp",
+      logoImage: "/sponsors/G10_ascend.png",
       overview: [
         `アセンドは日本で最もデジタル化の遅れた物流産業に対して、SaaSを基軸として
 産業変革に挑むスタートアップです。
@@ -249,18 +260,21 @@ Full-Stack TypeScriptで、全員がプロダクトエンジニアとして、6d
     //   sponsorId: "algo-artis",
     //   name: "株式会社ALGO ARTIS",
     //   logoLink: "https://www.algo-artis.com",
+    //   logoImage: "/sponsors/G11_algoartis.png",
     // },
     {
       id: "G12",
       sponsorId: "findy",
       name: "ファインディ株式会社",
       logoLink: "https://conference.findy-code.io",
+      logoImage: "/sponsors/G12_findy.png",
     },
     {
       id: "G13",
       sponsorId: "reiwatravel",
       name: "株式会社令和トラベル",
       logoLink: "https://www.reiwatravel.co.jp",
+      logoImage: "/sponsors/G13_reiwatravel.png",
       overview: [
         `令和トラベルは、「あたらしい旅行を、デザインする。」 をミッションに、"旅行"におけるあたらしい体験や、あたらしい社会価値の提供を目指すデジタルトラベルエージェンシーです。2022年4月より、旅行アプリ『NEWT（ニュート）』をローンチ。2024年9月にはシリーズAとして約48億円の資金調達を実施。`,
       ],
@@ -282,6 +296,7 @@ Full-Stack TypeScriptで、全員がプロダクトエンジニアとして、6d
     //   sponsorId: "luup",
     //   name: "株式会社Luup",
     //   logoLink: "https://luup.sc",
+    //   logoImage: "/sponsors/S01_luup.png",
     //   links: [
     //     {
     //       title: "公式サイト",
@@ -294,6 +309,7 @@ Full-Stack TypeScriptで、全員がプロダクトエンジニアとして、6d
       sponsorId: "kickflow",
       name: "株式会社kickflow",
       logoLink: "https://kickflow.com",
+      logoImage: "/sponsors/S02_kickflow.png",
       links: [
         {
           title: "公式サイト",
@@ -306,6 +322,7 @@ Full-Stack TypeScriptで、全員がプロダクトエンジニアとして、6d
       sponsorId: "herp",
       name: "株式会社HERP",
       logoLink: "https://herp.co.jp",
+      logoImage: "/sponsors/S03_herp.png",
       links: [
         {
           title: "公式サイト",
@@ -318,6 +335,7 @@ Full-Stack TypeScriptで、全員がプロダクトエンジニアとして、6d
       sponsorId: "freee",
       name: "フリー株式会社",
       logoLink: "https://corp.freee.co.jp",
+      logoImage: "/sponsors/S04_freee.png",
       overview: [
         `freeeは「スモールビジネスを、世界の主役に。」というミッションのもと、誰もが自由に経営できる統合型経営プラットフォームを実現する企業です。freee会計、freee人事労務、freee販売など、あらゆる業務課題を解決するプロダクトを展開し、個人事業主から上場企業まで幅広く利用されています。freeeではほとんどのプロダクトのフロントエンドでTypeScriptとReactを採用しています。TypeScriptの型の恩恵によって大規模なコードベースでも安心して開発をすることを可能にしています。`,
       ],
@@ -341,6 +359,7 @@ Full-Stack TypeScriptで、全員がプロダクトエンジニアとして、6d
       sponsorId: "seed",
       name: "株式会社SeeD",
       logoLink: "https://seed-it.jp",
+      logoImage: "/sponsors/S05_seed.png",
       links: [
         {
           title: "公式サイト",
@@ -353,6 +372,7 @@ Full-Stack TypeScriptで、全員がプロダクトエンジニアとして、6d
     //       sponsorId: "forcia",
     //       name: "フォルシア株式会社",
     //       logoLink: "https://www.forcia.com/",
+    //       logoImage: "/sponsors/S06_forcia.png",
     //       overview: [
     //         `フォルシアは、社員の半数近くをフルスタックエンジニアが占める技術者集団です。
     // 膨大・複雑なデータを高速かつ正確に処理できる技術を強みとし、独自の技術基盤を用いたプロダクト開発や、旅行・観光業界のオンライン販売を支援するSaaS型サービスの提供などを行っています。

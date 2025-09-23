@@ -28,14 +28,28 @@ const SponsorsPage = () => {
           return (
             <div key={key} className="flex flex-col gap-12">
               <SponsorHeading variant={key} />
-              <ul className="flex flex-col gap-6">
-                {value.map((company, idx, value) => (
-                  <li key={company.name} className="flex flex-col gap-6">
-                    <Company {...company} />
-                    {idx !== value.length - 1 && <hr className="border-black-200 border-t-2" />}
-                  </li>
-                ))}
-              </ul>
+              {key !== "silver" ? (
+                <ul className="flex flex-col gap-6">
+                  {value.map((company, idx, value) => (
+                    <li key={company.name} className="flex flex-col gap-6">
+                      <Company {...company} />
+                      {idx !== value.length - 1 && <hr className="border-black-200 border-t-2" />}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <ul className="grid grid-cols-2 gap-4 md:grid-cols-5">
+                  {value.map((company) => (
+                    <li key={company.name}>
+                      <img
+                        src={company.logoImage}
+                        alt={company.name}
+                        className="h-[96px] w-full object-contain p-2"
+                      />
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           );
         })}
