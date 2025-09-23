@@ -3,5 +3,5 @@ type Props = {
 };
 
 export default function SponsorLayout({ children }: Props) {
-  return <main className="bg-sponsor-background flex-1 py-10 pt-16 md:px-8">{children}</main>;
+  return <main className="bg-sponsor-background flex-1 pb-10 md:px-8">{children}</main>;
 }
