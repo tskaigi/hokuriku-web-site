@@ -1,7 +1,6 @@
 import { CfpRecruitment } from "@/components/cfp-recruitment";
 import { CountdownTimer } from "@/components/countdown-timer";
 import { SponsorBoardSection } from "@/components/spondor-board";
-import { SponsorRecruitment } from "@/components/sponsor-recruitment";
 import { ChevronDown } from "lucide-react";
 
 const Home = () => {
@@ -57,7 +56,6 @@ const Home = () => {
         </div>
       </div>
 
-      <SponsorRecruitment />
       <CfpRecruitment />
       <SponsorBoardSection />
     </main>
