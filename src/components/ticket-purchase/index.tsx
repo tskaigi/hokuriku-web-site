@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const TicketPurchaseSection = () => {
   return (
-    <section className="w-full bg-[var(--color-blue-light-100)] px-6 py-20 text-center lg:py-24">
+    <section className="bg-blue-light-100 w-full px-6 py-20 text-center lg:py-24">
       <div className="mx-auto max-w-[720px] rounded-xl bg-white p-8 md:p-12">
         <h2 className="font-noto text-center text-[32px] leading-[48px] font-bold tracking-[-1.2%] lg:text-4xl">
           チケット購入
