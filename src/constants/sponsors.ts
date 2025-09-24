@@ -47,47 +47,47 @@ export const sponsorList: SponsorList = {
     },
   ],
   gold: [
-    // {
-    //   id: "G01",
-    //   sponsorId: "kokorozashi",
-    //   name: "株式会社ココロザシ",
-    //   logoLink: "https://www.wantedly.com/companies/company_299137",
-    //   logoImage: "/sponsors/G01_kokorozashi.png",
-    //   links: [
-    //     {
-    //       title: "ホームメージ",
-    //       href: "https://kokorozashi-japan.co.jp/",
-    //     },
-    //     {
-    //       title: "公式採用サイト",
-    //       href: "https://www.wantedly.com/companies/company_299137",
-    //     },
-    //   ],
-    // },
-    // {
-    //   id: "G02",
-    //   sponsorId: "layerx",
-    //   name: "株式会社LayerX",
-    //   logoLink: "https://layerx.co.jp",
-    //   logoImage: "/sponsors/G02_layerx.png",
-    //   overview: [
-    //     `LayerXは「すべての経済活動を、デジタル化する。」をミッションに掲げるSaaS+FinTechスタートアップです。 法人支出管理サービス「バクラク」を中心に、デジタルネイティブなアセットマネジメント会社を目指す合弁会社「三井物産デジタル・アセットマネジメント」、大規模言語モデル（LLM）関連技術を活用し企業や行政における業務効率化・データ活用を支援する「AI・LLM事業」などを開発・運営しています。LayerXは、今後のプロダクト戦略で重要なテーマとして「AI-UX（AIを前提とした利用体験）」を掲げています。そして、最高のAI-UXを作り上げるにはAI以外のソフトウェア体験の磨き込み、改善基盤の構築も重要です。昨年策定したバクラクフロントエンドVisionでは「お客様に最高の体験を届けたい」「Webフロントエンドを楽しくしたい」という渾身の想いを込めました。ぜひ一度ご覧ください`,
-    //   ],
-    //   links: [
-    //     {
-    //       title: "LayerX 採用情報",
-    //       href: "https://jobs.layerx.co.jp/",
-    //     },
-    //     {
-    //       title: "LayerX Engineer Blog",
-    //       href: "https://tech.layerx.co.jp/",
-    //     },
-    //     {
-    //       title: "LayerX note",
-    //       href: "https://note.com/fukkyy",
-    //     },
-    //   ],
-    // },
+    {
+      id: "G01",
+      sponsorId: "kokorozashi",
+      name: "株式会社ココロザシ",
+      logoLink: "https://www.wantedly.com/companies/company_299137",
+      logoImage: "/sponsors/G01_kokorozashi.png",
+      links: [
+        {
+          title: "ホームメージ",
+          href: "https://kokorozashi-japan.co.jp/",
+        },
+        {
+          title: "公式採用サイト",
+          href: "https://www.wantedly.com/companies/company_299137",
+        },
+      ],
+    },
+    {
+      id: "G02",
+      sponsorId: "layerx",
+      name: "株式会社LayerX",
+      logoLink: "https://layerx.co.jp",
+      logoImage: "/sponsors/G02_layerx.png",
+      overview: [
+        `LayerXは「すべての経済活動を、デジタル化する。」をミッションに掲げるSaaS+FinTechスタートアップです。 法人支出管理サービス「バクラク」を中心に、デジタルネイティブなアセットマネジメント会社を目指す合弁会社「三井物産デジタル・アセットマネジメント」、大規模言語モデル（LLM）関連技術を活用し企業や行政における業務効率化・データ活用を支援する「AI・LLM事業」などを開発・運営しています。LayerXは、今後のプロダクト戦略で重要なテーマとして「AI-UX（AIを前提とした利用体験）」を掲げています。そして、最高のAI-UXを作り上げるにはAI以外のソフトウェア体験の磨き込み、改善基盤の構築も重要です。昨年策定したバクラクフロントエンドVisionでは「お客様に最高の体験を届けたい」「Webフロントエンドを楽しくしたい」という渾身の想いを込めました。ぜひ一度ご覧ください`,
+      ],
+      links: [
+        {
+          title: "LayerX 採用情報",
+          href: "https://jobs.layerx.co.jp/",
+        },
+        {
+          title: "LayerX Engineer Blog",
+          href: "https://tech.layerx.co.jp/",
+        },
+        {
+          title: "LayerX note",
+          href: "https://note.com/fukkyy",
+        },
+      ],
+    },
     {
       id: "G03",
       sponsorId: "agile-studio",
@@ -128,29 +128,29 @@ export const sponsorList: SponsorList = {
         },
       ],
     },
-    //     {
-    //       id: "G05",
-    //       sponsorId: "team-lab",
-    //       name: "チームラボ",
-    //       logoLink:
-    //         "https://www.team-lab.com/engineering/?utm_source=TSKaigi&utm_medium=web&utm_campaign=hokuriku",
-    //       logoImage: "/sponsors/G05_teamlab.png",
-    //       overview: [
-    //         `チームラボは日本で随一のデジタルプラットフォーム構築・運用の高いノウハウをもった専門家集団です。
-    // チームラボが構築運用しているサービスを合わせると、アプリでは累計1億6000万DL以上、アクティブユーザーは合計3000万人以上にのぼり、日本社会の様々な場面で生活者の体験を向上し続けています。`,
-    //       ],
-    //       links: [
-    //         {
-    //           title:
-    //             "チームラボはWebバックエンド/フロントエンドやスマホアプリから、リアルタイムCG、機械学習、ハードウェアまで幅広いエンジニアを採用中です！",
-    //           href: "https://www.team-lab.com/engineering/",
-    //         },
-    //         {
-    //           title: "【公式note】メンバーインタビューやプロジェクトについて紹介中！",
-    //           href: "https://www.team-lab.com/works/?category=all",
-    //         },
-    //       ],
-    //     },
+    {
+      id: "G05",
+      sponsorId: "team-lab",
+      name: "チームラボ",
+      logoLink:
+        "https://www.team-lab.com/engineering/?utm_source=TSKaigi&utm_medium=web&utm_campaign=hokuriku",
+      logoImage: "/sponsors/G05_teamlab.png",
+      overview: [
+        `チームラボは日本で随一のデジタルプラットフォーム構築・運用の高いノウハウをもった専門家集団です。
+    チームラボが構築運用しているサービスを合わせると、アプリでは累計1億6000万DL以上、アクティブユーザーは合計3000万人以上にのぼり、日本社会の様々な場面で生活者の体験を向上し続けています。`,
+      ],
+      links: [
+        {
+          title:
+            "チームラボはWebバックエンド/フロントエンドやスマホアプリから、リアルタイムCG、機械学習、ハードウェアまで幅広いエンジニアを採用中です！",
+          href: "https://www.team-lab.com/engineering/",
+        },
+        {
+          title: "【公式note】メンバーインタビューやプロジェクトについて紹介中！",
+          href: "https://www.team-lab.com/works/?category=all",
+        },
+      ],
+    },
     {
       id: "G06",
       sponsorId: "mosh",
@@ -191,26 +191,26 @@ export const sponsorList: SponsorList = {
         },
       ],
     },
-    // {
-    //   id: "G08",
-    //   sponsorId: "nstock",
-    //   name: "Nstock株式会社",
-    //   logoLink: "https://nstock.co.jp",
-    //   logoImage: "/sponsors/G08_nstock.png",
-    //   overview: [
-    //     `Nstockは、「スタートアップエコシステムをブーストし、日本からGoogle級の会社を生み出す」ことをミッションに掲げ、スタートアップが大きく育つための様々なプロダクトを提供しています。`,
-    //   ],
-    //   links: [
-    //     {
-    //       title: "Nstock 採用サイト",
-    //       href: "https://recruit.nstock.co.jp/work/software-engineer",
-    //     },
-    //     {
-    //       title: "Nstock Tech Blog",
-    //       href: "https://open.spotify.com/show/0m4TGTqbD6AuHFOrIbpkxx?si=fcb0d9a1f44049a8&nd=1&dlsi=97fdf39efbbe48a2",
-    //     },
-    //   ],
-    // },
+    {
+      id: "G08",
+      sponsorId: "nstock",
+      name: "Nstock株式会社",
+      logoLink: "https://nstock.co.jp",
+      logoImage: "/sponsors/G08_nstock.png",
+      overview: [
+        `Nstockは、「スタートアップエコシステムをブーストし、日本からGoogle級の会社を生み出す」ことをミッションに掲げ、スタートアップが大きく育つための様々なプロダクトを提供しています。`,
+      ],
+      links: [
+        {
+          title: "Nstock 採用サイト",
+          href: "https://recruit.nstock.co.jp/work/software-engineer",
+        },
+        {
+          title: "Nstock Tech Blog",
+          href: "https://open.spotify.com/show/0m4TGTqbD6AuHFOrIbpkxx?si=fcb0d9a1f44049a8&nd=1&dlsi=97fdf39efbbe48a2",
+        },
+      ],
+    },
     {
       id: "G09",
       sponsorId: "jig",
@@ -255,13 +255,13 @@ Full-Stack TypeScriptで、全員がプロダクトエンジニアとして、6d
         },
       ],
     },
-    // {
-    //   id: "G11",
-    //   sponsorId: "algo-artis",
-    //   name: "株式会社ALGO ARTIS",
-    //   logoLink: "https://www.algo-artis.com",
-    //   logoImage: "/sponsors/G11_algoartis.png",
-    // },
+    {
+      id: "G11",
+      sponsorId: "algo-artis",
+      name: "株式会社ALGO ARTIS",
+      logoLink: "https://www.algo-artis.com",
+      logoImage: "/sponsors/G11_algoartis.png",
+    },
     {
       id: "G12",
       sponsorId: "findy",
@@ -291,19 +291,19 @@ Full-Stack TypeScriptで、全員がプロダクトエンジニアとして、6d
     },
   ],
   silver: [
-    // {
-    //   id: "S01",
-    //   sponsorId: "luup",
-    //   name: "株式会社Luup",
-    //   logoLink: "https://luup.sc",
-    //   logoImage: "/sponsors/S01_luup.png",
-    //   links: [
-    //     {
-    //       title: "公式サイト",
-    //       href: "https://luup.sc/",
-    //     },
-    //   ],
-    // },
+    {
+      id: "S01",
+      sponsorId: "luup",
+      name: "株式会社Luup",
+      logoLink: "https://luup.sc",
+      logoImage: "/sponsors/S01_luup.png",
+      links: [
+        {
+          title: "公式サイト",
+          href: "https://luup.sc/",
+        },
+      ],
+    },
     {
       id: "S02",
       sponsorId: "kickflow",
@@ -367,32 +367,32 @@ Full-Stack TypeScriptで、全員がプロダクトエンジニアとして、6d
         },
       ],
     },
-    //     {
-    //       id: "S06",
-    //       sponsorId: "forcia",
-    //       name: "フォルシア株式会社",
-    //       logoLink: "https://www.forcia.com/",
-    //       logoImage: "/sponsors/S06_forcia.png",
-    //       overview: [
-    //         `フォルシアは、社員の半数近くをフルスタックエンジニアが占める技術者集団です。
-    // 膨大・複雑なデータを高速かつ正確に処理できる技術を強みとし、独自の技術基盤を用いたプロダクト開発や、旅行・観光業界のオンライン販売を支援するSaaS型サービスの提供などを行っています。
-    // フロントエンド・バックエンドやインフラ(IaC)などでTypeScriptを使用しており、過去にはTypeScript好きな方々との交流イベントの企画・運営も行ってきました。
-    // フォルシアの技術や社風についてはぜひ下記リンクもご覧ください！`,
-    //       ],
-    //       links: [
-    //         {
-    //           title: "FORCIA Tech Blog",
-    //           href: "https://zenn.dev/p/forcia_tech",
-    //         },
-    //         {
-    //           title: "採用サイト",
-    //           href: "https://www.forcia.com/jobs/",
-    //         },
-    //         {
-    //           title: "公式 X（旧 Twitter）",
-    //           href: "https://x.com/forcia_pr",
-    //         },
-    //       ],
-    //     },
+    {
+      id: "S06",
+      sponsorId: "forcia",
+      name: "フォルシア株式会社",
+      logoLink: "https://www.forcia.com/",
+      logoImage: "/sponsors/S06_forcia.png",
+      overview: [
+        `フォルシアは、社員の半数近くをフルスタックエンジニアが占める技術者集団です。
+    膨大・複雑なデータを高速かつ正確に処理できる技術を強みとし、独自の技術基盤を用いたプロダクト開発や、旅行・観光業界のオンライン販売を支援するSaaS型サービスの提供などを行っています。
+    フロントエンド・バックエンドやインフラ(IaC)などでTypeScriptを使用しており、過去にはTypeScript好きな方々との交流イベントの企画・運営も行ってきました。
+    フォルシアの技術や社風についてはぜひ下記リンクもご覧ください！`,
+      ],
+      links: [
+        {
+          title: "FORCIA Tech Blog",
+          href: "https://zenn.dev/p/forcia_tech",
+        },
+        {
+          title: "採用サイト",
+          href: "https://www.forcia.com/jobs/",
+        },
+        {
+          title: "公式 X（旧 Twitter）",
+          href: "https://x.com/forcia_pr",
+        },
+      ],
+    },
   ],
 };
