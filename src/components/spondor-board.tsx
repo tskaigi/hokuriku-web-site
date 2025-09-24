@@ -75,7 +75,8 @@ export const SponsorBoardSection = () => {
             return (
               <SponsorsBoardItem
                 key={sponsor.id}
-                className="h-full w-full rounded-xl md:col-start-2 lg:col-start-2"
+                className="h-full w-full rounded-xl"
+                wrapperClassName="md:col-start-2 lg:col-start-2"
                 src={`/sponsors/${sponsor.id}_${sponsor.sponsorId}.png`}
                 alt={sponsor.name}
                 href={sponsor.logoLink}

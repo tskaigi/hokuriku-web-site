@@ -21,30 +21,30 @@ type SponsorList = {
 
 export const sponsorList: SponsorList = {
   platinum: [
-    // {
-    //   id: "P01",
-    //   sponsorId: "toggle",
-    //   name: "トグルホールディングス株式会社",
-    //   logoLink: "https://toggle.co.jp",
-    //   logoImage: "/sponsors/P01_toggle.png",
-    //   overview: [
-    //     `トグルホールディングスは、「すべてのまちと、まちをつくる人たちのために」というミッションを基に、「不動産」「建築」「金融」の3つの業界をひとつの産業インフラへと統合することを目指しています。日本の不動産業界はIT資本投資で米国の1/10に留まり、テクノロジーの活用が遅れています。 このギャップは「新しい仕組みで業界変革できる余地が多い」ということでもあり、エンジニアにとって大きなチャンスがあります。弊社ではプロダクトのコア技術の実装にはフロントエンドからバックエンド、さらにはインフラストラクチャの定義までTypeScriptを用いています。 TypeScriptの厳密な型チェック機能をフル活用することで複雑なドメインの実装を柔軟、かつ安全に行うことを実現しています。`,
-    //   ],
-    //   links: [
-    //     {
-    //       title: "ホームページ",
-    //       href: "https://toggle.co.jp",
-    //     },
-    //     {
-    //       title: "Engineering Handbook",
-    //       href: "https://engineer.toggle.co.jp",
-    //     },
-    //     {
-    //       title: "note",
-    //       href: "https://note.com/toggle",
-    //     },
-    //   ],
-    // },
+    {
+      id: "P01",
+      sponsorId: "toggle",
+      name: "トグルホールディングス株式会社",
+      logoLink: "https://toggle.co.jp",
+      logoImage: "/sponsors/P01_toggle.png",
+      overview: [
+        `トグルホールディングスは、「すべてのまちと、まちをつくる人たちのために」というミッションを基に、「不動産」「建築」「金融」の3つの業界をひとつの産業インフラへと統合することを目指しています。日本の不動産業界はIT資本投資で米国の1/10に留まり、テクノロジーの活用が遅れています。 このギャップは「新しい仕組みで業界変革できる余地が多い」ということでもあり、エンジニアにとって大きなチャンスがあります。弊社ではプロダクトのコア技術の実装にはフロントエンドからバックエンド、さらにはインフラストラクチャの定義までTypeScriptを用いています。 TypeScriptの厳密な型チェック機能をフル活用することで複雑なドメインの実装を柔軟、かつ安全に行うことを実現しています。`,
+      ],
+      links: [
+        {
+          title: "ホームページ",
+          href: "https://toggle.co.jp",
+        },
+        {
+          title: "Engineering Handbook",
+          href: "https://engineer.toggle.co.jp",
+        },
+        {
+          title: "note",
+          href: "https://note.com/toggle",
+        },
+      ],
+    },
   ],
   gold: [
     // {
