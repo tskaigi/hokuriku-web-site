@@ -4,6 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #17a0fb;
   --radius: 0.625rem;
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
@@ -21,23 +24,7 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  /* ティザーサイト用 */
-  --primary: hsl(220 83% 47%);
-  --background: hsl(0 0% 100%);
-  --foreground: hsl(0 0% 3.9%);
-  --card: hsl(0 0% 100%);
-  --card-foreground: hsl(0 0% 3.9%);
-  --popover: hsl(0 0% 100%);
-  --popover-foreground: hsl(0 0% 3.9%);
-  --primary-foreground: hsl(0 0% 98%);
-  --secondary: hsl(0 0% 96.1%);
-  --secondary-foreground: hsl(0 0% 9%);
-  --muted: hsl(0 0% 96.1%);
-  --muted-foreground: hsl(0 0% 45.1%);
-  --accent: hsl(0 0% 96.1%);
-  --accent-foreground: hsl(0 0% 9%);
-  --destructive: hsl(0 84.2% 60.2%);
-  --destructive-foreground: hsl(0 0% 98%);
+
   /* スポンサー関連 */
   --blue-light-100: #f1f8ff;
   --blue-600: #0c7edc;
@@ -194,5 +181,5 @@ body {
 
 /* footer用 */
 footer {
-  background: linear-gradient(180deg, #3a89c4 0%, #1071d3 100%);
+  background: linear-gradient(180deg, #17a0fb 0%, #0077c7 100%);
 }
