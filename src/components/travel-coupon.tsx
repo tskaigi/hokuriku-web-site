@@ -15,11 +15,12 @@ export const TravelCouponSection = () => {
 
       <div className="mx-auto mt-10 max-w-[680px] space-y-10 text-left">
         <div>
-          <div className="px-0 leading-[25px] font-bold tracking-[-0.75%]">
-            <p>株式会社令和トラベル様より、宿泊クーポンのご提供があります！</p>
+          <div className="px-0 leading-[25px] tracking-[-0.75%]">
             <p>
-              下記サイトにクーポンコードをご入力いただくと、宿泊費から50%OFFの割引(最大5,000円)を利用することができます（先着60名まで）。
+              TSKaigi参加者のみなさまに限り、金沢の宿・ホテルで利用できる宿泊費が50%OFF(最大5,000円)になるクーポンを、令和トラベル様よりご提供いただいております。
             </p>
+            <br />
+            <p>クーポンの利用方法は、チケット購入後のご案内をご確認ください。</p>
           </div>
         </div>
 
@@ -30,7 +31,7 @@ export const TravelCouponSection = () => {
             rel="noopener noreferrer"
             className="font-noto bg-primary focus-visible:ring-primary/40 text-background inline-flex items-center rounded-full px-8 py-3 text-sm font-bold shadow-sm transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:outline-none"
           >
-            詳細を確認する →
+            クーポンの詳細を確認する →
           </Link>
         </div>
       </div>
