@@ -39,7 +39,10 @@ export const Header = () => {
   useEffect(() => {
     const heroSection = document.getElementById("hero");
 
-    if (!heroSection) return;
+    if (!heroSection) {
+      setIsVisible(true);
+      return;
+    }
 
     const observer = new IntersectionObserver(([entry]) => {
       if (!entry.isIntersecting) {
