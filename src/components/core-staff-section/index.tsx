@@ -4,6 +4,11 @@ const coreStaffList = [
     image: "/coreStaff/tsuyuni.jpg",
     href: "https://x.com/tsuy_uni",
   },
+  {
+    name:"hoshico",
+    image:"staff/hoshico.png",
+    href:"https://x.com/hoshihoshi_yasu",
+  },
 ];
 
 export const CoreStaffSection = () => {
