@@ -21,10 +21,10 @@ const specificCommercialData = {
       をご確認ください。
     </p>
   ),
-  受け付け可能な決済手段: <p>クレジットカード、コンビニ/ATM、PayPal</p>,
+  受け付け可能な決済手段: <p>クレジットカード</p>,
   引渡時期: (
     <p>
-      TSKaigi 2025の開催期間は
+      TSKaigi Hokuriku 2025の開催期間は
       <span className="px-1 font-bold">2025年11月23日</span>
       です。お申し込み完了後、イベント当日に会場または指定の方法にてサービスを提供いたします。
     </p>
