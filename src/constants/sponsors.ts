@@ -394,5 +394,26 @@ Full-Stack TypeScriptで、全員がプロダクトエンジニアとして、6d
         },
       ],
     },
+    {
+      id: "S07",
+      sponsorId: "ficilcom",
+      name: "フィシルコム",
+      logoLink: "https://www.ficilcom.jp",
+      logoImage: "/sponsors/S07_ficilcom.png",
+    },
+    // {
+    //   id: "S08",
+    //   sponsorId: "",
+    //   name: "",
+    //   logoLink: "",
+    //   logoImage: "",
+    // },
+    {
+      id: "S09",
+      sponsorId: "miidas",
+      name: "ミイダス株式会社",
+      logoLink: "https://careers.miidas.co.jp/tech/",
+      logoImage: "/sponsors/S09_miidas.png",
+    },
   ],
 };
