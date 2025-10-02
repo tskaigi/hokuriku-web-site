@@ -18,7 +18,7 @@ export const ScrollIndicator = () => {
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={2}
-          className="animate-blink"
+          className="animate-blink motion-reduce:animate-none"
           style={{
             animationDelay: `${200 * i}ms`,
           }}
