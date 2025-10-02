@@ -297,12 +297,6 @@ Full-Stack TypeScriptで、全員がプロダクトエンジニアとして、6d
       name: "株式会社Luup",
       logoLink: "https://luup.sc",
       logoImage: "/sponsors/S01_luup.png",
-      links: [
-        {
-          title: "公式サイト",
-          href: "https://luup.sc/",
-        },
-      ],
     },
     {
       id: "S02",
@@ -310,12 +304,6 @@ Full-Stack TypeScriptで、全員がプロダクトエンジニアとして、6d
       name: "株式会社kickflow",
       logoLink: "https://kickflow.com",
       logoImage: "/sponsors/S02_kickflow.png",
-      links: [
-        {
-          title: "公式サイト",
-          href: "https://kickflow.com/",
-        },
-      ],
     },
     {
       id: "S03",
@@ -323,12 +311,6 @@ Full-Stack TypeScriptで、全員がプロダクトエンジニアとして、6d
       name: "株式会社HERP",
       logoLink: "https://herp.co.jp",
       logoImage: "/sponsors/S03_herp.png",
-      links: [
-        {
-          title: "公式サイト",
-          href: "https://herp.co.jp/",
-        },
-      ],
     },
     {
       id: "S04",
@@ -336,23 +318,6 @@ Full-Stack TypeScriptで、全員がプロダクトエンジニアとして、6d
       name: "フリー株式会社",
       logoLink: "https://corp.freee.co.jp",
       logoImage: "/sponsors/S04_freee.png",
-      overview: [
-        `freeeは「スモールビジネスを、世界の主役に。」というミッションのもと、誰もが自由に経営できる統合型経営プラットフォームを実現する企業です。freee会計、freee人事労務、freee販売など、あらゆる業務課題を解決するプロダクトを展開し、個人事業主から上場企業まで幅広く利用されています。freeeではほとんどのプロダクトのフロントエンドでTypeScriptとReactを採用しています。TypeScriptの型の恩恵によって大規模なコードベースでも安心して開発をすることを可能にしています。`,
-      ],
-      links: [
-        {
-          title: "フリー株式会社",
-          href: "https://corp.freee.co.jp/",
-        },
-        {
-          title: "freee Developers Hub",
-          href: "https://developers.freee.co.jp/",
-        },
-        {
-          title: "エンジニア採用ページ",
-          href: "https://jobs.freee.co.jp/engineers/",
-        },
-      ],
     },
     {
       id: "S05",
@@ -360,12 +325,6 @@ Full-Stack TypeScriptで、全員がプロダクトエンジニアとして、6d
       name: "株式会社SeeD",
       logoLink: "https://seed-it.jp",
       logoImage: "/sponsors/S05_seed.png",
-      links: [
-        {
-          title: "公式サイト",
-          href: "https://seed-it.jp/",
-        },
-      ],
     },
     {
       id: "S06",
@@ -373,26 +332,6 @@ Full-Stack TypeScriptで、全員がプロダクトエンジニアとして、6d
       name: "フォルシア株式会社",
       logoLink: "https://www.forcia.com/",
       logoImage: "/sponsors/S06_forcia.png",
-      overview: [
-        `フォルシアは、社員の半数近くをフルスタックエンジニアが占める技術者集団です。
-    膨大・複雑なデータを高速かつ正確に処理できる技術を強みとし、独自の技術基盤を用いたプロダクト開発や、旅行・観光業界のオンライン販売を支援するSaaS型サービスの提供などを行っています。
-    フロントエンド・バックエンドやインフラ(IaC)などでTypeScriptを使用しており、過去にはTypeScript好きな方々との交流イベントの企画・運営も行ってきました。
-    フォルシアの技術や社風についてはぜひ下記リンクもご覧ください！`,
-      ],
-      links: [
-        {
-          title: "FORCIA Tech Blog",
-          href: "https://zenn.dev/p/forcia_tech",
-        },
-        {
-          title: "採用サイト",
-          href: "https://www.forcia.com/jobs/",
-        },
-        {
-          title: "公式 X（旧 Twitter）",
-          href: "https://x.com/forcia_pr",
-        },
-      ],
     },
   ],
 };
