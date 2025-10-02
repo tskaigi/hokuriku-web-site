@@ -1,4 +1,5 @@
 import { CfpRecruitment } from "@/components/cfp-recruitment";
+import EventOverview from "@/components/event-overview";
 import Hero from "@/components/hero";
 import { SponsorBoardSection } from "@/components/spondor-board";
 import TicketPurchaseSection from "@/components/ticket-purchase";
@@ -8,6 +9,8 @@ const Home = () => {
   return (
     <main className="overflow-x-hidden">
       <Hero />
+      <EventOverview />
+      <hr />
       <TicketPurchaseSection />
       <TravelCouponSection />
       <hr />
