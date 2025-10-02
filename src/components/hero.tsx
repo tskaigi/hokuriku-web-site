@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { ScrollIndicator } from "./scroll-indicator";
 
 const Hero = () => {
   return (
@@ -73,6 +74,14 @@ const Hero = () => {
         height={1080}
         className="absolute top-0 left-0 min-h-full min-w-full object-cover object-center mix-blend-color-burn"
       />
+
+      {/* Scroll Indicator */}
+      <div
+        className="pointer-events-none absolute right-0 bottom-0 flex w-full flex-col items-end p-8"
+        aria-hidden="true"
+      >
+        <ScrollIndicator />
+      </div>
     </section>
   );
 };
