@@ -1,22 +1,20 @@
 import ExternalLink from "@/components/sponsors/sponsors-external-link";
+import RoleBadge from "@/components/sponsors/sponsors-role-badge";
 import { sponsorList } from "@/constants/sponsors";
 import { getSponsor } from "@/utils/getSponsor";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
-// sponsorIdの一覧を元に静的にページをビルド
 export const generateStaticParams = () => {
   return Object.values(sponsorList)
     .flat()
-    .map((sponsor) => {
-      return {
-        sponsorId: sponsor.sponsorId,
-      };
-    });
+    .map((sponsor) => ({
+      sponsorId: sponsor.sponsorId,
+    }));
 };
 
-const description = "TSKaigi 2025 のスポンサー情報です。";
-
+// OGPメタ情報
 export const generateMetadata = async ({
   params,
 }: {
@@ -25,11 +23,19 @@ export const generateMetadata = async ({
   const { sponsorId } = await params;
   const sponsor = getSponsor(sponsorId);
 
+  const sponsorTitle = `${sponsor.name} は TSKaigi Hokuriku 2025 のスポンサーです。`;
+
+  const description = sponsor.detailDescription?.[0]
+    ? sponsor.detailDescription[0].slice(0, 100) +
+      (sponsor.detailDescription[0].length > 100 ? "…" : "")
+    : sponsorTitle;
+
   return {
-    title: sponsor.name,
+    title: sponsorTitle,
     description,
     twitter: {
-      title: sponsor.name,
+      card: "summary_large_image",
+      title: sponsorTitle,
       description,
       images: [
         {
@@ -38,7 +44,7 @@ export const generateMetadata = async ({
       ],
     },
     openGraph: {
-      title: sponsor.name,
+      title: sponsorTitle,
       description,
       images: [
         {
@@ -49,6 +55,7 @@ export const generateMetadata = async ({
   };
 };
 
+// スポンサー詳細ページ
 const SponsorDetailPage = async ({ params }: { params: Promise<{ sponsorId: string }> }) => {
   const { sponsorId } = await params;
   const sponsor = getSponsor(sponsorId);
@@ -60,37 +67,49 @@ const SponsorDetailPage = async ({ params }: { params: Promise<{ sponsorId: stri
       </h1>
 
       <div className="mx-auto flex max-w-screen-xl flex-col gap-10 bg-white p-6 md:rounded-xl lg:p-10">
+        {/* ロゴ */}
         <div>
-          <Image
-            width="800"
-            height="400"
-            className="mx-auto h-auto max-h-[400px] w-full max-w-[800px] object-contain"
-            src={`/sponsors/${sponsor.id}_${sponsor.sponsorId}.png`}
-            alt="logo"
-          />
+          {sponsor.logoLink ? (
+            <Link href={sponsor.logoLink} target="_blank" rel="noopener noreferrer">
+              <Image
+                width={800}
+                height={400}
+                className="mx-auto h-auto max-h-[400px] w-full max-w-[800px] object-contain"
+                src={`/sponsors/${sponsor.id}_${sponsor.sponsorId}.png`}
+                alt={`${sponsor.name}のロゴ`}
+              />
+            </Link>
+          ) : (
+            <Image
+              width={800}
+              height={400}
+              className="mx-auto h-auto max-h-[400px] w-full max-w-[800px] object-contain"
+              src={`/sponsors/${sponsor.id}_${sponsor.sponsorId}.png`}
+              alt={`${sponsor.name}のロゴ`}
+            />
+          )}
         </div>
-
-        <div className="flex flex-col gap-6">
-          {/* ロールタグ */}
-          {/* <div className="flex gap-2">
+        {/* バッチ・名前・詳細 */}
+        {sponsor.roles && sponsor.roles.length > 0 && (
+          <div className="flex flex-wrap gap-2">
             {sponsor.roles.map((role) => (
               <RoleBadge key={role} role={role} />
             ))}
-          </div> */}
+          </div>
+        )}
 
-          <p className="text-xl font-bold md:text-2xl lg:text-[28px]">{sponsor.name}</p>
+        <p className="text-xl font-bold md:text-2xl lg:text-[28px]">{sponsor.name}</p>
 
-          {sponsor.overview?.map((overview) => (
-            <p key={overview} className="whitespace-pre-wrap">
-              {overview}
-            </p>
-          ))}
-        </div>
+        {sponsor.detailDescription?.map((detail) => (
+          <p key={detail} className="whitespace-pre-wrap">
+            {detail}
+          </p>
+        ))}
 
         <ul className="flex list-inside list-disc flex-col gap-y-2">
           {sponsor.links?.map((link) => (
             <li key={link.title}>
-              <ExternalLink title={link.title} href={link.href} />
+              <ExternalLink href={link.href}>{link.title}</ExternalLink>
             </li>
           ))}
         </ul>

@@ -65,8 +65,8 @@ export const SponsorBoardSection = () => {
 
       {/* プラチナスポンサー */}
       <div className="flex flex-col pb-8">
-        <SponsorsBoardTitle titleClassName="before:bg-blue-purple-600 after:bg-blue-purple-600">
-          <h3 className="text-blue-purple-600 text-22 md:text-28 font-noto leading-normal font-bold md:leading-[42px]">
+        <SponsorsBoardTitle titleClassName="before:bg-sponsor-platinum after:bg-sponsor-platinum">
+          <h3 className="text-sponsor-platinum text-22 md:text-28 font-noto leading-normal font-bold md:leading-[42px]">
             Platinum Sponsors
           </h3>
         </SponsorsBoardTitle>
@@ -90,8 +90,8 @@ export const SponsorBoardSection = () => {
 
       {/* ゴールドスポンサー */}
       <div className="flex flex-col pb-8">
-        <SponsorsBoardTitle titleClassName="before:bg-yellow-600 after:bg-yellow-600">
-          <h3 className="text-22 md:text-28 font-noto leading-normal font-bold text-yellow-600 md:leading-[42px]">
+        <SponsorsBoardTitle titleClassName="before:bg-sponsor-gold after:bg-sponsor-gold">
+          <h3 className="text-22 md:text-28 font-noto text-sponsor-gold leading-normal font-bold md:leading-[42px]">
             Gold Sponsors
           </h3>
         </SponsorsBoardTitle>
@@ -114,8 +114,8 @@ export const SponsorBoardSection = () => {
 
       {/* シルバースポンサー */}
       <div className="flex flex-col pb-8">
-        <SponsorsBoardTitle titleClassName="before:bg-blue-light-500 after:bg-blue-light-500">
-          <h3 className="text-blue-light-500 text-22 md:text-28 font-noto leading-normal font-bold md:leading-[42px]">
+        <SponsorsBoardTitle titleClassName="before:bg-sponsor-silver after:bg-sponsor-silver">
+          <h3 className="text-sponsor-silver text-22 md:text-28 font-noto leading-normal font-bold md:leading-[42px]">
             Silver Sponsors
           </h3>
         </SponsorsBoardTitle>
