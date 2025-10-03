@@ -25,7 +25,7 @@ const Company = ({ id, sponsorId, name, overview, links, roles }: Sponsor) => {
           {roles && roles.length > 0 && (
             <div className="flex gap-2">
               {roles.map((role) => (
-                <RoleBadge key={role} role={role as any} />
+                <RoleBadge key={role} role={role} />
               ))}
             </div>
           )}
