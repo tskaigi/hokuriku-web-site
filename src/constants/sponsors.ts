@@ -374,7 +374,7 @@ Nstockのミッションに共感し、共にスタートアップ業界を盛�
     },
     {
       id: "G09",
-      sponsorId: "jig",
+      sponsorId: "jigjp",
       name: "株式会社jig.jp",
       logoLink: "https://jig.jp",
       logoImage: "/sponsors/G09_jig.png",
@@ -507,7 +507,7 @@ ALGO ARTISでは、TypeScriptを活用して社会にインパクトを与えた
         },
         {
           title: "「使いたい開発ツールがきっと見つかる」Findy Tools",
-          href: "https://findy-tools.io/ ?utm_source=lp&utm_medium=referral&utm_campaign=tskaigihokuriku",
+          href: "https://findy-tools.io/?utm_source=lp&utm_medium=referral&utm_campaign=tskaigihokuriku",
         },
         {
           title: "IT/Webエンジニアの転職サービス「Findy」",
