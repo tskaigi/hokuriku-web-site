@@ -1,13 +1,33 @@
 const coreStaffList = [
   {
     name: "tsuyuni",
-    image: "/coreStaff/tsuyuni.jpg",
+    image: "coreStaff/tsuyuni.jpg",
     href: "https://x.com/tsuy_uni",
   },
   {
-    name:"hoshico",
-    image:"staff/hoshico.png",
-    href:"https://x.com/hoshihoshi_yasu",
+    name: "hoshico",
+    image: "coreStaff/hoshico.png",
+    href: "https://x.com/hoshihoshi_yasu",
+  },
+  {
+    name: "OJI",
+    image: "coreStaff/oji.png",
+    href: "https://x.com/OldBigBuddha",
+  },
+  {
+    name: "magcho",
+    image: "coreStaff/magcho.png",
+    href: "https://x.com/magcho0527",
+  },
+  {
+    name: "ねぎ",
+    image: "coreStaff/negi.png",
+    href: "https://github.com/nyagihime",
+  },
+  {
+    name: "yuta-ike",
+    image: "coreStaff/yuta-ike.png",
+    href: "https://x.com/Selria1",
   },
 ];
 
