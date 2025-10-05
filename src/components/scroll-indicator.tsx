@@ -4,8 +4,8 @@ export const ScrollIndicator = () => {
   return (
     <svg
       className="text-white drop-shadow-md"
-      width={64}
-      height={64}
+      width={48}
+      height={48}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
     >

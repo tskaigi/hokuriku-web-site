@@ -77,7 +77,7 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <div
-        className="pointer-events-none absolute right-0 bottom-0 flex w-full flex-col items-end p-8"
+        className="pointer-events-none absolute right-0 bottom-0 flex w-full flex-col items-end p-6"
         aria-hidden="true"
       >
         <ScrollIndicator />
