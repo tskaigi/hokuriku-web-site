@@ -17,7 +17,11 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "TSKaigi Hokuriku",
+  title: {
+    template: "%s | TSKaigi Hokuriku",
+    default: "TSKaigi Hokuriku",
+  },
+  metadataBase: new URL("https://hokuriku.tskaigi.org/"),
   description:
     "日本最大級のTypeScriptをテーマとした技術カンファレンスであるTSKaigiが金沢でも開催されます。",
   authors: [
@@ -26,6 +30,32 @@ export const metadata: Metadata = {
       url: "https://association.tskaigi.org/",
     },
   ],
+  keywords: ["TypeScript", "TSKaigi", "TS会議", "カンファレンス", "イベント", "オンライン"],
+  publisher: "一般社団法人TSKaigi Association",
+  robots: "index, follow",
+  twitter: {
+    title: {
+      template: "%s | TSKaigi Hokuriku",
+      default: "TSKaigi Hokuriku",
+    },
+    description:
+      "日本最大級のTypeScriptをテーマとした技術カンファレンスであるTSKaigiが金沢でも開催されます。",
+    site: "@tskaigi",
+    creator: "@tskaigi",
+    card: "summary_large_image",
+    images: ["https://hokuriku.tskaigi.org/twitter-card.png"],
+  },
+  openGraph: {
+    title: {
+      template: "%s | TSKaigi Hokuriku",
+      default: "TSKaigi Hokuriku",
+    },
+    url: "https://hokuriku.tskaigi.org",
+    description:
+      "日本最大級のTypeScriptをテーマとした技術カンファレンスであるTSKaigiが金沢でも開催されます。",
+    type: "website",
+    images: ["https://hokuriku.tskaigi.org/ogp.png"],
+  },
 };
 
 const RootLayout = ({

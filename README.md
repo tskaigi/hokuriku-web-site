@@ -45,3 +45,5 @@ Pull Request を作成すると、自動的に Firebase Hosting のプレビュ�
 ## Release
 
 `main` ブランチに Pull Request がマージされると、自動的に本番リリース（GitHub Pages へのデプロイ）が行われます。
+
+##

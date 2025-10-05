@@ -9,25 +9,33 @@ const links: {
     href: "/",
     label: "Home",
   },
-  // {
-  //   href: "/talks",
-  //   label: "タイムテーブル",
-  // },
-  // {
-  //   href: "/sponsors",
-  //   label: "スポンサー",
-  // },
-  // {
-  //   href: "/code-of-conduct",
-  //   label: "行動規範",
-  // },
+  {
+    href: "/talks",
+    label: "タイムテーブル",
+  },
+  {
+    href: "/side-events",
+    label: "サイドイベント",
+  },
+  {
+    href: "/sponsors",
+    label: "スポンサー",
+  },
+  {
+    href: "/community",
+    label: "コミュニティ",
+  },
+  {
+    href: "/code-of-conduct",
+    label: "行動規範",
+  },
   {
     href: "/specific-commercial",
     label: "特定商取引法に基づく表記",
   },
 ];
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <footer className="text-sm text-white">
       <div className="mx-auto flex max-w-5xl flex-col gap-x-16 gap-y-10 px-10 py-16 md:flex-row md:p-16 lg:gap-x-24">
@@ -88,3 +96,5 @@ export const Footer = () => {
     </footer>
   );
 };
+
+export default Footer;
