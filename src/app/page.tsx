@@ -1,6 +1,6 @@
 import { CfpRecruitment } from "@/components/cfp-recruitment";
-import EventOverview from "@/components/event-overview";
 import { CoreStaffSection } from "@/components/core-staff-section";
+import EventOverview from "@/components/event-overview";
 import Hero from "@/components/hero";
 import { SponsorBoardSection } from "@/components/spondor-board";
 import { StaffSection } from "@/components/staff-section";
