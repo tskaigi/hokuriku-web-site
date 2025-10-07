@@ -1,6 +1,4 @@
-// src/components/event-overview.tsx
 import { ExternalLink } from "lucide-react";
-import Link from "next/link";
 
 const EventOverviewSection = () => {
   return (
@@ -26,7 +24,7 @@ const EventOverviewSection = () => {
               会場
             </dt>
             <dd className="w-full px-2 py-4 text-center sm:flex-1 sm:text-left md:text-lg">
-              <Link
+              <a
                 href="https://www.hotelkanazawa.co.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -35,7 +33,7 @@ const EventOverviewSection = () => {
               >
                 ホテル金沢
                 <ExternalLink className="ml-2 size-5" aria-hidden />
-              </Link>
+              </a>
             </dd>
           </div>
         </dl>
@@ -49,7 +47,7 @@ const EventOverviewSection = () => {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           title="ホテル金沢の地図（Googleマップ）"
-        ></iframe>
+        />
       </div>
     </section>
   );
