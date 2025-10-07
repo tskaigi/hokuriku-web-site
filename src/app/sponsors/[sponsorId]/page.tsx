@@ -2,9 +2,11 @@ import ExternalLink from "@/components/sponsors/sponsors-external-link";
 import RoleBadge from "@/components/sponsors/sponsors-role-badge";
 import { sponsorList } from "@/constants/sponsors";
 import { getSponsor } from "@/utils/getSponsor";
+import fs from "fs";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import path from "path";
 
 export const generateStaticParams = () => {
   return Object.values(sponsorList)
@@ -23,12 +25,20 @@ export const generateMetadata = async ({
   const { sponsorId } = await params;
   const sponsor = getSponsor(sponsorId);
 
-  const sponsorTitle = `${sponsor.name} は TSKaigi Hokuriku 2025 のスポンサーです。`;
+  const sponsorTitle = sponsor.name;
 
-  const description = sponsor.detailDescription?.[0]
-    ? sponsor.detailDescription[0].slice(0, 100) +
-      (sponsor.detailDescription[0].length > 100 ? "…" : "")
-    : sponsorTitle;
+  // スポンサーランクを取得
+  const rankMap: Record<string, string> = {
+    P: "プラチナ",
+    G: "ゴールド",
+    S: "シルバー",
+  };
+  const sponsorRank = rankMap[sponsor.id.charAt(0)] || "";
+
+  // OGP descriptionをカスタマイズ
+  const description =
+    `${sponsorTitle}は、TSKaigi Hokuriku 2025 の${sponsorRank}スポンサーです。` +
+    (sponsor.overview?.[0] ? sponsor.overview[0].replace(/\s+/g, "").slice(0, 60) + "…" : "");
 
   return {
     title: sponsorTitle,
@@ -37,20 +47,12 @@ export const generateMetadata = async ({
       card: "summary_large_image",
       title: sponsorTitle,
       description,
-      images: [
-        {
-          url: `/ogp/sponsors/${sponsor.sponsorId}.png`,
-        },
-      ],
+      images: [{ url: `/ogp.png` }],
     },
     openGraph: {
       title: sponsorTitle,
       description,
-      images: [
-        {
-          url: `/ogp/sponsors/${sponsor.sponsorId}.png`,
-        },
-      ],
+      images: [{ url: `/ogp.png` }],
     },
   };
 };
@@ -59,6 +61,17 @@ export const generateMetadata = async ({
 const SponsorDetailPage = async ({ params }: { params: Promise<{ sponsorId: string }> }) => {
   const { sponsorId } = await params;
   const sponsor = getSponsor(sponsorId);
+
+  const logoPath = path.join(
+    process.cwd(),
+    "public",
+    "sponsors",
+    `${sponsor.id}_${sponsor.sponsorId}.png`,
+  );
+  const logoExists = fs.existsSync(logoPath);
+  const displaySrc = logoExists
+    ? `/sponsors/${sponsor.id}_${sponsor.sponsorId}.png`
+    : `/sponsors/no-image.png`;
 
   return (
     <main>
@@ -75,7 +88,7 @@ const SponsorDetailPage = async ({ params }: { params: Promise<{ sponsorId: stri
                 width={800}
                 height={400}
                 className="mx-auto h-auto max-h-[400px] w-full max-w-[800px] object-contain"
-                src={`/sponsors/${sponsor.id}_${sponsor.sponsorId}.png`}
+                src={displaySrc}
                 alt={`${sponsor.name}のロゴ`}
               />
             </Link>
@@ -84,7 +97,7 @@ const SponsorDetailPage = async ({ params }: { params: Promise<{ sponsorId: stri
               width={800}
               height={400}
               className="mx-auto h-auto max-h-[400px] w-full max-w-[800px] object-contain"
-              src={`/sponsors/${sponsor.id}_${sponsor.sponsorId}.png`}
+              src={displaySrc}
               alt={`${sponsor.name}のロゴ`}
             />
           )}
@@ -98,7 +111,7 @@ const SponsorDetailPage = async ({ params }: { params: Promise<{ sponsorId: stri
           </div>
         )}
 
-        <p className="text-xl font-bold md:text-2xl lg:text-[28px]">{sponsor.name}</p>
+        <h2 className="text-xl font-bold md:text-2xl lg:text-[28px]">{sponsor.name}</h2>
 
         {sponsor.detailDescription?.map((detail) => (
           <p key={detail} className="whitespace-pre-wrap">

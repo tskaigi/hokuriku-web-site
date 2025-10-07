@@ -12,7 +12,7 @@ const Company = ({ id, sponsorId, name, overview, links, roles }: Sponsor) => {
       <Link href={detailUrl} className="flex-shrink-0 md:w-1/3 lg:w-1/4">
         <Image
           src={`/sponsors/${id}_${sponsorId}.png`}
-          alt={`${name}の詳細ページ`}
+          alt={`${name}の詳細ページへのリンク`}
           width={1280}
           height={640}
           className="aspect-video h-auto w-full object-contain"

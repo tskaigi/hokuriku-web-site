@@ -103,13 +103,13 @@ BE：Node.js(Nest.JS),Python,GraphQL,Fastify
 AI：Gemini、Copilot、Claude、Cursor、Devin
 
 ご興味持っていただいた方は、下記HPや採用情報、Wantedlyにてぜひ当社の様子をご覧ください。
-それではTSkaigi北陸でお会いできます事、楽しみにしております！
+それではTSKaigi北陸でお会いできます事、楽しみにしております！
       `,
       ],
       links: [
         {
           title: "コーポレートサイト",
-          href: "https://kokorozashi-japan.co.jp/",
+          href: "https://www.kokorozashi-japan.co.jp/",
         },
         {
           title: "採用情報",
