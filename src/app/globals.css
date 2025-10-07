@@ -183,3 +183,20 @@ body {
 footer {
   background: linear-gradient(180deg, #17a0fb 0%, #0077c7 100%);
 }
+
+/* ScrollIndicatorで利用するアニメーション */
+@theme {
+  --animate-blink: blink 2s linear infinite;
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+}
