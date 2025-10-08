@@ -62,7 +62,7 @@ const CodeOfConductPage = () => {
             ハラスメントを受けている場合、または他の誰かがハラスメントを受けていることに気づいた場合、あるいはその他の懸念事項がある場合は、直ちにカンファレンススタッフまたは
             <a
               href="mailto:coc@tskaigi.org?subject=お問い合わせ"
-              className="text-link-light underline"
+              className="text-link underline"
               aria-label="メールで連絡"
             >
               coc@tskaigi.org

@@ -17,15 +17,7 @@ import {
 const links: {
   href: string;
   label: string;
-  isOnlyMobile: boolean;
 }[] = [
-  // FIXME: モバイルのメニューが空に見えてバグと誤解されるため、暫定的にモバイルのみHomeリンクを表示
-  // 他リンクを有効する際に isOnlyMobile と Home のリンクを削除してください
-  {
-    href: "/",
-    label: "Home",
-    isOnlyMobile: true,
-  },
   // {
   //   href: "/talks",
   //   label: "タイムテーブル",
@@ -34,10 +26,10 @@ const links: {
   //   href: "/sponsors",
   //   label: "スポンサー",
   // },
-  // {
-  //   href: "/code-of-conduct",
-  //   label: "行動規範",
-  // },
+  {
+    href: "/code-of-conduct",
+    label: "行動規範",
+  },
 ];
 
 export const Header = () => {
@@ -86,14 +78,11 @@ export const Header = () => {
 
       {/* PC 用ナビゲーション */}
       <nav className="hidden space-x-6 md:flex">
-        {links.map(
-          ({ href, label, isOnlyMobile }) =>
-            !isOnlyMobile && (
-              <Link key={href} href={href} className="text-primary text-sm font-bold">
-                {label}
-              </Link>
-            ),
-        )}
+        {links.map(({ href, label }) => (
+          <Link key={href} href={href} className="text-primary text-sm font-bold">
+            {label}
+          </Link>
+        ))}
       </nav>
 
       {/* モバイル用ナビゲーション */}
