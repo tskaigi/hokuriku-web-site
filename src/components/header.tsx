@@ -89,7 +89,7 @@ export const Header = () => {
         {links.map(
           ({ href, label, isOnlyMobile }) =>
             !isOnlyMobile && (
-              <Link key={href} href={href} className="text-blue-purple-500 text-sm font-bold">
+              <Link key={href} href={href} className="text-primary text-sm font-bold">
                 {label}
               </Link>
             ),
@@ -112,7 +112,7 @@ export const Header = () => {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-blue-purple-500 block text-sm font-bold"
+                    className="text-primary block text-sm font-bold"
                     onClick={() => setIsDrawerOpen(false)}
                   >
                     {label}
