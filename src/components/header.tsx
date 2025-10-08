@@ -81,7 +81,7 @@ export const Header = () => {
       {/* PC 用ナビゲーション */}
       <nav className="hidden space-x-6 md:flex">
         {links.map(({ href, label }) => (
-          <Link key={href} href={href} className="text-primary text-sm font-bold">
+          <Link key={href} href={href} className="text-primary-dark text-sm font-bold">
             {label}
           </Link>
         ))}
@@ -103,7 +103,7 @@ export const Header = () => {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-primary block text-sm font-bold"
+                    className="text-primary-dark block text-sm font-bold"
                     onClick={() => setIsDrawerOpen(false)}
                   >
                     {label}
