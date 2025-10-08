@@ -115,7 +115,7 @@ const SponsorDetailPage = async ({ params }: { params: Promise<{ sponsorId: stri
 
         {sponsor.detailDescription?.map((detail) => (
           <p key={detail} className="whitespace-pre-wrap">
-            {detail}
+            {detail.trim()}
           </p>
         ))}
 

@@ -31,8 +31,7 @@ export const sponsorList: SponsorList = {
       logoImage: "/sponsors/P01_toggle.png",
       overview: [
         `トグルホールディングスは、不動産・建築・金融の3業界を統合したデジタル産業インフラの社会実装を目指す企業です。
-IT投資が遅れる日本の不動産業界において、TypeScriptをフル活用し、複雑なドメインを安全・柔軟に実装し、業界変革に挑んでいます。
-      `,
+IT投資が遅れる日本の不動産業界において、TypeScriptをフル活用し、複雑なドメインを安全・柔軟に実装し、業界変革に挑んでいます。`,
       ],
       detailDescription: [
         `私たちは、「すべてのまちと、まちをつくる人たちのために」をミッションに掲げ、古くからの慣習や非効率が残る「不動産」「建築」「金融」の３領域を、データとテクノロジーを核としてひとつの産業インフラへと統合することを目指しています。
@@ -575,20 +574,6 @@ ALGO ARTISでは、TypeScriptを活用して社会にインパクトを与えた
       name: "フリー株式会社",
       logoLink: "https://corp.freee.co.jp",
       logoImage: "/sponsors/S04_freee.png",
-      links: [
-        {
-          title: "フリー株式会社",
-          href: "https://corp.freee.co.jp/",
-        },
-        {
-          title: "freee Developers Hub",
-          href: "https://developers.freee.co.jp/",
-        },
-        {
-          title: "エンジニア採用ページ",
-          href: "https://jobs.freee.co.jp/engineers/",
-        },
-      ],
     },
     {
       id: "S05",

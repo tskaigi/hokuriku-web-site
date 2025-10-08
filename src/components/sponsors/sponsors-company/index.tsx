@@ -34,7 +34,7 @@ const Company = ({ id, sponsorId, name, overview, links, roles }: Sponsor) => {
           {/* 概要 */}
           {overview?.map((text, index) => (
             <p key={index} className="leading-8 whitespace-pre-wrap">
-              {text}
+              {text.trim()}
             </p>
           ))}
           {/* リンク一覧 */}
