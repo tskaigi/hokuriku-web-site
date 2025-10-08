@@ -35,7 +35,7 @@ const coreStaffList = [
 
 const CoreStaffSection = () => {
   return (
-    <section className="px-6 py-18">
+    <section className="px-6 pt-18">
       <div className="mx-auto flex max-w-4xl flex-col gap-12 px-6 md:px-12">
         <SectionHeading>コアスタッフ</SectionHeading>
 
