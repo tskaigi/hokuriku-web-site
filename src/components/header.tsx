@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import {
   Sheet,
@@ -35,6 +36,7 @@ const links: {
 export const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const heroSection = document.getElementById("hero");
@@ -57,12 +59,12 @@ export const Header = () => {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [pathname]);
 
   return (
     <header
       className={cn(
-        "fixed z-50 flex w-full items-center justify-between p-4 duration-300 md:px-6",
+        "fixed z-50 flex w-full items-center justify-between bg-white p-4 opacity-90 shadow-[0px_3px_16px_0px_rgba(0,143,238,0.05)] duration-300 md:px-6",
         isVisible ? "translate-y-0" : "-translate-y-full",
       )}
     >
