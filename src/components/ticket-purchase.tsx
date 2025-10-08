@@ -1,5 +1,6 @@
 import ButtonLink from "@/components/button-link";
 import SectionHeading from "@/components/section-heading";
+import Image from "next/image";
 
 const TicketPurchaseSection = () => {
   return (
@@ -18,6 +19,27 @@ const TicketPurchaseSection = () => {
         <ButtonLink href="https://conference.findy-code.io/conferences/tskaigi_hokuriku/9/registration">
           チケットを購入する
         </ButtonLink>
+
+        <hr className="h-auto self-stretch border-r border-r-slate-200" />
+
+        <div className="flex flex-col items-center gap-6">
+          <h2 className="font-noto text-lg font-bold tracking-[-1.2%] lg:text-xl">
+            現地参加される方へ
+          </h2>
+
+          <p className="mt-2 text-start">
+            TSKaigi Hokuriku 2025
+            参加者限定の宿泊費が50%OFF（最大割引5,000円）になるクーポンはこちら。
+          </p>
+
+          <div className="mx-auto my-6 grid max-w-[300px] place-items-center">
+            <Image src="/travel_sponsor.webp" alt="" width={566} height={210} />
+          </div>
+
+          <ButtonLink href="https://newt.net/spo-tskaigi-hokuriku-2025" variant="secondary">
+            クーポンの詳細を確認する
+          </ButtonLink>
+        </div>
       </div>
     </section>
   );
