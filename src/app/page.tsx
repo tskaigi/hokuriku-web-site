@@ -1,4 +1,3 @@
-import { CfpRecruitment } from "@/components/cfp-recruitment";
 import { CoreStaffSection } from "@/components/core-staff-section";
 import EventOverview from "@/components/event-overview";
 import Hero from "@/components/hero";
@@ -14,11 +13,7 @@ const Home = () => {
       <EventOverview />
       <TicketPurchaseSection />
       <TravelCouponSection />
-      <hr />
-      <CfpRecruitment />
-
       <SponsorBoardSection />
-
       <CoreStaffSection />
       <StaffSection />
     </main>
