@@ -14,13 +14,13 @@ const SectionHeading = ({ children }: { children: ReactNode }) => {
       <h2 className="font-noto text-center text-3xl leading-snug font-bold">{children}</h2>
 
       <div className="flex justify-center gap-3">
-        <span className="h-5 w-4.5 fill-[#d1ed2b]">
+        <span className="h-[15px] w-[13.5px] fill-[#17a0fb]">
           <PetiteDaruma />
         </span>
-        <span className="h-5 w-4.5 fill-[#17a0fb]">
+        <span className="h-[15px] w-[13.5px] fill-[#d1ed2b]">
           <PetiteDaruma />
         </span>
-        <span className="h-5 w-4.5 fill-[#f54d93]">
+        <span className="h-[15px] w-[13.5px] fill-[#f54d93]">
           <PetiteDaruma />
         </span>
       </div>

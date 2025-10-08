@@ -1,10 +1,10 @@
+import SectionHeading from "@/components/section-heading";
 import { ExternalLink } from "lucide-react";
-import SectionHeading from "./section-heading";
 
 const EventOverviewSection = () => {
   return (
     <section id="overview" className="px-6 py-18">
-      <div className="mx-auto flex max-w-3xl flex-col gap-12">
+      <div className="mx-auto flex max-w-4xl flex-col gap-12 px-6 md:p-12">
         <SectionHeading>
           <span className="inline-block">TSKaigi Hokuriku</span>{" "}
           <span className="inline-block">開催概要</span>
