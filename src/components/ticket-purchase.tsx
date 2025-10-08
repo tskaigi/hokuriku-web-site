@@ -27,7 +27,7 @@ const TicketPurchaseSection = () => {
         <div className="flex w-full flex-col items-center gap-6">
           <h2 className="font-noto text-lg font-bold lg:text-xl">現地参加される方へ</h2>
 
-          <p>
+          <p className="font-medium">
             TSKaigi Hokuriku 2025
             参加者限定の宿泊費が50%OFF（最大割引5,000円）になるクーポンはこちら。
           </p>

@@ -6,7 +6,7 @@ const EventOverviewSection = () => {
     <section id="overview" className="px-6 py-18">
       <div className="mx-auto flex max-w-4xl flex-col gap-12 px-6 md:p-12">
         <SectionHeading>
-          <span className="inline-block">TSKaigi Hokuriku</span>{" "}
+          <span className="inline-block">TSKaigi Hokuriku 2025</span>{" "}
           <span className="inline-block">開催概要</span>
         </SectionHeading>
 

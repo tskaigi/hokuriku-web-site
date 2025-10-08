@@ -47,7 +47,7 @@ const SponsorBoardSection = () => {
     <section className="bg-blue-light-100 px-6 py-18">
       <div className="mx-auto flex max-w-4xl flex-col items-center gap-12 px-6 md:px-12">
         <SectionHeading>
-          <span className="inline-block">TSKaigi Hokuriku</span>{" "}
+          <span className="inline-block">TSKaigi Hokuriku 2025</span>{" "}
           <span className="inline-block">スポンサー各社</span>
         </SectionHeading>
 

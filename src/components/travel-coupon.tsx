@@ -9,7 +9,7 @@ const TravelCouponSection = () => {
 
         <div className="font-medium md:text-lg">
           <p>
-            株式会社令和トラベル様から、{"TSKaigi Hokuriku 2025"}
+            株式会社令和トラベル様から、TSKaigi Hokuriku 2025
             参加者限定の、金沢の宿・ホテルで利用できる、宿泊費が50%OFF（最大割引5,000円）になるクーポンを、ご提供いただきました。
           </p>
           <br />

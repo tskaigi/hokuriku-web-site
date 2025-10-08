@@ -11,7 +11,9 @@ const PetiteDaruma = () => {
 const SectionHeading = ({ children }: { children: ReactNode }) => {
   return (
     <div className="flex flex-col gap-3">
-      <h2 className="font-noto text-center text-3xl leading-snug font-bold">{children}</h2>
+      <h2 className="font-noto text-center text-2xl leading-snug font-bold md:text-3xl">
+        {children}
+      </h2>
 
       <div className="flex justify-center gap-3">
         <span className="h-[15px] w-[13.5px] fill-[#17a0fb]">
