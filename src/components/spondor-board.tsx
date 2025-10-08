@@ -2,6 +2,7 @@ import { sponsorList } from "@/constants/sponsors";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import SectionHeading from "./section-heading";
 
 const SponsorsBoardTitle = ({
   children,
@@ -57,11 +58,11 @@ const SponsorsBoardItem = ({
 
 export const SponsorBoardSection = () => {
   return (
-    <section className="bg-blue-light-100 md:px-10">
-      <h2 className="text-24 font-noto flex flex-col pt-10 pb-8 text-center leading-normal font-bold md:flex-row md:justify-center md:gap-2 md:text-[32px] md:leading-[42px] lg:pt-16 lg:pb-10">
-        <span>TSKaigi Hokuriku</span>
-        <span>スポンサー各社</span>
-      </h2>
+    <section className="bg-blue-light-100 px-3 md:px-10">
+      <SectionHeading>
+        <span className="inline-block">TSKaigi Hokuriku</span>{" "}
+        <span className="inline-block">スポンサー各社</span>
+      </SectionHeading>
 
       {/* プラチナスポンサー */}
       <div className="flex flex-col pb-8">

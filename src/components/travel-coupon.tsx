@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SectionHeading from "./section-heading";
 
 export const TravelCouponSection = () => {
   return (
@@ -6,12 +7,7 @@ export const TravelCouponSection = () => {
       aria-labelledby="travel-coupon-heading"
       className="mx-auto w-full max-w-screen-md px-6 pt-10 pb-24 text-center lg:pt-14"
     >
-      <h2
-        id="travel-coupon"
-        className="font-noto text-center text-[32px] leading-[48px] font-bold tracking-[-1.2%] lg:text-4xl"
-      >
-        宿泊クーポン
-      </h2>
+      <SectionHeading>宿泊クーポン</SectionHeading>
 
       <div className="mx-auto mt-10 max-w-[680px] space-y-10 text-left">
         <div>

@@ -12,7 +12,6 @@ const Home = () => {
     <main className="overflow-x-hidden">
       <Hero />
       <EventOverview />
-      <hr />
       <TicketPurchaseSection />
       <TravelCouponSection />
       <hr />
