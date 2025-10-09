@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import {
   Sheet,
@@ -17,15 +18,7 @@ import {
 const links: {
   href: string;
   label: string;
-  isOnlyMobile: boolean;
 }[] = [
-  // FIXME: モバイルのメニューが空に見えてバグと誤解されるため、暫定的にモバイルのみHomeリンクを表示
-  // 他リンクを有効する際に isOnlyMobile と Home のリンクを削除してください
-  {
-    href: "/",
-    label: "Home",
-    isOnlyMobile: true,
-  },
   // {
   //   href: "/talks",
   //   label: "タイムテーブル",
@@ -34,15 +27,16 @@ const links: {
   //   href: "/sponsors",
   //   label: "スポンサー",
   // },
-  // {
-  //   href: "/code-of-conduct",
-  //   label: "行動規範",
-  // },
+  {
+    href: "/code-of-conduct",
+    label: "行動規範",
+  },
 ];
 
 export const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const heroSection = document.getElementById("hero");
@@ -65,12 +59,12 @@ export const Header = () => {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [pathname]);
 
   return (
     <header
       className={cn(
-        "fixed z-50 flex w-full items-center justify-between p-4 duration-300 md:px-6",
+        "fixed z-50 flex w-full items-center justify-between bg-white p-4 opacity-90 shadow-[0px_3px_16px_0px_rgba(0,143,238,0.05)] duration-300 md:px-6",
         isVisible ? "translate-y-0" : "-translate-y-full",
       )}
     >
@@ -86,14 +80,11 @@ export const Header = () => {
 
       {/* PC 用ナビゲーション */}
       <nav className="hidden space-x-6 md:flex">
-        {links.map(
-          ({ href, label, isOnlyMobile }) =>
-            !isOnlyMobile && (
-              <Link key={href} href={href} className="text-primary text-sm font-bold">
-                {label}
-              </Link>
-            ),
-        )}
+        {links.map(({ href, label }) => (
+          <Link key={href} href={href} className="text-primary-dark text-sm font-bold">
+            {label}
+          </Link>
+        ))}
       </nav>
 
       {/* モバイル用ナビゲーション */}
@@ -112,7 +103,7 @@ export const Header = () => {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-primary block text-sm font-bold"
+                    className="text-primary-dark block text-sm font-bold"
                     onClick={() => setIsDrawerOpen(false)}
                   >
                     {label}
