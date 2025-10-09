@@ -1,17 +1,17 @@
-import { SponsorClass } from "@/constants/sponsors";
-import { convertToUpperCamelCase } from "./utils";
+import clsx from "clsx";
 
-const bgColor: { [key in SponsorClass]: string } = {
-  platinum: "bg-sponsor-platinum",
-  gold: "bg-sponsor-gold",
-  silver: "bg-sponsor-silver",
-};
+interface RoleBadgeProps {
+  role: string;
+}
 
-const RoleBadge = ({ role }: { role: SponsorClass }) => {
+const RoleBadge = ({ role }: RoleBadgeProps) => {
+  const colorClass =
+    {
+      "Naming Rights": "bg-yellow-400 text-black",
+    }[role] ?? "bg-gray-300 text-black";
+
   return (
-    <span className={`rounded-s rounded-e px-3 py-1 text-sm font-bold text-white ${bgColor[role]}`}>
-      {convertToUpperCamelCase(role)}
-    </span>
+    <span className={clsx("rounded-full px-3 py-1 text-sm font-semibold", colorClass)}>{role}</span>
   );
 };
 
