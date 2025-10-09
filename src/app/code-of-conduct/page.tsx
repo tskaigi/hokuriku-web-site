@@ -15,7 +15,7 @@ const CodeOfConductPage = () => {
   return (
     <main className="bg-blue-light-100 font-noto py-10 pt-16 md:px-8">
       <h1 className="text-blue-light-500 py-10 text-center text-2xl font-bold md:py-16 md:text-3xl lg:text-4xl">
-        TSKaigi行動規範
+        TSKaigi 行動規範
       </h1>
       <div className="mx-auto flex max-w-screen-xl flex-col gap-6 bg-white p-6 text-lg md:rounded-xl lg:p-10">
         <section>
