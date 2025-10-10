@@ -16,7 +16,7 @@ export const generateStaticParams = () => {
     }));
 };
 
-// OGPメタ情報
+// スポンサー詳細ごとのOGPメタ情報生成
 export const generateMetadata = async ({
   params,
 }: {
@@ -24,6 +24,8 @@ export const generateMetadata = async ({
 }): Promise<Metadata> => {
   const { sponsorId } = await params;
   const sponsor = getSponsor(sponsorId);
+
+  if (!sponsor) return { title: "スポンサー", description: "" };
 
   const sponsorTitle = sponsor.name;
 
@@ -35,24 +37,30 @@ export const generateMetadata = async ({
   };
   const sponsorRank = rankMap[sponsor.id.charAt(0)] || "";
 
-  // OGP descriptionをカスタマイズ
+  // OGP descriptionを作成
   const description =
     `${sponsorTitle}は、TSKaigi Hokuriku 2025 の${sponsorRank}スポンサーです。` +
     (sponsor.overview?.[0] ? sponsor.overview[0].replace(/\s+/g, "").slice(0, 60) + "…" : "");
 
+  // OGP画像の絶対URL
+  const ogpFileName = `${sponsor.id}_${sponsor.sponsorId}_ogp.png`;
+  const ogpUrl = `https://hokuriku.tskaigi.org/sponsors/ogp/${ogpFileName}`;
+
   return {
-    title: sponsorTitle,
+    title: `${sponsorTitle}`,
     description,
+    openGraph: {
+      title: `${sponsorTitle} `,
+      description,
+      images: [{ url: ogpUrl, width: 1200, height: 630 }],
+      type: "website",
+      locale: "ja_JP",
+    },
     twitter: {
       card: "summary_large_image",
-      title: sponsorTitle,
+      title: `${sponsorTitle}`,
       description,
-      images: [{ url: `/ogp.png` }],
-    },
-    openGraph: {
-      title: sponsorTitle,
-      description,
-      images: [{ url: `/ogp.png` }],
+      images: [ogpUrl],
     },
   };
 };

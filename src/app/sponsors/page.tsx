@@ -4,6 +4,8 @@ import { sponsorList } from "@/constants/sponsors";
 import type { Metadata } from "next";
 import Image from "next/image";
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://hokuriku.tskaigi.org";
+
 export async function generateMetadata(): Promise<Metadata> {
   return {
     description: "TSKaigi Hokuriku 2025 のスポンサー一覧ページです。",
@@ -12,7 +14,13 @@ export async function generateMetadata(): Promise<Metadata> {
       description: "TSKaigi Hokuriku 2025 のスポンサー一覧ページです。",
       url: "https://hokuriku.tskaigi.org/sponsors",
       siteName: "TSKaigi Hokuriku 2025",
-      images: [{ url: "https://hokuriku.tskaigi.org/ogp.png", width: 1200, height: 630 }],
+      images: [
+        {
+          url: `${baseUrl}/ogp.png`,
+          width: 1200,
+          height: 630,
+        },
+      ],
       locale: "ja_JP",
       type: "website",
     },
@@ -20,7 +28,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: "TSKaigi Hokuriku 2025 スポンサー一覧",
       description: "TSKaigi Hokuriku 2025 のスポンサー一覧ページです。",
-      images: ["https://hokuriku.tskaigi.org/ogp.png"],
+      images: [`${baseUrl}/ogp.png`],
     },
   };
 }
