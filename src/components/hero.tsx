@@ -1,7 +1,7 @@
 "use client";
 
+import { ScrollIndicator } from "@/components/scroll-indicator";
 import Image from "next/image";
-import { ScrollIndicator } from "./scroll-indicator";
 
 const Hero = () => {
   return (
