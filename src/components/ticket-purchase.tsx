@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const TicketPurchaseSection = () => {
   return (
-    <section className="bg-blue-light-100 px-6 py-18">
+    <section id="ticket" className="bg-blue-light-100 px-6 py-18">
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-12 rounded-xl bg-white p-6 md:p-12 lg:flex-row">
         <div className="flex flex-col items-center gap-12">
           <SectionHeading>チケット購入</SectionHeading>
