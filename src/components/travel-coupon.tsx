@@ -16,7 +16,7 @@ const TravelCouponSection = () => {
           <p>クーポンの利用方法は、チケット購入後のご案内をご確認ください。</p>
         </div>
 
-        <ButtonLink href="https://newt.net/spo-tskaiga-hokuriku-2025">
+        <ButtonLink href="https://newt.net/spo-tskaigi-hokuriku-2025">
           クーポンの詳細を確認する
         </ButtonLink>
       </div>
