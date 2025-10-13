@@ -54,34 +54,24 @@ const SponsorsPage = () => {
                 </ul>
               ) : (
                 <ul className="grid grid-cols-2 gap-4 md:grid-cols-5">
-                  {companies.map((company) => (
-                    <li key={company.name}>
-                      {company.logoImage && company.logoLink ? (
-                        <a
-                          href={company.logoLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={`${company.name} のWebサイトへ`}
-                        >
-                          <Image
-                            src={company.logoImage}
-                            alt={`${company.name}のロゴ`}
-                            width={192}
-                            height={96}
-                            className="object-contain p-2"
-                          />
-                        </a>
-                      ) : (
+                  {companies.map((company) => {
+                    return (
+                      <a
+                        href={company.logoLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        key={company.id}
+                      >
                         <Image
-                          src={company.logoImage ?? "/images/no-logo.png"}
+                          src={`/sponsors/${company.id}_${company.sponsorId}.png`}
                           alt={`${company.name}のロゴ`}
                           width={192}
                           height={96}
                           className="object-contain p-2"
                         />
-                      )}
-                    </li>
-                  ))}
+                      </a>
+                    );
+                  })}
                 </ul>
               )}
             </div>

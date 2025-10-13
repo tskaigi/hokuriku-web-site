@@ -5,14 +5,13 @@ import ExternalLink from "../sponsors-external-link";
 import RoleBadge from "../sponsors-role-badge";
 
 const Company = ({ id, sponsorId, name, overview, links, roles }: Sponsor) => {
-  const detailUrl = `/sponsors/${sponsorId}`;
   return (
     <div className="flex flex-col gap-y-3 md:flex-row md:items-start md:gap-x-8 lg:gap-x-10">
       {/* 画像リンク */}
-      <Link href={detailUrl} className="flex-shrink-0 md:w-1/3 lg:w-1/4">
+      <Link href={`/sponsors/${sponsorId}`} className="flex-shrink-0 md:w-1/3 lg:w-1/4">
         <Image
           src={`/sponsors/${id}_${sponsorId}.png`}
-          alt={`${name}の詳細ページへのリンク`}
+          alt={`${name}の詳細ページへ`}
           width={1280}
           height={640}
           className="aspect-video h-auto w-full object-contain"
@@ -30,13 +29,9 @@ const Company = ({ id, sponsorId, name, overview, links, roles }: Sponsor) => {
             </div>
           )}
           {/* 社名 */}
-          <p className="text-xl font-bold md:text-2xl lg:text-3xl">{name}</p>
+          <h2 className="text-xl font-bold md:text-2xl lg:text-3xl">{name}</h2>
           {/* 概要 */}
-          {overview?.map((text, index) => (
-            <p key={index} className="leading-8 whitespace-pre-wrap">
-              {text.trim()}
-            </p>
-          ))}
+          <p className="leading-8 whitespace-pre-wrap">{overview}</p>
           {/* リンク一覧 */}
           {links && (
             <ul className="flex flex-col gap-y-2">
