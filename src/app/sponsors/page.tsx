@@ -9,9 +9,10 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://hokuriku.tskaigi.or
 export async function generateMetadata(): Promise<Metadata> {
   return {
     description: "TSKaigi Hokuriku 2025 のスポンサー一覧ページです。",
+    title: "スポンサー",
     openGraph: {
-      title: "TSKaigi Hokuriku 2025 スポンサー一覧",
-      description: "TSKaigi Hokuriku 2025 のスポンサー一覧ページです。",
+      title: "TSKaigi Hokuriku 2025 スポンサー",
+      description: "TSKaigi Hokuriku 2025 のスポンサーページです。",
       url: "https://hokuriku.tskaigi.org/sponsors",
       siteName: "TSKaigi Hokuriku 2025",
       images: [
@@ -26,8 +27,8 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: "TSKaigi Hokuriku 2025 スポンサー一覧",
-      description: "TSKaigi Hokuriku 2025 のスポンサー一覧ページです。",
+      title: "TSKaigi Hokuriku 2025 スポンサー",
+      description: "TSKaigi Hokuriku 2025 のスポンサーページです。",
       images: [`${baseUrl}/ogp.png`],
     },
   };

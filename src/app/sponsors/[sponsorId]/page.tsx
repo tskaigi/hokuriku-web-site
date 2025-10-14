@@ -110,15 +110,17 @@ const SponsorDetailPage = async ({ params }: { params: Promise<{ sponsorId: stri
           })}
         </div>
 
-        <ul className="flex list-inside list-disc flex-col gap-y-2">
-          {sponsor.links?.map((link) => {
-            return (
-              <li key={link.title}>
-                <ExternalLink href={link.href}>{link.title}</ExternalLink>
-              </li>
-            );
-          })}
-        </ul>
+        {sponsor.links && sponsor.links.length > 0 && (
+          <ul className="flex list-inside list-disc flex-col gap-y-2">
+            {sponsor.links.map((link) => {
+              return (
+                <li key={link.title}>
+                  <ExternalLink href={link.href}>{link.title}</ExternalLink>
+                </li>
+              );
+            })}
+          </ul>
+        )}
       </div>
     </main>
   );

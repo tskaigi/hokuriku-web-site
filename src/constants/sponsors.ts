@@ -17,13 +17,23 @@ export type Sponsor = {
 } & (
   | {
       id: `${"P" | "G"}${number}`;
+      sponsorId: string;
+      name: string;
+      logoLink: string;
       overview: string;
       detailDescription: string[];
+      roles?: string[];
+      links?: ExternalLinkProps[];
     }
   | {
       id: `S${number}`;
+      sponsorId: string;
+      name: string;
+      logoLink: string;
       overview?: never;
       detailDescription?: never;
+      roles?: never;
+      links?: never;
     }
 );
 
