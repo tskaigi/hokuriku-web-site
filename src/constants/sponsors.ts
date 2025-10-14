@@ -474,6 +474,7 @@ ALGO ARTISでは、TypeScriptを活用して社会にインパクトを与えた
           href: "https://www.reiwatravel.co.jp/engineers",
         },
       ],
+      roles: ["Travel"],
     },
   ],
   silver: [
