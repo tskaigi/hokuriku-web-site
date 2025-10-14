@@ -23,10 +23,10 @@ const links: {
   //   href: "/talks",
   //   label: "タイムテーブル",
   // },
-  {
-    href: "/sponsors",
-    label: "スポンサー",
-  },
+  // {
+  //   href: "/sponsors",
+  //   label: "スポンサー",
+  // },
   {
     href: "/code-of-conduct",
     label: "行動規範",
