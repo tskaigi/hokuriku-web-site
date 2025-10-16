@@ -1,0 +1,7 @@
+# Require reviews from the sponsor team to ensure sponsors' confirmation in advance.
+src/app/sponsors @tskaigi/hokuriku-2025-sponsor
+src/components/sponsors @tskaigi/hokuriku-2025-sponsor
+src/components/sponsor-board-heading.tsx @tskaigi/hokuriku-2025-sponsor
+src/components/sponsor-board.tsx @tskaigi/hokuriku-2025-sponsor
+src/components/sponsor-recruitment.tsx @tskaigi/hokuriku-2025-sponsor
+src/constants/sponsors.ts @tskaigi/hokuriku-2025-sponsor
