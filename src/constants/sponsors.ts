@@ -14,8 +14,6 @@ export type Sponsor = {
   detailDescription?: string[];
   roles?: string[];
   links?: ExternalLinkProps[];
-  // FIXME: 一時的に非表示にするためのフラグ。スポンサーチェック後に削除
-  isHiddenSponsorPage?: boolean;
 } & (
   | {
       id: `${"P" | "G"}${number}`;
@@ -86,7 +84,6 @@ TypeScriptはもちろん、インフラ・AI・LLM・GIS等の先端技術を�
         },
       ],
       roles: ["Naming Rights"],
-      isHiddenSponsorPage: true,
     },
   ],
   gold: [
@@ -128,7 +125,6 @@ AI：Gemini、Copilot、Claude、Cursor、Devin`,
           href: "https://www.wantedly.com/companies/company_299137",
         },
       ],
-      isHiddenSponsorPage: true,
     },
     {
       id: "G02",
@@ -157,7 +153,6 @@ AI：Gemini、Copilot、Claude、Cursor、Devin`,
           href: "https://x.com/layerx_tech",
         },
       ],
-      isHiddenSponsorPage: true,
     },
     {
       id: "G03",
@@ -251,7 +246,6 @@ Agile Studio では、従来の受託開発の型にはまらない共創型の�
           href: "https://note.team-lab.com/",
         },
       ],
-      isHiddenSponsorPage: true,
     },
     {
       id: "G06",
@@ -335,7 +329,6 @@ Agile Studio では、従来の受託開発の型にはまらない共創型の�
           href: "https://zenn.dev/p/nstock",
         },
       ],
-      isHiddenSponsorPage: true,
     },
     {
       id: "G09",
@@ -422,7 +415,6 @@ ALGO ARTISでは、TypeScriptを活用して社会にインパクトを与えた
           href: "https://zenn.dev/p/algoartis",
         },
       ],
-      isHiddenSponsorPage: true,
     },
     {
       id: "G12",
@@ -491,7 +483,6 @@ ALGO ARTISでは、TypeScriptを活用して社会にインパクトを与えた
       sponsorId: "luup",
       name: "株式会社Luup",
       logoLink: "https://luup.sc",
-      isHiddenSponsorPage: true,
     },
     {
       id: "S02",
@@ -522,7 +513,6 @@ ALGO ARTISでは、TypeScriptを活用して社会にインパクトを与えた
       sponsorId: "forcia",
       name: "フォルシア株式会社",
       logoLink: "https://www.forcia.com/",
-      isHiddenSponsorPage: true,
     },
     {
       id: "S07",
