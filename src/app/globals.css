@@ -30,12 +30,14 @@
   --blue-light-100: #f1f8ff;
   --blue-600: #0c7edc;
   --link-light: #253edf;
+  --black-border-200: #f2f2fb;
   /* platinumcolor */
   --blue-800: #0e24b8;
   /* goldcolor */
   --yellow-600: #c0ba02;
   /* silvercolor */
   --gray-400: #c9caca;
+  --gray-500: #8a8a8a;
   --blue-light-500: #0c7edc;
 }
 
@@ -46,7 +48,8 @@
   --color-sponsor-link: var(--link-light);
   --color-sponsor-platinum: var(--blue-800);
   --color-sponsor-gold: var(--yellow-600);
-  --color-sponsor-silver: var(--blue-light-500);
+  --color-sponsor-silver: var(--gray-500);
+  --color-sponsor-black-200: var(--black-border-200);
 }
 
 @theme {
@@ -56,7 +59,6 @@
   --font-noto: var(--font-noto);
   --color-primary: var(--primary);
   --color-primary-dark: var(--primary-dark);
-
   /* リンクで使用する */
   --color-link: var(--link-light);
 

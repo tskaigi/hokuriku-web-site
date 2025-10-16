@@ -1,15 +1,20 @@
-import { ExternalLinkProps } from "@/constants/sponsors";
 import { ArrowUpRightFromSquare } from "lucide-react";
 import Link from "next/link";
 
-const ExternalLink = ({ title, href }: ExternalLinkProps) => {
+type ExternalLinkProps = {
+  href: string;
+  children: React.ReactNode;
+};
+
+const ExternalLink = ({ href, children }: ExternalLinkProps) => {
   return (
     <Link
       href={href}
       target="_blank"
-      className="text-sponsor-link decoration-link-light underline decoration-1 underline-offset-2"
+      rel="noopener noreferrer"
+      className="text-blue-600 hover:underline"
     >
-      {title}
+      {children}
       <ArrowUpRightFromSquare size={16} className="relative left-2 inline" />
     </Link>
   );
