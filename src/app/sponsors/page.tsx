@@ -3,6 +3,7 @@ import SponsorHeading from "@/components/sponsors/sponsors-heading";
 import { sponsorList } from "@/constants/sponsors";
 import type { Metadata } from "next";
 import Image from "next/image";
+import { Fragment } from "react";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://hokuriku.tskaigi.org";
 
@@ -35,13 +36,24 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const SponsorsPage = () => {
+  const visibleSponsorList = Object.fromEntries(
+    Object.entries(sponsorList).map(([key, companies]) => [
+      key,
+      companies.filter((company) => !company.isHiddenSponsorPage),
+    ]),
+  ) as typeof sponsorList;
+
   return (
     <div className="pt-16 pb-10 md:px-8">
       <h1 className="text-sponsor-title py-10 text-center text-2xl font-bold md:py-16 md:text-3xl lg:text-4xl">
         スポンサー
       </h1>
       <div className="mx-auto flex max-w-screen-xl flex-col gap-10 rounded-none bg-white p-6 md:rounded-xl lg:p-10">
-        {Object.entries(sponsorList).map(([key, companies]) => {
+        {Object.entries(visibleSponsorList).map(([key, companies]) => {
+          if (!companies.length) {
+            return <Fragment key={key}></Fragment>;
+          }
+
           return (
             <div key={key} className="flex flex-col gap-12">
               <SponsorHeading variant={key} />
