@@ -529,17 +529,23 @@ ALGO ARTISでは、TypeScriptを活用して社会にインパクトを与えた
       name: "フィシルコム",
       logoLink: "https://www.ficilcom.jp",
     },
-    // {
-    //   id: "S08",
-    //   sponsorId: "",
-    //   name: "",
-    //   logoLink: "",
-    // },
+    {
+      id: "S08",
+      sponsorId: "fp-matsuri",
+      name: "関数型まつり",
+      logoLink: "https://fp-matsuri.org/",
+    },
     {
       id: "S09",
       sponsorId: "miidas",
       name: "ミイダス株式会社",
       logoLink: "https://careers.miidas.co.jp/tech/",
+    },
+    {
+      id: "S10",
+      sponsorId: "knowledgework",
+      name: "株式会社ナレッジワーク",
+      logoLink: "https://knowledgework.com/",
     },
   ],
 };
