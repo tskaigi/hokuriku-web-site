@@ -1,8 +1,8 @@
+import "@/app/globals.css";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Outfit } from "next/font/google";
-import "./globals.css";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -18,15 +18,15 @@ const notoSansJP = Noto_Sans_JP({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | TSKaigi Hokuriku",
-    default: "TSKaigi Hokuriku",
+    template: "%s | TSKaigi Hokuriku 2025",
+    default: "TSKaigi Hokuriku 2025",
   },
   metadataBase: new URL("https://hokuriku.tskaigi.org/"),
   description:
     "日本最大級のTypeScriptをテーマとした技術カンファレンスであるTSKaigiが金沢でも開催されます。",
   authors: [
     {
-      name: "一般社団法人TSKaigi Association",
+      name: "一般社団法人 TSKaigi Association",
       url: "https://association.tskaigi.org/",
     },
   ],
@@ -35,6 +35,7 @@ export const metadata: Metadata = {
     "TSKaigi",
     "TS会議",
     "TSKaigi Hokuriku",
+    "TSKaigi Hokuriku 2025",
     "Hokuriku",
     "北陸",
     "Kanazawa",
@@ -47,8 +48,8 @@ export const metadata: Metadata = {
   robots: "index, follow",
   twitter: {
     title: {
-      template: "%s | TSKaigi Hokuriku",
-      default: "TSKaigi Hokuriku",
+      template: "%s | TSKaigi Hokuriku 2025",
+      default: "TSKaigi Hokuriku 2025",
     },
     description:
       "日本最大級のTypeScriptをテーマとした技術カンファレンスであるTSKaigiが金沢でも開催されます。",
@@ -59,12 +60,12 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: {
-      template: "%s | TSKaigi Hokuriku",
-      default: "TSKaigi Hokuriku",
+      template: "%s | TSKaigi Hokuriku 2025",
+      default: "TSKaigi Hokuriku 2025",
     },
     url: "https://hokuriku.tskaigi.org",
     description:
-      "日本最大級のTypeScriptをテーマとした技術カンファレンスであるTSKaigiが金沢でも開催されます。",
+      "日本最大級のTypeScriptをテーマとした技術カンファレンスである TSKaigi が金沢でも開催されます。",
     type: "website",
     images: ["https://hokuriku.tskaigi.org/ogp.png"],
   },
