@@ -156,7 +156,6 @@ AI：Gemini、Copilot、Claude、Cursor、Devin`,
           href: "https://x.com/layerx_tech",
         },
       ],
-      isHiddenSponsorPage: true,
     },
     {
       id: "G03",
@@ -334,7 +333,6 @@ Agile Studio では、従来の受託開発の型にはまらない共創型の�
           href: "https://zenn.dev/p/nstock",
         },
       ],
-      isHiddenSponsorPage: true,
     },
     {
       id: "G09",
@@ -521,7 +519,6 @@ ALGO ARTISでは、TypeScriptを活用して社会にインパクトを与えた
       sponsorId: "forcia",
       name: "フォルシア株式会社",
       logoLink: "https://www.forcia.com/",
-      isHiddenSponsorPage: true,
     },
     {
       id: "S07",
