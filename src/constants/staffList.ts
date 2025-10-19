@@ -7,7 +7,7 @@ export type Staff = {
 export const staffList: Staff[] = [
   {
     name: "takumi",
-    image: "/staff/takumi.jpg",
+    image: "staff/takumi.jpg",
     href: "https://x.com/1ye_q",
   },
   {
@@ -49,5 +49,30 @@ export const staffList: Staff[] = [
     name: "ykoba",
     image: "staff/ykoba.png",
     href: "https://x.com/ykoba0523",
+  },
+  {
+    name: "ゆーせい",
+    image: "staff/yusei.jpg",
+    href: "https://x.com/yusei9027",
+  },
+  {
+    name: "わたわた",
+    image: "staff/watawata.jpg",
+    href: "https://x.com/hishiwata7",
+  },
+  {
+    name: "ken7253",
+    image: "staff/ken7253.png",
+    href: "https://x.com/ken7253_",
+  },
+  {
+    name: "wabi",
+    image: "staff/wabi.jpg",
+    href: "https://x.com/wabi_1318",
+  },
+  {
+    name: "Haruto Takeuchi",
+    image: "staff/haru.png",
+    href: "https://x.com/_harucn",
   },
 ];

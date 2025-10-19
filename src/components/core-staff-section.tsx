@@ -1,6 +1,12 @@
 import SectionHeading from "@/components/section-heading";
+import { Staff } from "@/constants/staffList";
 
-const coreStaffList = [
+const coreStaffList: Staff[] = [
+  {
+    name: "midori",
+    image: "coreStaff/midori.png",
+    href: "https://x.com/midori697810050",
+  },
   {
     name: "tsuyuni",
     image: "coreStaff/tsuyuni.jpg",
