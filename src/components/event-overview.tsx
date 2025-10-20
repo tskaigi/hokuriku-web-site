@@ -14,10 +14,10 @@ const EventOverviewSection = () => {
           {/* 開催日 */}
           <div className="flex w-full flex-col border-b border-gray-300 sm:flex-row">
             <dt className="flex items-center justify-center border-r border-gray-300 bg-gray-100 px-2 py-4 font-semibold sm:w-40 md:text-lg">
-              開催日
+              開催日時
             </dt>
             <dd className="w-full px-3 py-4 text-center sm:flex-1 sm:text-left md:text-lg">
-              2025年11月23日（日）
+              2025年11月23日（日）10:00〜18:00（懇親会: 18:00〜20:00）
             </dd>
           </div>
           {/* 会場 */}
