@@ -487,7 +487,6 @@ ALGO ARTISでは、TypeScriptを活用して社会にインパクトを与えた
       sponsorId: "luup",
       name: "株式会社Luup",
       logoLink: "https://luup.sc",
-      isHiddenSponsorPage: true,
     },
     {
       id: "S02",
