@@ -236,12 +236,11 @@ Agile Studio では、従来の受託開発の型にはまらない共創型の�
       ],
       links: [
         {
-          title:
-            "チームラボはWebバックエンド/フロントエンドやスマホアプリから、リアルタイムCG、機械学習、ハードウェアまで幅広いエンジニアを採用中です！",
+          title: "幅広くエンジニア採用中！",
           href: "https://www.team-lab.com/engineering/",
         },
         {
-          title: "Web/アプリの開発事例一覧",
+          title: "開発事例一覧",
           href: "https://www.team-lab.com/works/?category=all",
         },
         {
@@ -249,7 +248,6 @@ Agile Studio では、従来の受託開発の型にはまらない共創型の�
           href: "https://note.team-lab.com/",
         },
       ],
-      isHiddenSponsorPage: true,
     },
     {
       id: "G06",
