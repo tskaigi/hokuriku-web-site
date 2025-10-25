@@ -2,12 +2,34 @@ import ButtonLink from "@/components/button-link";
 import SectionHeading from "@/components/section-heading";
 import Image from "next/image";
 
+const ticketTypes: Array<{ label: string; price: number }> = [
+  { label: "一般（懇親会なし）", price: 4000 },
+  { label: "一般（懇親会あり）", price: 6000 },
+  { label: "学生（懇親会あり）", price: 3000 },
+  { label: "個人スポンサー（懇親会あり）", price: 20000 },
+  { label: "オンライン", price: 0 },
+];
+
 const TicketPurchaseSection = () => {
   return (
     <section id="ticket" className="bg-blue-light-100 px-6 py-18">
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-12 rounded-xl bg-white p-6 md:p-12 lg:flex-row">
         <div className="flex flex-col items-center gap-12">
           <SectionHeading>チケット購入</SectionHeading>
+
+          <div className="flex flex-col items-center gap-6">
+            <h3 className="font-noto text-center text-xl leading-snug font-bold md:text-xl">
+              価格
+            </h3>
+            <dl className="w-full space-y-2">
+              {ticketTypes.map((ticket) => (
+                <div key={ticket.label} className="flex justify-between gap-4">
+                  <dt className="font-semibold">{ticket.label}</dt>
+                  <dd>{ticket.price.toLocaleString()}円</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
 
           <ul className="mx-auto list-disc space-y-4 pl-5 text-left leading-6 font-medium md:text-lg">
             <li>イベント参加にはチケットが必要です。以下のリンクから購入できます。</li>
