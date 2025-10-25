@@ -18,36 +18,37 @@ const TicketPurchaseSection = () => {
             </li>
           </ul>
 
-          <div className="w-full rounded-lg border border-slate-200 bg-white p-6">
-            <div className="flex flex-col gap-4 md:gap-4">
-              <div className="flex-1">
-                <div className="mb-3 flex items-center gap-2">
-                  <MapPin className="size-5" />
-                  <h3 className="font-noto text-base font-bold md:text-lg">現地参加:</h3>
-                </div>
-                <ul className="font-noto space-y-2 text-base font-bold md:text-base">
-                  <li>一般チケット（懇親会なし）: 4,000円</li>
-                  <li>一般チケット（懇親会あり）: 6,000円</li>
-                  <li>学生チケット（懇親会あり）: 3,000円</li>
-                  <li>個人スポンサー（懇親会あり）: 20,000円</li>
-                </ul>
-              </div>
+          <div className="flex w-full flex-col items-center gap-6 rounded-lg border border-slate-200 p-6">
+            <div className="flex flex-col gap-3 self-start">
+              <h3 className="font-noto flex items-center gap-2 text-base font-bold md:text-lg">
+                <MapPin className="size-5" />
+                現地参加:
+              </h3>
 
-              <div className="flex-1">
-                <div className="mb-3 flex items-center gap-2">
-                  <Laptop className="size-5 text-gray-700" />
-                  <h3 className="font-noto text-base font-bold md:text-lg">
-                    <span className="text-md md:text-base">オンライン参加 : 無料</span>
-                  </h3>
-                </div>
-              </div>
+              <ul className="font-noto space-y-2 pl-8 text-base font-medium md:text-base">
+                <li>一般チケット : 4,000円</li>
+                <li>一般チケット + 懇親会 : 6,000円</li>
+              </ul>
             </div>
 
-            <div className="mt-4 flex justify-center">
-              <ButtonLink href="https://conference.findy-code.io/conferences/tskaigi_hokuriku/9/registration">
-                チケットを購入する
-              </ButtonLink>
+            <div className="flex flex-col gap-3 self-start">
+              <h3 className="font-noto flex items-center gap-2 text-base font-bold md:text-lg">
+                <Laptop className="size-5 text-gray-700" />
+                オンライン参加
+              </h3>
+
+              <ul className="font-noto space-y-2 pl-8 text-base font-medium md:text-base">
+                <li>配信チケット : 無料</li>
+              </ul>
             </div>
+
+            <p className="self-start text-sm text-gray-600">
+              ※ 学生チケットや個人スポンサーチケットもございます。
+            </p>
+
+            <ButtonLink href="https://conference.findy-code.io/conferences/tskaigi_hokuriku/9/registration">
+              チケットを購入する
+            </ButtonLink>
           </div>
         </div>
 
