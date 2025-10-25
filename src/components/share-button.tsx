@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { XIcon } from "./icon/x";
 
 type Props = {
@@ -17,7 +18,6 @@ export const ShareButton = ({ size = "md" }: Props) => {
         size === "md" ? "px-6 py-3" : "px-4 py-2 text-xs",
       )}
       target="_blank"
-      data-size={size}
       rel="noopener noreferrer"
       href={shareUrl.toString()}
     >
