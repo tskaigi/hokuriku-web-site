@@ -1,5 +1,6 @@
 import ButtonLink from "@/components/button-link";
 import SectionHeading from "@/components/section-heading";
+import { Laptop, MapPin } from "lucide-react";
 import Image from "next/image";
 
 const TicketPurchaseSection = () => {
@@ -16,6 +17,32 @@ const TicketPurchaseSection = () => {
               登録時に勤務先情報の入力を求められますが、実際には連絡が取れるメールアドレスであれば問題ありません。必ずご連絡可能なメールアドレスをご記入ください。
             </li>
           </ul>
+
+          <div className="w-full rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+            <div className="flex flex-col gap-6 md:gap-8">
+              <div className="flex-1">
+                <div className="mb-3 flex items-center gap-2">
+                  <MapPin className="size-5 text-red-500" />
+                  <h3 className="font-noto text-base font-bold md:text-lg">現地参加:</h3>
+                </div>
+                <ul className="space-y-2 text-sm md:text-base">
+                  <li>懇親会パーティーなしチケット: 4,000円</li>
+                  <li>懇親会パーティー付きチケット: 6,000円</li>
+                </ul>
+              </div>
+
+              <div className="flex-1">
+                <div className="mb-3 flex items-center gap-2">
+                  <Laptop className="size-5 text-gray-700" />
+                  <h3 className="font-noto text-base font-bold md:text-lg">オンライン参加: 無料</h3>
+                </div>
+              </div>
+            </div>
+
+            <p className="mt-4 text-xs text-gray-600 md:text-sm">
+              ※ 学生チケットや個人スポンサーチケットなど、他のチケット種類もあります
+            </p>
+          </div>
 
           <ButtonLink href="https://conference.findy-code.io/conferences/tskaigi_hokuriku/9/registration">
             チケットを購入する
