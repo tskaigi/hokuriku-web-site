@@ -25,7 +25,7 @@ const TicketPurchaseSection = () => {
                   <MapPin className="size-5" />
                   <h3 className="font-noto text-base font-bold md:text-lg">現地参加:</h3>
                 </div>
-                <ul className="space-y-2 font-noto text-base font-bold md:text-base">
+                <ul className="font-noto space-y-2 text-base font-bold md:text-base">
                   <li>一般チケット（懇親会なし）: 4,000円</li>
                   <li>一般チケット（懇親会あり）: 6,000円</li>
                 </ul>
@@ -34,7 +34,9 @@ const TicketPurchaseSection = () => {
               <div className="flex-1">
                 <div className="mb-3 flex items-center gap-2">
                   <Laptop className="size-5 text-gray-700" />
-                  <h3 className="font-noto text-base font-bold md:text-lg">オンライン参加: 無料</h3>
+                  <h3 className="font-noto text-base font-bold md:text-lg">
+                    <span className="text-md md:text-base">オンライン参加 : 無料</span>
+                  </h3>
                 </div>
               </div>
             </div>
