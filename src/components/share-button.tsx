@@ -12,7 +12,10 @@ shareUrl.searchParams.set("url", "https://hokuriku.tskaigi.org/");
 export const ShareButton = ({ size = "md" }: Props) => {
   return (
     <a
-      className="flex items-center gap-2 rounded-full bg-black px-5 py-3 text-[white] data-[size=sm]:px-4 data-[size=sm]:py-2"
+      className={cn(
+        "flex items-center gap-2 rounded-full bg-black text-[white]",
+        size === "md" ? "px-6 py-3" : "px-4 py-2 text-xs",
+      )}
       target="_blank"
       data-size={size}
       rel="noopener noreferrer"
