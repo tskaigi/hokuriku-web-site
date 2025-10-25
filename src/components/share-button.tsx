@@ -21,7 +21,7 @@ export const ShareButton = ({ size = "md" }: Props) => {
       rel="noopener noreferrer"
       href={shareUrl.toString()}
     >
-      <XIcon size={size === "md" ? 20 : 14} />
+      <XIcon size={size === "md" ? 18 : 14} />
       でシェア
     </a>
   );
