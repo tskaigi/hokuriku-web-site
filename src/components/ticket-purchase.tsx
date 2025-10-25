@@ -18,16 +18,16 @@ const TicketPurchaseSection = () => {
             </li>
           </ul>
 
-          <div className="w-full rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+          <div className="w-full rounded-lg border border-slate-200 bg-white p-6">
             <div className="flex flex-col gap-6 md:gap-8">
               <div className="flex-1">
                 <div className="mb-3 flex items-center gap-2">
-                  <MapPin className="size-5 text-red-500" />
+                  <MapPin className="size-5" />
                   <h3 className="font-noto text-base font-bold md:text-lg">現地参加:</h3>
                 </div>
-                <ul className="space-y-2 text-sm md:text-base">
-                  <li>懇親会パーティーなしチケット: 4,000円</li>
-                  <li>懇親会パーティー付きチケット: 6,000円</li>
+                <ul className="space-y-2 font-noto text-base font-bold md:text-base">
+                  <li>一般チケット（懇親会なし）: 4,000円</li>
+                  <li>一般チケット（懇親会あり）: 6,000円</li>
                 </ul>
               </div>
 
@@ -40,13 +40,15 @@ const TicketPurchaseSection = () => {
             </div>
 
             <p className="mt-4 text-xs text-gray-600 md:text-sm">
-              ※ 学生チケットや個人スポンサーチケットなど、他のチケット種類もあります
+              ※ 学生チケットや個人スポンサーチケットもございます。
             </p>
-          </div>
 
-          <ButtonLink href="https://conference.findy-code.io/conferences/tskaigi_hokuriku/9/registration">
-            チケットを購入する
-          </ButtonLink>
+            <div className="mt-6 flex justify-center">
+              <ButtonLink href="https://conference.findy-code.io/conferences/tskaigi_hokuriku/9/registration">
+                チケットを購入する
+              </ButtonLink>
+            </div>
+          </div>
         </div>
 
         <hr className="h-auto self-stretch border-r border-r-slate-200" />
