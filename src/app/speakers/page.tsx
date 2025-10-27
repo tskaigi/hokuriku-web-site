@@ -36,7 +36,7 @@ const Page = () => {
               <Link
                 data-selected={selected === tab}
                 href={"/speakers?tab=" + tab}
-                className="min-w-[54px] cursor-pointer border-b-2 border-b-transparent px-2 py-1 text-center transition-transform hover:bg-slate-100 active:translate-y-px data-[selected=true]:border-b-slate-800 data-[selected=true]:font-bold"
+                className="min-w-[54px] cursor-pointer rounded border-b-2 border-b-transparent px-2 py-1 text-center transition-transform hover:bg-slate-100 active:translate-y-px data-[selected=true]:rounded-b-none data-[selected=true]:border-b-slate-800 data-[selected=true]:font-bold"
               >
                 {tab}
               </Link>
@@ -96,13 +96,8 @@ const Page = () => {
               </div>
             ))}
         </div>
-        <div className="mt-4">
+        <div className="mt-8">
           タイムテーブルについては、決まり次第こちらの公式サイトで発表いたします。
-        </div>
-        <div className="mt-4">
-          <ExternalLink href="https://tskaigi.hatenablog.com/entry/2025/10/14/140147">
-            採択結果をブログで確認する
-          </ExternalLink>
         </div>
       </main>
     </div>

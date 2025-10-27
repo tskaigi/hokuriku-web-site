@@ -7,14 +7,13 @@ export const NewsSection = () => {
         {/* 採択トーク公開 */}
         <div>2025.10.14.</div>
         <div>
-          採択トークを公開しました （
           <Link
             href="/speakers"
             className="text-blue-600 underline underline-offset-3 hover:no-underline"
           >
-            トーク一覧ページを見る
+            採択トーク
           </Link>
-          ）
+          を公開しました
         </div>
       </div>
     </section>
