@@ -15,7 +15,7 @@ const ExternalLink = ({ href, children, size = "md" }: ExternalLinkProps) => {
       target="_blank"
       rel="noopener noreferrer"
       className={clsx(
-        "flex items-center gap-2 text-blue-600 hover:underline",
+        "inline-flex items-center gap-2 text-blue-600 hover:underline",
         size === "sm" ? "text-sm" : "text-base",
       )}
     >
