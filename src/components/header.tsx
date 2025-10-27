@@ -25,6 +25,10 @@ const links: {
   //   label: "タイムテーブル",
   // },
   {
+    href: "/speakers",
+    label: "採択トーク",
+  },
+  {
     href: "/sponsors",
     label: "スポンサー",
   },

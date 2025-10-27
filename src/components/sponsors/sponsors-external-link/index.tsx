@@ -1,21 +1,26 @@
+import clsx from "clsx";
 import { ArrowUpRightFromSquare } from "lucide-react";
 import Link from "next/link";
 
 type ExternalLinkProps = {
   href: string;
   children: React.ReactNode;
+  size?: "md" | "sm";
 };
 
-const ExternalLink = ({ href, children }: ExternalLinkProps) => {
+const ExternalLink = ({ href, children, size = "md" }: ExternalLinkProps) => {
   return (
     <Link
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-blue-600 hover:underline"
+      className={clsx(
+        "flex items-center gap-2 text-blue-600 hover:underline",
+        size === "sm" ? "text-sm" : "text-base",
+      )}
     >
       {children}
-      <ArrowUpRightFromSquare size={16} className="relative left-2 inline" />
+      <ArrowUpRightFromSquare size={16} />
     </Link>
   );
 };
