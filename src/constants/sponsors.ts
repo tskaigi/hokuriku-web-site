@@ -85,7 +85,6 @@ TypeScriptはもちろん、インフラ・AI・LLM・GIS等の先端技術を�
         },
       ],
       roles: ["Naming Rights"],
-      isHiddenSponsorPage: true,
     },
   ],
   gold: [
@@ -127,7 +126,6 @@ AI：Gemini、Copilot、Claude、Cursor、Devin`,
           href: "https://www.wantedly.com/companies/company_299137",
         },
       ],
-      isHiddenSponsorPage: true,
     },
     {
       id: "G02",
