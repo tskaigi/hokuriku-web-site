@@ -5,20 +5,13 @@ import { KEYNOTE_SESSION, LT, SESSION, SPONSOR_LT, TEAM_SESSION } from "@/consta
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
-const TABS = [
-  "ALL" as const,
-  "Session" as const,
-  "LT" as const,
-  "TeamSession" as const,
-  "SponsorLT" as const,
-];
+const TABS = ["ALL" as const, "Session" as const, "LT" as const, "SponsorLT" as const];
 type Tab = (typeof TABS)[number];
 
 const TAB_LABELS: Record<Tab, string> = {
   ALL: "ALL",
   Session: "セッション",
   LT: "LT",
-  TeamSession: "チーム発表",
   SponsorLT: "スポンサーLT",
 };
 
@@ -35,7 +28,6 @@ const Page = () => {
 
   const showSession = selected === "ALL" || selected === "Session";
   const showLT = selected === "ALL" || selected === "LT";
-  const showTeamSession = selected === "ALL" || selected === "TeamSession";
   const showSponsorLT = selected === "ALL" || selected === "SponsorLT";
 
   return (
@@ -76,12 +68,6 @@ const Page = () => {
             </ExternalLink>
           </div>
         </nav>
-        {selected === "TeamSession" && (
-          <div className="mt-4 px-4 py-2">
-            TSKaigi Hokurikuでは今回の開催にあたり、「チーム発表」枠を新たに設けました。
-            同じプロジェクト・チームでの取り組みを、異なる立場・役割の2名がそれぞれの視点から語る形式です。
-          </div>
-        )}
         <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {showSession &&
             KEYNOTE_SESSION.map((talk) => (
@@ -95,18 +81,32 @@ const Page = () => {
                 <div className="h-2 bg-[#4C6EF5]" />
               </div>
             ))}
-          {showSession &&
-            SESSION.map((talk) => (
-              <div
-                key={talk.name}
-                className="flex flex-col gap-2 overflow-hidden rounded-lg bg-white pt-4 shadow-xs"
-              >
-                <div className="text-primary-dark px-4 text-sm font-bold">#セッション</div>
-                <div className="px-4 text-lg font-bold">{talk.title}</div>
-                <div className="mt-auto px-4">Speaker: {talk.name}</div>
-                <div className="bg-primary h-2" />
-              </div>
-            ))}
+          {showSession && (
+            <>
+              {SESSION.map((talk) => (
+                <div
+                  key={talk.name}
+                  className="flex flex-col gap-2 overflow-hidden rounded-lg bg-white pt-4 shadow-xs"
+                >
+                  <div className="text-primary-dark px-4 text-sm font-bold">#セッション</div>
+                  <div className="px-4 text-lg font-bold">{talk.title}</div>
+                  <div className="mt-auto px-4">Speaker: {talk.name}</div>
+                  <div className="bg-primary h-2" />
+                </div>
+              ))}
+              {TEAM_SESSION.map((talk) => (
+                <div
+                  key={talk.name}
+                  className="flex flex-col gap-2 overflow-hidden rounded-lg bg-white pt-4 shadow-xs"
+                >
+                  <div className="px-4 text-sm font-bold text-[#007240]">#チーム発表</div>
+                  <div className="px-4 text-lg font-bold">{talk.title}</div>
+                  <div className="mt-auto px-4">Speaker: {talk.name}</div>
+                  <div className="h-2 bg-[#00b969]" />
+                </div>
+              ))}
+            </>
+          )}
           {showLT &&
             LT.map((talk) => (
               <div
@@ -117,18 +117,6 @@ const Page = () => {
                 <div className="px-4 text-lg font-bold">{talk.title}</div>
                 <div className="mt-auto px-4">Speaker: {talk.name}</div>
                 <div className="h-2 bg-[#F64D93]" />
-              </div>
-            ))}
-          {showTeamSession &&
-            TEAM_SESSION.map((talk) => (
-              <div
-                key={talk.name}
-                className="flex flex-col gap-2 overflow-hidden rounded-lg bg-white pt-4 shadow-xs"
-              >
-                <div className="px-4 text-sm font-bold text-[#007240]">#チーム発表</div>
-                <div className="px-4 text-lg font-bold">{talk.title}</div>
-                <div className="mt-auto px-4">Speaker: {talk.name}</div>
-                <div className="h-2 bg-[#00b969]" />
               </div>
             ))}
           {showSponsorLT &&
