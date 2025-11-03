@@ -26,17 +26,16 @@ export const SESSION = [
     title: "フロントエンドにおける「型」の責務分離に対する1つのアプローチ",
   },
   {
-    id: "k-05" as const,
-    type: "Session",
-    name: "kakekakemiya",
-    title: "type-challenges を全問解いたのでエッセンスと推し問題を紹介してみる",
-  },
-
-  {
     id: "t-05" as const,
     type: "Session",
     name: "比嘉 一晃",
     title: "denoとtypescriptの関係について改めて考えてみる",
+  },
+  {
+    id: "k-05" as const,
+    type: "Session",
+    name: "kakekakemiya",
+    title: "type-challenges を全問解いたのでエッセンスと推し問題を紹介してみる",
   },
   {
     id: "t-07" as const,
