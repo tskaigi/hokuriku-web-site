@@ -36,16 +36,16 @@ const Page = () => {
         採択トーク
       </h1>
       <main>
-        <nav className="sticky top-[72px] flex items-center rounded-lg bg-white/80 px-2 py-2 shadow-sm backdrop-blur-md">
+        <nav className="sticky top-[72px] flex items-center gap-2 rounded-lg bg-white/80 px-2 py-2 shadow-sm backdrop-blur-md">
           {/* ALL タブ */}
           <Link
             data-selected={selected === "ALL"}
             href="/speakers"
-            className="min-w-[54px] cursor-pointer rounded border-b-2 border-b-transparent px-2 py-1 text-center transition-transform hover:bg-slate-100 active:translate-y-px data-[selected=true]:rounded-b-none data-[selected=true]:border-b-slate-800 data-[selected=true]:font-bold"
+            className="min-w-[54px] cursor-pointer rounded border-b-2 border-b-transparent p-1 text-center transition-transform hover:bg-slate-100 active:translate-y-px data-[selected=true]:rounded-b-none data-[selected=true]:border-b-slate-800 data-[selected=true]:font-bold sm:px-2"
           >
             {TAB_LABELS["ALL"]}
           </Link>
-          <hr className="mx-2 my-2 h-auto self-stretch border-r border-transparent border-r-slate-800" />
+          <hr className="h-auto self-stretch border-r border-transparent border-r-slate-800" />
 
           {/* セッション種別ごとのタブ */}
           <div className="flex flex-wrap gap-1">
@@ -54,7 +54,7 @@ const Page = () => {
                 key={tab}
                 data-selected={selected === tab}
                 href={"/speakers?tab=" + tab}
-                className="min-w-[54px] cursor-pointer rounded border-b-2 border-b-transparent px-2 py-1 text-center transition-transform hover:bg-slate-100 active:translate-y-px data-[selected=true]:rounded-b-none data-[selected=true]:border-b-slate-800 data-[selected=true]:font-bold"
+                className="min-w-[54px] cursor-pointer rounded border-b-2 border-b-transparent p-1 text-center transition-transform hover:bg-slate-100 active:translate-y-px data-[selected=true]:rounded-b-none data-[selected=true]:border-b-slate-800 data-[selected=true]:font-bold sm:px-2"
               >
                 {TAB_LABELS[tab]}
               </Link>
