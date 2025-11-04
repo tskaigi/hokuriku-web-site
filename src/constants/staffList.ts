@@ -113,4 +113,19 @@ export const staffList: Staff[] = [
     image: "staff/haru.png",
     href: "https://x.com/_harucn",
   },
+  {
+    name: "motikoma",
+    image: "staff/motikoma.png",
+    href: "https://x.com/motikoma",
+  },
+  {
+    name: "マナティ",
+    image: "staff/manatee.png",
+    href: "https://x.com/m_k01104",
+  },
+  {
+    name: "SimiChoco",
+    image: "staff/simichoco.png",
+    href: "https://github.com/SimiChoco",
+  },
 ];

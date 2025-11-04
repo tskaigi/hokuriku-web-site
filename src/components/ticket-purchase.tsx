@@ -1,10 +1,11 @@
 import ButtonLink from "@/components/button-link";
 import SectionHeading from "@/components/section-heading";
+import { Laptop, MapPin } from "lucide-react";
 import Image from "next/image";
 
 const TicketPurchaseSection = () => {
   return (
-    <section id="ticket" className="bg-blue-light-100 px-6 py-18">
+    <section id="ticket" className="bg-blue-light-100 px-4 pb-4">
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-12 rounded-xl bg-white p-6 md:p-12 lg:flex-row">
         <div className="flex flex-col items-center gap-12">
           <SectionHeading>チケット購入</SectionHeading>
@@ -17,9 +18,38 @@ const TicketPurchaseSection = () => {
             </li>
           </ul>
 
-          <ButtonLink href="https://conference.findy-code.io/conferences/tskaigi_hokuriku/9/registration">
-            チケットを購入する
-          </ButtonLink>
+          <div className="flex w-full flex-col items-center gap-6 rounded-lg border border-slate-200 p-5">
+            <div className="flex flex-col gap-3 self-start">
+              <h3 className="font-noto flex items-center gap-2 text-base font-bold md:text-lg">
+                <MapPin className="size-5" />
+                現地参加:
+              </h3>
+
+              <ul className="font-noto space-y-2 pl-0.5 font-medium md:pl-8">
+                <li>一般チケット : 4,000円</li>
+                <li>一般チケット + 懇親会 : 6,000円</li>
+              </ul>
+            </div>
+
+            <div className="flex flex-col gap-3 self-start">
+              <h3 className="font-noto flex items-center gap-2 text-base font-bold md:text-lg">
+                <Laptop className="size-5 text-gray-700" />
+                オンライン参加
+              </h3>
+
+              <ul className="font-noto space-y-2 pl-0.5 font-medium md:pl-8">
+                <li>配信チケット : 無料</li>
+              </ul>
+            </div>
+
+            <p className="self-start text-sm text-gray-600">
+              ※ 学生チケットや個人スポンサーチケットもございます。
+            </p>
+
+            <ButtonLink href="https://conference.findy-code.io/conferences/tskaigi_hokuriku/9/registration">
+              チケットを購入する
+            </ButtonLink>
+          </div>
         </div>
 
         <hr className="h-auto self-stretch border-r border-r-slate-200" />

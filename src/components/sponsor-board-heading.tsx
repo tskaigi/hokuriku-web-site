@@ -2,9 +2,9 @@ import { cn } from "@/lib/utils";
 
 const SponsorBoardHeading = ({ variant }: { variant: "Platinum" | "Gold" | "Silver" }) => {
   const color = {
-    Platinum: "text-blue-purple-600 before:bg-blue-purple-600 after:bg-blue-purple-600",
-    Gold: "text-yellow-600 before:bg-yellow-600 after:bg-yellow-600",
-    Silver: "text-blue-light-500 before:bg-blue-light-500 after:bg-blue-light-500",
+    Platinum: "text-sponsor-platinum before:bg-sponsor-platinum after:bg-sponsor-platinum",
+    Gold: "text-sponsor-gold before:bg-sponsor-gold after:bg-sponsor-gold",
+    Silver: "text-sponsor-silver before:bg-sponsor-silver after:bg-sponsor-silver",
   };
 
   return (

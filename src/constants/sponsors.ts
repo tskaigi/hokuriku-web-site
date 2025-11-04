@@ -85,7 +85,6 @@ TypeScriptはもちろん、インフラ・AI・LLM・GIS等の先端技術を�
         },
       ],
       roles: ["Naming Rights"],
-      isHiddenSponsorPage: true,
     },
   ],
   gold: [
@@ -127,7 +126,6 @@ AI：Gemini、Copilot、Claude、Cursor、Devin`,
           href: "https://www.wantedly.com/companies/company_299137",
         },
       ],
-      isHiddenSponsorPage: true,
     },
     {
       id: "G02",
@@ -236,12 +234,11 @@ Agile Studio では、従来の受託開発の型にはまらない共創型の�
       ],
       links: [
         {
-          title:
-            "チームラボはWebバックエンド/フロントエンドやスマホアプリから、リアルタイムCG、機械学習、ハードウェアまで幅広いエンジニアを採用中です！",
+          title: "幅広くエンジニア採用中！",
           href: "https://www.team-lab.com/engineering/",
         },
         {
-          title: "Web/アプリの開発事例一覧",
+          title: "開発事例一覧",
           href: "https://www.team-lab.com/works/?category=all",
         },
         {
@@ -249,7 +246,6 @@ Agile Studio では、従来の受託開発の型にはまらない共創型の�
           href: "https://note.team-lab.com/",
         },
       ],
-      isHiddenSponsorPage: true,
     },
     {
       id: "G06",
@@ -487,7 +483,6 @@ ALGO ARTISでは、TypeScriptを活用して社会にインパクトを与えた
       sponsorId: "luup",
       name: "株式会社Luup",
       logoLink: "https://luup.sc",
-      isHiddenSponsorPage: true,
     },
     {
       id: "S02",

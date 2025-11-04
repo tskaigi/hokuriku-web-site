@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { ShareButton } from "./share-button";
 import {
   Sheet,
   SheetContent,
@@ -23,6 +24,10 @@ const links: {
   //   href: "/talks",
   //   label: "タイムテーブル",
   // },
+  {
+    href: "/speakers",
+    label: "採択トーク",
+  },
   {
     href: "/sponsors",
     label: "スポンサー",
@@ -64,7 +69,7 @@ export const Header = () => {
   return (
     <header
       className={cn(
-        "fixed z-50 flex w-full items-center justify-between bg-white p-4 opacity-90 shadow-[0px_3px_16px_0px_rgba(0,143,238,0.05)] duration-300 md:px-6",
+        "fixed z-50 flex w-full items-center justify-between bg-white p-4 opacity-90 shadow-[0px_3px_16px_0px_rgba(0,143,238,0.05)] duration-300 md:px-6 md:py-2",
         isVisible ? "translate-y-0" : "-translate-y-full",
       )}
     >
@@ -79,12 +84,13 @@ export const Header = () => {
       </Link>
 
       {/* PC 用ナビゲーション */}
-      <nav className="hidden space-x-6 md:flex">
+      <nav className="hidden space-x-6 md:flex md:items-center">
         {links.map(({ href, label }) => (
           <Link key={href} href={href} className="text-primary-dark text-sm font-bold">
             {label}
           </Link>
         ))}
+        <ShareButton size="sm" />
       </nav>
 
       {/* モバイル用ナビゲーション */}
