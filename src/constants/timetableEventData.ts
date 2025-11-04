@@ -150,7 +150,7 @@ export const talkList: Talk[] = [
       {
         name: "kinocoboy",
         username: "",
-        profileImagePath: "3_kinocoboy.jpg",
+        profileImagePath: "",
         biography: "",
         xUrl: "",
         githubUrl: "",
