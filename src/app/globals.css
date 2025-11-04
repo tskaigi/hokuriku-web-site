@@ -39,6 +39,13 @@
   --gray-400: #c9caca;
   --gray-500: #8a8a8a;
   --blue-light-500: #0c7edc;
+  /* timetable関連 */
+  --timetable-indigo-700: #165e83;
+  --timetable-crimson-700: #b94047;
+  --timetable-ochre-700: #c39143;
+  --timetable-blue-700: #1249d8;
+  --timetable-green-500: #d1dc4a;
+  --timetable-cyan-500: #48c0e4;
 }
 
 @theme {
@@ -50,6 +57,13 @@
   --color-sponsor-gold: var(--yellow-600);
   --color-sponsor-silver: var(--gray-500);
   --color-sponsor-black-200: var(--black-border-200);
+  /* timetable関連 */
+  --color-track1-indigo: var(--timetable-indigo-700);
+  --color-track2-crimson: var(--timetable-crimson-700);
+  --color-timelabel-ochre: var(--timetable-ochre-700);
+  --color-talktype-blue: var(--timetable-blue-700);
+  --color-talktype-green: var(--timetable-green-500);
+  --color-talktype-cyan: var(--timetable-cyan-500);
 }
 
 @theme {
