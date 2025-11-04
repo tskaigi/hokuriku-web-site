@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 export const generateStaticParams = () => {
-  return ALL_TALKS.map((talk) => ({ talkId: talk.id }));
+  return ALL_TALKS.map((talk) => ({ talkId: `${talk.id}` }));
 };
 
 export const generateMetadata = async ({
