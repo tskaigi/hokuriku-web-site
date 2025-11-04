@@ -48,7 +48,7 @@ export const SESSION = [
   {
     id: 24 as const,
     type: "Session",
-    name: "karacoro",
+    name: "karacoro / からころ",
     title: "レガシーシステム刷新におけるTypeSpecスキーマ駆動開発のすゝめ",
   },
   {
@@ -99,7 +99,7 @@ export const LT = [
   {
     id: 29 as const,
     type: "LT",
-    name: "中村 崇人",
+    name: "中村崇人",
     title: "パイプ演算子をTypeScriptに勝手に実装して遊ぶ話",
   },
   {
@@ -136,13 +136,13 @@ export const LT = [
   {
     id: 38 as const,
     type: "LT",
-    name: "タケイ",
+    name: "武井勇也",
     title: "TypeScript ASTを活用した意味差分抽出の紹介",
   },
   {
     id: 39 as const,
     type: "LT",
-    name: "大石貴則 (bicstone)",
+    name: "おおいし (bicstone)",
     title: "TS 5.9で使えるようになった import defer でパフォーマンス最適化を実現する",
   },
   {
