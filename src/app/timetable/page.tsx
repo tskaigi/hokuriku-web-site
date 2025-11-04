@@ -1,8 +1,8 @@
 "use client";
 
+import { TimeTable } from "@/components/timetable/time-table";
 import { TimetableHeader } from "@/components/timetable/timetable-header";
 import { TrackHeader } from "@/components/timetable/track-header";
-import { TimeTable } from "@/components/timetable/time-table";
 
 export default function TimetablePage() {
   return (
