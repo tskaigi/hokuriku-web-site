@@ -1,13 +1,19 @@
 "use client";
 
 import ExternalLink from "@/components/sponsors/sponsors-external-link";
-import { LT, SESSION, TEAM_SESSION } from "@/constants/talks";
+import { KEYNOTE_SESSION, LT, SESSION, SPONSOR_LT, TEAM_SESSION } from "@/constants/talks";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { Fragment } from "react";
 
-const TABS = ["ALL" as const, "Session" as const, "LT" as const, "チーム発表" as const];
+const TABS = ["ALL" as const, "Session" as const, "LT" as const, "SponsorLT" as const];
 type Tab = (typeof TABS)[number];
+
+const TAB_LABELS: Record<Tab, string> = {
+  ALL: "ALL",
+  Session: "セッション",
+  LT: "LT",
+  SponsorLT: "スポンサーLT",
+};
 
 const parseTab = (tab: string | null): Tab => {
   if (!tab || !(TABS as string[]).includes(tab as Tab)) {
@@ -22,7 +28,7 @@ const Page = () => {
 
   const showSession = selected === "ALL" || selected === "Session";
   const showLT = selected === "ALL" || selected === "LT";
-  const showTeamSession = selected === "ALL" || selected === "チーム発表";
+  const showSponsorLT = selected === "ALL" || selected === "SponsorLT";
 
   return (
     <div className="mx-auto max-w-[1000px] px-4 pt-16 pb-10 md:px-8">
@@ -30,69 +36,101 @@ const Page = () => {
         採択トーク
       </h1>
       <main>
-        <nav className="fixed right-4 bottom-[calc(env(safe-area-inset-bottom)+16px)] flex items-center gap-1 rounded-lg bg-white/80 px-4 py-2 shadow-sm backdrop-blur-md md:sticky md:top-[72px]">
-          {TABS.map((tab) => (
-            <Fragment key={tab}>
+        <nav className="sticky top-[72px] flex items-center gap-2 rounded-lg bg-white/80 px-2 py-2 shadow-sm backdrop-blur-md">
+          {/* ALL タブ */}
+          <Link
+            data-selected={selected === "ALL"}
+            href="/speakers"
+            className="min-w-[54px] cursor-pointer rounded border-b-2 border-b-transparent p-1 text-center transition-transform hover:bg-slate-100 active:translate-y-px data-[selected=true]:rounded-b-none data-[selected=true]:border-b-slate-800 data-[selected=true]:font-bold sm:px-2"
+          >
+            {TAB_LABELS["ALL"]}
+          </Link>
+          <hr className="h-auto self-stretch border-r border-transparent border-r-slate-800" />
+
+          {/* セッション種別ごとのタブ */}
+          <div className="flex flex-wrap gap-1">
+            {TABS.filter((tab) => tab !== "ALL").map((tab) => (
               <Link
+                key={tab}
                 data-selected={selected === tab}
                 href={"/speakers?tab=" + tab}
-                className="min-w-[54px] cursor-pointer rounded border-b-2 border-b-transparent px-2 py-1 text-center transition-transform hover:bg-slate-100 active:translate-y-px data-[selected=true]:rounded-b-none data-[selected=true]:border-b-slate-800 data-[selected=true]:font-bold"
+                className="min-w-[54px] cursor-pointer rounded border-b-2 border-b-transparent p-1 text-center transition-transform hover:bg-slate-100 active:translate-y-px data-[selected=true]:rounded-b-none data-[selected=true]:border-b-slate-800 data-[selected=true]:font-bold sm:px-2"
               >
-                {tab}
+                {TAB_LABELS[tab]}
               </Link>
-              {tab === "ALL" && (
-                <hr className="mx-3 my-2 h-auto self-stretch border-r border-transparent border-r-slate-800" />
-              )}
-            </Fragment>
-          ))}
+            ))}
+          </div>
+
+          {/* 外部リンク */}
           <div className="ml-auto hidden md:block">
             <ExternalLink href="https://tskaigi.hatenablog.com/entry/2025/10/14/140147" size="sm">
               採択結果をブログで確認する
             </ExternalLink>
           </div>
         </nav>
-        {selected === "チーム発表" && (
-          <div className="mt-4 px-4 py-2">
-            TSKaigi Hokurikuでは今回の開催にあたり、「チーム発表」枠を新たに設けました。
-            同じプロジェクト・チームでの取り組みを、異なる立場・役割の2名がそれぞれの視点から語る形式です。
-          </div>
-        )}
         <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {showSession &&
-            SESSION.map((talk) => (
+            KEYNOTE_SESSION.map((talk) => (
               <div
                 key={talk.name}
-                className="flex flex-col gap-4 overflow-hidden rounded-lg bg-white pt-4 shadow-xs"
+                className="flex flex-col gap-2 overflow-hidden rounded-lg bg-white pt-4 shadow-xs"
               >
+                <div className="px-4 text-sm font-bold text-[#0828a7]">#基調講演</div>
                 <div className="px-4 text-lg font-bold">{talk.title}</div>
                 <div className="mt-auto px-4">Speaker: {talk.name}</div>
-                <div className="bg-primary px-4 py-1 text-center font-bold text-[white]">
-                  Session
-                </div>
+                <div className="h-2 bg-[#4C6EF5]" />
               </div>
             ))}
+          {showSession && (
+            <>
+              {SESSION.map((talk) => (
+                <div
+                  key={talk.name}
+                  className="flex flex-col gap-2 overflow-hidden rounded-lg bg-white pt-4 shadow-xs"
+                >
+                  <div className="text-primary-dark px-4 text-sm font-bold">#セッション</div>
+                  <div className="px-4 text-lg font-bold">{talk.title}</div>
+                  <div className="mt-auto px-4">Speaker: {talk.name}</div>
+                  <div className="bg-primary h-2" />
+                </div>
+              ))}
+              {TEAM_SESSION.map((talk) => (
+                <div
+                  key={talk.name}
+                  className="flex flex-col gap-2 overflow-hidden rounded-lg bg-white pt-4 shadow-xs"
+                >
+                  <div className="px-4 text-sm font-bold text-[#007240]">#チーム発表</div>
+                  <div className="px-4 text-lg font-bold">{talk.title}</div>
+                  <div className="mt-auto px-4">Speaker: {talk.name}</div>
+                  <div className="h-2 bg-[#00b969]" />
+                </div>
+              ))}
+            </>
+          )}
           {showLT &&
             LT.map((talk) => (
               <div
                 key={talk.name}
-                className="flex flex-col gap-4 overflow-hidden rounded-lg bg-white pt-4 shadow-xs"
+                className="flex flex-col gap-2 overflow-hidden rounded-lg bg-white pt-4 shadow-xs"
               >
+                <div className="px-4 text-sm font-bold text-[#b21355]">#LT</div>
                 <div className="px-4 text-lg font-bold">{talk.title}</div>
                 <div className="mt-auto px-4">Speaker: {talk.name}</div>
-                <div className="bg-[#F64D93] px-4 py-1 text-center font-bold text-[white]">LT</div>
+                <div className="h-2 bg-[#F64D93]" />
               </div>
             ))}
-          {showTeamSession &&
-            TEAM_SESSION.map((talk) => (
+          {showSponsorLT &&
+            SPONSOR_LT.map((talk) => (
               <div
-                key={talk.name}
-                className="flex flex-col gap-4 overflow-hidden rounded-lg bg-white pt-4 shadow-xs"
+                key={talk.sponsorId}
+                className="flex flex-col gap-2 overflow-hidden rounded-lg bg-white pt-4 shadow-xs"
               >
+                <div className="px-4 text-sm font-bold text-[#814e00]">#スポンサーLT</div>
                 <div className="px-4 text-lg font-bold">{talk.title}</div>
-                <div className="mt-auto px-4">Speaker: {talk.name}</div>
-                <div className="bg-[#00b969] px-4 py-1 text-center font-bold text-[white]">
-                  チーム発表
+                <div className="mt-auto px-4">
+                  Speaker: {talk.name} / {talk.sponsor}
                 </div>
+                <div className="h-2 bg-[#FF9900]" />
               </div>
             ))}
         </div>
