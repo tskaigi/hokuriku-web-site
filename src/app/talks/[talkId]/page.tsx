@@ -14,7 +14,7 @@ export const generateMetadata = async ({
 }): Promise<Metadata> => {
   const { talkId } = await params;
 
-  const talk = ALL_TALKS.find((talk) => talk.id === talkId);
+  const talk = ALL_TALKS.find((talk) => `${talk.id}` === talkId);
 
   if (talk == null) {
     notFound();
@@ -44,7 +44,7 @@ export const generateMetadata = async ({
 
 const Page = async ({ params }: { params: Promise<{ talkId: string }> }) => {
   const { talkId } = await params;
-  const talk = ALL_TALKS.find((talk) => talk.id === talkId);
+  const talk = ALL_TALKS.find((talk) => `${talk.id}` === talkId);
 
   if (talk == null) {
     notFound();

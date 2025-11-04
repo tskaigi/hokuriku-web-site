@@ -1,5 +1,6 @@
 export const KEYNOTE_SESSION = [
   {
+    id: 1 as const,
     type: "Keynote",
     name: "うひょ",
     title: "TypeScript 6.0で非推奨化されるオプションたち",
@@ -8,68 +9,62 @@ export const KEYNOTE_SESSION = [
 
 export const SESSION = [
   {
-    id: "t-02" as const,
-    type: "Session",
-    name: "うひょ",
-    title: "TypeScript 6.0で非推奨化されるオプションたち",
-  },
-  {
-    id: "t-03" as const,
+    id: 2 as const,
     type: "Session",
     name: "鈴木翔大",
     title: "Fullstack TSでマルチプロダクトの基盤開発",
   },
   {
-    id: "k-03" as const,
+    id: 3 as const,
     type: "Session",
     name: "kinocoboy",
     title: "フロントエンドにおける「型」の責務分離に対する1つのアプローチ",
   },
   {
-    id: "t-05" as const,
+    id: 18 as const,
     type: "Session",
     name: "比嘉 一晃",
     title: "denoとtypescriptの関係について改めて考えてみる",
   },
   {
-    id: "k-05" as const,
+    id: 19 as const,
     type: "Session",
     name: "kakekakemiya",
     title: "type-challenges を全問解いたのでエッセンスと推し問題を紹介してみる",
   },
   {
-    id: "t-07" as const,
+    id: 22 as const,
     type: "Session",
     name: "moeka",
     title:
       "同期APIの壁を越える：TypeScriptで設計する、堅牢さとUXを両立した非同期ワークフローの実現",
   },
   {
-    id: "k-07" as const,
+    id: 23 as const,
     type: "Session",
     name: "Hal",
     title: "「TSのAPI型安全」の対価は誰が払う？ 不公平なスキーマ駆動に終止符を打つハイブリッド戦略",
   },
   {
-    id: "t-08" as const,
+    id: 24 as const,
     type: "Session",
     name: "karacoro",
     title: "レガシーシステム刷新におけるTypeSpecスキーマ駆動開発のすゝめ",
   },
   {
-    id: "t-09" as const,
+    id: 30 as const,
     type: "Session",
     name: "jiko21",
     title: "型情報を手繰り寄せる技術〜TypeScript Compiler APIによる型解析実践〜",
   },
   {
-    id: "k-09" as const,
+    id: 31 as const,
     type: "Session",
     name: "TAKASE Kazuyuki (@Guvalif)",
     title: 'Welcome to the "Fantasy Land" 🧚 − 代数的構造をめぐる冒険 −',
   },
   {
-    id: "t-10" as const,
+    id: 32 as const,
     type: "Session",
     name: "izumin5210",
     title: "Building AI Agents with TypeScript",
@@ -78,86 +73,86 @@ export const SESSION = [
 
 export const LT = [
   {
-    id: "k-08a" as const,
+    id: 25 as const,
     type: "LT",
     name: "Issa",
     title: "リスクゼロでデリバリーする ― Open Feature × DevCycleの機能解放戦略",
   },
   {
-    id: "k-08b" as const,
+    id: 26 as const,
     type: "LT",
     name: "福田哲也",
     title: "アプリケーションの拡大に伴う開発者体験の悪化をなんとかする",
   },
   {
-    id: "k-08c" as const,
+    id: 27 as const,
     type: "LT",
     name: "かっつー",
     title: "Zod × Web Workerを用いた型安全かつUIファーストなIPアドレスCSV一括登録",
   },
   {
-    id: "k-08d" as const,
+    id: 28 as const,
     type: "LT",
     name: "あかほし",
     title: "AIエージェントのプロンプトを自然言語ではなくTypeScriptで書いてみる試み",
   },
   {
-    id: "k-08e" as const,
+    id: 29 as const,
     type: "LT",
     name: "中村 崇人",
     title: "パイプ演算子をTypeScriptに勝手に実装して遊ぶ話",
   },
   {
-    id: "k-10a" as const,
+    id: 33 as const,
     type: "LT",
     name: "Kanon",
     title: "TDMaCのススメ - cittyを使ってテストデータ作成を効率化する",
   },
   {
-    id: "k-10b" as const,
+    id: 34 as const,
     type: "LT",
     name: "高橋哉人",
     title: "TypeScriptの型システムを活用した複合認証システムの設計パターン",
   },
   {
-    id: "k-10c" as const,
+    id: 35 as const,
     type: "LT",
     name: "takuma-ru",
     title: "TC39 Signals で描くJS/TS/フレームワークの未来の姿",
   },
   {
-    id: "k-10d" as const,
+    id: 36 as const,
     type: "LT",
     name: "elecdeer",
     title: "oxc-transformとisolatedDeclarationsで手に入れるtscなし型定義ファイル生成",
   },
   {
-    id: "t-11a" as const,
+    id: 37 as const,
     type: "LT",
     name: "大塚竜太郎",
     title:
       '`tsc --init` の設計思想の変化とその背景を追う - "教育的"アプローチから実用性重視への転換',
   },
   {
-    id: "t-11b" as const,
+    id: 38 as const,
     type: "LT",
     name: "タケイ",
     title: "TypeScript ASTを活用した意味差分抽出の紹介",
   },
   {
-    id: "t-11c" as const,
+    id: 39 as const,
     type: "LT",
     name: "大石貴則 (bicstone)",
     title: "TS 5.9で使えるようになった import defer でパフォーマンス最適化を実現する",
   },
   {
-    id: "k-11a" as const,
+    id: 40 as const,
     type: "LT",
     name: "t-jimbo",
     title: "React / TypeScriptでのカラーピッカーの実装戦略",
   },
   {
-    id: "k-11b" as const,
+    id: 41 as const,
     type: "LT",
     name: "Saji",
     title: "Branded Typesで日時の複雑さと戦う",
@@ -166,13 +161,13 @@ export const LT = [
 
 export const TEAM_SESSION = [
   {
-    id: "t-06" as const,
+    id: 20 as const,
     type: "TeamSession",
     name: "坂津 潤平 / 芹澤 和也",
     title: "TypeScript×CASLでつくるSaaSの認可",
   },
   {
-    id: "k-06" as const,
+    id: 21 as const,
     type: "TeamSession",
     name: "澤浦 司 / 秋吉 圭輔",
     title:
@@ -271,3 +266,5 @@ export const SPONSOR_LT = [
     position: "EM",
   },
 ];
+
+export const ALL_TALKS = [...KEYNOTE_SESSION, ...SESSION, ...LT];
