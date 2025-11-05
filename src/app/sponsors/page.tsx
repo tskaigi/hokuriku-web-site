@@ -1,9 +1,8 @@
 import Company from "@/components/sponsors/sponsors-company";
 import SponsorHeading from "@/components/sponsors/sponsors-heading";
-import { sponsorList } from "@/constants/sponsors";
+import { sponsorList, type SponsorClass } from "@/constants/sponsors";
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Fragment } from "react";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://hokuriku.tskaigi.org";
 
@@ -50,14 +49,11 @@ const SponsorsPage = () => {
       </h1>
       <div className="mx-auto flex max-w-screen-xl flex-col gap-10 rounded-none bg-white p-6 md:rounded-xl lg:p-10">
         {Object.entries(visibleSponsorList).map(([key, companies]) => {
-          if (!companies.length) {
-            return <Fragment key={key}></Fragment>;
-          }
-
+          const sponsorClass = key as SponsorClass;
           return (
-            <div key={key} className="flex flex-col gap-12">
-              <SponsorHeading variant={key} />
-              {key !== "silver" ? (
+            <div key={sponsorClass} className="flex flex-col gap-12">
+              <SponsorHeading rank={sponsorClass} />
+              {sponsorClass !== "silver" ? (
                 <ul className="divide-sponsor-black-200 flex flex-col divide-y-2">
                   {companies.map((company) => (
                     <li key={company.name} className="flex flex-col gap-6 py-6">

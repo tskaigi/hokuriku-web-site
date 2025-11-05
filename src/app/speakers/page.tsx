@@ -73,7 +73,7 @@ const Page = () => {
             KEYNOTE_SESSION.map((talk) => (
               <div
                 key={talk.name}
-                className="flex flex-col gap-2 overflow-hidden rounded-lg bg-white pt-4 shadow-xs"
+                className="flex flex-col gap-4 overflow-hidden rounded-lg bg-white pt-4 shadow-xs"
               >
                 <div className="px-4 text-sm font-bold text-[#0828a7]">#基調講演</div>
                 <div className="px-4 text-lg font-bold">{talk.title}</div>
@@ -110,8 +110,8 @@ const Page = () => {
           {showLT &&
             LT.map((talk) => (
               <div
-                key={talk.name}
-                className="flex flex-col gap-2 overflow-hidden rounded-lg bg-white pt-4 shadow-xs"
+                key={talk.id}
+                className="flex flex-col gap-4 overflow-hidden rounded-lg bg-white pt-4 shadow-xs"
               >
                 <div className="px-4 text-sm font-bold text-[#b21355]">#LT</div>
                 <div className="px-4 text-lg font-bold">{talk.title}</div>
@@ -122,8 +122,8 @@ const Page = () => {
           {showSponsorLT &&
             SPONSOR_LT.map((talk) => (
               <div
-                key={talk.sponsorId}
-                className="flex flex-col gap-2 overflow-hidden rounded-lg bg-white pt-4 shadow-xs"
+                key={talk.name}
+                className="flex flex-col gap-4 overflow-hidden rounded-lg bg-white pt-4 shadow-xs"
               >
                 <div className="px-4 text-sm font-bold text-[#814e00]">#スポンサーLT</div>
                 <div className="px-4 text-lg font-bold">{talk.title}</div>
