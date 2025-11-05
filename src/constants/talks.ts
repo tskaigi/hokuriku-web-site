@@ -167,6 +167,16 @@ export const SPONSOR_LT = [
     position: "Ai Workforce事業部 CPO 兼 プロダクト部 部長",
   },
   {
+    sponsorId: "G04",
+    sponsor: "株式会社カミナシ",
+    title: "カミナシ社初の フルスタックTypeScript 利用の現在",
+    description:
+      "株式会社カミナシでは，バックエンド API の開発には基本的には Go 言語を使っている中，カミナシ教育開発チーム a.k.a Sanma チームではバックエンドも TypeScript を採用．その背景や実際に開発をスタートしてみてどうだったか，現在地から見える良かった点・今後の展望などをお話したいと思います．",
+    name: "桑原聖仁",
+    position:
+      "エンジニアリング本部 Employee Services 部 Negima Engineering ユニット エンジニアリングマネージャー",
+  },
+  {
     sponsorId: "G03",
     sponsor: "株式会社永和システムマネジメント",
     title: "手書き型をやめてTypeScript×PythonをOpenAPIで繋ぐ",
@@ -194,6 +204,16 @@ export const SPONSOR_LT = [
     position: "ソフトウェアエンジニア",
   },
   {
+    sponsorId: "G07",
+    sponsor: "株式会社tacoms",
+    title: "Effect入門──次の新規開発で役立つ実践指針",
+    description: `「バリデーションは整えたのに内部ロジックの分岐が膨らむ」という課題を起点に、Effectで依存関係ごとの責務分離、失敗チャネルの一元化、テスト容易性の向上をどう実現できるかを紹介します。
+Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的なフローを一本化する書き方、そして将来の拡張を見据えた設計の考え方を5分に凝縮。
+新しく始めるTypeScriptプロジェクトでEffectを採用するか判断する際のヒントをお届けします。`,
+    name: "ふみや",
+    position: "ソフトウェアエンジニア",
+  },
+  {
     sponsorId: "G09",
     sponsor: "株式会社jig.jp",
     title: "WebとFlutterの連携をTypeSpecで固めたかった",
@@ -214,8 +234,8 @@ export const SPONSOR_LT = [
   {
     sponsorId: "G11",
     sponsor: "株式会社 ALGO ARTIS",
-    title: "ALGO ARTISのご紹介",
-    description: "GoldスポンサーのALGO ARTISがどんなことをやっているのかご紹介します！",
+    title: "型に救われたアーキテクチャ移行の話",
+    description: "",
     name: "中川 旭",
     position: "ソフトウェアエンジニア",
   },
