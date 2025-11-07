@@ -16,7 +16,7 @@ const Page = () => {
       <div className="mx-auto mt-4 flex max-w-4xl flex-col gap-8 bg-white p-6 md:rounded-xl lg:p-10">
         <section className="flex flex-col gap-4">
           {/* 見出し */}
-          <div className="flex flex-col text-xl md:flex-row">
+          <div className="flex flex-col text-xl leading-relaxed md:flex-row">
             <div className="font-normal">11/21開催</div>
             <hr className="mx-4 my-1 hidden h-auto border-r border-t-transparent border-r-black/50 md:block" />
             <h2 className="font-bold">
