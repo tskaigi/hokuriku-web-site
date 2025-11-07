@@ -34,22 +34,22 @@ const Hero = () => {
         <Image
           src="/daruma-left.png"
           alt=""
-          width={408}
-          height={492}
+          width={357}
+          height={428}
           className="absolute top-[51vw] -left-[6vw] h-[40vw] w-auto sm:top-[9vw] sm:left-[6vw] sm:h-[30vw]"
         />
         <Image
           src="/daruma-center.png"
           alt=""
-          width={388}
-          height={492}
+          width={340}
+          height={428}
           className="absolute top-[51vw] left-1/2 h-[40vw] w-auto -translate-x-1/2 sm:top-[9vw] sm:h-[30vw]"
         />
         <Image
           src="/daruma-right.png"
           alt=""
-          width={424}
-          height={524}
+          width={369}
+          height={457}
           className="absolute top-[51vw] -right-[6vw] h-[40vw] w-auto sm:top-[9vw] sm:right-[6vw] sm:h-[30vw]"
         />
       </div>
