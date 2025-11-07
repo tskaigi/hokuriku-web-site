@@ -167,6 +167,15 @@ export const SPONSOR_LT = [
     position: "Ai Workforce事業部 CPO 兼 プロダクト部 部長",
   },
   {
+    sponsorId: "G03",
+    sponsor: "株式会社永和システムマネジメント",
+    title: "手書き型をやめてTypeScript×PythonをOpenAPIで繋ぐ",
+    description:
+      "永和システムマネジメントでは受託開発において、さまざまな技術を用いたシステム開発に取り組んでいます。私は約2年前から参画したプロジェクトで、お客様と一緒に、バックエンドはPython、フロントエンドはTypeScriptでWebアプリケーションを開発しています。開発の過程でAPIの変更に気づかず、一部の機能が正常に動作しなくなる事象が発生しました。そこで、実際の業務で起きたAPIの型ズレを題材に、バックエンドから生成したOpenAPIを用いて型エラーを検知する取り組みについてお話しします。",
+    name: "栗田英治",
+    position: "エンジニア",
+  },
+  {
     sponsorId: "G04",
     sponsor: "株式会社カミナシ",
     title: "カミナシ社初の フルスタックTypeScript 利用の現在",
@@ -175,15 +184,6 @@ export const SPONSOR_LT = [
     name: "桑原聖仁",
     position:
       "エンジニアリング本部 Employee Services 部 Negima Engineering ユニット エンジニアリングマネージャー",
-  },
-  {
-    sponsorId: "G03",
-    sponsor: "株式会社永和システムマネジメント",
-    title: "手書き型をやめてTypeScript×PythonをOpenAPIで繋ぐ",
-    description:
-      "永和システムマネジメントでは受託開発において、さまざまな技術を用いたシステム開発に取り組んでいます。私は約2年前から参画したプロジェクトで、お客様と一緒に、バックエンドはPython、フロントエンドはTypeScriptでWebアプリケーションを開発しています。開発の過程でAPIの変更に気づかず、一部の機能が正常に動作しなくなる事象が発生しました。そこで、実際の業務で起きたAPIの型ズレを題材に、バックエンドから生成したOpenAPIを用いて型エラーを検知する取り組みについてお話しします。",
-    name: "栗田英治",
-    position: "エンジニア",
   },
   {
     sponsorId: "G05",
