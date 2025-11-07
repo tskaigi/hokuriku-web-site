@@ -267,4 +267,4 @@ export const SPONSOR_LT = [
   },
 ];
 
-export const ALL_TALKS = [...KEYNOTE_SESSION, ...SESSION, ...LT];
+export const ALL_TALKS = [...KEYNOTE_SESSION, ...SESSION, ...TEAM_SESSION, ...LT];
