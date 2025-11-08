@@ -20,10 +20,10 @@ const links: {
   href: string;
   label: string;
 }[] = [
-  // {
-  //   href: "/talks",
-  //   label: "タイムテーブル",
-  // },
+  {
+    href: "/talks",
+    label: "タイムテーブル",
+  },
   {
     href: "/speakers",
     label: "採択トーク",
