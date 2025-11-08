@@ -23,7 +23,7 @@ const Page = () => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline hover:no-underline"
+                className="underline underline-offset-2 hover:no-underline"
                 href="https://findy.connpass.com/event/374040/"
               >
                 Findy Drinkup at TSKaigi Hokuriku 2025
@@ -33,7 +33,7 @@ const Page = () => {
           </div>
 
           {/* サムネイル */}
-          <div className="md:px-4">
+          <div>
             <Image
               src="/sideEvents/findy-drinkup.png"
               alt="Findy Drinkup at TSKaigi Hokuriku 2025 at 金沢 11/2 (Sat) 18:30 - 20:30 開催場所 さぶろうべい尾山町店"
