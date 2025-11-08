@@ -22,6 +22,10 @@ const links: {
     label: "スポンサー",
   },
   {
+    href: "/side-events",
+    label: "サイドイベント",
+  },
+  {
     href: "/code-of-conduct",
     label: "行動規範",
   },
