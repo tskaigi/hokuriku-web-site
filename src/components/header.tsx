@@ -21,7 +21,7 @@ const links: {
   label: string;
 }[] = [
   {
-    href: "/timetable",
+    href: "/talks",
     label: "タイムテーブル",
   },
   {

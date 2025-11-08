@@ -1,6 +1,8 @@
-// src/components/timetable/track-item/index.tsx
-import { TimeLabel } from "@/components/timetable/time-label";
+// src/components/talks/track-item/index.tsx
+import { TimeLabel } from "@/components/talks/time-label";
+import { TrackBadge } from "@/components/talks/track-badge";
 import { TALK_TYPE, TRACK, type Talk } from "@/constants/timetableEventData";
+import Link from "next/link";
 
 type TrackContent = {
   track: keyof typeof TRACK;
@@ -33,10 +35,8 @@ export function TrackItem({
       {/* 左側の時間スロット */}
       <TimeLabel timeText={endTime ? `${startTime}〜${endTime}` : startTime} isActive={isActive} />
 
-      {/* トラックごとのイベント */}
       {orderedTracks.map((t) => {
         const trackContents = contents.filter((c) => c.track === t);
-
         const firstTalk = Array.isArray(trackContents[0]?.talk)
           ? trackContents[0]?.talk[0]
           : trackContents[0]?.talk;
@@ -49,35 +49,28 @@ export function TrackItem({
             {/* バッジ列 */}
             {trackContents.length > 0 && (
               <div className="mb-2 flex w-full flex-wrap justify-start gap-1">
+                {/* TRACKバッジ（スマホのみ） */}
                 {TRACK[t] && (
-                  <span
-                    className={`inline-flex items-center justify-center rounded-full px-2 py-1 text-xs font-semibold md:hidden ${TRACK[t].bgColor} ${TRACK[t].textColor}`}
-                  >
-                    {TRACK[t].name}
-                  </span>
+                  <TrackBadge
+                    label={TRACK[t].name}
+                    bgColor={TRACK[t].bgColor}
+                    textColor={TRACK[t].textColor}
+                    hiddenOnDesktop
+                  />
                 )}
+
+                {/* TALK_TYPEバッジ */}
                 {firstTalk?.talkType && (
-                  <span
-                    className={`inline-flex items-center justify-center rounded-full border px-2 py-1 text-xs font-semibold md:hidden ${
-                      TALK_TYPE[firstTalk.talkType]?.borderColor
-                    } ${TALK_TYPE[firstTalk.talkType]?.textColor}`}
-                  >
-                    {TALK_TYPE[firstTalk.talkType]?.name}
-                  </span>
-                )}
-                {firstTalk?.talkType && (
-                  <span
-                    className={`hidden min-w-[70px] items-center justify-center rounded-full border px-2 py-1 text-xs font-semibold md:inline-flex ${
-                      TALK_TYPE[firstTalk.talkType]?.borderColor
-                    } ${TALK_TYPE[firstTalk.talkType]?.textColor}`}
-                  >
-                    {TALK_TYPE[firstTalk.talkType]?.name}
-                  </span>
+                  <TrackBadge
+                    label={TALK_TYPE[firstTalk.talkType]?.name}
+                    borderColor={TALK_TYPE[firstTalk.talkType]?.borderColor}
+                    textColor={TALK_TYPE[firstTalk.talkType]?.textColor}
+                  />
                 )}
               </div>
             )}
 
-            {/* タイトル + スピーカー */}
+            {/* トークタイトル・スピーカー */}
             {trackContents.length > 0 ? (
               trackContents.map((c, i) => {
                 const talksArray = Array.isArray(c.talk) ? c.talk : c.talk ? [c.talk] : [];
@@ -86,14 +79,12 @@ export function TrackItem({
                   <div key={i} className="flex w-full flex-col items-start gap-1 text-left">
                     {talksArray.map((talk, j) => (
                       <div key={`${i}-${j}`} className="mb-2 w-full last:mb-0">
-                        {/* タイトルをaタグでリンク化 */}
                         <h3 className="font-semibold">
-                          <a href={`/timetable/${talk?.id}`} className="hover:underline">
+                          <Link href={`/talks/${talk?.id}`} className="hover:underline">
                             {talk?.title}
-                          </a>
+                          </Link>
                         </h3>
 
-                        {/* スピーカー情報 */}
                         {talk?.speakers && talk.speakers.length > 0 && (
                           <ul className="mt-1 ml-2 space-y-0.5 text-sm">
                             {talk.speakers.map((speaker) => (
@@ -124,7 +115,6 @@ export function TrackItem({
                       </div>
                     ))}
 
-                    {/* talkの下にeventTextを表示 */}
                     {c.eventText && <h3 className="mt-2 font-semibold">{c.eventText}</h3>}
                   </div>
                 );

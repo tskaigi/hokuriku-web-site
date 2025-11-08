@@ -7,7 +7,7 @@ export type EventDate = keyof typeof EVENT_DATE;
 // トラック設定
 export const TRACK = {
   TRACK1: {
-    name: "トグルホール",
+    name: "toggleルーム",
     tag: "#tskaigi_toggle",
     textColor: "text-white",
     bgColor: "bg-track1-indigo",
@@ -187,27 +187,57 @@ export const talkList: Talk[] = [
     eventDate: "DAY1",
     track: "TRACK1",
     talkType: "SPONSOR_LIGHTNINGTALKS",
-    title: "挑戦を支えるTypeScript──顧客とエンジニアが共に成長する現場から",
+    title: "通るURLだけ通す — Monorepoで実現する型安全なリンク設計",
     overview: [
-      `ココロザシは、TypeScriptを軸にSES・受託開発事業を展開し、フロントからインフラまでを横断して顧客の課題解決に取り組んでいます。モダナイゼーションと挑戦を後押しする文化のもと、エンジニアとお客様のビジネスが共に成長していく。本セッションでは、そのための私たちの実践をご紹介します。`,
+      `Next.jsの新しい機能として公開されたtyped routesが内部リンクのタイポ検出には効く一方、①アプリ内限定のためMicro-Frontend（monorepo）横断では価値が薄い、②dynamic linkに弱い、③pathに限定されており、queryの型付けがない──という課題があります。そこで本LTでは、名前空間付きのURLビルダーを生成することで、Micro-Frontendにおいても型安全なリンクを実現しつつ、queryも踏まえた非リテラルな“生成リンク”でも型の枠内で一貫して扱えるリンク設計を提案します。`,
     ],
     time: "12:00 〜 12:35",
     speakers: [
       {
-        name: "坂口真由 / wabi",
-        username: "さかぐちまゆ/wabi",
-        profileImagePath: "5_wabi.png",
+        name: "松本泰幸（ya2s）",
+        username: "マツモトヤスユキ",
+        profileImagePath: "5_matsumotoyasuyuki.jpg",
         biography: "",
-        xUrl: "https://x.com/wabi_1318",
-        githubUrl: "",
-        additionalLink: "https://kokorozashi-japan.co.jp/",
-        affiliation: "株式会社ココロザシ",
-        position: "エンジニア",
+        xUrl: "https://x.com/ya2s_x",
+        githubUrl: "https://github.com/ya2s",
+        additionalLink: "https://www.reiwatravel.co.jp/",
+        affiliation: "株式会社令和トラベル",
+        position: "EM",
       },
     ],
   },
   {
     id: "6",
+    eventDate: "DAY1",
+    track: "TRACK1",
+    talkType: "SPONSOR_LIGHTNINGTALKS",
+    title: "フロントエンドアーキテクチャの設計方法論 Feature-Sliced Designの紹介",
+    overview: [
+      `弊社は運送業向けに設計されたオールインワンSaaS「ロジックス」を提供しています。
+
+ロジックスのフロントエンドは、規模の大きいページのロジックが1箇所にまとまっており実装が肥大化しやすい状況でした。その結果として、「改修時の影響範囲が広い」「コンフリクトが発生しやすい」という課題を抱えていました。
+
+上記の課題を解決するためにFeature-Sliced Designを採用し、コンポーネントを単一の責務ごとに定義することで、各々の機能コンポーネントが低結合,高凝集になるように開発を進めています。
+
+今回のセッションではFeature-Sliced Designの紹介を中心にお話ししたいと思います。`,
+    ],
+    time: "12:00 〜 12:35",
+    speakers: [
+      {
+        name: "坂本 圭佑",
+        username: "さかもと けいすけ",
+        profileImagePath: "6_sakamotokeisuke.jpg",
+        biography: "",
+        xUrl: "https://x.com/motikoma",
+        githubUrl: "",
+        additionalLink: "https://www.ascendlogi.co.jp/",
+        affiliation: "アセンド株式会社",
+        position: "リードプロダクトエンジニア",
+      },
+    ],
+  },
+  {
+    id: "7",
     eventDate: "DAY1",
     track: "TRACK1",
     talkType: "SPONSOR_LIGHTNINGTALKS",
@@ -220,37 +250,13 @@ export const talkList: Talk[] = [
       {
         name: "小林 篤",
         username: "こばやし あつし",
-        profileImagePath: "6_kobayashiatsushi.webp",
+        profileImagePath: "7_kobayashiatsushi.webp",
         biography: "",
         xUrl: "https://x.com/nekokak",
         githubUrl: "https://github.com/nekokak",
         additionalLink: "https://layerx.co.jp/",
         affiliation: "株式会社LayerX",
         position: "Ai Workforce事業部 CPO 兼 プロダクト部 部長",
-      },
-    ],
-  },
-  {
-    id: "7",
-    eventDate: "DAY1",
-    track: "TRACK1",
-    talkType: "SPONSOR_LIGHTNINGTALKS",
-    title: "手書き型をやめてTypeScript×PythonをOpenAPIで繋ぐ",
-    overview: [
-      `永和システムマネジメントでは受託開発において、さまざまな技術を用いたシステム開発に取り組んでいます。私は約2年前から参画したプロジェクトで、お客様と一緒に、バックエンドはPython、フロントエンドはTypeScriptでWebアプリケーションを開発しています。開発の過程でAPIの変更に気づかず、一部の機能が正常に動作しなくなる事象が発生しました。そこで、実際の業務で起きたAPIの型ズレを題材に、バックエンドから生成したOpenAPIを用いて型エラーを検知する取り組みについてお話しします。`,
-    ],
-    time: "12:00 〜 12:35",
-    speakers: [
-      {
-        name: "栗田英治",
-        username: "くりたえいじ",
-        profileImagePath: "",
-        biography: "",
-        xUrl: "",
-        githubUrl: "https://github.com/kuri-eiei",
-        additionalLink: "https://www.agile-studio.jp/",
-        affiliation: "Agile Studio by 永和システムマネジメント",
-        position: "エンジニア",
       },
     ],
   },
@@ -283,25 +289,22 @@ export const talkList: Talk[] = [
     eventDate: "DAY1",
     track: "TRACK1",
     talkType: "SPONSOR_LIGHTNINGTALKS",
-    title: "型で守る個人情報：TypeScriptによる静的データガバナンス",
+    title: "挑戦を支えるTypeScript──顧客とエンジニアが共に成長する現場から",
     overview: [
-      `本セッションでは、TypeScriptを「コード品質」のレイヤーから一歩進め、ビジネスリスク管理をコードレベルで実現する事例を紹介します。
-
-TypeScriptの型システムを「セキュリティガードレール」として活用し、個人情報の意図しない漏洩をレビューや注意力といった属人的なプロセスに頼らず、コンパイル時に防ぐアプローチです。`,
+      `ココロザシは、TypeScriptを軸にSES・受託開発事業を展開し、フロントからインフラまでを横断して顧客の課題解決に取り組んでいます。モダナイゼーションと挑戦を後押しする文化のもと、エンジニアとお客様のビジネスが共に成長していく。本セッションでは、そのための私たちの実践をご紹介します。`,
     ],
     time: "12:00 〜 12:35",
     speakers: [
       {
-        name: "高木 克哉",
-        username: "たかぎ かつや",
-        profileImagePath: "",
+        name: "坂口真由 / wabi",
+        username: "さかぐちまゆ/wabi",
+        profileImagePath: "9_wabi.png",
         biography: "",
-        xUrl: "https://x.com/sagasanaidecur",
+        xUrl: "https://x.com/wabi_1318",
         githubUrl: "",
-        additionalLink:
-          "https://www.team-lab.com/engineering/?utm_source=TSKaigi&utm_medium=web&utm_campaign=hokuriku",
-        affiliation: "チームラボ株式会社",
-        position: "フロントエンドスペシャリスト",
+        additionalLink: "https://kokorozashi-japan.co.jp/",
+        affiliation: "株式会社ココロザシ",
+        position: "エンジニア",
       },
     ],
   },
@@ -310,24 +313,24 @@ TypeScriptの型システムを「セキュリティガードレール」とし�
     eventDate: "DAY1",
     track: "TRACK2",
     talkType: "SPONSOR_LIGHTNINGTALKS",
-    title: "社内オペレーション改善のためのTypeScript",
+    title: "Nxはいいぞ！monorepoプロジェクトにおける差分検知を活用した型チェック最適化",
     overview: [
-      `利用者数の拡大に伴い、MOSHへのお問い合わせは日々増加しています。技術の活用により対応時間を短縮することは、ユーザーと対応者の双方にとって非常に重要です。
-TypeScriptの採用によりSaaS連携を型安全に実装できるようになり、Hono x Cloudflareの採用によって検証・運用のための環境を容易に作成できるようになりました。
-本トークでは、TypeScriptを選択して得られた成果と今後の展望についてお話しします。`,
+      `CIの実行時間が長すぎて辛いなんて悩みを持ったことはありませんか？生成AI活用によりCIの実行頻度が増加したことにより、今まで以上に開発体験に与える影響は大きくなっています。TypeScriptを使っているプロジェクトであれば、ここにTypeチェックの時間とコンパイルの時間も含まれます。依存ファイルの増加によるCI実行時間の増加の対策として、型チェックの高速化やコンパイラの性能向上、マシンスペックの向上といったスケールアップする方法での解決には限界があります。このトークでは、Nxの差分検知の仕組みとその仕組みを活用したCI高速化の手法について紹介させていただきます。
+
+monorepo構成におけるCI実行時間の効率化に興味がある方、Nxに興味がある方におすすめです。`,
     ],
     time: "12:00 〜 12:35",
     speakers: [
       {
-        name: "Ryo Adachi",
-        username: "アダチ リョウ",
-        profileImagePath: "10_adachiryo.jpg",
+        name: "甲斐 和基",
+        username: "かい かずき",
+        profileImagePath: "10_kaikazuki.jpg",
         biography: "",
-        xUrl: "https://x.com/dachi_023",
-        githubUrl: "https://github.com/dachi023",
-        additionalLink: "https://mosh.jp/",
-        affiliation: "MOSH株式会社",
-        position: "ソフトウェアエンジニア",
+        xUrl: "https://x.com/karukan013L23",
+        githubUrl: "https://github.com/karukan029",
+        additionalLink: "https://conference.findy-code.io/",
+        affiliation: "ファインディ株式会社",
+        position: "Team+開発部 フロントエンドエンジニア",
       },
     ],
   },
@@ -336,23 +339,19 @@ TypeScriptの採用によりSaaS連携を型安全に実装できるようにな
     eventDate: "DAY1",
     track: "TRACK2",
     talkType: "SPONSOR_LIGHTNINGTALKS",
-    title: "Effect入門──次の新規開発で役立つ実践指針",
-    overview: [
-      `「バリデーションは整えたのに内部ロジックの分岐が膨らむ」という課題を起点に、Effectで依存関係ごとの責務分離、失敗チャネルの一元化、テスト容易性の向上をどう実現できるかを紹介します。
-Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的なフローを一本化する書き方、そして将来の拡張を見据えた設計の考え方を5分に凝縮。
-新しく始めるTypeScriptプロジェクトでEffectを採用するか判断する際のヒントをお届けします。`,
-    ],
+    title: "型に救われたアーキテクチャ移行の話",
+    overview: [`GoldスポンサーのALGO ARTISがどんなことをやっているのかご紹介します！`],
     time: "12:00 〜 12:35",
     speakers: [
       {
-        name: "ふみや",
-        username: "ふみや",
-        profileImagePath: "11_fumiya.jpg",
+        name: "中川 旭",
+        username: "なかがわ あきら",
+        profileImagePath: "11_nakagawaakira.jpg",
         biography: "",
-        xUrl: "https://x.com/fumiyaki_",
-        githubUrl: "https://github.com/fumiyaki",
-        additionalLink: "https://www.tacoms-inc.com/",
-        affiliation: "株式会社tacoms",
+        xUrl: "https://x.com/modo_ckey",
+        githubUrl: "https://github.com/modockey",
+        additionalLink: "https://www.algo-artis.com/",
+        affiliation: "株式会社 ALGO ARTIS",
         position: "ソフトウェアエンジニア",
       },
     ],
@@ -360,28 +359,24 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   {
     id: "12",
     eventDate: "DAY1",
-    track: "TRACK2",
+    track: "TRACK1",
     talkType: "SPONSOR_LIGHTNINGTALKS",
-    title: "4分でわかった気になるRailway Oriented Programming",
+    title: "手書き型をやめてTypeScript×PythonをOpenAPIで繋ぐ",
     overview: [
-      `
-      関数型ドメインモデリングにある、Railway Oriented ProgrammingについてのLTです。
-このLTでは、そんな悩みをシンプルに解決する設計思想 Railway Oriented Programming（ROP） を、4分で“わかった気になる”スピード解説で紹介します。
-
-線路（Railway）のように、「成功」と「失敗」の2つのルートを走らせることで、ネストしたtry-catch地獄から抜け出し、データフローを安全かつ美しく表現する方法を学びます。`,
+      `永和システムマネジメントでは受託開発において、さまざまな技術を用いたシステム開発に取り組んでいます。私は約2年前から参画したプロジェクトで、お客様と一緒に、バックエンドはPython、フロントエンドはTypeScriptでWebアプリケーションを開発しています。開発の過程でAPIの変更に気づかず、一部の機能が正常に動作しなくなる事象が発生しました。そこで、実際の業務で起きたAPIの型ズレを題材に、バックエンドから生成したOpenAPIを用いて型エラーを検知する取り組みについてお話しします。`,
     ],
     time: "12:00 〜 12:35",
     speakers: [
       {
-        name: "シマ",
-        username: "シマ",
+        name: "栗田英治",
+        username: "くりたえいじ",
         profileImagePath: "",
         biography: "",
         xUrl: "",
-        githubUrl: "",
-        additionalLink: "https://nstock.co.jp/",
-        affiliation: "Nstock株式会社",
-        position: "ソフトウェアエンジニア",
+        githubUrl: "https://github.com/kuri-eiei",
+        additionalLink: "https://www.agile-studio.jp/",
+        affiliation: "Agile Studio by 永和システムマネジメント",
+        position: "エンジニア",
       },
     ],
   },
@@ -412,30 +407,27 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   {
     id: "14",
     eventDate: "DAY1",
-    track: "TRACK2",
+    track: "TRACK1",
     talkType: "SPONSOR_LIGHTNINGTALKS",
-    title: "フロントエンドアーキテクチャの設計方法論 Feature-Sliced Designの紹介",
+    title: "型で守る個人情報：TypeScriptによる静的データガバナンス",
     overview: [
-      `弊社は運送業向けに設計されたオールインワンSaaS「ロジックス」を提供しています。
+      `本セッションでは、TypeScriptを「コード品質」のレイヤーから一歩進め、ビジネスリスク管理をコードレベルで実現する事例を紹介します。
 
-ロジックスのフロントエンドは、規模の大きいページのロジックが1箇所にまとまっており実装が肥大化しやすい状況でした。その結果として、「改修時の影響範囲が広い」「コンフリクトが発生しやすい」という課題を抱えていました。
-
-上記の課題を解決するためにFeature-Sliced Designを採用し、コンポーネントを単一の責務ごとに定義することで、各々の機能コンポーネントが低結合,高凝集になるように開発を進めています。
-
-今回のセッションではFeature-Sliced Designの紹介を中心にお話ししたいと思います。`,
+TypeScriptの型システムを「セキュリティガードレール」として活用し、個人情報の意図しない漏洩をレビューや注意力といった属人的なプロセスに頼らず、コンパイル時に防ぐアプローチです。`,
     ],
     time: "12:00 〜 12:35",
     speakers: [
       {
-        name: "坂本 圭佑",
-        username: "さかもと けいすけ",
-        profileImagePath: "14_sakamotokeisuke.jpg",
+        name: "高木 克哉",
+        username: "たかぎ かつや",
+        profileImagePath: "",
         biography: "",
-        xUrl: "https://x.com/motikoma",
+        xUrl: "https://x.com/sagasanaidecur",
         githubUrl: "",
-        additionalLink: "https://www.ascendlogi.co.jp/",
-        affiliation: "アセンド株式会社",
-        position: "リードプロダクトエンジニア",
+        additionalLink:
+          "https://www.team-lab.com/engineering/?utm_source=TSKaigi&utm_medium=web&utm_campaign=hokuriku",
+        affiliation: "チームラボ株式会社",
+        position: "フロントエンドスペシャリスト",
       },
     ],
   },
@@ -444,19 +436,23 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     eventDate: "DAY1",
     track: "TRACK2",
     talkType: "SPONSOR_LIGHTNINGTALKS",
-    title: "型に救われたアーキテクチャ移行の話",
-    overview: [`GoldスポンサーのALGO ARTISがどんなことをやっているのかご紹介します！`],
+    title: "社内オペレーション改善のためのTypeScript",
+    overview: [
+      `利用者数の拡大に伴い、MOSHへのお問い合わせは日々増加しています。技術の活用により対応時間を短縮することは、ユーザーと対応者の双方にとって非常に重要です。
+TypeScriptの採用によりSaaS連携を型安全に実装できるようになり、Hono x Cloudflareの採用によって検証・運用のための環境を容易に作成できるようになりました。
+本トークでは、TypeScriptを選択して得られた成果と今後の展望についてお話しします。`,
+    ],
     time: "12:00 〜 12:35",
     speakers: [
       {
-        name: "中川 旭",
-        username: "なかがわ あきら",
-        profileImagePath: "15_nakagawaakira.jpg",
+        name: "Ryo Adachi",
+        username: "アダチ リョウ",
+        profileImagePath: "15_adachiryo.jpg",
         biography: "",
-        xUrl: "https://x.com/modo_ckey",
-        githubUrl: "https://github.com/modockey",
-        additionalLink: "https://www.algo-artis.com/",
-        affiliation: "株式会社 ALGO ARTIS",
+        xUrl: "https://x.com/dachi_023",
+        githubUrl: "https://github.com/dachi023",
+        additionalLink: "https://mosh.jp/",
+        affiliation: "MOSH株式会社",
         position: "ソフトウェアエンジニア",
       },
     ],
@@ -466,24 +462,24 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     eventDate: "DAY1",
     track: "TRACK2",
     talkType: "SPONSOR_LIGHTNINGTALKS",
-    title: "Nxはいいぞ！monorepoプロジェクトにおける差分検知を活用した型チェック最適化",
+    title: "Effect入門──次の新規開発で役立つ実践指針",
     overview: [
-      `CIの実行時間が長すぎて辛いなんて悩みを持ったことはありませんか？生成AI活用によりCIの実行頻度が増加したことにより、今まで以上に開発体験に与える影響は大きくなっています。TypeScriptを使っているプロジェクトであれば、ここにTypeチェックの時間とコンパイルの時間も含まれます。依存ファイルの増加によるCI実行時間の増加の対策として、型チェックの高速化やコンパイラの性能向上、マシンスペックの向上といったスケールアップする方法での解決には限界があります。このトークでは、Nxの差分検知の仕組みとその仕組みを活用したCI高速化の手法について紹介させていただきます。
-
-monorepo構成におけるCI実行時間の効率化に興味がある方、Nxに興味がある方におすすめです。`,
+      `「バリデーションは整えたのに内部ロジックの分岐が膨らむ」という課題を起点に、Effectで依存関係ごとの責務分離、失敗チャネルの一元化、テスト容易性の向上をどう実現できるかを紹介します。
+Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的なフローを一本化する書き方、そして将来の拡張を見据えた設計の考え方を5分に凝縮。
+新しく始めるTypeScriptプロジェクトでEffectを採用するか判断する際のヒントをお届けします。`,
     ],
     time: "12:00 〜 12:35",
     speakers: [
       {
-        name: "甲斐 和基",
-        username: "かい かずき",
-        profileImagePath: "16_kaikazuki.jpg",
+        name: "ふみや",
+        username: "ふみや",
+        profileImagePath: "16_fumiya.jpg",
         biography: "",
-        xUrl: "https://x.com/karukan013L23",
-        githubUrl: "https://github.com/karukan029",
-        additionalLink: "https://conference.findy-code.io/",
-        affiliation: "ファインディ株式会社",
-        position: "Team+開発部 フロントエンドエンジニア",
+        xUrl: "https://x.com/fumiyaki_",
+        githubUrl: "https://github.com/fumiyaki",
+        additionalLink: "https://www.tacoms-inc.com/",
+        affiliation: "株式会社tacoms",
+        position: "ソフトウェアエンジニア",
       },
     ],
   },
@@ -492,26 +488,30 @@ monorepo構成におけるCI実行時間の効率化に興味がある方、Nx�
     eventDate: "DAY1",
     track: "TRACK2",
     talkType: "SPONSOR_LIGHTNINGTALKS",
-    title: "通るURLだけ通す — Monorepoで実現する型安全なリンク設計",
+    title: "4分でわかった気になるRailway Oriented Programming",
     overview: [
-      `Next.jsの新しい機能として公開されたtyped routesが内部リンクのタイポ検出には効く一方、①アプリ内限定のためMicro-Frontend（monorepo）横断では価値が薄い、②dynamic linkに弱い、③pathに限定されており、queryの型付けがない──という課題があります。そこで本LTでは、名前空間付きのURLビルダーを生成することで、Micro-Frontendにおいても型安全なリンクを実現しつつ、queryも踏まえた非リテラルな“生成リンク”でも型の枠内で一貫して扱えるリンク設計を提案します。
-`,
+      `
+      関数型ドメインモデリングにある、Railway Oriented ProgrammingについてのLTです。
+このLTでは、そんな悩みをシンプルに解決する設計思想 Railway Oriented Programming（ROP） を、4分で“わかった気になる”スピード解説で紹介します。
+
+線路（Railway）のように、「成功」と「失敗」の2つのルートを走らせることで、ネストしたtry-catch地獄から抜け出し、データフローを安全かつ美しく表現する方法を学びます。`,
     ],
     time: "12:00 〜 12:35",
     speakers: [
       {
-        name: "松本泰幸（ya2s）",
-        username: "マツモトヤスユキ",
-        profileImagePath: "17_matsumotoyasuyuki.jpg",
+        name: "シマ",
+        username: "シマ",
+        profileImagePath: "",
         biography: "",
-        xUrl: "https://x.com/ya2s_x",
-        githubUrl: "https://github.com/ya2s",
-        additionalLink: "https://www.reiwatravel.co.jp/",
-        affiliation: "株式会社令和トラベル",
-        position: "EM",
+        xUrl: "",
+        githubUrl: "",
+        additionalLink: "https://nstock.co.jp/",
+        affiliation: "Nstock株式会社",
+        position: "ソフトウェアエンジニア",
       },
     ],
   },
+
   {
     id: "18",
     eventDate: "DAY1",
@@ -611,7 +611,7 @@ monorepo構成におけるCI実行時間の効率化に興味がある方、Nx�
         position: "",
       },
       {
-        name: "秋吉 圭",
+        name: "秋吉 圭輔",
         username: "akiyoshikei",
         profileImagePath: "23_akiyoshikei.png",
         biography: "",
@@ -678,7 +678,7 @@ monorepo構成におけるCI実行時間の効率化に興味がある方、Nx�
     time: "14:40 〜 15:10",
     speakers: [
       {
-        name: "karacoro",
+        name: "karacoro / からころ",
         username: "karacoro",
         profileImagePath: "26_karacoro.jpg",
         biography: "",
@@ -960,7 +960,7 @@ monorepo構成におけるCI実行時間の効率化に興味がある方、Nx�
     track: "TRACK2",
     talkType: "LIGHTNINGTALKS",
     title:
-      " `tsc --init` の設計思想の変化とその背景を追う - “教育的”アプローチから実用性重視への転換",
+      "`tsc --init` の設計思想の変化とその背景を追う - “教育的”アプローチから実用性重視への転換",
     overview: [` `],
     time: "16:40 〜 17:00",
     speakers: [
@@ -987,7 +987,7 @@ monorepo構成におけるCI実行時間の効率化に興味がある方、Nx�
     time: "16:00 〜 16:30",
     speakers: [
       {
-        name: "タケイ",
+        name: "武井勇也",
         username: "",
         profileImagePath: "40_takewell.jpeg",
         biography: "",
@@ -1004,12 +1004,12 @@ monorepo構成におけるCI実行時間の効率化に興味がある方、Nx�
     eventDate: "DAY1",
     track: "TRACK2",
     talkType: "LIGHTNINGTALKS",
-    title: " TS 5.9で使えるようになった import defer でパフォーマンス最適化を実現する",
+    title: "TS 5.9で使えるようになった import defer でパフォーマンス最適化を実現する",
     overview: [` `],
     time: "16:40 〜 17:00",
     speakers: [
       {
-        name: "大石貴則 (bicstone)",
+        name: "おおいし (bicstone)",
         username: "",
         profileImagePath: "41_bicstone.jpg",
         biography: "",
@@ -1048,7 +1048,7 @@ monorepo構成におけるCI実行時間の効率化に興味がある方、Nx�
     eventDate: "DAY1",
     track: "TRACK2",
     talkType: "SESSION",
-    title: " Branded Typesで日時の複雑さと戦う",
+    title: "Branded Typesで日時の複雑さと戦う",
     overview: [` `],
     time: "16:00 〜 16:30",
     speakers: [

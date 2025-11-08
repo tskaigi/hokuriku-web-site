@@ -1,19 +1,23 @@
-// src/app/timetable/[id]/page.tsx
+import { TrackBadge } from "@/components/talks/track-badge";
 import { TALK_TYPE, TRACK, talkList } from "@/constants/timetableEventData";
 import { getTalk } from "@/utils/getTalk";
 import { isSpeakerVisible } from "@/utils/isSpeakerVisible";
 import fs from "fs";
+import { CircleUserRound } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import path from "path";
 import type { ComponentProps } from "react";
-
-import { CircleUserRound } from "lucide-react";
 import Markdown from "react-markdown";
 import remarkBreaks from "remark-breaks";
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
-  return talkList.map((talk) => ({ id: talk.id }));
+  return talkList.map((talk) => ({
+    id: String(talk.id),
+  }));
 }
 
 const description = "TSKaigi Hokuriku 2025 のスピーカー、トーク情報です。";
@@ -26,6 +30,9 @@ export async function generateMetadata({
   const resolvedParams = await params;
   const id = resolvedParams.id;
   const talk = getTalk(id);
+  if (!talk) {
+    notFound();
+  }
 
   return {
     title: talk.title,
@@ -72,6 +79,9 @@ export default async function TalkDetailPage({ params }: { params: Promise<{ id:
   const resolvedParams = await params;
   const id = resolvedParams.id;
   const talk = getTalk(id);
+  if (!talk) {
+    notFound();
+  }
   const talkType = TALK_TYPE[talk.talkType] || TALK_TYPE.DEFAULT;
 
   const thumbnailPath = path.join("public", "ogp", "speaker-ogp", `${talk.id}.png`);
@@ -83,7 +93,12 @@ export default async function TalkDetailPage({ params }: { params: Promise<{ id:
         トーク
       </h1>
 
-      <div className="mx-auto flex max-w-screen-xl flex-col gap-6 bg-white pb-6 md:rounded-xl md:pb-8 lg:pb-10">
+      <div
+        className={`mx-auto flex max-w-screen-xl flex-col gap-6 bg-white md:rounded-xl ${
+          !thumbnailExists ? "pt-6 pb-6 md:pt-8 md:pb-8 lg:pt-10 lg:pb-10" : "pb-6 md:pb-8 lg:pb-10"
+        }`}
+      >
+        {/* サムネイル画像がある場合 */}
         {thumbnailExists && (
           <div className="bg-black-100 flex justify-center md:mx-8 md:mt-8 lg:mx-10 lg:mt-10">
             <img
@@ -97,11 +112,12 @@ export default async function TalkDetailPage({ params }: { params: Promise<{ id:
         )}
 
         <div className="flex flex-col gap-1 px-6 md:px-8 lg:px-10">
-          <div
-            className={`mt-8 inline-block w-max rounded-full border px-3 py-1 text-xs font-bold ${talkType.borderColor} ${talkType.textColor}`}
-          >
-            {talkType.name}
-          </div>
+          <TrackBadge
+            label={talkType.name}
+            borderColor={talkType.borderColor}
+            textColor={talkType.textColor}
+          />
+
           <h2 className="mt-2 text-2xl font-bold">{talk.title.trim()}</h2>
           <div className="text-lg font-bold">
             {talk.time} （{TRACK[talk.track].name}）

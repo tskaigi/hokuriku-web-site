@@ -1,7 +1,7 @@
-// src/components/timetable/track-group/index.tsx
-import { TimeLabel } from "@/components/timetable/time-label";
+// src/components/talks/track-group/index.tsx
+import { TimeLabel } from "@/components/talks/time-label";
+import { TrackBadge } from "@/components/talks/track-badge";
 import { TRACK, type Talk } from "@/constants/timetableEventData";
-import Link from "next/link";
 import { forwardRef } from "react";
 
 type Props = {
@@ -35,12 +35,13 @@ export const TrackGroup = forwardRef<HTMLDivElement, Props>(
           {tracks.length > 0 && (
             <div className="mb-1 flex flex-wrap gap-1 self-start md:hidden">
               {tracks.map((t) => (
-                <span
+                <TrackBadge
                   key={t}
-                  className={`inline-block rounded-full px-2 py-1 text-xs font-semibold ${TRACK[t].bgColor} ${TRACK[t].textColor}`}
-                >
-                  {TRACK[t].name}
-                </span>
+                  label={TRACK[t].name}
+                  bgColor={TRACK[t].bgColor}
+                  textColor={TRACK[t].textColor}
+                  hiddenOnDesktop
+                />
               ))}
             </div>
           )}
@@ -48,9 +49,7 @@ export const TrackGroup = forwardRef<HTMLDivElement, Props>(
           {/* venue バッジ（スマホ〜PCすべて表示） */}
           {venue && (
             <div className="mb-1 flex flex-wrap gap-1 self-start">
-              <span className="inline-block rounded-full bg-gray-200 px-2 py-1 text-xs font-semibold text-gray-800">
-                {venue}
-              </span>
+              <TrackBadge label={venue} bgColor="bg-gray-200" textColor="text-gray-800" />
             </div>
           )}
 
@@ -61,18 +60,28 @@ export const TrackGroup = forwardRef<HTMLDivElement, Props>(
                 {/* タイトル */}
                 <h3 className="font-semibold">{t.title}</h3>
 
+                {/* TALK_TYPEバッジ */}
+                {t.talkType && (
+                  <div className="mb-1 flex flex-wrap gap-1">
+                    {/* スマホ用 */}
+                    <TrackBadge talkType={t.talkType} hiddenOnDesktop />
+                    {/* PC用 */}
+                    <TrackBadge talkType={t.talkType} hiddenOnMobile />
+                  </div>
+                )}
+
                 {/* スピーカーリスト */}
                 {t.speakers && t.speakers.length > 0 && (
                   <ul className="mt-1 ml-2 space-y-0.5 text-sm">
                     {t.speakers.map((speaker) => (
                       <li key={speaker.name}>
                         {speaker.username ? (
-                          <Link
-                            href={`/timetable/${speaker.username}`}
+                          <a
+                            href={`/talks/${speaker.username}`}
                             className="text-blue-600 underline"
                           >
                             {speaker.name}
-                          </Link>
+                          </a>
                         ) : (
                           speaker.name
                         )}

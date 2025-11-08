@@ -1,10 +1,10 @@
 "use client";
 
-import { TimeTable } from "@/components/timetable/time-table";
-import { TimetableHeader } from "@/components/timetable/timetable-header";
-import { TrackHeader } from "@/components/timetable/track-header";
+import { TimeTable } from "@/components/talks/time-table";
+import { TimetableHeader } from "@/components/talks/timetable-header";
+import { TrackHeader } from "@/components/talks/track-header";
 
-export default function TimetablePage() {
+export default function TalksPage() {
   return (
     <main className="bg-blue-light-100 mt-16 px-1 py-10 md:px-3 md:py-16 lg:px-10">
       {/* ページタイトル */}
