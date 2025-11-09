@@ -78,6 +78,11 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="ja">
+      <head>
+        <script src="https://cdn.jsdelivr.net/npm/p5/lib/p5.min.js" defer />
+        <script src="/hero/sketch.js" type="text/javascript" defer />
+      </head>
+
       <body className={`${outfit.variable} ${notoSansJP.variable} antialiased`}>
         <div className="flex min-h-screen flex-col">
           <Header />
