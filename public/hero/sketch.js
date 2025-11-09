@@ -7,6 +7,7 @@ async function setup() {
 
 function draw() {
   const parent = document.getElementById("canvas");
+  console.log(parent.clientWidth)
   const canvas = createCanvas(parent.clientWidth, windowHeight / parent.clientWidth < 9 / 16 ? (parent.clientWidth * 9) / 16 : windowHeight / parent.clientWidth < 3 / 4 ? windowHeight : windowHeight / parent.clientWidth < 4 / 3 ? (parent.clientWidth * 3) / 4 : windowHeight / parent.clientWidth < 16 / 9 ? windowHeight : (windowWidth * 16) / 9);
   canvas.parent("canvas");
 
