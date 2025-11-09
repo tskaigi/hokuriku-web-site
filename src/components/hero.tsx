@@ -18,8 +18,21 @@ const Hero = () => {
         </div>
       </section>
 
-      <Script src="https://cdn.jsdelivr.net/npm/p5/lib/p5.min.js" strategy="beforeInteractive" />
-      <Script src="/hero/sketch.js" type="text/javascript" strategy="afterInteractive" />
+      <Script
+        src="https://cdn.jsdelivr.net/npm/p5/lib/p5.min.js"
+        strategy="afterInteractive"
+        onLoad={() => {
+          console.log("p5.js loaded");
+        }}
+      />
+      <Script
+        src="/hero/sketch.js"
+        type="text/javascript"
+        strategy="afterInteractive"
+        onLoad={() => {
+          console.log("sketch.js loaded");
+        }}
+      />
     </>
   );
 };
