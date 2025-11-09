@@ -1,7 +1,7 @@
 let kasumiLeft, kasumiRight, hokuriku, _2025, darumaLeft, darumaCenter, darumaRight, logo, date, hoku, riku, _2025Full, cover;
 
 async function setup() {
-  [kasumiLeft, kasumiRight, hokuriku, _2025, darumaLeft, darumaCenter, darumaRight, logo, date, hoku, riku, _2025Full, cover] = await Promise.all(["kasumi-left", "kasumi-right", "HOKURIKU", "2025", "daruma-left", "daruma-center", "daruma-right", "logo", "date", "hoku", "riku", "2025-full", "cover",].map((path) => loadImage(`/hero/${path}.png`)));
+  [kasumiLeft, kasumiRight, hokuriku, _2025, darumaLeft, darumaCenter, darumaRight, logo, date, hoku, riku, _2025Full, cover] = await Promise.allSettled(["kasumi-left", "kasumi-right", "HOKURIKU", "2025", "daruma-left", "daruma-center", "daruma-right", "logo", "date", "HOKU", "RIKU", "2025-full", "cover",].map((path) => loadImage(`/hero/${path}.png`)));
   noLoop();
 }
 
