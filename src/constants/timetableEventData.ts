@@ -370,7 +370,7 @@ monorepo構成におけるCI実行時間の効率化に興味がある方、Nx�
       {
         name: "栗田英治",
         username: "くりたえいじ",
-        profileImagePath: "",
+        profileImagePath: "12_kuri-eiei.jpg",
         biography: "",
         xUrl: "",
         githubUrl: "https://github.com/kuri-eiei",
