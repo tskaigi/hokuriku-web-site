@@ -1,13 +1,13 @@
 import SectionHeading from "@/components/section-heading";
-import { type Staff, staffList } from "@/constants/staffList";
+import { type Staff, eventStaffList } from "@/constants/staffList";
 import { useMemo } from "react";
 
-const StaffSection = () => {
-  const sortedStaffList = useMemo(() => {
+const EventStaffSection = () => {
+  const sortedEventStaffList = useMemo(() => {
     const alphabetStaff: Staff[] = [];
     const japaneseStaff: Staff[] = [];
 
-    for (const staff of staffList) {
+    for (const staff of eventStaffList) {
       if (/^[a-zA-Z]/.test(staff.name)) {
         alphabetStaff.push(staff);
       } else {
@@ -22,12 +22,12 @@ const StaffSection = () => {
   }, []);
 
   return (
-    <section className="px-6 pt-18">
+    <section className="px-6 py-18">
       <div className="mx-auto flex max-w-4xl flex-col gap-12 px-6 md:px-12">
-        <SectionHeading>スタッフ</SectionHeading>
+        <SectionHeading>当日スタッフ</SectionHeading>
 
         <ul className="grid grid-cols-[repeat(2,8rem)] justify-center gap-6 sm:grid-cols-[repeat(4,8rem)] md:grid-cols-[repeat(5,8rem)]">
-          {sortedStaffList.map(({ name, image, href }) => (
+          {sortedEventStaffList.map(({ name, image, href }) => (
             <li key={name}>
               <a
                 href={href}
@@ -50,4 +50,4 @@ const StaffSection = () => {
   );
 };
 
-export default StaffSection;
+export default EventStaffSection;
