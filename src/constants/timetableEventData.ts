@@ -359,7 +359,7 @@ monorepo構成におけるCI実行時間の効率化に興味がある方、Nx�
   {
     id: "12",
     eventDate: "DAY1",
-    track: "TRACK1",
+    track: "TRACK2",
     talkType: "SPONSOR_LIGHTNINGTALKS",
     title: "手書き型をやめてTypeScript×PythonをOpenAPIで繋ぐ",
     overview: [
@@ -407,7 +407,7 @@ monorepo構成におけるCI実行時間の効率化に興味がある方、Nx�
   {
     id: "14",
     eventDate: "DAY1",
-    track: "TRACK1",
+    track: "TRACK2",
     talkType: "SPONSOR_LIGHTNINGTALKS",
     title: "型で守る個人情報：TypeScriptによる静的データガバナンス",
     overview: [
