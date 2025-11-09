@@ -1,6 +1,7 @@
 import ExternalLink from "@/components/sponsors/sponsors-external-link";
 import RoleBadge from "@/components/sponsors/sponsors-role-badge";
 import { sponsorList } from "@/constants/sponsors";
+import { talkList } from "@/constants/timetableEventData";
 import { getSponsor } from "@/utils/getSponsor";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -70,6 +71,9 @@ const SponsorDetailPage = async ({ params }: { params: Promise<{ sponsorId: stri
 
   const sponsor = getSponsor(sponsorId);
 
+  const sponsorLt =
+    sponsor.sponsorLtId && talkList.find((talk) => talk.id === `${sponsor.sponsorLtId}`);
+
   if (sponsor.isHiddenSponsorPage) {
     notFound();
   }
@@ -104,6 +108,20 @@ const SponsorDetailPage = async ({ params }: { params: Promise<{ sponsorId: stri
         )}
 
         <h2 className="text-xl font-bold md:text-2xl lg:text-[28px]">{sponsor.name}</h2>
+
+        {sponsorLt && (
+          <a href={`/talks/${sponsorLt.id}`} className="group block hover:opacity-80">
+            <div className="flex flex-col gap-2 overflow-hidden rounded-lg border border-[#FF9900] bg-[#ff990015] p-4 shadow-xs shadow-[#FF9900]">
+              <div className="text-sm font-bold text-[#814e00]">#スポンサーLT</div>
+              <div className="text-lg font-bold underline-offset-2 group-hover:underline">
+                {sponsorLt.title}
+              </div>
+              <div className="mt-auto">Speaker: {sponsorLt.speakers[0].name || "準備中"}</div>
+
+              {sponsorLt.speakers[0].affiliation}
+            </div>
+          </a>
+        )}
 
         <div className="flex flex-col gap-6">
           {sponsor.detailDescription?.map((detail) => {
