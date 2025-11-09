@@ -23,6 +23,7 @@ function draw() {
     placeImage(darumaRight, [(width * 4) / 5, height / 2], ["CENTER", "TOP"], 1.3);
     placeImage(logo, [width / 2, (height - col.height - 20) / 4], ["CENTER", "CENTER"], 1.5);
     placeImage(date, [width / 2, (height * 3 + col.height - 20) / 4], ["CENTER", "CENTER"], 2.5);
+    col.remove();
   } else {
     placeImage(kasumiLeft, [0, height - 50], ["LEFT", "BOTTOM"]);
     placeImage(kasumiRight, [width, 0], ["RIGHT", "TOP"]);
@@ -33,6 +34,7 @@ function draw() {
     placeImage(darumaRight, [(width * 8) / 11, height / 2 + 50], ["CENTER", "CENTER"]);
     placeImage(logo, [width / 2, (height - col.height) / 4], ["CENTER", "CENTER"]);
     placeImage(date, [width / 2, (height * 3 + col.height) / 4], ["CENTER", "CENTER"]);
+    col.remove();
   }
 
   blendMode(BURN);
