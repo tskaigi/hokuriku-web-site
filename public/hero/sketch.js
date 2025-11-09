@@ -1,228 +1,38 @@
-let kasumiLeft;
-let kasumiRight;
-let hokuriku;
-let _2025;
-let darumaLeft;
-let darumaCenter;
-let darumaRight;
-let logo;
-let date;
-let hoku;
-let riku;
-let _2025Full;
-let cover;
+let kasumiLeft, kasumiRight, hokuriku, _2025, darumaLeft, darumaCenter, darumaRight, logo, date, hoku, riku, _2025Full, cover;
 
 async function setup() {
-  kasumiLeft = await loadImage("/hero/kasumi-left.png");
-  kasumiRight = await loadImage("/hero/kasumi-right.png");
-  hokuriku = await loadImage("/hero/hokuriku.png");
-  _2025 = await loadImage("/hero/2025.png");
-  darumaLeft = await loadImage("/hero/daruma-left.png");
-  darumaCenter = await loadImage("/hero/daruma-center.png");
-  darumaRight = await loadImage("/hero/daruma-right.png");
-  logo = await loadImage("/hero/logo.png");
-  date = await loadImage("/hero/date.png");
-  hoku = await loadImage("/hero/hoku.png");
-  riku = await loadImage("/hero/riku.png");
-  _2025Full = await loadImage("/hero/2025-full.png");
-  cover = await loadImage("/hero/cover.png");
-
+  [kasumiLeft, kasumiRight, hokuriku, _2025, darumaLeft, darumaCenter, darumaRight, logo, date, hoku, riku, _2025Full, cover] = await Promise.all(["kasumi-left", "kasumi-right", "HOKURIKU", "2025", "daruma-left", "daruma-center", "daruma-right", "logo", "date", "hoku", "riku", "2025-full", "cover",].map((path) => loadImage(`/hero/${path}.png`)));
   noLoop();
 }
 
 function draw() {
   const parent = document.getElementById("canvas");
-  console.log(parent.clientWidth);
-  let canvas;
-  if (windowHeight / parent.clientWidth < 9 / 16) {
-    canvas = createCanvas(parent.clientWidth, (parent.clientWidth * 9) / 16);
-  } else if (windowHeight / parent.clientWidth < 3 / 4) {
-    canvas = createCanvas(parent.clientWidth, windowHeight);
-  } else if (windowHeight / parent.clientWidth < 4 / 3) {
-    canvas = createCanvas(parent.clientWidth, (parent.clientWidth * 3) / 4);
-  } else if (windowHeight / parent.clientWidth < 16 / 9) {
-    canvas = createCanvas(parent.clientWidth, windowHeight);
-  } else {
-    canvas = createCanvas(parent.clientWidth, (windowWidth * 16) / 9);
-  }
+  const canvas = createCanvas(parent.clientWidth, windowHeight / parent.clientWidth < 9 / 16 ? (parent.clientWidth * 9) / 16 : windowHeight / parent.clientWidth < 3 / 4 ? windowHeight : windowHeight / parent.clientWidth < 4 / 3 ? (parent.clientWidth * 3) / 4 : windowHeight / parent.clientWidth < 16 / 9 ? windowHeight : (windowWidth * 16) / 9);
   canvas.parent("canvas");
+
   background("#17a0fb");
+
   blendMode(BLEND);
-  if (windowWidth / windowHeight > 3 / 4) {
-    image(
-      kasumiLeft,
-      0,
-      height - (((kasumiLeft.width * width) / 1920) * kasumiLeft.height) / kasumiLeft.width - 50,
-      (kasumiLeft.width * width) / 1920,
-      (((kasumiLeft.width * width) / 1920) * kasumiLeft.height) / kasumiLeft.width,
-    );
+  if (width / height < 3 / 4) {
+    placeImage(kasumiLeft, [0, height - 30], ["LEFT", "BOTTOM"], 1.5);
+    placeImage(kasumiRight, [width, 30], ["RIGHT", "TOP"], 1.5);
+    const col = createCol(20, width, hoku, riku, _2025Full);
+    placeImage(col, [0, height / 2 - 20], ["LEFT", "CENTER"], 1920 / col.width);
+    placeImage(darumaLeft, [width / 5, height / 2], ["CENTER", "TOP"], 1.3);
+    placeImage(darumaCenter, [width / 2, height / 2], ["CENTER", "TOP"], 1.3);
+    placeImage(darumaRight, [(width * 4) / 5, height / 2], ["CENTER", "TOP"], 1.3);
+    placeImage(logo, [width / 2, (height - col.height - 20) / 4], ["CENTER", "CENTER"], 1.5);
+    placeImage(date, [width / 2, (height * 3 + col.height - 20) / 4], ["CENTER", "CENTER"], 2.5);
   } else {
-    image(
-      kasumiLeft,
-      0,
-      height -
-        (((kasumiLeft.width * width) / 1920) * 1.5 * kasumiLeft.height) / kasumiLeft.width -
-        30,
-      ((kasumiLeft.width * width) / 1920) * 1.5,
-      (((kasumiLeft.width * width) / 1920) * 1.5 * kasumiLeft.height) / kasumiLeft.width,
-    );
-  }
-  if (windowWidth / windowHeight > 3 / 4) {
-    image(
-      kasumiRight,
-      width - (kasumiRight.width * width) / 1920,
-      0,
-      (kasumiRight.width * width) / 1920,
-      (((kasumiRight.width * width) / 1920) * kasumiRight.height) / kasumiRight.width,
-    );
-  } else {
-    image(
-      kasumiRight,
-      width - ((kasumiRight.width * width) / 1920) * 1.5,
-      0,
-      ((kasumiRight.width * width) / 1920) * 1.5,
-      (((kasumiRight.width * width) / 1920) * 1.5 * kasumiRight.height) / kasumiRight.width,
-    );
-  }
-  if (windowWidth / windowHeight > 3 / 4) {
-    image(
-      hokuriku,
-      0,
-      height / 2 - (hokuriku.height * width) / hokuriku.width - 20,
-      width,
-      (hokuriku.height * width) / hokuriku.width,
-    );
-  } else {
-    image(
-      hoku,
-      0,
-      height / 2 - (riku.height * width) / riku.width / 2 - (hoku.height * width) / hoku.width - 20,
-      width,
-      (hoku.height * width) / hoku.width,
-    );
-    image(
-      riku,
-      0,
-      height / 2 - (riku.height * width) / riku.width / 2,
-      width,
-      (riku.height * width) / riku.width,
-    );
-  }
-  if (windowWidth / windowHeight > 3 / 4) {
-    image(_2025, 0, height / 2 + 20, width, (_2025.height * width) / _2025.width);
-  } else {
-    image(
-      _2025Full,
-      0,
-      height / 2 - (riku.height * width) / riku.width / 2 + (riku.height * width) / riku.width + 20,
-      width,
-      (_2025Full.height * width) / _2025Full.width,
-    );
-  }
-  if (windowWidth / windowHeight > 3 / 4) {
-    image(
-      darumaLeft,
-      width / 2 - ((darumaLeft.width * width) / 1920) * 1.5,
-      height / 2 -
-        (((darumaLeft.width * width) / 1920) * darumaLeft.height) / darumaLeft.width / 2 +
-        50,
-      (darumaLeft.width * width) / 1920,
-      (((darumaLeft.width * width) / 1920) * darumaLeft.height) / darumaLeft.width,
-    );
-  } else {
-    image(
-      darumaLeft,
-      width / 2 - ((darumaLeft.width * width) / 1920) * 1.3 * 1.5,
-      height / 2,
-      ((darumaLeft.width * width) / 1920) * 1.3,
-      (((darumaLeft.width * width) / 1920) * 1.3 * darumaLeft.height) / darumaLeft.width,
-    );
-  }
-  if (windowWidth / windowHeight > 3 / 4) {
-    image(
-      darumaCenter,
-      width / 2 - (darumaCenter.width * width) / 1920 / 2,
-      height / 2 -
-        (((darumaCenter.width * width) / 1920) * darumaCenter.height) / darumaCenter.width / 2 +
-        50,
-      (darumaCenter.width * width) / 1920,
-      (((darumaCenter.width * width) / 1920) * darumaCenter.height) / darumaCenter.width,
-    );
-  } else {
-    image(
-      darumaCenter,
-      width / 2 - (((darumaCenter.width * width) / 1920) * 1.3) / 2,
-      height / 2,
-      ((darumaCenter.width * width) / 1920) * 1.3,
-      (((darumaCenter.width * width) / 1920) * 1.3 * darumaCenter.height) / darumaCenter.width,
-    );
-  }
-  if (windowWidth / windowHeight > 3 / 4) {
-    image(
-      darumaRight,
-      width / 2 + ((darumaRight.width * width) / 1920) * 0.5,
-      height / 2 -
-        (((darumaRight.width * width) / 1920) * darumaRight.height) / darumaRight.width / 2 +
-        50,
-      (darumaRight.width * width) / 1920,
-      (((darumaRight.width * width) / 1920) * darumaRight.height) / darumaRight.width,
-    );
-  } else {
-    image(
-      darumaRight,
-      width / 2 + ((darumaRight.width * width) / 1920) * 1.3 * 0.5,
-      height / 2,
-      ((darumaRight.width * width) / 1920) * 1.3,
-      (((darumaRight.width * width) / 1920) * 1.3 * darumaRight.height) / darumaRight.width,
-    );
-  }
-  if (windowWidth / windowHeight > 3 / 4) {
-    image(
-      logo,
-      width / 2 - (logo.width * width) / 1920 / 2,
-      (height / 2 - (hokuriku.height * width) / hokuriku.width - 20) / 2 -
-        (((logo.width * width) / 1920) * logo.height) / logo.width / 2,
-      (logo.width * width) / 1920,
-      (((logo.width * width) / 1920) * logo.height) / logo.width,
-    );
-  } else {
-    image(
-      logo,
-      width / 2 - (((logo.width * width) / 1920) * 1.5) / 2,
-      (height / 2 -
-        (riku.height * width) / riku.width / 2 -
-        (hoku.height * width) / hoku.width -
-        20) /
-        2 -
-        (((logo.width * width) / 1920) * 1.5 * logo.height) / logo.width / 2,
-      ((logo.width * width) / 1920) * 1.5,
-      (((logo.width * width) / 1920) * 1.5 * logo.height) / logo.width,
-    );
-  }
-  if (windowWidth / windowHeight > 3 / 4) {
-    image(
-      date,
-      width / 2 - (date.width * width) / 1920 / 2,
-      (height / 2 + 20 + (_2025.height * width) / _2025.width + height) / 2 -
-        (((date.width * width) / 1920) * date.height) / date.width / 2,
-      (date.width * width) / 1920,
-      (((date.width * width) / 1920) * date.height) / date.width,
-    );
-  } else {
-    image(
-      date,
-      width / 2 - (((date.width * width) / 1920) * 2.5) / 2,
-      (height / 2 -
-        (riku.height * width) / riku.width / 2 +
-        (riku.height * width) / riku.width +
-        20 +
-        (_2025Full.height * width) / _2025Full.width +
-        height) /
-        2 -
-        (((date.width * width) / 1920) * 2.5 * date.height) / date.width / 2,
-      ((date.width * width) / 1920) * 2.5,
-      (((date.width * width) / 1920) * 2.5 * date.height) / date.width,
-    );
+    placeImage(kasumiLeft, [0, height - 50], ["LEFT", "BOTTOM"]);
+    placeImage(kasumiRight, [width, 0], ["RIGHT", "TOP"]);
+    const col = createCol(40, width, hokuriku, _2025);
+    placeImage(col, [0, height / 2], ["LEFT", "CENTER"], 1920 / col.width);
+    placeImage(darumaLeft, [(width * 3) / 11, height / 2 + 50], ["CENTER", "CENTER"]);
+    placeImage(darumaCenter, [width / 2, height / 2 + 50], ["CENTER", "CENTER"]);
+    placeImage(darumaRight, [(width * 8) / 11, height / 2 + 50], ["CENTER", "CENTER"]);
+    placeImage(logo, [width / 2, (height - col.height) / 4], ["CENTER", "CENTER"]);
+    placeImage(date, [width / 2, (height * 3 + col.height) / 4], ["CENTER", "CENTER"]);
   }
 
   blendMode(BURN);
@@ -232,3 +42,27 @@ function draw() {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
+
+const calcSize = (image, mag = 1) => {
+  return [((image.width * width) / 1920) * mag, (width / 1920) * mag * image.height];
+};
+
+const placeImage = (_image, anchor, align, mag = 1) => {
+  const [w, h] = calcSize(_image, mag);
+  const x = align[0] === "LEFT" ? anchor[0] : align[0] === "RIGHT" ? anchor[0] - w : anchor[0] - w / 2;
+  const y = align[1] === "TOP" ? anchor[1] : align[1] === "BOTTOM" ? anchor[1] - h : anchor[1] - h / 2;
+  image(_image, x, y, w, h);
+};
+
+const createCol = (gap, width, ...images) => {
+  pg = createGraphics(width, images.reduce((acc, cur) => acc + (width / cur.width) * cur.height, 0) + gap * (images.length - 1));
+  let y = 0;
+  for (let i = 0; i < images.length; i++) {
+    const img = images[i];
+    const h = (width / img.width) * img.height;
+    pg.image(img, 0, y, width, h);
+    y += h + gap;
+  }
+
+  return pg;
+};

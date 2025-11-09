@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Outfit } from "next/font/google";
+import Script from "next/script";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -79,8 +80,8 @@ const RootLayout = ({
   return (
     <html lang="ja">
       <head>
-        <script src="https://cdn.jsdelivr.net/npm/p5/lib/p5.min.js" />
-        <script src="/hero/sketch.js" />
+        <Script src="https://cdn.jsdelivr.net/npm/p5/lib/p5.min.js" />
+        <Script src="/hero/sketch.js" />
       </head>
 
       <body className={`${outfit.variable} ${notoSansJP.variable} antialiased`}>
