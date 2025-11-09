@@ -9,13 +9,9 @@ const links: {
     href: "/",
     label: "Home",
   },
-  // {
-  //   href: "/talks",
-  //   label: "タイムテーブル",
-  // },
   {
-    href: "/speakers",
-    label: "採択トーク",
+    href: "/talks",
+    label: "タイムテーブル",
   },
   {
     href: "/sponsors",

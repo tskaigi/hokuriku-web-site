@@ -3,7 +3,6 @@ type Props = {
   isActive?: boolean;
 };
 
-// TimeLabel コンポーネント
 export function TimeLabel({ timeText, isActive = false }: Props) {
   return (
     <div

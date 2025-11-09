@@ -1,45 +1,39 @@
-// src/components/talks/track-item/index.tsx
 import { TimeLabel } from "@/components/talks/time-label";
 import { TrackBadge } from "@/components/talks/track-badge";
-import { TALK_TYPE, TRACK, type Talk } from "@/constants/timetableEventData";
+import { TALK_TYPE, TRACK, TRACKS, type Talk, type Track } from "@/constants/timetableEventData";
+import Image from "next/image";
 import Link from "next/link";
 
-type TrackContent = {
-  track: keyof typeof TRACK;
-  talk?: Talk | Talk[];
-  eventText?: string;
-};
+type TrackContent =
+  | {
+      track: Track;
+      talk: Talk[];
+      eventText?: undefined;
+    }
+  | {
+      track: Track;
+      talk?: undefined;
+      eventText?: string;
+    };
 
 type Props = {
   startTime: string;
   endTime?: string;
   contents?: TrackContent[];
   isActive?: boolean;
-  refHandler?: (ref: HTMLDivElement) => void;
 };
 
-export function TrackItem({
-  startTime,
-  endTime,
-  contents = [],
-  isActive = false,
-  refHandler,
-}: Props) {
-  const orderedTracks: (keyof typeof TRACK)[] = ["TRACK1", "TRACK2"];
-
+export function TrackItem({ startTime, endTime, contents = [], isActive = false }: Props) {
   return (
-    <div
-      ref={refHandler}
-      className="mt-4 grid grid-cols-[1fr] gap-1 md:mt-2 md:grid-cols-[auto_1fr_1fr] md:items-stretch"
-    >
+    <div className="mt-4 grid grid-cols-[1fr] gap-1 md:mt-2 md:grid-cols-[auto_1fr_1fr] md:items-stretch">
       {/* 左側の時間スロット */}
       <TimeLabel timeText={endTime ? `${startTime}〜${endTime}` : startTime} isActive={isActive} />
 
-      {orderedTracks.map((t) => {
+      {TRACKS.map((t) => {
         const trackContents = contents.filter((c) => c.track === t);
-        const firstTalk = Array.isArray(trackContents[0]?.talk)
-          ? trackContents[0]?.talk[0]
-          : trackContents[0]?.talk;
+
+        // NOTE: talkが複数指定されている場合でも、talkTypeは全て同じであるため、0番目のtalkTypeを参照する
+        const firstTalkType = trackContents[0]?.talk?.[0].talkType;
 
         return (
           <div
@@ -60,68 +54,52 @@ export function TrackItem({
                 )}
 
                 {/* TALK_TYPEバッジ */}
-                {firstTalk?.talkType && (
+                {firstTalkType && (
                   <TrackBadge
-                    label={TALK_TYPE[firstTalk.talkType]?.name}
-                    borderColor={TALK_TYPE[firstTalk.talkType]?.borderColor}
-                    textColor={TALK_TYPE[firstTalk.talkType]?.textColor}
+                    label={TALK_TYPE[firstTalkType]?.name}
+                    borderColor={TALK_TYPE[firstTalkType]?.borderColor}
+                    textColor={TALK_TYPE[firstTalkType]?.textColor}
                   />
                 )}
               </div>
             )}
 
             {/* トークタイトル・スピーカー */}
-            {trackContents.length > 0 ? (
-              trackContents.map((c, i) => {
-                const talksArray = Array.isArray(c.talk) ? c.talk : c.talk ? [c.talk] : [];
+            {trackContents.map((c) => {
+              return (
+                <div key={c.track} className="flex w-full flex-col items-start gap-1 text-left">
+                  {c.talk?.map((talk) => (
+                    <div key={talk.id} className="mb-2 w-full last:mb-0">
+                      <h3 className="font-semibold">
+                        <Link href={`/talks/${talk?.id}`} className="hover:underline">
+                          {talk?.title}
+                        </Link>
+                      </h3>
 
-                return (
-                  <div key={i} className="flex w-full flex-col items-start gap-1 text-left">
-                    {talksArray.map((talk, j) => (
-                      <div key={`${i}-${j}`} className="mb-2 w-full last:mb-0">
-                        <h3 className="font-semibold">
-                          <Link href={`/talks/${talk?.id}`} className="hover:underline">
-                            {talk?.title}
-                          </Link>
-                        </h3>
+                      <ul className="mt-1 space-y-0.5 text-sm">
+                        {talk.speakers.map((speaker) => (
+                          <li key={speaker.name}>
+                            {speaker.profileImagePath && (
+                              <Image
+                                src={`/timetable/speaker/${speaker.profileImagePath}`}
+                                alt={speaker.name}
+                                className="mr-2 inline rounded-full"
+                                width={32}
+                                height={32}
+                              />
+                            )}
+                            {speaker.name}
+                            {speaker.affiliation ? ` / ${speaker.affiliation}` : ""}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
 
-                        {talk?.speakers && talk.speakers.length > 0 && (
-                          <ul className="mt-1 ml-2 space-y-0.5 text-sm">
-                            {talk.speakers.map((speaker) => (
-                              <li key={speaker.name}>
-                                Speaker:{" "}
-                                {speaker.affiliation ? (
-                                  speaker.additionalLink ? (
-                                    <a
-                                      href={speaker.additionalLink}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      className="text-black"
-                                    >
-                                      {speaker.affiliation}
-                                    </a>
-                                  ) : (
-                                    speaker.affiliation
-                                  )
-                                ) : (
-                                  ""
-                                )}
-                                {speaker.affiliation ? " " : ""}
-                                {speaker.name}
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </div>
-                    ))}
-
-                    {c.eventText && <h3 className="mt-2 font-semibold">{c.eventText}</h3>}
-                  </div>
-                );
-              })
-            ) : (
-              <p className="w-full text-left">&nbsp;</p>
-            )}
+                  {c.eventText && <h3 className="font-semibold">{c.eventText}</h3>}
+                </div>
+              );
+            })}
           </div>
         );
       })}

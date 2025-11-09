@@ -1,13 +1,13 @@
 import { TrackBadge } from "@/components/talks/track-badge";
 import { TALK_TYPE, TRACK, talkList } from "@/constants/timetableEventData";
+import { cn } from "@/lib/utils";
 import { getTalk } from "@/utils/getTalk";
 import { isSpeakerVisible } from "@/utils/isSpeakerVisible";
-import fs from "fs";
 import { CircleUserRound } from "lucide-react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import path from "path";
 import type { ComponentProps } from "react";
 import Markdown from "react-markdown";
 import remarkBreaks from "remark-breaks";
@@ -82,10 +82,10 @@ export default async function TalkDetailPage({ params }: { params: Promise<{ id:
   if (!talk) {
     notFound();
   }
-  const talkType = TALK_TYPE[talk.talkType] || TALK_TYPE.DEFAULT;
+  const talkType = TALK_TYPE[talk.talkType];
 
-  const thumbnailPath = path.join("public", "ogp", "speaker-ogp", `${talk.id}.png`);
-  const thumbnailExists = fs.existsSync(thumbnailPath);
+  // NOTE: スポンサーLTはサムネイルがまだ準備できていないので非表示にする
+  const showThumbnail = talk.talkType !== "SPONSOR_LIGHTNINGTALKS";
 
   return (
     <main className="bg-blue-light-100 pt-16 pb-10 md:px-8 md:py-16 lg:px-10">
@@ -94,14 +94,14 @@ export default async function TalkDetailPage({ params }: { params: Promise<{ id:
       </h1>
 
       <div
-        className={`mx-auto flex max-w-screen-xl flex-col gap-6 bg-white md:rounded-xl ${
-          !thumbnailExists ? "pt-6 pb-6 md:pt-8 md:pb-8 lg:pt-10 lg:pb-10" : "pb-6 md:pb-8 lg:pb-10"
-        }`}
+        className={cn(
+          "mx-auto flex max-w-screen-xl flex-col gap-6 bg-white pb-6 md:rounded-xl md:py-8 lg:py-10",
+          !showThumbnail && "pt-8",
+        )}
       >
-        {/* サムネイル画像がある場合 */}
-        {thumbnailExists && (
-          <div className="bg-black-100 flex justify-center md:mx-8 md:mt-8 lg:mx-10 lg:mt-10">
-            <img
+        {showThumbnail && (
+          <div className="bg-black-100 flex justify-center md:mx-8 lg:mx-10">
+            <Image
               src={`/ogp/speaker-ogp/${talk.id}.png`}
               alt={talk.title}
               className="mx-auto h-auto max-h-[383px] w-full max-w-[730px] object-contain"
@@ -118,7 +118,7 @@ export default async function TalkDetailPage({ params }: { params: Promise<{ id:
             textColor={talkType.textColor}
           />
 
-          <h2 className="mt-2 text-2xl font-bold">{talk.title.trim()}</h2>
+          <h2 className="mt-2 text-2xl font-bold">{talk.title}</h2>
           <div className="text-lg font-bold">
             {talk.time} （{TRACK[talk.track].name}）
           </div>
@@ -135,19 +135,21 @@ export default async function TalkDetailPage({ params }: { params: Promise<{ id:
             <div key={`${speaker.name}-${index}`} className="mt-4 px-6 md:px-8 lg:px-10">
               <div className="bg-blue-light-200 rounded-xl p-6">
                 <div className="flex flex-col items-center gap-6 sm:flex-row">
-                  <div className="flex aspect-square w-[180px] shrink-0 items-center justify-center overflow-hidden rounded-full bg-gray-100 md:w-[220px]">
+                  <div className="aspect-square shrink-0">
                     {speaker.profileImagePath ? (
-                      <img
+                      <Image
                         src={`/timetable/speaker/${speaker.profileImagePath}`}
                         alt={speaker.name}
-                        className="h-full w-full object-cover"
+                        className="h-[120px] w-[120px] rounded-full object-cover"
+                        width={160}
+                        height={160}
                       />
                     ) : (
-                      <CircleUserRound className="h-full w-full text-gray-400" />
+                      <CircleUserRound size={120} className="h-full w-full text-gray-400" />
                     )}
                   </div>
 
-                  <div className="flex flex-col gap-4">
+                  <div className="flex w-full flex-col gap-4">
                     <h2 className="text-2xl font-bold">{speaker.name}</h2>
                     <div className="flex flex-col gap-2">
                       <p className="text-16 md:text-18 text-gray-700">

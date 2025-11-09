@@ -1,6 +1,6 @@
-// src/components/talks/track-header/index.tsx
 import { Button } from "@/components/ui/button";
 import { TRACK, type Track } from "@/constants/timetableEventData";
+import { cn } from "@/lib/utils";
 import { Copy } from "lucide-react";
 import { useState } from "react";
 
@@ -35,12 +35,12 @@ export function TrackHeader({ track }: Props) {
   };
 
   return (
-    <div className={`${TRACK[track].bgColor} p-2 text-center`}>
-      <h2 className={`font-bold ${TRACK[track].textColor}`}>{TRACK[track].name}</h2>
+    <div className={cn(TRACK[track].bgColor, "p-2 text-center")}>
+      <h2 className={cn(TRACK[track].textColor, "font-bold")}>{TRACK[track].name}</h2>
       <div className="mt-2 flex justify-center">
         <Button
           onClick={() => copyToClipboard(TRACK[track].tag)}
-          className="flex h-auto items-center gap-2 rounded-full bg-white px-4 py-1 text-sm font-medium text-black hover:bg-gray-100"
+          className="flex h-auto cursor-pointer items-center gap-2 rounded-full bg-white px-4 py-1 text-sm font-medium text-black hover:bg-gray-100"
         >
           {copySuccess ? (
             <span>コピーしました！</span>
