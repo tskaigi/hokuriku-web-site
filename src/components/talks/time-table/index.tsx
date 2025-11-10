@@ -257,7 +257,7 @@ export const TimeTable = () => {
         startTime="17:00"
         endTime="17:55"
         contents={[
-          { track: "TRACK1", eventText: "トグルホールクロージング" },
+          { track: "TRACK1", eventText: "toggleルームクロージング" },
           { track: "TRACK2", eventText: "参加者体験企画" },
         ]}
         isActive={isSessionActive("17:00")}
