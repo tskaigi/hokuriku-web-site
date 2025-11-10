@@ -1,6 +1,7 @@
 import CoreStaffSection from "@/components/core-staff-section";
 import EventOverview from "@/components/event-overview";
 import Hero from "@/components/hero";
+import { JudgesSection } from "@/components/JudgesSection";
 import { NewsSection } from "@/components/news-section";
 import { ShareButton } from "@/components/share-button";
 import SponsorBoardSection from "@/components/sponsor-board";
@@ -15,6 +16,7 @@ const Home = () => {
       <TicketPurchaseSection />
       <EventOverview />
       <SponsorBoardSection />
+      <JudgesSection />
       <CoreStaffSection />
       <StaffSection />
 
