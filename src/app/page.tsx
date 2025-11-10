@@ -1,7 +1,7 @@
 import CoreStaffSection from "@/components/core-staff-section";
 import EventOverview from "@/components/event-overview";
 import Hero from "@/components/hero";
-import { JudgesSection } from "@/components/JudgesSection";
+import { JudgesSection } from "@/components/judges-section";
 import { NewsSection } from "@/components/news-section";
 import { ShareButton } from "@/components/share-button";
 import SponsorBoardSection from "@/components/sponsor-board";
