@@ -118,6 +118,10 @@ const sketch = (p: p5) => {
     );
   };
 
+  p.touchMoved = () => {
+    return true;
+  };
+
   const calcSize = (image: p5.Image | p5.Graphics, mag = 1) => {
     return [((image.width * p.width) / 1920) * mag, (p.width / 1920) * mag * image.height];
   };
