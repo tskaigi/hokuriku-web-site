@@ -10,7 +10,6 @@ const Hero = () => {
   const p5Instance = useRef<p5>(null);
 
   useEffect(() => {
-    console.log(window);
     import("p5").then(({ default: p5 }) => {
       if (!p5Instance.current) {
         p5Instance.current = new p5(sketch, canvasRef.current!);
@@ -20,7 +19,7 @@ const Hero = () => {
 
   return (
     <section id="hero" className="bg-primary relative w-full min-w-84">
-      <div id="canvas" className="w-full" ref={canvasRef} />
+      <div id="canvas" className="w-full [&>canvas]:!touch-auto" ref={canvasRef} />
 
       {/* Scroll Indicator */}
       <div
