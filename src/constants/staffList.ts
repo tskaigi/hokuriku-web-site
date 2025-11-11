@@ -129,3 +129,21 @@ export const staffList: Staff[] = [
     href: "https://github.com/SimiChoco",
   },
 ];
+
+export const eventStaffList: Staff[] = [
+  {
+    name: "Keisuke Ikeda",
+    image: "eventStaff/ike_keichan.png",
+    href: "https://x.com/ike_keichan",
+  },
+  {
+    name: "IIHARA議長",
+    image: "eventStaff/iihara_gityo.jpeg",
+    href: "https://x.com/iihara_gityo",
+  },
+  {
+    name: "Yuma Satake",
+    image: "eventStaff/yumasatake.jpeg",
+    href: "https://x.com/yuma_satake22",
+  },
+];

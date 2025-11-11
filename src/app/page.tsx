@@ -1,5 +1,6 @@
 import CoreStaffSection from "@/components/core-staff-section";
 import EventOverview from "@/components/event-overview";
+import EventStaffSection from "@/components/event-staff-section";
 import Hero from "@/components/hero";
 import { NewsSection } from "@/components/news-section";
 import { ShareButton } from "@/components/share-button";
@@ -17,6 +18,7 @@ const Home = () => {
       <SponsorBoardSection />
       <CoreStaffSection />
       <StaffSection />
+      <EventStaffSection />
 
       <div className="fixed right-0 bottom-[env(safe-area-inset-bottom)] p-4 md:hidden">
         <ShareButton />
