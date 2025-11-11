@@ -1,9 +1,3 @@
-// イベント日付
-export const EVENT_DATE = {
-  DAY1: "2025-11-23",
-} as const;
-export type EventDate = keyof typeof EVENT_DATE;
-
 // トラック設定
 export const TRACK = {
   TRACK1: {
@@ -20,6 +14,7 @@ export const TRACK = {
   },
 } as const;
 export type Track = keyof typeof TRACK;
+export const TRACKS = Object.keys(TRACK) as Track[];
 
 // トークタイプ
 export const TALK_TYPE = {
@@ -31,11 +26,6 @@ export const TALK_TYPE = {
   SESSION: {
     name: "セッション",
     borderColor: "border-talktype-green",
-    textColor: "text-black",
-  },
-  ORGANIZER: {
-    name: "主催者講演",
-    borderColor: "border-yellow-400",
     textColor: "text-black",
   },
   LIGHTNINGTALKS: {
@@ -58,11 +48,6 @@ export const TALK_TYPE = {
     borderColor: "border-purple-600",
     textColor: "text-black",
   },
-  DEFAULT: {
-    name: "未設定",
-    borderColor: "border-gray-300",
-    textColor: "text-black",
-  },
 } as const;
 
 export type TalkType = keyof typeof TALK_TYPE;
@@ -70,7 +55,7 @@ export type TalkType = keyof typeof TALK_TYPE;
 // スピーカー型
 export type Speaker = {
   name: string;
-  username?: string;
+  username: string;
   profileImagePath?: string;
   biography?: string;
   xUrl?: string;
@@ -85,7 +70,6 @@ export type Talk = {
   id: string;
   title: string;
   speakers: Speaker[];
-  eventDate: EventDate;
   track: Track;
   talkType: TalkType;
   overview: string[];
@@ -96,7 +80,6 @@ export type Talk = {
 export const talkList: Talk[] = [
   {
     id: "1",
-    eventDate: "DAY1",
     track: "TRACK1",
     talkType: "KEYNOTE",
     title: "TypeScript 6.0で非推奨化されるオプションたち",
@@ -118,7 +101,6 @@ export const talkList: Talk[] = [
   },
   {
     id: "2",
-    eventDate: "DAY1",
     track: "TRACK1",
     talkType: "SESSION",
     title: "Fullstack TSでマルチプロダクトの基盤開発",
@@ -140,7 +122,6 @@ export const talkList: Talk[] = [
   },
   {
     id: "3",
-    eventDate: "DAY1",
     track: "TRACK2",
     talkType: "SESSION",
     title: "フロントエンドにおける「型」の責務分離に対する1つのアプローチ",
@@ -162,10 +143,9 @@ export const talkList: Talk[] = [
   },
   {
     id: "4",
-    eventDate: "DAY1",
     track: "TRACK1",
     talkType: "SPONSOR_LIGHTNINGTALKS",
-    title: "トグルホールディングス株式会社",
+    title: "掲載準備中",
     overview: [``],
     time: "12:00 〜 12:35",
     speakers: [
@@ -184,7 +164,6 @@ export const talkList: Talk[] = [
   },
   {
     id: "5",
-    eventDate: "DAY1",
     track: "TRACK1",
     talkType: "SPONSOR_LIGHTNINGTALKS",
     title: "通るURLだけ通す — Monorepoで実現する型安全なリンク設計",
@@ -200,7 +179,7 @@ export const talkList: Talk[] = [
         biography: "",
         xUrl: "https://x.com/ya2s_x",
         githubUrl: "https://github.com/ya2s",
-        additionalLink: "https://www.reiwatravel.co.jp/",
+        additionalLink: "",
         affiliation: "株式会社令和トラベル",
         position: "EM",
       },
@@ -208,7 +187,6 @@ export const talkList: Talk[] = [
   },
   {
     id: "6",
-    eventDate: "DAY1",
     track: "TRACK1",
     talkType: "SPONSOR_LIGHTNINGTALKS",
     title: "フロントエンドアーキテクチャの設計方法論 Feature-Sliced Designの紹介",
@@ -230,7 +208,7 @@ export const talkList: Talk[] = [
         biography: "",
         xUrl: "https://x.com/motikoma",
         githubUrl: "",
-        additionalLink: "https://www.ascendlogi.co.jp/",
+        additionalLink: "",
         affiliation: "アセンド株式会社",
         position: "リードプロダクトエンジニア",
       },
@@ -238,7 +216,6 @@ export const talkList: Talk[] = [
   },
   {
     id: "7",
-    eventDate: "DAY1",
     track: "TRACK1",
     talkType: "SPONSOR_LIGHTNINGTALKS",
     title: "数千〜数万のAgentを司る「Ai Workforce」のウラ側",
@@ -254,7 +231,7 @@ export const talkList: Talk[] = [
         biography: "",
         xUrl: "https://x.com/nekokak",
         githubUrl: "https://github.com/nekokak",
-        additionalLink: "https://layerx.co.jp/",
+        additionalLink: "https://note.com/nekokak",
         affiliation: "株式会社LayerX",
         position: "Ai Workforce事業部 CPO 兼 プロダクト部 部長",
       },
@@ -262,7 +239,6 @@ export const talkList: Talk[] = [
   },
   {
     id: "8",
-    eventDate: "DAY1",
     track: "TRACK1",
     talkType: "SPONSOR_LIGHTNINGTALKS",
     title: "カミナシ社初の フルスタックTypeScript 利用の現在",
@@ -278,15 +254,15 @@ export const talkList: Talk[] = [
         biography: "",
         xUrl: "https://x.com/kuwahara_jsri",
         githubUrl: "https://github.com/kkeeth",
-        additionalLink: "https://corp.kaminashi.jp/",
-        affiliation: "株式会社カミナシ",
+        additionalLink: "https://keeth.me",
+        affiliation:
+          "株式会社カミナシ / エンジニアリング本部 Employee Services 部 Negima Engineering ユニット",
         position: "エンジニアリングマネージャー",
       },
     ],
   },
   {
     id: "9",
-    eventDate: "DAY1",
     track: "TRACK1",
     talkType: "SPONSOR_LIGHTNINGTALKS",
     title: "挑戦を支えるTypeScript──顧客とエンジニアが共に成長する現場から",
@@ -296,13 +272,13 @@ export const talkList: Talk[] = [
     time: "12:00 〜 12:35",
     speakers: [
       {
-        name: "坂口真由 / wabi",
-        username: "さかぐちまゆ/wabi",
+        name: "坂口真由",
+        username: "さかぐちまゆ",
         profileImagePath: "9_wabi.png",
         biography: "",
         xUrl: "https://x.com/wabi_1318",
         githubUrl: "",
-        additionalLink: "https://kokorozashi-japan.co.jp/",
+        additionalLink: "",
         affiliation: "株式会社ココロザシ",
         position: "エンジニア",
       },
@@ -310,7 +286,6 @@ export const talkList: Talk[] = [
   },
   {
     id: "10",
-    eventDate: "DAY1",
     track: "TRACK2",
     talkType: "SPONSOR_LIGHTNINGTALKS",
     title: "Nxはいいぞ！monorepoプロジェクトにおける差分検知を活用した型チェック最適化",
@@ -328,7 +303,7 @@ monorepo構成におけるCI実行時間の効率化に興味がある方、Nx�
         biography: "",
         xUrl: "https://x.com/karukan013L23",
         githubUrl: "https://github.com/karukan029",
-        additionalLink: "https://conference.findy-code.io/",
+        additionalLink: "",
         affiliation: "ファインディ株式会社",
         position: "Team+開発部 フロントエンドエンジニア",
       },
@@ -336,7 +311,6 @@ monorepo構成におけるCI実行時間の効率化に興味がある方、Nx�
   },
   {
     id: "11",
-    eventDate: "DAY1",
     track: "TRACK2",
     talkType: "SPONSOR_LIGHTNINGTALKS",
     title: "型に救われたアーキテクチャ移行の話",
@@ -350,7 +324,7 @@ monorepo構成におけるCI実行時間の効率化に興味がある方、Nx�
         biography: "",
         xUrl: "https://x.com/modo_ckey",
         githubUrl: "https://github.com/modockey",
-        additionalLink: "https://www.algo-artis.com/",
+        additionalLink: "",
         affiliation: "株式会社 ALGO ARTIS",
         position: "ソフトウェアエンジニア",
       },
@@ -358,8 +332,7 @@ monorepo構成におけるCI実行時間の効率化に興味がある方、Nx�
   },
   {
     id: "12",
-    eventDate: "DAY1",
-    track: "TRACK1",
+    track: "TRACK2",
     talkType: "SPONSOR_LIGHTNINGTALKS",
     title: "手書き型をやめてTypeScript×PythonをOpenAPIで繋ぐ",
     overview: [
@@ -370,11 +343,11 @@ monorepo構成におけるCI実行時間の効率化に興味がある方、Nx�
       {
         name: "栗田英治",
         username: "くりたえいじ",
-        profileImagePath: "",
+        profileImagePath: "12_kuri-eiei.jpg",
         biography: "",
         xUrl: "",
         githubUrl: "https://github.com/kuri-eiei",
-        additionalLink: "https://www.agile-studio.jp/",
+        additionalLink: "",
         affiliation: "Agile Studio by 永和システムマネジメント",
         position: "エンジニア",
       },
@@ -382,7 +355,6 @@ monorepo構成におけるCI実行時間の効率化に興味がある方、Nx�
   },
   {
     id: "13",
-    eventDate: "DAY1",
     track: "TRACK2",
     talkType: "SPONSOR_LIGHTNINGTALKS",
     title: "WebとFlutterの連携をTypeSpecで固めたかった",
@@ -406,8 +378,7 @@ monorepo構成におけるCI実行時間の効率化に興味がある方、Nx�
   },
   {
     id: "14",
-    eventDate: "DAY1",
-    track: "TRACK1",
+    track: "TRACK2",
     talkType: "SPONSOR_LIGHTNINGTALKS",
     title: "型で守る個人情報：TypeScriptによる静的データガバナンス",
     overview: [
@@ -424,8 +395,7 @@ TypeScriptの型システムを「セキュリティガードレール」とし�
         biography: "",
         xUrl: "https://x.com/sagasanaidecur",
         githubUrl: "",
-        additionalLink:
-          "https://www.team-lab.com/engineering/?utm_source=TSKaigi&utm_medium=web&utm_campaign=hokuriku",
+        additionalLink: "",
         affiliation: "チームラボ株式会社",
         position: "フロントエンドスペシャリスト",
       },
@@ -433,7 +403,6 @@ TypeScriptの型システムを「セキュリティガードレール」とし�
   },
   {
     id: "15",
-    eventDate: "DAY1",
     track: "TRACK2",
     talkType: "SPONSOR_LIGHTNINGTALKS",
     title: "社内オペレーション改善のためのTypeScript",
@@ -451,7 +420,7 @@ TypeScriptの採用によりSaaS連携を型安全に実装できるようにな
         biography: "",
         xUrl: "https://x.com/dachi_023",
         githubUrl: "https://github.com/dachi023",
-        additionalLink: "https://mosh.jp/",
+        additionalLink: "",
         affiliation: "MOSH株式会社",
         position: "ソフトウェアエンジニア",
       },
@@ -459,7 +428,6 @@ TypeScriptの採用によりSaaS連携を型安全に実装できるようにな
   },
   {
     id: "16",
-    eventDate: "DAY1",
     track: "TRACK2",
     talkType: "SPONSOR_LIGHTNINGTALKS",
     title: "Effect入門──次の新規開発で役立つ実践指針",
@@ -477,7 +445,7 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
         biography: "",
         xUrl: "https://x.com/fumiyaki_",
         githubUrl: "https://github.com/fumiyaki",
-        additionalLink: "https://www.tacoms-inc.com/",
+        additionalLink: "",
         affiliation: "株式会社tacoms",
         position: "ソフトウェアエンジニア",
       },
@@ -485,13 +453,11 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "17",
-    eventDate: "DAY1",
     track: "TRACK2",
     talkType: "SPONSOR_LIGHTNINGTALKS",
     title: "4分でわかった気になるRailway Oriented Programming",
     overview: [
-      `
-      関数型ドメインモデリングにある、Railway Oriented ProgrammingについてのLTです。
+      `関数型ドメインモデリングにある、Railway Oriented ProgrammingについてのLTです。
 このLTでは、そんな悩みをシンプルに解決する設計思想 Railway Oriented Programming（ROP） を、4分で“わかった気になる”スピード解説で紹介します。
 
 線路（Railway）のように、「成功」と「失敗」の2つのルートを走らせることで、ネストしたtry-catch地獄から抜け出し、データフローを安全かつ美しく表現する方法を学びます。`,
@@ -505,7 +471,7 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
         biography: "",
         xUrl: "",
         githubUrl: "",
-        additionalLink: "https://nstock.co.jp/",
+        additionalLink: "",
         affiliation: "Nstock株式会社",
         position: "ソフトウェアエンジニア",
       },
@@ -514,7 +480,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
 
   {
     id: "18",
-    eventDate: "DAY1",
     track: "TRACK1",
     talkType: "SESSION",
     title: "denoとtypescriptの関係について改めて考えてみる",
@@ -536,7 +501,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "19",
-    eventDate: "DAY1",
     track: "TRACK1",
     talkType: "SESSION",
     title: "type-challenges を全問解いたのでエッセンスと推し問題を紹介してみる",
@@ -558,7 +522,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "20",
-    eventDate: "DAY1",
     track: "TRACK1",
     talkType: "TEAM_PRESENTATION",
     title: "TypeScript×CASLでつくるSaaSの認可",
@@ -591,7 +554,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "21",
-    eventDate: "DAY1",
     track: "TRACK2",
     talkType: "TEAM_PRESENTATION",
     title:
@@ -625,7 +587,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "22",
-    eventDate: "DAY1",
     track: "TRACK1",
     talkType: "SESSION",
     title:
@@ -648,7 +609,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "23",
-    eventDate: "DAY1",
     track: "TRACK2",
     talkType: "SESSION",
     title: "「TSのAPI型安全」の対価は誰が払う？ 不公平なスキーマ駆動に終止符を打つハイブリッド戦略",
@@ -670,7 +630,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "24",
-    eventDate: "DAY1",
     track: "TRACK1",
     talkType: "SESSION",
     title: "レガシーシステム刷新におけるTypeSpecスキーマ駆動開発のすゝめ",
@@ -692,7 +651,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "25",
-    eventDate: "DAY1",
     track: "TRACK2",
     talkType: "LIGHTNINGTALKS",
     title: "リスクゼロでデリバリーする ― Open Feature × DevCycleの機能解放戦略",
@@ -714,7 +672,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "26",
-    eventDate: "DAY1",
     track: "TRACK2",
     talkType: "LIGHTNINGTALKS",
     title: "アプリケーションの拡大に伴う開発者体験の悪化をなんとかする",
@@ -736,7 +693,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "27",
-    eventDate: "DAY1",
     track: "TRACK2",
     talkType: "LIGHTNINGTALKS",
     title: "Zod × Web Workerを用いた型安全かつUIファーストなIPアドレスCSV一括登録",
@@ -758,7 +714,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "28",
-    eventDate: "DAY1",
     track: "TRACK2",
     talkType: "LIGHTNINGTALKS",
     title: "AIエージェントのプロンプトを自然言語ではなくTypeScriptで書いてみる試み",
@@ -780,7 +735,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "29",
-    eventDate: "DAY1",
     track: "TRACK2",
     talkType: "LIGHTNINGTALKS",
     title: "パイプ演算子をTypeScriptに勝手に実装して遊ぶ話",
@@ -802,7 +756,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "30",
-    eventDate: "DAY1",
     track: "TRACK1",
     talkType: "SESSION",
     title: "型情報を手繰り寄せる技術〜TypeScript Compiler APIによる型解析実践〜",
@@ -824,7 +777,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "31",
-    eventDate: "DAY1",
     track: "TRACK2",
     talkType: "SESSION",
     title: "Welcome to the “Fantasy Land” 🧚 − 代数的構造をめぐる冒険 −",
@@ -846,7 +798,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "32",
-    eventDate: "DAY1",
     track: "TRACK1",
     talkType: "SESSION",
     title: "Building AI Agents with TypeScript",
@@ -868,7 +819,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "33",
-    eventDate: "DAY1",
     track: "TRACK2",
     talkType: "LIGHTNINGTALKS",
     title: "TDMaCのススメ - cittyを使ってテストデータ作成を効率化する",
@@ -890,7 +840,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "34",
-    eventDate: "DAY1",
     track: "TRACK2",
     talkType: "LIGHTNINGTALKS",
     title: "TypeScriptの型システムを活用した複合認証システムの設計パターン",
@@ -912,7 +861,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "35",
-    eventDate: "DAY1",
     track: "TRACK2",
     talkType: "LIGHTNINGTALKS",
     title: "TC39 Signals で描くJS/TS/フレームワークの未来の姿",
@@ -934,7 +882,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "36",
-    eventDate: "DAY1",
     track: "TRACK2",
     talkType: "LIGHTNINGTALKS",
     title: "oxc-transformとisolatedDeclarationsで手に入れるtscなし型定義ファイル生成",
@@ -956,7 +903,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "37",
-    eventDate: "DAY1",
     track: "TRACK2",
     talkType: "LIGHTNINGTALKS",
     title:
@@ -979,7 +925,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "38",
-    eventDate: "DAY1",
     track: "TRACK1",
     talkType: "LIGHTNINGTALKS",
     title: "TypeScript ASTを活用した意味差分抽出の紹介",
@@ -1001,7 +946,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "39",
-    eventDate: "DAY1",
     track: "TRACK2",
     talkType: "LIGHTNINGTALKS",
     title: "TS 5.9で使えるようになった import defer でパフォーマンス最適化を実現する",
@@ -1023,7 +967,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "40",
-    eventDate: "DAY1",
     track: "TRACK2",
     talkType: "LIGHTNINGTALKS",
     title: "React / TypeScriptでのカラーピッカーの実装戦略",
@@ -1045,7 +988,6 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "41",
-    eventDate: "DAY1",
     track: "TRACK2",
     talkType: "SESSION",
     title: "Branded Typesで日時の複雑さと戦う",
@@ -1066,14 +1008,3 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     ],
   },
 ];
-
-// username 抽出
-export const usernames = talkList.flatMap((talk) =>
-  talk.speakers.map((s) => ({
-    username: s.username || talk.id,
-  })),
-);
-
-export const talkUsernames = talkList.flatMap((talk) =>
-  talk.speakers.filter((s) => s.username).map((s) => ({ username: s.username })),
-);

@@ -1,5 +1,5 @@
-// src/components/talks/track-badge/index.tsx
 import { TALK_TYPE } from "@/constants/timetableEventData";
+import { cn } from "@/lib/utils";
 
 export type TrackBadgeProps = {
   label?: string;
@@ -30,15 +30,21 @@ export function TrackBadge({
       : "";
 
   // TALK_TYPE指定がある場合は自動で色と名前を取得
-  const type = talkType ? (TALK_TYPE[talkType] ?? TALK_TYPE.DEFAULT) : null;
-  const finalLabel = talkType ? type?.name : label;
+  const type = talkType ? TALK_TYPE[talkType] : null;
   const finalBgColor = talkType ? "" : bgColor;
-  const finalTextColor = talkType ? (type?.textColor ?? "") : textColor;
-  const finalBorderColor = talkType ? (type?.borderColor ?? "") : borderColor;
+  const finalTextColor = talkType ? type?.textColor : textColor;
+  const finalBorderColor = talkType ? type?.borderColor : borderColor;
 
   return (
     <span
-      className={`inline-flex w-max items-center justify-center rounded-full border-2 px-3 py-1 text-xs font-semibold ${finalBgColor} ${finalTextColor} ${finalBorderColor} ${visibilityClass} ${className}`}
+      className={cn(
+        "inline-flex w-max items-center justify-center rounded-full border-2 px-3 py-1 text-xs font-semibold",
+        finalBgColor,
+        finalTextColor,
+        finalBorderColor,
+        visibilityClass,
+        className,
+      )}
     >
       {label}
     </span>
