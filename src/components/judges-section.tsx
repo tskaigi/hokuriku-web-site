@@ -1,4 +1,5 @@
 import { judgesList } from "@/constants/judgesList";
+import Image from "next/image";
 import SectionHeading from "./section-heading";
 
 export const JudgesSection = () => {
@@ -8,16 +9,16 @@ export const JudgesSection = () => {
         <SectionHeading>プロポーザル選考委員</SectionHeading>
         <ul className="grid grid-cols-[repeat(auto-fit,192px)] justify-center gap-x-14 gap-y-8 px-10 md:grid-cols-[repeat(auto-fit,224px)]">
           {judgesList.map(({ name, image, href }) => (
-            <li key={name}>
+            <li key={name} className="relative aspect-square h-full w-full">
               <a
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center gap-2"
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src={image}
+                  fill
                   alt={`${name} アイコン`}
                   className="h-auto w-full overflow-hidden rounded-full"
                 />
