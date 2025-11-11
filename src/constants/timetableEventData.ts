@@ -929,7 +929,7 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     talkType: "LIGHTNINGTALKS",
     title: "TypeScript ASTを活用した意味差分抽出の紹介",
     overview: [` `],
-    time: "16:00 〜 16:30",
+    time: "16:40 〜 17:00",
     speakers: [
       {
         name: "武井勇也",
@@ -971,7 +971,7 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     talkType: "LIGHTNINGTALKS",
     title: "React / TypeScriptでのカラーピッカーの実装戦略",
     overview: [` `],
-    time: "16:00 〜 16:30",
+    time: "16:40 〜 17:00",
     speakers: [
       {
         name: "t-jimbo",
@@ -992,7 +992,7 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     talkType: "SESSION",
     title: "Branded Typesで日時の複雑さと戦う",
     overview: [` `],
-    time: "16:00 〜 16:30",
+    time: "16:40 〜 17:00",
     speakers: [
       {
         name: "Saji",
