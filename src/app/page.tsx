@@ -3,6 +3,7 @@ import EventOverview from "@/components/event-overview";
 import EventStaffSection from "@/components/event-staff-section";
 import Hero from "@/components/hero";
 import { NewsSection } from "@/components/news-section";
+import PersonalSponsorsSection from "@/components/personal-sponsors-section";
 import { ShareButton } from "@/components/share-button";
 import SponsorBoardSection from "@/components/sponsor-board";
 import StaffSection from "@/components/staff-section";
@@ -16,6 +17,7 @@ const Home = () => {
       <TicketPurchaseSection />
       <EventOverview />
       <SponsorBoardSection />
+      <PersonalSponsorsSection />
       <CoreStaffSection />
       <StaffSection />
       <EventStaffSection />
