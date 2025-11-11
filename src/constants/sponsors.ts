@@ -8,6 +8,7 @@ export type SponsorClass = "platinum" | "gold" | "silver";
 export type Sponsor = {
   id: `${"P" | "G" | "S"}${number}`;
   sponsorId: string;
+  sponsorLtId?: number;
   name: string;
   logoLink: string;
   overview?: string;
@@ -48,6 +49,7 @@ export const sponsorList: SponsorList = {
     {
       id: "P01",
       sponsorId: "toggle",
+      sponsorLtId: 4,
       name: "トグルホールディングス株式会社",
       logoLink: "https://toggle.co.jp",
       overview: `トグルホールディングスは、不動産・建築・金融の3業界を統合したデジタル産業インフラの社会実装を目指す企業です。IT投資が遅れる日本の不動産業界において、TypeScriptをフル活用し、複雑なドメインを安全・柔軟に実装し、業界変革に挑んでいます。`,
@@ -91,6 +93,7 @@ TypeScriptはもちろん、インフラ・AI・LLM・GIS等の先端技術を�
     {
       id: "G01",
       sponsorId: "kokorozashi",
+      sponsorLtId: 9,
       name: "株式会社ココロザシ",
       logoLink: "https://www.wantedly.com/companies/company_299137",
       overview: `AIやクラウド領域を中心としたシステム開発、AWS事業を展開しています。
@@ -130,6 +133,7 @@ AI：Gemini、Copilot、Claude、Cursor、Devin`,
     {
       id: "G02",
       sponsorId: "layerx",
+      sponsorLtId: 7,
       name: "株式会社LayerX",
       logoLink: "https://layerx.co.jp",
       overview:
@@ -158,6 +162,7 @@ AI：Gemini、Copilot、Claude、Cursor、Devin`,
     {
       id: "G03",
       sponsorId: "agile-studio",
+      sponsorLtId: 12,
       name: "Agile Studio by 永和システムマネジメント",
       logoLink: "https://www.agile-studio.jp",
       overview: `「アジャイルで日本の組織を元気にしたい」
@@ -192,6 +197,7 @@ Agile Studio では、従来の受託開発の型にはまらない共創型の�
     {
       id: "G04",
       sponsorId: "kaminashi",
+      sponsorLtId: 8,
       name: "株式会社カミナシ",
       logoLink: "https://corp.kaminashi.jp/",
       overview:
@@ -221,6 +227,7 @@ Agile Studio では、従来の受託開発の型にはまらない共創型の�
     {
       id: "G05",
       sponsorId: "team-lab",
+      sponsorLtId: 14,
       name: "チームラボ",
       logoLink:
         "https://www.team-lab.com/engineering/?utm_source=TSKaigi&utm_medium=web&utm_campaign=hokuriku",
@@ -250,6 +257,7 @@ Agile Studio では、従来の受託開発の型にはまらない共創型の�
     {
       id: "G06",
       sponsorId: "mosh",
+      sponsorLtId: 15,
       name: "MOSH株式会社",
       logoLink: "https://mosh.jp",
       overview:
@@ -278,6 +286,7 @@ Agile Studio では、従来の受託開発の型にはまらない共創型の�
     {
       id: "G07",
       sponsorId: "tacoms",
+      sponsorLtId: 16,
       name: "株式会社tacoms",
       logoLink: "https://www.tacoms-inc.com",
       overview:
@@ -301,6 +310,7 @@ Agile Studio では、従来の受託開発の型にはまらない共創型の�
     {
       id: "G08",
       sponsorId: "nstock",
+      sponsorLtId: 17,
       name: "Nstock株式会社",
       logoLink: "https://nstock.co.jp",
       overview:
@@ -333,6 +343,7 @@ Agile Studio では、従来の受託開発の型にはまらない共創型の�
     {
       id: "G09",
       sponsorId: "jigjp",
+      sponsorLtId: 13,
       name: "株式会社jig.jp",
       logoLink: "https://jig.jp",
       overview: `jig.jpでは、「みんなのライブ配信」ふわっちを中心に、B2C/C2Cのソフトウェア・アプリのサービス開発を行っています。
@@ -360,6 +371,7 @@ Agile Studio では、従来の受託開発の型にはまらない共創型の�
     {
       id: "G10",
       sponsorId: "ascend",
+      sponsorLtId: 6,
       name: "アセンド株式会社",
       logoLink: "https://www.ascendlogi.co.jp",
       overview: `アセンドは日本で最もデジタル化の遅れた物流産業に対して、SaaSを基軸として産業変革に挑むスタートアップです。
@@ -390,6 +402,7 @@ TypeScriptを駆使して社会課題解決に挑むプロダクトエンジニ�
     {
       id: "G11",
       sponsorId: "algo-artis",
+      sponsorLtId: 11,
       name: "株式会社 ALGO ARTIS",
       logoLink: "https://www.algo-artis.com",
       overview:
@@ -419,6 +432,7 @@ ALGO ARTISでは、TypeScriptを活用して社会にインパクトを与えた
     {
       id: "G12",
       sponsorId: "findy",
+      sponsorLtId: 10,
       name: "ファインディ株式会社",
       logoLink: "https://conference.findy-code.io",
       overview:
@@ -452,6 +466,7 @@ ALGO ARTISでは、TypeScriptを活用して社会にインパクトを与えた
     {
       id: "G13",
       sponsorId: "reiwatravel",
+      sponsorLtId: 5,
       name: "株式会社令和トラベル",
       logoLink: "https://www.reiwatravel.co.jp",
       overview: `令和トラベルは、「あたらしい旅行を、デザインする。」 をミッションに、"旅行"におけるあたらしい体験や、あたらしい社会価値の提供を目指すデジタルトラベルエージェンシーです。2022年4月より、旅行アプリ『NEWT（ニュート）』をローンチ。2024年9月にはシリーズAとして約48億円の資金調達を実施。`,
