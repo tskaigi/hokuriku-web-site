@@ -166,13 +166,13 @@ export default async function TalkDetailPage({ params }: { params: Promise<{ id:
                     </div>
 
                     {/* SNSリンク */}
-                    <div className="mt-2 flex flex-wrap gap-4">
+                    <div className="mt-2 flex flex-wrap gap-6">
                       {speaker.xId && (
                         <a
                           href={`https://x.com/${speaker.xId}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-3 rounded-full text-lg text-gray-700 underline-offset-2 hover:underline"
+                          className="inline-flex items-center gap-2 rounded-full text-lg text-gray-700 underline-offset-2 hover:underline"
                         >
                           <div className="shrink-0">
                             <XIcon size={18} />
@@ -185,7 +185,7 @@ export default async function TalkDetailPage({ params }: { params: Promise<{ id:
                           href={`https://github.com/${speaker.githubId}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-3 rounded-full text-lg text-gray-700 underline-offset-2 hover:underline"
+                          className="inline-flex items-center gap-2 rounded-full text-lg text-gray-700 underline-offset-2 hover:underline"
                         >
                           <div className="shrink-0">
                             <GithubIcon size={22} />
@@ -198,7 +198,7 @@ export default async function TalkDetailPage({ params }: { params: Promise<{ id:
                           href={speaker.additionalLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex max-w-full items-center gap-3 truncate rounded-full text-lg text-gray-700 underline-offset-2 hover:underline"
+                          className="inline-flex max-w-full items-center gap-2 truncate rounded-full text-lg text-gray-700 underline-offset-2 hover:underline"
                         >
                           <div className="shrink-0">
                             <LinkIcon size={18} />
