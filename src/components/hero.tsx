@@ -14,27 +14,27 @@ const Hero = () => {
         alt=""
         width={875}
         height={657}
-        priority
         className="absolute top-[9vw] right-0 w-[48vw] sm:top-[6vw]"
         decoding="async"
+        fetchPriority="high"
       />
       <Image
         src="/kasumi-left.png"
         alt=""
         width={584}
         height={374}
-        priority
         className="absolute top-[48vw] left-0 w-[30vw] sm:top-[min(48vw,60vh)]"
         decoding="async"
+        fetchPriority="high"
       />
       <Image
         src="/logo-white.svg"
         alt="TSKaigi Hokuriku"
         width={126}
         height={41}
-        priority
         className="absolute top-[6vw] left-[50vw] w-[30vw] -translate-x-1/2 sm:top-[3vw] sm:w-[21vw]"
         decoding="async"
+        fetchPriority="high"
       />
       <div className="absolute top-[max(15vh,18vw)] left-0 h-[67vw] w-full bg-[url('/HOKURIKU-v.png')] bg-contain bg-no-repeat sm:top-[18vw] sm:h-[18vw] sm:bg-[url('/HOKURIKU-h.png')] md:top-[15vw]">
         <Image
@@ -42,27 +42,27 @@ const Hero = () => {
           alt=""
           width={357}
           height={428}
-          priority
           className="absolute top-[51vw] -left-[6vw] h-[40vw] w-auto sm:top-[9vw] sm:left-[6vw] sm:h-[30vw]"
           decoding="async"
+          fetchPriority="high"
         />
         <Image
           src="/daruma-center.png"
           alt=""
           width={340}
           height={428}
-          priority
           className="absolute top-[51vw] left-1/2 h-[40vw] w-auto -translate-x-1/2 sm:top-[9vw] sm:h-[30vw]"
           decoding="async"
+          fetchPriority="high"
         />
         <Image
           src="/daruma-right.png"
           alt=""
           width={369}
           height={457}
-          priority
           className="absolute top-[51vw] -right-[6vw] h-[40vw] w-auto sm:top-[9vw] sm:right-[6vw] sm:h-[30vw]"
           decoding="async"
+          fetchPriority="high"
         />
       </div>
       <Image
@@ -70,27 +70,27 @@ const Hero = () => {
         alt="2025/11/23"
         width={610}
         height={181}
-        priority
         className="absolute bottom-[18vw] left-1/2 h-[27vw] max-h-42 w-auto -translate-x-1/2 sm:bottom-[9vw] sm:h-[12vw] sm:max-h-36"
         decoding="async"
+        fetchPriority="high"
       />
       <Image
         src="/Kanazawa.png"
         alt="Kanazawa"
         width={407}
         height={100}
-        priority
         className="absolute bottom-[6vw] left-1/2 h-[12vw] max-h-18 w-auto -translate-x-1/2 sm:bottom-[3vw] sm:h-[6vw]"
         decoding="async"
+        fetchPriority="high"
       />
       <Image
         src="/cover.png"
         alt=""
         width={1920}
         height={1080}
-        priority
         className="absolute top-0 left-0 min-h-full min-w-full object-cover object-center mix-blend-color-burn"
         decoding="async"
+        fetchPriority="high"
       />
 
       {/* Scroll Indicator */}
