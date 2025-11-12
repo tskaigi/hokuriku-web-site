@@ -9,7 +9,7 @@ export const JudgesSection = () => {
         <SectionHeading>プロポーザル選考委員</SectionHeading>
         <ul className="grid grid-cols-[repeat(auto-fit,192px)] justify-center gap-x-14 gap-y-8 px-10 md:grid-cols-[repeat(auto-fit,224px)]">
           {judgesList.map(({ name, image, href }) => (
-            <li key={name} className="relative aspect-square h-full w-full">
+            <li key={name}>
               <a
                 href={href}
                 target="_blank"
