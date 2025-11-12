@@ -22,6 +22,8 @@ const PersonalSponsorsSection = () => {
                   alt={`${name} アイコン`}
                   width={400}
                   height={400}
+                  decoding="async"
+                  loading="lazy"
                   className="h-full w-full overflow-hidden rounded-full object-cover"
                 />
                 <p className="text-base leading-7">{name}</p>

@@ -1,5 +1,6 @@
 import SectionHeading from "@/components/section-heading";
 import { coreStaffList } from "@/constants/staffList";
+import Image from "next/image";
 
 const CoreStaffSection = () => {
   return (
@@ -16,10 +17,14 @@ const CoreStaffSection = () => {
                 rel="noopener noreferrer"
                 className="flex aspect-square flex-col items-center gap-2"
               >
-                <img
+                <Image
                   src={image}
                   alt={`${name} アイコン`}
                   className="h-full w-full overflow-hidden rounded-full object-cover"
+                  width={128}
+                  height={128}
+                  decoding="async"
+                  loading="lazy"
                 />
                 <p className="text-base leading-7">{name}</p>
               </a>

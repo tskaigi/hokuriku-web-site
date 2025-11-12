@@ -68,6 +68,8 @@ const TicketPurchaseSection = () => {
             width={566}
             height={210}
             className="w-full max-w-80"
+            decoding="async"
+            loading="lazy"
           />
 
           <ButtonLink href="https://newt.net/spo-tskaigi-hokuriku-2025" variant="secondary">

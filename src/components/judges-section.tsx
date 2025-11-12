@@ -20,6 +20,8 @@ export const JudgesSection = () => {
                   src={image}
                   alt={`${name} アイコン`}
                   className="rounded-full"
+                  decoding="async"
+                  loading="lazy"
                   width={224}
                   height={224}
                 />

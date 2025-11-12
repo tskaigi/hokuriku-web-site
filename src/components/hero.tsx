@@ -15,6 +15,7 @@ const Hero = () => {
         width={875}
         height={657}
         className="absolute top-[9vw] right-0 w-[48vw] sm:top-[6vw]"
+        decoding="async"
       />
       <Image
         src="/kasumi-left.png"
@@ -22,6 +23,7 @@ const Hero = () => {
         width={584}
         height={374}
         className="absolute top-[48vw] left-0 w-[30vw] sm:top-[min(48vw,60vh)]"
+        decoding="async"
       />
       <Image
         src="/logo-white.svg"
@@ -29,6 +31,7 @@ const Hero = () => {
         width={126}
         height={41}
         className="absolute top-[6vw] left-[50vw] w-[30vw] -translate-x-1/2 sm:top-[3vw] sm:w-[21vw]"
+        decoding="async"
       />
       <div className="absolute top-[max(15vh,18vw)] left-0 h-[67vw] w-full bg-[url('/HOKURIKU-v.png')] bg-contain bg-no-repeat sm:top-[18vw] sm:h-[18vw] sm:bg-[url('/HOKURIKU-h.png')] md:top-[15vw]">
         <Image
@@ -37,6 +40,7 @@ const Hero = () => {
           width={357}
           height={428}
           className="absolute top-[51vw] -left-[6vw] h-[40vw] w-auto sm:top-[9vw] sm:left-[6vw] sm:h-[30vw]"
+          decoding="async"
         />
         <Image
           src="/daruma-center.png"
@@ -44,6 +48,7 @@ const Hero = () => {
           width={340}
           height={428}
           className="absolute top-[51vw] left-1/2 h-[40vw] w-auto -translate-x-1/2 sm:top-[9vw] sm:h-[30vw]"
+          decoding="async"
         />
         <Image
           src="/daruma-right.png"
@@ -51,6 +56,7 @@ const Hero = () => {
           width={369}
           height={457}
           className="absolute top-[51vw] -right-[6vw] h-[40vw] w-auto sm:top-[9vw] sm:right-[6vw] sm:h-[30vw]"
+          decoding="async"
         />
       </div>
       <Image
@@ -59,6 +65,7 @@ const Hero = () => {
         width={610}
         height={181}
         className="absolute bottom-[18vw] left-1/2 h-[27vw] max-h-42 w-auto -translate-x-1/2 sm:bottom-[9vw] sm:h-[12vw] sm:max-h-36"
+        decoding="async"
       />
       <Image
         src="/Kanazawa.png"
@@ -66,6 +73,7 @@ const Hero = () => {
         width={407}
         height={100}
         className="absolute bottom-[6vw] left-1/2 h-[12vw] max-h-18 w-auto -translate-x-1/2 sm:bottom-[3vw] sm:h-[6vw]"
+        decoding="async"
       />
       <Image
         src="/cover.png"
@@ -73,6 +81,7 @@ const Hero = () => {
         width={1920}
         height={1080}
         className="absolute top-0 left-0 min-h-full min-w-full object-cover object-center mix-blend-color-burn"
+        decoding="async"
       />
 
       {/* Scroll Indicator */}

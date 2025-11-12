@@ -2,13 +2,14 @@ import "@/app/globals.css";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import type { Metadata } from "next";
-import { Noto_Sans_JP, Outfit } from "next/font/google";
+import { Noto_Sans_JP } from "next/font/google";
 
-const outfit = Outfit({
-  subsets: ["latin"],
-  variable: "--font-outfit",
-  display: "swap",
-});
+// 消して良いかも
+// const outfit = Outfit({
+//   subsets: ["latin"],
+//   variable: "--font-outfit",
+//   display: "swap",
+// });
 
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
@@ -78,7 +79,11 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="ja">
-      <body className={`${outfit.variable} ${notoSansJP.variable} antialiased`}>
+      <head>
+        <link rel="preload" as="image" href="/HOKURIKU-v.png" type="image/png" />
+        <link rel="preload" as="image" href="/HOKURIKU-h.png" type="image/png" />
+      </head>
+      <body className={`${notoSansJP.variable} antialiased`}>
         <div className="flex min-h-screen flex-col">
           <Header />
           {children}

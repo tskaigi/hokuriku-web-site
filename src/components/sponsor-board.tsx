@@ -5,6 +5,18 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
+const rounded = {
+  Plutinum: "rounded-xl",
+  Gold: "rounded-lg",
+  Silver: "rounded",
+};
+
+const width = {
+  Plutinum: 480,
+  Gold: 320,
+  Silver: 240,
+};
+
 const SponsorsBoardItem = ({
   href,
   src,
@@ -16,18 +28,6 @@ const SponsorsBoardItem = ({
   alt: string;
   variant: "Plutinum" | "Gold" | "Silver";
 }) => {
-  const rounded = {
-    Plutinum: "rounded-xl",
-    Gold: "rounded-lg",
-    Silver: "rounded",
-  };
-
-  const width = {
-    Plutinum: 480,
-    Gold: 320,
-    Silver: 240,
-  };
-
   return (
     <Link href={href} target="_blank" rel="noopener noreferrer">
       <Image
@@ -35,7 +35,8 @@ const SponsorsBoardItem = ({
         alt={alt}
         width={width[variant]}
         height={width[variant] / 2}
-        unoptimized
+        loading="lazy"
+        decoding="async"
         className={cn("mx-auto w-full max-w-lg", rounded[variant])}
       />
     </Link>
