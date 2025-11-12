@@ -1,9 +1,11 @@
+import { GithubIcon } from "@/components/icon/github";
+import { XIcon } from "@/components/icon/x";
 import { TrackBadge } from "@/components/talks/track-badge";
 import { TALK_TYPE, TRACK, talkList } from "@/constants/timetableEventData";
 import { cn } from "@/lib/utils";
 import { getTalk } from "@/utils/getTalk";
 import { isSpeakerVisible } from "@/utils/isSpeakerVisible";
-import { CircleUserRound } from "lucide-react";
+import { CircleUserRound, LinkIcon } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -150,7 +152,10 @@ export default async function TalkDetailPage({ params }: { params: Promise<{ id:
                   </div>
 
                   <div className="flex w-full flex-col gap-4">
+                    {/* 登壇者名 */}
                     <h2 className="text-2xl font-bold">{speaker.name}</h2>
+
+                    {/* 所属・自己紹介 */}
                     <div className="flex flex-col gap-2">
                       <p className="text-16 md:text-18 text-gray-700">
                         {speaker.affiliation}
@@ -158,37 +163,47 @@ export default async function TalkDetailPage({ params }: { params: Promise<{ id:
                         {speaker.position}
                       </p>
                       <p className="text-16 md:text-18 text-gray-700">{speaker.biography}</p>
+                    </div>
+
+                    {/* SNSリンク */}
+                    <div className="mt-2 flex flex-wrap gap-4">
+                      {speaker.xId && (
+                        <a
+                          href={`https://x.com/${speaker.xId}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-3 rounded-full text-lg text-gray-700 underline-offset-2 hover:underline"
+                        >
+                          <div className="shrink-0">
+                            <XIcon size={18} />
+                          </div>
+                          <div>{speaker.xId}</div>
+                        </a>
+                      )}
+                      {speaker.githubId && (
+                        <a
+                          href={`https://github.com/${speaker.githubId}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-3 rounded-full text-lg text-gray-700 underline-offset-2 hover:underline"
+                        >
+                          <div className="shrink-0">
+                            <GithubIcon size={22} />
+                          </div>
+                          {speaker.githubId}
+                        </a>
+                      )}
                       {speaker.additionalLink && (
                         <a
                           href={speaker.additionalLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-16 md:text-18 break-all text-gray-700 underline"
+                          className="inline-flex max-w-full items-center gap-3 truncate rounded-full text-lg text-gray-700 underline-offset-2 hover:underline"
                         >
-                          {speaker.additionalLink}
-                        </a>
-                      )}
-                    </div>
-
-                    <div className="mt-2 flex gap-5">
-                      {speaker.xUrl && (
-                        <a
-                          href={speaker.xUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-lg text-gray-700 transition-colors hover:text-gray-900"
-                        >
-                          X
-                        </a>
-                      )}
-                      {speaker.githubUrl && (
-                        <a
-                          href={speaker.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-lg text-gray-700 transition-colors hover:text-gray-900"
-                        >
-                          GitHub
+                          <div className="shrink-0">
+                            <LinkIcon size={18} />
+                          </div>
+                          <div className="grow truncate">{speaker.additionalLink}</div>
                         </a>
                       )}
                     </div>
