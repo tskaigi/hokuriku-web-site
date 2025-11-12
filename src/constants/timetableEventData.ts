@@ -135,8 +135,7 @@ export const talkList: Talk[] = [
     talkType: "SPONSOR_LIGHTNINGTALKS",
     title: "Perl歴約10年のエンジニアがTypeScriptと出会ってみた",
     overview: [
-      `
-      私は約10年、PerlでWebサービスの開発に従事していましたが、現職に転職して初めて「フルスタックTypeScript」で開発するWebサービスに出会い、開発に従事することになりました。
+      `私は約10年、PerlでWebサービスの開発に従事していましたが、現職に転職して初めて「フルスタックTypeScript」で開発するWebサービスに出会い、開発に従事することになりました。
 このスポンサーLTでは、そのような環境で自分がどのようにTypeScriptを学んだかをご紹介することで、他のプログラミング言語からTypeScriptの世界へ足を踏み入れるときの（あるいは、踏み入れる人をサポートするときの）一助になればと思っています。`,
     ],
     time: "12:00 〜 12:35",
