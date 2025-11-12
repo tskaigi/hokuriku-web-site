@@ -14,7 +14,7 @@ export const JudgesSection = () => {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center gap-2"
+                className="flex flex-col items-center gap-3"
               >
                 <Image
                   src={image}
