@@ -80,8 +80,13 @@ const RootLayout = ({
   return (
     <html lang="ja">
       <head>
-        <link rel="preload" as="image" href="/HOKURIKU-v.png" type="image/png" />
-        <link rel="preload" as="image" href="/HOKURIKU-h.png" type="image/png" />
+        <link
+          rel="preload"
+          as="image"
+          imageSrcSet="/HOKURIKU-v.png 639w, /HOKURIKU-h.png 640w"
+          imageSizes="(max-width: 639px) 639px, 640px"
+          href="/HOKURIKU-h.png"
+        />
       </head>
       <body className={`${notoSansJP.variable} antialiased`}>
         <div className="flex min-h-screen flex-col">
