@@ -18,9 +18,10 @@ export const JudgesSection = () => {
               >
                 <Image
                   src={image}
-                  fill
                   alt={`${name} アイコン`}
-                  className="h-auto w-full overflow-hidden rounded-full"
+                  className="rounded-full"
+                  width={224}
+                  height={224}
                 />
                 <p className="text-lg font-bold">{name}</p>
               </a>
