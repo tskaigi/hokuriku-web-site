@@ -55,11 +55,10 @@ export type TalkType = keyof typeof TALK_TYPE;
 // スピーカー型
 export type Speaker = {
   name: string;
-  username: string;
   profileImagePath?: string;
   biography?: string;
-  xUrl?: string;
-  githubUrl?: string;
+  xId?: string;
+  githubId?: string;
   additionalLink?: string;
   affiliation?: string;
   position?: string;
@@ -88,13 +87,10 @@ export const talkList: Talk[] = [
     speakers: [
       {
         name: "うひょ",
-        username: "",
         profileImagePath: "1_uhyo.jpg",
         biography: "",
-        xUrl: "https://x.com/uhyo_",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
+        xId: "uhyo_",
+        githubId: "uhyo",
         position: "フロントエンドエキスパート",
       },
     ],
@@ -109,14 +105,11 @@ export const talkList: Talk[] = [
     speakers: [
       {
         name: "鈴木翔大",
-        username: "Shodai Suzuki",
         profileImagePath: "2_shodaisuzuki.jpeg",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "SoartecL",
+        githubId: "soartec-lab",
+        additionalLink: "https://my.prairie.cards/u/shodai.suzuki",
       },
     ],
   },
@@ -130,14 +123,9 @@ export const talkList: Talk[] = [
     speakers: [
       {
         name: "kinocoboy",
-        username: "",
         profileImagePath: "",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "kinocoboy2",
       },
     ],
   },
@@ -151,14 +139,9 @@ export const talkList: Talk[] = [
     speakers: [
       {
         name: "",
-        username: "",
         profileImagePath: "",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
         affiliation: "トグルホールディングス株式会社",
-        position: "",
       },
     ],
   },
@@ -174,12 +157,10 @@ export const talkList: Talk[] = [
     speakers: [
       {
         name: "松本泰幸（ya2s）",
-        username: "マツモトヤスユキ",
         profileImagePath: "5_matsumotoyasuyuki.jpg",
         biography: "",
-        xUrl: "https://x.com/ya2s_x",
-        githubUrl: "https://github.com/ya2s",
-        additionalLink: "",
+        xId: "ya2s_x",
+        githubId: "ya2s",
         affiliation: "株式会社令和トラベル",
         position: "EM",
       },
@@ -203,12 +184,9 @@ export const talkList: Talk[] = [
     speakers: [
       {
         name: "坂本 圭佑",
-        username: "さかもと けいすけ",
         profileImagePath: "6_sakamotokeisuke.jpg",
         biography: "",
-        xUrl: "https://x.com/motikoma",
-        githubUrl: "",
-        additionalLink: "",
+        xId: "motikoma",
         affiliation: "アセンド株式会社",
         position: "リードプロダクトエンジニア",
       },
@@ -226,11 +204,10 @@ export const talkList: Talk[] = [
     speakers: [
       {
         name: "小林 篤",
-        username: "こばやし あつし",
         profileImagePath: "7_kobayashiatsushi.webp",
         biography: "",
-        xUrl: "https://x.com/nekokak",
-        githubUrl: "https://github.com/nekokak",
+        xId: "nekokak",
+        githubId: "nekokak",
         additionalLink: "https://note.com/nekokak",
         affiliation: "株式会社LayerX",
         position: "Ai Workforce事業部 CPO 兼 プロダクト部 部長",
@@ -249,11 +226,10 @@ export const talkList: Talk[] = [
     speakers: [
       {
         name: "桑原聖仁",
-        username: "くわはらきよひと",
         profileImagePath: "8_kuwaharakiyohito.jpg",
         biography: "",
-        xUrl: "https://x.com/kuwahara_jsri",
-        githubUrl: "https://github.com/kkeeth",
+        xId: "kuwahara_jsri",
+        githubId: "kkeeth",
         additionalLink: "https://keeth.me",
         affiliation:
           "株式会社カミナシ / エンジニアリング本部 Employee Services 部 Negima Engineering ユニット",
@@ -273,12 +249,9 @@ export const talkList: Talk[] = [
     speakers: [
       {
         name: "坂口真由",
-        username: "さかぐちまゆ",
         profileImagePath: "9_wabi.png",
         biography: "",
-        xUrl: "https://x.com/wabi_1318",
-        githubUrl: "",
-        additionalLink: "",
+        xId: "wabi_1318",
         affiliation: "株式会社ココロザシ",
         position: "エンジニア",
       },
@@ -298,12 +271,10 @@ monorepo構成におけるCI実行時間の効率化に興味がある方、Nx�
     speakers: [
       {
         name: "甲斐 和基",
-        username: "かい かずき",
         profileImagePath: "10_kaikazuki.jpg",
         biography: "",
-        xUrl: "https://x.com/karukan013L23",
-        githubUrl: "https://github.com/karukan029",
-        additionalLink: "",
+        xId: "karukan013L23",
+        githubId: "karukan029",
         affiliation: "ファインディ株式会社",
         position: "Team+開発部 フロントエンドエンジニア",
       },
@@ -325,12 +296,10 @@ monorepo構成におけるCI実行時間の効率化に興味がある方、Nx�
     speakers: [
       {
         name: "中川 旭",
-        username: "なかがわ あきら",
         profileImagePath: "11_nakagawaakira.jpg",
         biography: "",
-        xUrl: "https://x.com/modo_ckey",
-        githubUrl: "https://github.com/modockey",
-        additionalLink: "",
+        xId: "modo_ckey",
+        githubId: "modockey",
         affiliation: "株式会社 ALGO ARTIS",
         position: "ソフトウェアエンジニア",
       },
@@ -348,12 +317,9 @@ monorepo構成におけるCI実行時間の効率化に興味がある方、Nx�
     speakers: [
       {
         name: "栗田英治",
-        username: "くりたえいじ",
         profileImagePath: "12_kuri-eiei.jpg",
         biography: "",
-        xUrl: "",
-        githubUrl: "https://github.com/kuri-eiei",
-        additionalLink: "",
+        githubId: "kuri-eiei",
         affiliation: "Agile Studio by 永和システムマネジメント",
         position: "エンジニア",
       },
@@ -371,11 +337,10 @@ monorepo構成におけるCI実行時間の効率化に興味がある方、Nx�
     speakers: [
       {
         name: "Ikeno Sosuke",
-        username: "いけのそうすけ",
         profileImagePath: "13_ikenososuke.jpg",
         biography: "",
-        xUrl: "https://x.com/sausukei_",
-        githubUrl: "https://github.com/sausukei",
+        xId: "sausukei_",
+        githubId: "sausukei",
         additionalLink: "https://www.jig.jp/",
         affiliation: "株式会社jig.jp",
         position: "フロントエンドエンジニア",
@@ -396,12 +361,9 @@ TypeScriptの型システムを「セキュリティガードレール」とし�
     speakers: [
       {
         name: "高木 克哉",
-        username: "たかぎ かつや",
         profileImagePath: "",
         biography: "",
-        xUrl: "https://x.com/sagasanaidecur",
-        githubUrl: "",
-        additionalLink: "",
+        xId: "sagasanaidecur",
         affiliation: "チームラボ株式会社",
         position: "フロントエンドスペシャリスト",
       },
@@ -421,12 +383,10 @@ TypeScriptの採用によりSaaS連携を型安全に実装できるようにな
     speakers: [
       {
         name: "Ryo Adachi",
-        username: "アダチ リョウ",
         profileImagePath: "15_adachiryo.jpg",
         biography: "",
-        xUrl: "https://x.com/dachi_023",
-        githubUrl: "https://github.com/dachi023",
-        additionalLink: "",
+        xId: "dachi_023",
+        githubId: "dachi023",
         affiliation: "MOSH株式会社",
         position: "ソフトウェアエンジニア",
       },
@@ -446,12 +406,10 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "ふみや",
-        username: "ふみや",
         profileImagePath: "16_fumiya.jpg",
         biography: "",
-        xUrl: "https://x.com/fumiyaki_",
-        githubUrl: "https://github.com/fumiyaki",
-        additionalLink: "",
+        xId: "fumiyaki_",
+        githubId: "fumiyaki",
         affiliation: "株式会社tacoms",
         position: "ソフトウェアエンジニア",
       },
@@ -472,12 +430,8 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "シマ",
-        username: "シマ",
         profileImagePath: "",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
         affiliation: "Nstock株式会社",
         position: "ソフトウェアエンジニア",
       },
@@ -494,14 +448,10 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "比嘉 一晃",
-        username: "HigaKazuaki",
         profileImagePath: "18_higakazuaki.jpg",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "higakazuaki9",
+        githubId: "higak926",
       },
     ],
   },
@@ -515,14 +465,10 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "kakekakemiya",
-        username: "",
         profileImagePath: "19_kakekakemiya.jpg",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "kakekakemiya",
+        githubId: "Kakeru-Miyazaki",
       },
     ],
   },
@@ -536,25 +482,18 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "坂津 潤平",
-        username: "さかつ じゅんぺい",
         profileImagePath: "20_sakatsujunpei.jpg",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "saka2jp",
+        githubId: "saka2jp",
+        additionalLink: "https://youtrust.jp/users/saka2jp",
       },
       {
         name: "芹澤 和也",
-        username: "せりざわ かずや",
         profileImagePath: "21_serizawakazuya.jpg",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "seriseri_55",
+        githubId: "seriseri-123",
       },
     ],
   },
@@ -569,25 +508,17 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "澤浦 司",
-        username: "sawauratsukasa",
         profileImagePath: "22_sawauratsukasa.jpeg",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "plcherrim",
+        githubId: "pulcherriman",
+        additionalLink: "https://media.algo-artis.com/posts/6v-Rhf9e",
       },
       {
         name: "秋吉 圭輔",
-        username: "akiyoshikei",
         profileImagePath: "23_akiyoshikei.png",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        githubId: "udon1206",
       },
     ],
   },
@@ -602,14 +533,9 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "moeka",
-        username: "moeka",
         profileImagePath: "24_moeka.jpg",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "moeka__c",
       },
     ],
   },
@@ -623,14 +549,10 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "Hal",
-        username: "hal",
         profileImagePath: "25_hal.jpg",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "hal_spidernight",
+        githubId: "Hal-Spidernight",
       },
     ],
   },
@@ -644,14 +566,10 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "karacoro / からころ",
-        username: "karacoro",
         profileImagePath: "26_karacoro.jpg",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "karan_corons",
+        githubId: "tsukuha",
       },
     ],
   },
@@ -665,14 +583,11 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "Issa",
-        username: "issa",
         profileImagePath: "27_Issa.jpeg",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "DadaAux",
+        githubId: "aux-Issa",
+        additionalLink: "https://www.linkedin.com/in/issa-itoi-815187225/",
       },
     ],
   },
@@ -686,14 +601,10 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "福田哲也",
-        username: "fukudatetsuya",
         profileImagePath: "28_fukudatetsuya.png",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "gendaihyousyou",
+        githubId: "ghken",
       },
     ],
   },
@@ -707,14 +618,10 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "かっつー",
-        username: "",
         profileImagePath: "29_kattsu.jpg",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "astrotyotogood",
+        githubId: "fkatsuhiro",
       },
     ],
   },
@@ -728,14 +635,10 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "あかほし",
-        username: "Akahoshi",
         profileImagePath: "30_akahoshi.jpg",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "akahoshi_1421",
+        githubId: "akahoshi1421",
       },
     ],
   },
@@ -749,14 +652,9 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "中村 崇人",
-        username: "nakamuratakahito",
         profileImagePath: "31_nakamuratakahito.jpg",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "aTakatoNakamura",
       },
     ],
   },
@@ -770,14 +668,10 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "jiko21",
-        username: "",
         profileImagePath: "32_jiko21.jpg",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "jiko_21",
+        githubId: "jiko21",
       },
     ],
   },
@@ -791,14 +685,11 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "TAKASE Kazuyuki (@Guvalif)",
-        username: "",
         profileImagePath: "33_guvalif.png",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "guvalif",
+        githubId: "Guvalif",
+        additionalLink: "https://www.wantedly.com/id/guvalif",
       },
     ],
   },
@@ -812,14 +703,11 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "izumin5210",
-        username: "",
         profileImagePath: "34_izumin5210.jpeg",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "izumin5210",
+        githubId: "izumin5210",
+        additionalLink: "https://www.wantedly.com/id/izumin",
       },
     ],
   },
@@ -833,14 +721,10 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "Kanon",
-        username: "",
         profileImagePath: "35_kanon.jpg",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "ysknsid25",
+        githubId: "ysknsid25",
       },
     ],
   },
@@ -854,14 +738,10 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "高橋哉人",
-        username: "",
         profileImagePath: "36_takahashi.jpg",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "kanayan_toggle",
+        githubId: "ml-Takahashi",
       },
     ],
   },
@@ -875,14 +755,11 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "takuma-ru",
-        username: "",
         profileImagePath: "37_takuma-ru.jpg",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "takumaru_2222",
+        githubId: "takuma-ru",
+        additionalLink: "https://takumaru.dev/",
       },
     ],
   },
@@ -896,14 +773,10 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "elecdeer",
-        username: "",
         profileImagePath: "38_elecdeer.png",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "elecdeerdev",
+        githubId: "elecdeer",
       },
     ],
   },
@@ -918,14 +791,9 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "大塚竜太郎",
-        username: "otsukaryutaro",
         profileImagePath: "39_otsukaryutaro.jpg",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "tsuka_ryu",
       },
     ],
   },
@@ -939,14 +807,10 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "武井勇也",
-        username: "",
         profileImagePath: "40_takewell.jpeg",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "takewell_",
+        githubId: "takewell",
       },
     ],
   },
@@ -960,14 +824,11 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "おおいし (bicstone)",
-        username: "",
         profileImagePath: "41_bicstone.jpg",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "bicstone_me",
+        githubId: "bicstone",
+        additionalLink: "https://bicstone.me/",
       },
     ],
   },
@@ -981,14 +842,10 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "t-jimbo",
-        username: "",
         profileImagePath: "42_t-jimbo.jpg",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "ce_mm",
+        githubId: "t-jimbo",
       },
     ],
   },
@@ -1002,14 +859,11 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "Saji",
-        username: "",
         profileImagePath: "43_saji.jpeg",
         biography: "",
-        xUrl: "",
-        githubUrl: "",
-        additionalLink: "",
-        affiliation: "",
-        position: "",
+        xId: "sajikix",
+        githubId: "sajikix",
+        additionalLink: "https://sajikix.dev/",
       },
     ],
   },
