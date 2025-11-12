@@ -38,7 +38,7 @@ export function TrackBadge({
   return (
     <span
       className={cn(
-        "inline-flex w-max items-center justify-center rounded-full border-2 px-3 py-1 text-xs font-semibold",
+        "inline-flex w-max items-center justify-center rounded-full border-2 px-3 py-1 text-sm font-semibold",
         finalBgColor,
         finalTextColor,
         finalBorderColor,
