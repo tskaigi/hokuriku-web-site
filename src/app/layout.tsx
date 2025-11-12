@@ -4,13 +4,6 @@ import { Header } from "@/components/header";
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 
-// 消して良いかも
-// const outfit = Outfit({
-//   subsets: ["latin"],
-//   variable: "--font-outfit",
-//   display: "swap",
-// });
-
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
   variable: "--font-noto",
