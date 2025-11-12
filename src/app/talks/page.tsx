@@ -1,5 +1,3 @@
-"use client";
-
 import { TimeTable } from "@/components/talks/time-table";
 import { TimetableHeader } from "@/components/talks/timetable-header";
 import { TrackHeader } from "@/components/talks/track-header";
@@ -22,7 +20,6 @@ export default function TalksPage() {
               <TrackHeader track="TRACK2" />
             </TimetableHeader>
           </div>
-          {/* DAY1 のタイムテーブル */}
           <TimeTable />
         </div>
       </div>

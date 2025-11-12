@@ -177,6 +177,15 @@ export const TEAM_SESSION = [
 
 export const SPONSOR_LT = [
   {
+    sponsorId: "P01",
+    sponsor: "トグルホールディングス株式会社",
+    title: "Perl歴約10年のエンジニアがTypeScriptと出会ってみた",
+    description:
+      "私は約10年、PerlでWebサービスの開発に従事していましたが、現職に転職して初めて「フルスタックTypeScript」で開発するWebサービスに出会い、開発に従事することになりました。\nこのスポンサーLTでは、そのような環境で自分がどのようにTypeScriptを学んだかをご紹介することで、他のプログラミング言語からTypeScriptの世界へ足を踏み入れるときの（あるいは、踏み入れる人をサポートするときの）一助になればと思っています。",
+    name: "papix",
+    position: "エンジニア",
+  },
+  {
     sponsorId: "G01",
     sponsor: "株式会社ココロザシ",
     title: "挑戦を支えるTypeScript──顧客とエンジニアが共に成長する現場から",
