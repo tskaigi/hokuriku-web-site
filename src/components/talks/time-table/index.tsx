@@ -153,6 +153,7 @@ export const TimeTable = () => {
         endTime="12:00"
         eventText="ランチ配布"
         isActive={isSessionActive("11:45")}
+        isBreakTime
       />
 
       {/* スポンサーLT: 12:00 ~ 12:35 */}
@@ -194,6 +195,7 @@ export const TimeTable = () => {
         endTime="13:00"
         eventText="休憩"
         isActive={isSessionActive("12:35")}
+        isBreakTime
       />
 
       {/* 午後セッション: 13:00 ~ 13:30 */}
@@ -222,6 +224,7 @@ export const TimeTable = () => {
         endTime="14:10"
         eventText="休憩"
         isActive={isSessionActive("14:00")}
+        isBreakTime
       />
       {/* 午後セッション: 14:10 ~ 14:40 */}
       <TrackItem
@@ -257,6 +260,7 @@ export const TimeTable = () => {
         endTime="15:30"
         eventText="休憩"
         isActive={isSessionActive("15:10")}
+        isBreakTime
       />
 
       {/* 午後セッション: 15:30 ~ 16:00 */}
@@ -293,6 +297,7 @@ export const TimeTable = () => {
         endTime="16:40"
         eventText="休憩"
         isActive={isSessionActive("16:30")}
+        isBreakTime
       />
 
       {/* 午後セッション: 16:40 ~ 17:00 */}
@@ -318,7 +323,7 @@ export const TimeTable = () => {
         endTime="17:15"
         contents={[
           { track: "TRACK1", eventText: "クロージング" },
-          { track: "TRACK2", eventText: "転換" },
+          { track: "TRACK2", eventText: "転換", isBreakTime: true },
         ]}
         isActive={isSessionActive("17:00")}
       />
@@ -328,7 +333,7 @@ export const TimeTable = () => {
         startTime="17:15"
         endTime="18:00"
         contents={[
-          { track: "TRACK1", eventText: "転換" },
+          { track: "TRACK1", eventText: "転換", isBreakTime: true },
           { track: "TRACK2", eventText: "現地参加者向け企画" },
         ]}
         isActive={isSessionActive("17:55")}
