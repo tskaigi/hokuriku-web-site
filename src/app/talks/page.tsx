@@ -10,10 +10,11 @@ export default function TalksPage() {
         タイムテーブル
       </h1>
 
-      <div className="mt-10 overflow-x-auto">
+      <div className="mt-10">
         <div className="min-w-full">
           {/* PCレイアウト時のヘッダー */}
-          <div className="hidden md:block">
+          {/* ヘッダー分 52px をずらす */}
+          <div className="sticky top-[52px] hidden md:block">
             <TimetableHeader>
               <div className="w-[70px] md:w-[99px] lg:w-[125px]" />
               <TrackHeader track="TRACK1" />
