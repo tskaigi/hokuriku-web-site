@@ -85,7 +85,7 @@ export function TrackItem({ startTime, endTime, contents = [], isActive = false 
                       </Link>
                     </h3>
 
-                    <ul className="mt-1 space-y-0.5 text-sm">
+                    <ul className="mt-1 flex flex-wrap gap-4 text-sm">
                       {talk.speakers.map((speaker) => (
                         <li key={speaker.name}>
                           {speaker.profileImagePath && (

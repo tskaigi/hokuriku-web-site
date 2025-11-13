@@ -1,3 +1,5 @@
+"use client";
+
 import { TrackGroup } from "@/components/talks/track-group";
 import { TrackItem } from "@/components/talks/track-item";
 import { useTimetable } from "@/hooks/useTimetable";
