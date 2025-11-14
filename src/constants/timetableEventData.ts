@@ -463,7 +463,7 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "19",
-    track: "TRACK1",
+    track: "TRACK2",
     talkType: "SESSION",
     title: "type-challenges を全問解いたのでエッセンスと推し問題を紹介してみる",
     overview: [``],
@@ -788,7 +788,7 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "37",
-    track: "TRACK2",
+    track: "TRACK1",
     talkType: "LIGHTNINGTALKS",
     title:
       "`tsc --init` の設計思想の変化とその背景を追う - “教育的”アプローチから実用性重視への転換",
@@ -822,7 +822,7 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "39",
-    track: "TRACK2",
+    track: "TRACK1",
     talkType: "LIGHTNINGTALKS",
     title: "TS 5.9で使えるようになった import defer でパフォーマンス最適化を実現する",
     overview: [` `],
