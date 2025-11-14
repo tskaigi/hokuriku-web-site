@@ -463,7 +463,7 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   },
   {
     id: "19",
-    track: "TRACK1",
+    track: "TRACK2",
     talkType: "SESSION",
     title: "type-challenges を全問解いたのでエッセンスと推し問題を紹介してみる",
     overview: [``],
