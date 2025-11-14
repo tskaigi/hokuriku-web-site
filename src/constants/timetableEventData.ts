@@ -123,7 +123,7 @@ export const talkList: Talk[] = [
     speakers: [
       {
         name: "kinocoboy",
-        profileImagePath: "",
+        profileImagePath: "3_kinocoboy.jpg",
         biography: "",
         xId: "kinocoboy2",
       },
@@ -436,7 +436,7 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     speakers: [
       {
         name: "シマ",
-        profileImagePath: "",
+        profileImagePath: "17_shima.png",
         biography: "",
         affiliation: "Nstock株式会社",
         position: "ソフトウェアエンジニア",
