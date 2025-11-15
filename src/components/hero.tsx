@@ -4,6 +4,7 @@ import { ScrollIndicator } from "@/components/scroll-indicator";
 import sketch from "@/lib/sketch";
 import p5 from "p5";
 import { useEffect, useRef } from "react";
+import "./hero.css";
 
 const Hero = () => {
   const canvasRef = useRef<HTMLDivElement>(null);
@@ -19,8 +20,7 @@ const Hero = () => {
 
   return (
     <section id="hero" className="bg-primary relative w-full min-w-84">
-      <div id="canvas" className="w-full [&>canvas]:!touch-auto" ref={canvasRef} />
-
+      <div id="canvas" className="canvas-container w-full [&>canvas]:!touch-auto" ref={canvasRef} />
       {/* Scroll Indicator */}
       <div
         className="pointer-events-none absolute right-0 bottom-0 flex w-full flex-col items-end p-6"
