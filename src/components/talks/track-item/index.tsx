@@ -88,15 +88,13 @@ export function TrackItem({ startTime, endTime, contents = [], isActive = false 
                     <ul className="mt-1 flex flex-wrap gap-4 text-sm">
                       {talk.speakers.map((speaker) => (
                         <li key={speaker.name}>
-                          {speaker.profileImagePath && (
-                            <Image
-                              src={`/timetable/speaker/${speaker.profileImagePath}`}
-                              alt={speaker.name}
-                              className="mr-2 inline rounded-full"
-                              width={32}
-                              height={32}
-                            />
-                          )}
+                          <Image
+                            src={`/timetable/speaker/${speaker.profileImagePath}`}
+                            alt={speaker.name}
+                            className="mr-2 inline rounded-full"
+                            width={32}
+                            height={32}
+                          />
                           {speaker.name}
                           {speaker.affiliation ? ` / ${speaker.affiliation}` : ""}
                         </li>
