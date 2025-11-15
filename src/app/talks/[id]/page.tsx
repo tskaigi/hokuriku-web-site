@@ -2,7 +2,6 @@ import { GithubIcon } from "@/components/icon/github";
 import { XIcon } from "@/components/icon/x";
 import { TrackBadge } from "@/components/talks/track-badge";
 import { TALK_TYPE, TRACK, talkList } from "@/constants/timetableEventData";
-import { cn } from "@/lib/utils";
 import { getTalk } from "@/utils/getTalk";
 import { isSpeakerVisible } from "@/utils/isSpeakerVisible";
 import { CircleUserRound, LinkIcon } from "lucide-react";
@@ -86,32 +85,22 @@ export default async function TalkDetailPage({ params }: { params: Promise<{ id:
   }
   const talkType = TALK_TYPE[talk.talkType];
 
-  // NOTE: スポンサーLTはサムネイルがまだ準備できていないので非表示にする
-  const showThumbnail = talk.talkType !== "SPONSOR_LIGHTNINGTALKS";
-
   return (
     <main className="bg-blue-light-100 pt-16 pb-10 md:px-8 md:py-16 lg:px-10">
       <h1 className="text-blue-light-500 py-10 text-center text-2xl font-bold md:py-16 md:text-3xl lg:text-4xl">
         トーク
       </h1>
 
-      <div
-        className={cn(
-          "mx-auto flex max-w-screen-xl flex-col gap-6 bg-white pb-6 md:rounded-xl md:py-8 lg:py-10",
-          !showThumbnail && "pt-8",
-        )}
-      >
-        {showThumbnail && (
-          <div className="bg-black-100 flex justify-center md:mx-8 lg:mx-10">
-            <Image
-              src={`/ogp/speaker-ogp/${talk.id}.png`}
-              alt={talk.title}
-              className="mx-auto h-auto max-h-[383px] w-full max-w-[730px] object-contain"
-              width={730}
-              height={383}
-            />
-          </div>
-        )}
+      <div className="mx-auto flex max-w-screen-xl flex-col gap-6 bg-white pb-6 md:rounded-xl md:py-8 lg:py-10">
+        <div className="bg-black-100 flex justify-center md:mx-8 lg:mx-10">
+          <Image
+            src={`/ogp/speaker-ogp/${talk.id}.png`}
+            alt={talk.title}
+            className="mx-auto h-auto max-h-[383px] w-full max-w-[730px] object-contain"
+            width={730}
+            height={383}
+          />
+        </div>
 
         <div className="flex flex-col gap-1 px-6 md:px-8 lg:px-10">
           <TrackBadge
