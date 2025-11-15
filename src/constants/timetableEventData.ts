@@ -55,8 +55,8 @@ export type TalkType = keyof typeof TALK_TYPE;
 // スピーカー型
 export type Speaker = {
   name: string;
-  profileImagePath?: string;
-  biography?: string;
+  profileImagePath: string;
+  biography: string;
   xId?: string;
   githubId?: string;
   additionalLink?: string;
@@ -367,7 +367,7 @@ TypeScriptの型システムを「セキュリティガードレール」とし�
     speakers: [
       {
         name: "高木 克哉",
-        profileImagePath: "",
+        profileImagePath: "14.png",
         biography: "",
         xId: "sagasanaidecur",
         affiliation: "チームラボ株式会社",
