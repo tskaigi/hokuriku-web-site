@@ -16,6 +16,7 @@ type TrackContent =
       track: Track;
       talk?: undefined;
       eventText?: string;
+      href?: string;
       isBreakTime?: boolean;
     };
 
@@ -38,9 +39,6 @@ export function TrackItem({ startTime, endTime, contents = [], isActive = false 
           return null;
         }
 
-        // NOTE: talkが複数指定されている場合でも talkType は全て同じであるため、0番目のtalkTypeを参照する
-        const firstTalkType = trackContent?.talk?.[0].talkType;
-
         return (
           <div
             key={t}
@@ -49,59 +47,60 @@ export function TrackItem({ startTime, endTime, contents = [], isActive = false 
               trackContent.isBreakTime ? "border-gray-200 bg-gray-200" : "bg-gray-50",
             )}
           >
-            {/* バッジ列 */}
-            <div className="flex w-full flex-wrap justify-start gap-1">
-              {/* TRACKバッジ（スマホのみ） */}
-              {TRACK[t] && (
+            {/* TRACKバッジ（スマホのみ） */}
+            {TRACK[t] && (
+              <div className="mb-2 flex w-full flex-wrap justify-start gap-1">
                 <TrackBadge
                   label={TRACK[t].name}
                   bgColor={TRACK[t].bgColor}
                   textColor={TRACK[t].textColor}
                   hiddenOnDesktop
                 />
-              )}
+              </div>
+            )}
 
-              {/* TALK_TYPEバッジ */}
-              {firstTalkType && (
-                <TrackBadge
-                  label={TALK_TYPE[firstTalkType]?.name}
-                  borderColor={TALK_TYPE[firstTalkType]?.borderColor}
-                  textColor={TALK_TYPE[firstTalkType]?.textColor}
-                />
-              )}
-            </div>
-
-            {/* トークタイトル・スピーカー */}
+            {/* トークタイトル・スピーカー（各トークごとにバッジを表示） */}
             {trackContent.talk != null && (
               <div className="mt-2 flex w-full flex-col items-start gap-1 text-left">
-                {trackContent.talk.map((talk) => (
-                  <div key={talk.id} className="mb-2 w-full last:mb-0">
-                    <h3>
-                      <Link
-                        href={`/talks/${talk?.id}`}
-                        className="underline underline-offset-2 hover:no-underline"
-                      >
-                        {talk?.title}
-                      </Link>
-                    </h3>
+                {trackContent.talk.map((talk) => {
+                  return (
+                    <div key={talk.id} className="mb-2 w-full last:mb-0">
+                      {/* TALK_TYPEバッジ */}
+                      <div className="mb-1 flex w-full flex-wrap justify-start gap-1">
+                        <TrackBadge
+                          label={TALK_TYPE[talk.talkType]?.name}
+                          borderColor={TALK_TYPE[talk.talkType]?.borderColor}
+                          textColor={TALK_TYPE[talk.talkType]?.textColor}
+                        />
+                      </div>
 
-                    <ul className="mt-1 flex flex-wrap gap-4 text-sm">
-                      {talk.speakers.map((speaker) => (
-                        <li key={speaker.name}>
-                          <Image
-                            src={`/timetable/speaker/${speaker.profileImagePath}`}
-                            alt={speaker.name}
-                            className="mr-2 inline rounded-full"
-                            width={32}
-                            height={32}
-                          />
-                          {speaker.name}
-                          {speaker.affiliation ? ` / ${speaker.affiliation}` : ""}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+                      <h3>
+                        <Link
+                          href={`/talks/${talk?.id}`}
+                          className="underline underline-offset-2 hover:no-underline"
+                        >
+                          {talk?.title}
+                        </Link>
+                      </h3>
+
+                      <ul className="mt-1 flex flex-wrap gap-4 text-sm">
+                        {talk.speakers.map((speaker) => (
+                          <li key={speaker.name}>
+                            <Image
+                              src={`/timetable/speaker/${speaker.profileImagePath}`}
+                              alt={speaker.name}
+                              className="mr-2 inline rounded-full"
+                              width={32}
+                              height={32}
+                            />
+                            {speaker.name}
+                            {speaker.affiliation ? ` / ${speaker.affiliation}` : ""}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                })}
               </div>
             )}
 

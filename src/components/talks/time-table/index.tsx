@@ -45,11 +45,6 @@ const sessionTimeTable = [
   {
     id: "13:00",
     startTime: new Date(`2025-11-23T13:00:00`),
-    endTime: new Date(`2025-11-23T13:30:00`),
-  },
-  {
-    id: "13:30",
-    startTime: new Date(`2025-11-23T13:30:00`),
     endTime: new Date(`2025-11-23T14:00:00`),
   },
   {
@@ -60,11 +55,6 @@ const sessionTimeTable = [
   {
     id: "14:10",
     startTime: new Date(`2025-11-23T14:10:00`),
-    endTime: new Date(`2025-11-23T14:40:00`),
-  },
-  {
-    id: "14:40",
-    startTime: new Date(`2025-11-23T14:40:00`),
     endTime: new Date(`2025-11-23T15:10:00`),
   },
   {
@@ -75,11 +65,6 @@ const sessionTimeTable = [
   {
     id: "15:30",
     startTime: new Date(`2025-11-23T15:30:00`),
-    endTime: new Date(`2025-11-23T16:00:00`),
-  },
-  {
-    id: "16:00",
-    startTime: new Date(`2025-11-23T16:00:00`),
     endTime: new Date(`2025-11-23T16:30:00`),
   },
   {
@@ -198,25 +183,15 @@ export const TimeTable = () => {
         isBreakTime
       />
 
-      {/* 午後セッション: 13:00 ~ 13:30 */}
+      {/* 午後セッション: 13:00 ~ 14:00 */}
       <TrackItem
         startTime="13:00"
-        endTime="13:30"
-        contents={[
-          { track: "TRACK1", talk: [getTalk("18")] },
-          { track: "TRACK2", talk: [getTalk("19")] },
-        ]}
-        isActive={isSessionActive("13:00")}
-      />
-      {/* チーム発表: 13:30 ~ 14:00 */}
-      <TrackItem
-        startTime="13:30"
         endTime="14:00"
         contents={[
-          { track: "TRACK1", talk: [getTalk("20")] },
-          { track: "TRACK2", talk: [getTalk("21")] },
+          { track: "TRACK1", talk: [getTalk("18"), getTalk("20")] },
+          { track: "TRACK2", talk: [getTalk("19"), getTalk("21")] },
         ]}
-        isActive={isSessionActive("13:30")}
+        isActive={isSessionActive("13:00")}
       />
       {/* 休憩: 14:00 ~ 14:10 */}
       <TrackGroup
@@ -226,32 +201,28 @@ export const TimeTable = () => {
         isActive={isSessionActive("14:00")}
         isBreakTime
       />
-      {/* 午後セッション: 14:10 ~ 14:40 */}
+      {/* 午後セッション: 14:10 ~ 15:10 */}
       <TrackItem
         startTime="14:10"
-        endTime="14:40"
-        contents={[
-          { track: "TRACK1", talk: [getTalk("22")] },
-          { track: "TRACK2", talk: [getTalk("23")] },
-        ]}
-        isActive={isSessionActive("14:10")}
-      />
-
-      {/* 午後セッション: 14:40 ~ 15:10 */}
-      <TrackItem
-        startTime="14:40"
         endTime="15:10"
         contents={[
           {
             track: "TRACK1",
-            talk: [getTalk("24")],
+            talk: [getTalk("22"), getTalk("24")],
           },
           {
             track: "TRACK2",
-            talk: [getTalk("25"), getTalk("26"), getTalk("27"), getTalk("28"), getTalk("29")],
+            talk: [
+              getTalk("23"),
+              getTalk("25"),
+              getTalk("26"),
+              getTalk("27"),
+              getTalk("28"),
+              getTalk("29"),
+            ],
           },
         ]}
-        isActive={isSessionActive("14:40")}
+        isActive={isSessionActive("14:10")}
       />
 
       {/* 休憩: 15:10 ~ 15:30 */}
@@ -263,32 +234,21 @@ export const TimeTable = () => {
         isBreakTime
       />
 
-      {/* 午後セッション: 15:30 ~ 16:00 */}
+      {/* 午後セッション: 15:30 ~ 16:30 */}
       <TrackItem
         startTime="15:30"
-        endTime="16:00"
-        contents={[
-          { track: "TRACK1", talk: [getTalk("30")] },
-          { track: "TRACK2", talk: [getTalk("31")] },
-        ]}
-        isActive={isSessionActive("15:30")}
-      />
-
-      {/* 午後セッション: 16:00 ~ 16:30 */}
-      <TrackItem
-        startTime="16:00"
         endTime="16:30"
         contents={[
           {
             track: "TRACK1",
-            talk: [getTalk("32")],
+            talk: [getTalk("30"), getTalk("32")],
           },
           {
             track: "TRACK2",
-            talk: [getTalk("33"), getTalk("34"), getTalk("35"), getTalk("36")],
+            talk: [getTalk("31"), getTalk("33"), getTalk("34"), getTalk("35"), getTalk("36")],
           },
         ]}
-        isActive={isSessionActive("16:00")}
+        isActive={isSessionActive("15:30")}
       />
 
       {/* 休憩: 16:30 ~ 16:40 */}
@@ -334,7 +294,11 @@ export const TimeTable = () => {
         endTime="18:00"
         contents={[
           { track: "TRACK1", eventText: "転換", isBreakTime: true },
-          { track: "TRACK2", eventText: "現地参加者向け企画" },
+          {
+            track: "TRACK2",
+            eventText: "初級者~上級者まで　チームで協力！クイズ大会",
+            href: "/talks/quiz",
+          },
         ]}
         isActive={isSessionActive("17:55")}
       />
