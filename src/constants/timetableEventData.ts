@@ -44,7 +44,7 @@ export const TALK_TYPE = {
     textColor: "text-black",
   },
   EVENT: {
-    name: "現地参加者向け企画",
+    name: "初級者~上級者まで　チームで協力！クイズ大会",
     borderColor: "border-purple-600",
     textColor: "text-black",
   },
@@ -858,7 +858,7 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
   {
     id: "41",
     track: "TRACK2",
-    talkType: "SESSION",
+    talkType: "LIGHTNINGTALKS",
     title: "Branded Typesで日時の複雑さと戦う",
     overview: [` `],
     time: "16:40 〜 17:00",
