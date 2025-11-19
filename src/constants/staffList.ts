@@ -161,4 +161,9 @@ export const eventStaffList: Staff[] = [
     image: "eventStaff/yshk.jpeg",
     href: "https://x.com/_yshk",
   },
+  {
+    name: "ysaito",
+    image: "eventStaff/ysaito.png",
+    href: "https://x.com/ysaito8015",
+  },
 ];
