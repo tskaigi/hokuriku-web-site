@@ -16,11 +16,11 @@ const textColor = {
 const SponsorHeading = ({ rank }: { rank: SponsorClass }) => {
   return (
     <div className="flex items-center justify-center gap-3">
-      <hr className={`flex-1 border-t ${borderColor[rank]}`} />
+      <hr className={cn("flex-1 border-t", borderColor[rank])} />
       <h2 id={rank} className={cn("text-2xl font-bold md:text-3xl lg:text-3xl", textColor[rank])}>
         {`${rank[0].toUpperCase()}${rank.slice(1)}`} Sponsors
       </h2>
-      <hr className={`flex-1 border-t ${borderColor[rank]}`} />
+      <hr className={cn(`flex-1 border-t`, borderColor[rank])} />
     </div>
   );
 };

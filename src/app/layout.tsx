@@ -1,6 +1,7 @@
 import "@/app/globals.css";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Outfit } from "next/font/google";
 
@@ -78,7 +79,7 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="ja">
-      <body className={`${outfit.variable} ${notoSansJP.variable} antialiased`}>
+      <body className={cn(outfit.variable, notoSansJP.variable, "antialiased")}>
         <div className="flex min-h-screen flex-col">
           <Header />
           {children}

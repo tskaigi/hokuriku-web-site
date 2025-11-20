@@ -1,4 +1,3 @@
-// src/utils/getTalk.ts
 import { type Talk, talkList } from "@/constants/timetableEventData";
 
 /**

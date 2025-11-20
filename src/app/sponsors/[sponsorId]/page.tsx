@@ -16,7 +16,6 @@ export const generateStaticParams = () => {
     }));
 };
 
-// スポンサー詳細ごとのOGPメタ情報生成
 export const generateMetadata = async ({
   params,
 }: {
@@ -33,7 +32,6 @@ export const generateMetadata = async ({
         ? "シルバー"
         : "";
 
-  // OGP descriptionを作成
   const description =
     `${sponsor.name}は TSKaigi Hokuriku 2025 の${sponsorRank}スポンサーです。` +
     (sponsor.overview?.[0] ? sponsor.overview[0].replace(/\s+/g, "").slice(0, 60) + "…" : "");
@@ -65,7 +63,6 @@ export const generateMetadata = async ({
   };
 };
 
-// スポンサー詳細ページ
 const SponsorDetailPage = async ({ params }: { params: Promise<{ sponsorId: string }> }) => {
   const { sponsorId } = await params;
 
@@ -110,7 +107,7 @@ const SponsorDetailPage = async ({ params }: { params: Promise<{ sponsorId: stri
         <h2 className="text-xl font-bold md:text-2xl lg:text-[28px]">{sponsor.name}</h2>
 
         {sponsorLt && (
-          <a href={`/talks/${sponsorLt.id}`} className="group block hover:opacity-80">
+          <Link href={`/talks/${sponsorLt.id}`} className="group block hover:opacity-80">
             <div className="flex flex-col gap-2 overflow-hidden rounded-lg border border-[#FF9900] bg-[#ff990015] p-4 shadow-xs shadow-[#FF9900]">
               <div className="text-sm font-bold text-[#814e00]">#スポンサーLT</div>
               <div className="text-lg font-bold underline-offset-2 group-hover:underline">
@@ -120,7 +117,7 @@ const SponsorDetailPage = async ({ params }: { params: Promise<{ sponsorId: stri
 
               {sponsorLt.speakers[0].affiliation}
             </div>
-          </a>
+          </Link>
         )}
 
         <div className="flex flex-col gap-6">
