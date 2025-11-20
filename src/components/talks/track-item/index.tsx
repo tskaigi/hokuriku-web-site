@@ -45,6 +45,7 @@ export function TrackItem({ startTime, endTime, contents = [], isActive = false 
             className={cn(
               "flex flex-col items-start justify-start rounded-sm border p-5 text-black",
               trackContent.isBreakTime ? "border-gray-200 bg-gray-200" : "bg-gray-50",
+              isActive && "border-talktype-blue border-2",
             )}
           >
             {/* TRACKバッジ（スマホのみ） */}
