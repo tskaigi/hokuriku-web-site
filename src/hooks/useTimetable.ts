@@ -1,4 +1,3 @@
-// src/hooks/useTimetable.ts
 import { useEffect, useState } from "react";
 
 export type Session = {
