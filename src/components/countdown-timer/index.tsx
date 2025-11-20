@@ -7,7 +7,7 @@ const TimeLeft = ({ value, unit, duration }: { value: number; unit: string; dura
     <div className="w-[50px] text-center md:w-[100px]">
       <time
         dateTime={duration}
-        className={`block text-3xl font-semibold tracking-[-0.75%] md:text-5xl md:font-normal lg:text-6xl`}
+        className="block text-3xl font-semibold tracking-[-0.75%] md:text-5xl md:font-normal lg:text-6xl"
       >
         {value}
       </time>

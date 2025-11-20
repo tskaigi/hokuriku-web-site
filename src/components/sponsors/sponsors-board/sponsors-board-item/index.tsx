@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,7 +19,7 @@ export const SponsorsBoardItem = ({ href, src, alt, width, height, className }: 
         alt={alt}
         width={width}
         height={height}
-        className={`rounded-[10px] bg-white object-contain ${className}`}
+        className={cn("rounded-[10px] bg-white object-contain", className)}
         loading="lazy"
       />
     </Link>
