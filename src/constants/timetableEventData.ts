@@ -91,7 +91,7 @@ export const talkList: Talk[] = [
         biography: "",
         xId: "uhyo_",
         githubId: "uhyo",
-        position: "フロントエンドエキスパート",
+        position: "株式会社カオナビ フロントエンドエキスパート",
       },
     ],
   },
@@ -668,15 +668,21 @@ TypeScriptを用いた開発としてはAngularやReact（TS）、vanilla-ts（C
     track: "TRACK2",
     talkType: "LIGHTNINGTALKS",
     title: "AIエージェントのプロンプトを自然言語ではなくTypeScriptで書いてみる試み",
-    overview: [` `],
+    overview: [
+      ` 「頭が赤い魚を食べる猫」という言葉をご存知でしょうか？簡単に言えば「どこに句読点を置くかで意味が異なる言葉」です。句読点の位置によっては「魚の頭が赤い」と読むことも、「猫の頭が赤い」と読むこともできます。これはLLMにおいても当てはまります。ユーザはAの解釈でプロンプトを書いたとしても、LLMはBの解釈として捉える可能性があるということです。
+そこで私はTypeScriptを用いた構造的なプロンプトを考えました。TypeScript含め一般的なプログラミング言語は自然言語と比べ、より厳格な木構造の形になっているので解釈の問題は起こりにくい、と考えたためです。
+ここでは実際に、AIエージェントに開発の流れを伝えるプロンプトを自然言語ではなくTypeScriptで指示したことにより一定の効果を感じたので、そのやり方と結果を発表していきたいと思います。`,
+    ],
     time: "14:40 〜 15:10",
     speakers: [
       {
         name: "あかほし",
         profileImagePath: "30_akahoshi.jpg",
-        biography: "",
+        biography:
+          "新卒2年目のフロントエンドエンジニアです。会社でも副業でも趣味でもずっとTypeScript書いています。最近はSpec Workflow MCPが気になっています👀(まだ触れてないけど)",
         xId: "akahoshi_1421",
         githubId: "akahoshi1421",
+        position: "株式会社i-plug",
       },
     ],
   },
@@ -916,15 +922,20 @@ import defer のメリットと使い方を理解し、自身のプロジェク�
     track: "TRACK2",
     talkType: "LIGHTNINGTALKS",
     title: "React / TypeScriptでのカラーピッカーの実装戦略",
-    overview: [` `],
+    overview: [
+      `皆さんはカラーピッカーを実装したことがありますか？
+一見すると単純そうな機能ですが、HTML標準の <input type="color"> や多数のnpmライブラリが存在しながらも、2025年現在「これが最適」と言える実装方法はまだ定まっていないように思えます。
+本LTでは、React / TypeScriptを用いて、多様なカラーコード形式や、グラデーションを含む型設計といった課題にどのように向き合い、型安全かつ効率的に実装していけるかを議論します。`,
+    ],
     time: "16:40 〜 17:00",
     speakers: [
       {
         name: "t-jimbo",
         profileImagePath: "42_t-jimbo.jpg",
-        biography: "",
+        biography: "フロントエンド寄りのソフトウェアエンジニア 石川県金沢市出身です。",
         xId: "ce_mm",
         githubId: "t-jimbo",
+        position: "株式会社プレイド",
       },
     ],
   },
