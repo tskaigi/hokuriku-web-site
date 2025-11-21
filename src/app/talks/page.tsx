@@ -1,6 +1,12 @@
 import { TimeTable } from "@/components/talks/time-table";
 import { TimetableHeader } from "@/components/talks/timetable-header";
 import { TrackHeader } from "@/components/talks/track-header";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "タイムテーブル",
+  description: "TSKaigi Hokuriku 2025 タイムテーブル",
+};
 
 export default function TalksPage() {
   return (
