@@ -932,8 +932,7 @@ import defer のメリットと使い方を理解し、自身のプロジェク�
       {
         name: "t-jimbo",
         profileImagePath: "42_t-jimbo.jpg",
-        biography:
-          "フロントエンド寄りのソフトウェアエンジニア 石川県金沢市出身です。",
+        biography: "フロントエンド寄りのソフトウェアエンジニア 石川県金沢市出身です。",
         xId: "ce_mm",
         githubId: "t-jimbo",
         position: "株式会社プレイド",
