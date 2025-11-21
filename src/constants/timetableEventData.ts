@@ -449,13 +449,19 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     track: "TRACK1",
     talkType: "SESSION",
     title: "denoとtypescriptの関係について改めて考えてみる",
-    overview: [``],
+    overview: [
+      `TypeScriptが統合されているDenoにどのような可能性があるか、改めて振り返ることを主題とします。ビルドやトランスパイルが他のツールチェーンと比べてどうなっているか、依存関係の管理や内蔵されているテストランナー、リンター、フォーマッターやセキュリティ面などを確認し、Denoを使って何ができるか、それらを踏まえてTypeScriptにどのような可能性があるかなどをみていこうと思います。
+後半にはDenoのJupyterカーネルを使ったTypeScriptによるデータ分析なども簡単に見ていきます。`,
+    ],
     time: "13:00 〜 13:30",
     speakers: [
       {
         name: "比嘉 一晃",
         profileImagePath: "18_higakazuaki.jpg",
-        biography: "",
+        biography: `沖縄県出身のエンジニア。
+これまでWebアプリやChrome拡張機能などのフロントエンド、バックエンド開発に従事。
+TypeScriptを用いた開発としてはAngularやReact（TS）、vanilla-ts（Chrome拡張機能）など様々なフレームワークを通して経験を積んできました。
+プライベートではDenoなど個人的に気になるOSSに触れて遊んだりしています。`,
         xId: "higakazuaki9",
         githubId: "higak926",
       },
@@ -466,15 +472,20 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     track: "TRACK2",
     talkType: "SESSION",
     title: "type-challenges を全問解いたのでエッセンスと推し問題を紹介してみる",
-    overview: [``],
+    overview: [
+      `TypeScript の型への理解・型パズル力を高めるために、type-challenges は非常に有用な教材ですが、「問題数が結構多い」「なんだか難しそう」と、食わず嫌いをされがちである印象があります。
+そこで本セッションでは、type-challenges の全問題に取り組んだ自分が、解く中で学んだ型パズルのテクニックや、実務に活かせそうな部分などを「エッセンス」として紹介します。`,
+    ],
     time: "13:00 〜 13:30",
     speakers: [
       {
         name: "kakekakemiya",
         profileImagePath: "19_kakekakemiya.jpg",
-        biography: "",
+        biography:
+          "Front-end Engineer。React と TypeScript が好き。CLI も好き。焼き鳥が大好きな25新卒です。",
         xId: "kakekakemiya",
         githubId: "Kakeru-Miyazaki",
+        position: "株式会社ナレッジワーク",
       },
     ],
   },
@@ -483,13 +494,16 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     track: "TRACK1",
     talkType: "TEAM_PRESENTATION",
     title: "TypeScript×CASLでつくるSaaSの認可",
-    overview: [``],
+    overview: [
+      `アプリの認可は、UIでの「見せない」とAPIでの「させない」が分断されがちです。本セッションでは、認可ライブラリCASLを用いて、フロントエンドとバックエンドで同一ポリシーを共有し、RBAC＋ABAC（属性ベース）のハイブリッド設計を型安全に運用する方法を紹介します。`,
+    ],
     time: "13:30 〜 14:00",
     speakers: [
       {
         name: "坂津 潤平",
         profileImagePath: "20_sakatsujunpei.jpg",
-        biography: "",
+        biography:
+          "AIプロダクトのWebエンジニア。スタートアップ、AbemaTVなどを経て、PeopleXに創業から参画。AI×HR領域の新規サービスを12ヶ月で5本立ち上げ。PeopleX AI面接をTypeScriptのMonorepo構成で開発中。",
         xId: "saka2jp",
         githubId: "saka2jp",
         additionalLink: "https://youtrust.jp/users/saka2jp",
@@ -497,7 +511,8 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
       {
         name: "芹澤 和也",
         profileImagePath: "21_serizawakazuya.jpg",
-        biography: "",
+        biography: `海外大学を卒業後、Goodpatchをはじめ複数のスタートアップ企業でモバイルアプリやSaaSプロダクトの開発に従事。
+2024年よりPeopleXでAIプロダクトのフロントエンドリードを務める。`,
         xId: "seriseri_55",
         githubId: "seriseri-123",
       },
@@ -534,13 +549,16 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     talkType: "SESSION",
     title:
       "同期APIの壁を越える：TypeScriptで設計する、堅牢さとUXを両立した非同期ワークフローの実現",
-    overview: [``],
+    overview: [
+      `複数のドメインコンテキストで構成されるWebシステムは、コンテキストを跨ぐ更新を行う同期APIがパフォーマンスの悪化や障害の連鎖を招き、ユーザー体験を損ねがちです。本セッションでは、非同期で実行されるコンテキスト間データ連携を設計する知識を体系的にまとめつつ、特にTypeScriptの"型＝契約"を核にしたイベント駆動＋Sagaパターンを採用した場合の実戦知を共有します。`,
+    ],
     time: "14:10 〜 14:40",
     speakers: [
       {
         name: "moeka",
         profileImagePath: "24_moeka.jpg",
-        biography: "",
+        biography: `SIerでのバックエンドエンジニアを経て、2022年7月に4人目エンジニアとしてアセンドに入社。プロダクトマネジメント、UI/UXデザイン, フロントエンドまで領域を広げ、運送会社向けオールインワン運行管理SaaS「ロジックス」の開発に携わる。現在は10->100より0->1、1->10案件に単身でぶち込まれがちなリードエンジニア。
+型パズルとDDDが好き。`,
         xId: "moeka__c",
       },
     ],
@@ -550,15 +568,26 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     track: "TRACK2",
     talkType: "SESSION",
     title: "「TSのAPI型安全」の対価は誰が払う？ 不公平なスキーマ駆動に終止符を打つハイブリッド戦略",
-    overview: [` `],
+    overview: [
+      `近年、OpenAPIやgRPCによるスキーマ駆動開発（SDD）が主流となる一方で、その運用が「フロントエンドの型安全性を、バックエンドの高い運用コストと交換している」に過ぎないケースを見かけることが増えました。
+
+あなたのチームのSDDは本当に「全体最適」に機能していますか？
+チーム全体の理解、特にバックエンドエンジニアの納得感を十分に得られていますか？
+
+本セッションでは、まずSDDがコストのシフトに終わる構造的な問題（局所最適化、永続的な手動管理コスト）を分析します。
+その上で、「SDDにおけるROIの最大化」と「長期的な運用コストの最小化」を両立させるための二軸の戦略を提案します。`,
+    ],
     time: "14:10 〜 14:40",
     speakers: [
       {
         name: "Hal",
         profileImagePath: "25_hal.jpg",
-        biography: "",
+        biography: `LIXIL アプリケーションエキスパート
+フロントエンドだけでなくバックエンド、インフラを行き来するシャトルランエンジニア🚀
+最近はTypiaが気になっています`,
         xId: "hal_spidernight",
         githubId: "Hal-Spidernight",
+        position: "株式会社LIXIL",
       },
     ],
   },
@@ -619,13 +648,16 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     track: "TRACK2",
     talkType: "LIGHTNINGTALKS",
     title: "Zod × Web Workerを用いた型安全かつUIファーストなIPアドレスCSV一括登録",
-    overview: [` `],
+    overview: [
+      `本セッションでは、Zod v4 で新たに追加されたIPv4,v6,CIDRv4,v6スキーマを用いてバリデーションを行いつつ、重複・包含判定処理をWeb Worker で並列的に処理を行うことで効率的に判定処理を行い、UIファーストな実装を目指した取り組みから得た知見を共有します。`,
+    ],
     time: "14:40 〜 15:10",
     speakers: [
       {
         name: "かっつー",
         profileImagePath: "29_kattsu.jpg",
-        biography: "",
+        biography: `東京大学大学院
+フロントエンドに興味があります。`,
         xId: "astrotyotogood",
         githubId: "fkatsuhiro",
       },
@@ -669,15 +701,23 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     track: "TRACK1",
     talkType: "SESSION",
     title: "型情報を手繰り寄せる技術〜TypeScript Compiler APIによる型解析実践〜",
-    overview: [` `],
+    overview: [
+      `TypeScriptの型情報から他言語のクラス定義や、データベーススキーマ、API仕様書を自動生成できたら便利だと思いませんか？
+
+TypeScript Compiler APIを使えば、型情報を解析して様々な形式に変換することが可能です。しかし、実際に型情報の解析を行おうとしても、丁寧なドキュメントが用意されているわけでもないため、挫折してしまいがちです。
+
+本セッションでは、型定義からHTMLを生成できるhtml-typeを題材に、実際にTypeScript Compiler APIを使って解析していく過程をステップバイステップで解説していきます。`,
+    ],
     time: "15:30 〜 16:00",
     speakers: [
       {
         name: "jiko21",
         profileImagePath: "32_jiko21.jpg",
-        biography: "",
+        biography: `新卒時よりフロントエンドエンジニアとしてキャリアをスタートし、メガベンチャーやスタートアップを経て、現在はエムスリー株式会社に所属。フロントエンドだけではなくバックエンドやアプリ開発も担当。
+TC39のProposalを追うのも好きで、最近はproposal compositesが気になるところ。`,
         xId: "jiko_21",
         githubId: "jiko21",
+        position: "エムスリー株式会社",
       },
     ],
   },
@@ -686,16 +726,31 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     track: "TRACK2",
     talkType: "SESSION",
     title: "Welcome to the “Fantasy Land” 🧚 − 代数的構造をめぐる冒険 −",
-    overview: [` `],
+    overview: [
+      `プログラムの抽象化にはさまざまな考え方がありますが、TypeScript プログラマーにとって Promise は、最も恩恵を受けている抽象化の 1 つでしょう。また近年では neverthrow などにおける Result も、活用が広がっているように思います。
+
+さて、Promise と Result という一見異なるように思える抽象化にも、実は共通の構造が潜んでいます。それを紐解くキーワードが「Algebraic Structure / 代数的構造」です。
+
+本セッションでは：
+
+- そもそも代数的構造とは何か？
+- プログラムの抽象化に役立つ代表的な代数的構造
+- ライブラリ実装における標準化仕様 − "Fantasy Land"
+- TC39 Proposals による未来の姿
+
+... といった流れで、TypeScript プログラミングにおける新たな知見を提供できればと思います。`,
+    ],
     time: "15:30 〜 16:00",
     speakers: [
       {
         name: "TAKASE Kazuyuki (@Guvalif)",
         profileImagePath: "33_guvalif.png",
-        biography: "",
+        biography:
+          '普段は EdTech × ML 系プロダクトのプロトタイピングに従事しています。クライアントサイドに適した軽量かつ疎結合なアーキテクチャに関心があり、"関数型プログラミング" を軸にいろいろとアイデアを発表しています ⚡️',
         xId: "guvalif",
         githubId: "Guvalif",
         additionalLink: "https://www.wantedly.com/id/guvalif",
+        position: "株式会社ドワンゴ / 教育事業本部 / TechPM",
       },
     ],
   },
@@ -756,16 +811,20 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     track: "TRACK2",
     talkType: "LIGHTNINGTALKS",
     title: "TC39 Signals で描くJS/TS/フレームワークの未来の姿",
-    overview: [` `],
+    overview: [
+      `TC39の新しい提案「Signals」によって、フロントエンドやそれ以外のJS/TSを使う開発に様々な変化があると予想されています。
+このLTでは、Signals が導入された未来のJS/TS開発の姿をサクッとお話します！`,
+    ],
     time: "16:00 〜 16:30",
     speakers: [
       {
         name: "takuma-ru",
         profileImagePath: "37_takuma-ru.jpg",
-        biography: "",
+        biography: "♥️ 🐈️ ♥️ Vue.js",
         xId: "takumaru_2222",
         githubId: "takuma-ru",
         additionalLink: "https://takumaru.dev/",
+        position: "チームラボ / パッケージチーム フロントエンド班",
       },
     ],
   },
@@ -774,13 +833,17 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     track: "TRACK2",
     talkType: "LIGHTNINGTALKS",
     title: "oxc-transformとisolatedDeclarationsで手に入れるtscなし型定義ファイル生成",
-    overview: [` `],
+    overview: [
+      `最近登場したライブラリ向けバンドラであるtsdownには、tscを使わずに型定義ファイルを生成する機能が実装されています。内部で使用されているoxc-transformは、TypeScriptのisolatedDeclarationsオプションによる制約のもと、型推論を回避することで高速に型定義を生成しています。
+本LTでは、isolatedDeclarationsによって得られる利点と課せられる制約、そしてその厳しさについて紹介します。`,
+    ],
     time: "16:00 〜 16:30",
     speakers: [
       {
         name: "elecdeer",
         profileImagePath: "38_elecdeer.png",
-        biography: "",
+        biography:
+          "TypeScriptとReactのファン。手触りの良いアプリや便利なツールを作ることに関心があります。",
         xId: "elecdeerdev",
         githubId: "elecdeer",
       },
@@ -792,14 +855,18 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     talkType: "LIGHTNINGTALKS",
     title:
       "`tsc --init` の設計思想の変化とその背景を追う - “教育的”アプローチから実用性重視への転換",
-    overview: [` `],
+    overview: [
+      `TypeScript 5.9からtsc --initの出力内容が大きく変更されました。本セッションでは、この変更に至った経緯とTypeScriptチームの意図を深掘りします。モダンなTypeScript環境でのtsconfigを見直すきっかけになればと思います。`,
+    ],
     time: "16:40 〜 17:00",
     speakers: [
       {
         name: "大塚竜太郎",
         profileImagePath: "39_otsukaryutaro.jpg",
-        biography: "",
+        biography:
+          "フロントエンドエンジニア。最新のエコシステム動向からマネージメントも含めた広義のエンジニアリングまで幅広く興味関心。チームラボではフロントエンドスペシャリストとして横断的な課題解決に従事。寿司と能登牛と蟹を食べにきました。",
         xId: "tsuka_ryu",
+        position: "チームラボ",
       },
     ],
   },
@@ -825,13 +892,19 @@ Effect.tryで例外を型付きに受け止める方法、Effect.genで段階的
     track: "TRACK1",
     talkType: "LIGHTNINGTALKS",
     title: "TS 5.9で使えるようになった import defer でパフォーマンス最適化を実現する",
-    overview: [` `],
+    overview: [
+      `TypeScript 5.9 で新たに利用可能になった import defer について、その機能と実践的な活用法を解説します。
+import defer は、モジュールの「読み込み」と「実行（評価）」を分離し、アクセスされるまで実行を遅延させることができます。
+本発表では、まず従来の import との挙動の違いをシンプルなコードで比較し、 import defer の基本的な仕組みを解説します。そして、具体的なシナリオから、 import defer を用いてパフォーマンスを向上させられるのか紹介します。制約などの注意点にも触れ、明日から import defer を活用するための知識を提供します。
+import defer のメリットと使い方を理解し、自身のプロジェクトでの活用を具体的にイメージできるようになることを目指します。`,
+    ],
     time: "16:40 〜 17:00",
     speakers: [
       {
         name: "おおいし (bicstone)",
         profileImagePath: "41_bicstone.jpg",
-        biography: "",
+        biography:
+          "建設業界で機械設計に従事していたが、テクノロジーの力で世の中の摩擦を解決したいと考えるようになり2019年にWebエンジニアに転向。5年以上Vertical SaaSの開発に携わる。多角的なアプローチで迅速かつ効果的にプロダクトの価値を最大化し、社会やステークホルダーの課題解決に貢献。",
         xId: "bicstone_me",
         githubId: "bicstone",
         additionalLink: "https://bicstone.me/",
