@@ -524,22 +524,35 @@ TypeScriptを用いた開発としてはAngularやReact（TS）、vanilla-ts（C
     talkType: "TEAM_PRESENTATION",
     title:
       "アルゴリズムの専門家と挑むフロントエンド実装 − 複雑なロジックを支える設計とパフォーマンス最適化 ",
-    overview: [` `],
+    overview: [
+      ` 株式会社 ALGO ARTIS では、社会基盤の最適化をビジョンとして、計画業務の困難性を解決するソリューションを開発しています。
+
+私たちの製品は、最適化アルゴリズムを専門とするアルゴリズムエンジニアと、UI 開発を専門とするフロントエンドエンジニアがタッグを組み、Web アプリケーションの形で提供を行います。
+そのような開発では、しばしば UI 操作に対してリアルタイムに、非常に高度なアルゴリズムを動作させる必要が出てきます。この時、データの規模が大きいこともあり、計算処理そのものが UI パフォーマンスにおけるボトルネックとなってしまいます。
+
+そこで本発表では、大規模かつ高度なアルゴリズムを Web フロントエンド上で高速に動作させるまでの課題と工夫を紹介します。
+表出した課題や解決までの試行錯誤を共有するとともに、WebAssemblyを活用し、異なる領域のエンジニア間での開発フローや実装手法について、実践的な知見を説明します。
+`,
+    ],
     time: "13:30 〜 14:00",
     speakers: [
       {
         name: "澤浦 司",
         profileImagePath: "22_sawauratsukasa.jpeg",
-        biography: "",
+        biography:
+          "Web エンジニア。最近はもっぱら React 漬けの生活を送っている。株式会社ALGO ARTIS では、業界特化の計画スケジューラ SaaS『Planium』のフロントエンド開発をリード。",
         xId: "plcherrim",
         githubId: "pulcherriman",
         additionalLink: "https://media.algo-artis.com/posts/6v-Rhf9e",
+        position: "株式会社ALGO ARTIS",
       },
       {
         name: "秋吉 圭輔",
         profileImagePath: "23_akiyoshikei.png",
-        biography: "",
+        biography:
+          "アルゴリズムエンジニア。最近はもっぱら Rust 漬けの生活を送っている。株式会社ALGO ARTIS では、業界特化の計画スケジューラ SaaS『Planium』のアルゴリズム開発をリード。",
         githubId: "udon1206",
+        position: "株式会社ALGO ARTIS",
       },
     ],
   },
@@ -613,16 +626,20 @@ TypeScriptを用いた開発としてはAngularやReact（TS）、vanilla-ts（C
     track: "TRACK2",
     talkType: "LIGHTNINGTALKS",
     title: "リスクゼロでデリバリーする ― Open Feature × DevCycleの機能解放戦略",
-    overview: [` `],
+    overview: [
+      `本LTでは、マッチングアプリ「tapple」の大規模なマイクロサービス移行において採用した、DevCycleの強力なリリース制御と、CNCF準拠のOpen FeatureによるTypeScript SDKを用いたコードの抽象化を組み合わせた機能解放戦略、そしてそれによって享受できた巨大なメリットの事例を紹介します。`,
+    ],
     time: "14:40 〜 15:10",
     speakers: [
       {
         name: "Issa",
         profileImagePath: "27_Issa.jpeg",
-        biography: "",
+        biography:
+          "タップルのバックエンドエンジニア。DDD・クリーンアーキテクチャへのリアーキ・マイクロサービス移行のリードを務める。TypeScriptだけでなく関西語を話すのが持ち味、社内ではDDDヤクザと呼ばれる。",
         xId: "DadaAux",
         githubId: "aux-Issa",
         additionalLink: "https://www.linkedin.com/in/issa-itoi-815187225/",
+        position: "株式会社サイバーエージェント",
       },
     ],
   },
@@ -800,15 +817,16 @@ TC39のProposalを追うのも好きで、最近はproposal compositesが気に�
     track: "TRACK2",
     talkType: "LIGHTNINGTALKS",
     title: "TypeScriptの型システムを活用した複合認証システムの設計パターン",
-    overview: [` `],
+    overview: [`認証システムの開発で、複雑化したコードを何とかリファクタリングした話 `],
     time: "16:00 〜 16:30",
     speakers: [
       {
         name: "高橋哉人",
         profileImagePath: "36_takahashi.jpg",
-        biography: "",
+        biography: "25卒のエンジニア。TypeScriptでフルスタックに開発しています。",
         xId: "kanayan_toggle",
         githubId: "ml-Takahashi",
+        position: "株式会社トグルホールディングス",
       },
     ],
   },
