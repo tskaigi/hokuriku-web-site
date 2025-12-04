@@ -100,13 +100,16 @@ export const talkList: Talk[] = [
     track: "TRACK1",
     talkType: "SESSION",
     title: "Fullstack TSでマルチプロダクトの基盤開発",
-    overview: [``],
+    overview: [
+      `MOSHではマルチプロダクト型の開発を行うにあたりFullstack TSへのリアーキテクチャを行っています。このセッションでは、TypeScriptで基盤開発を行う中での技術選定や向き合っている困難について紹介します。`,
+    ],
     time: "11:15 〜 11:45",
     speakers: [
       {
         name: "鈴木翔大",
         profileImagePath: "2_shodaisuzuki.jpeg",
-        biography: "",
+        biography:
+          "IdaaSプラットフォーム、IoT農園サービスなど様々な組織で技術マネジメントを経験してきました。MOSHではVPoTとして主に技術基盤の改善や開発チームへのイネーブリングを行っています。個人ではorvalのmaintainerとしての開発やrailsなど複数のOSSへのコントリビュート活動を行なっています。",
         xId: "SoartecL",
         githubId: "soartec-lab",
         additionalLink: "https://my.prairie.cards/u/shodai.suzuki",
@@ -782,16 +785,23 @@ TC39のProposalを追うのも好きで、最近はproposal compositesが気に�
     track: "TRACK1",
     talkType: "SESSION",
     title: "Building AI Agents with TypeScript",
-    overview: [` `],
+    overview: [
+      `AI・機械学習の開発エコシステムは Python を中心とした状況から、TypeScript をはじめとする他言語へと広がっています。LLM は汎用性を獲得すると同時に巨大化し、その利用は API 経由が必然となりました。この流れの中で Web 技術との親和性やライブラリ整備が進み、フルスタック TypeScript 開発の延長で AI 機能を実装できる環境が整いつつあります。
+
+ 本セッションでは、その具体的な例としてシンプルな AI Agent を実装しつつ段階的に機能を拡張していくサンプルを用いて、TypeScript で AI Agent を実装する考え方やプロセスを解説します。また、従来の Web アプリケーション開発と比較して、開発者は何を考えて設計・実装をするのかがあるのかを、具体的なコード例を通して紹介します。`,
+    ],
     time: "16:00 〜 16:30",
     speakers: [
       {
         name: "izumin5210",
         profileImagePath: "34_izumin5210.jpeg",
-        biography: "",
+        biography: `バクラク事業部 PlatformEngineering部 Enablingチーム。 プロダクト開発やバックエンド・Webフロントエンドの設計・基盤開発などをしています。 最近はAI何もわからん状態ながらAI Agent開発に加わり、AI Agentを作るためのPlatformを作っている。
+
+AI何もわからん。`,
         xId: "izumin5210",
         githubId: "izumin5210",
         additionalLink: "https://www.wantedly.com/id/izumin",
+        position: "株式会社LayerX / Staff Software Engineer",
       },
     ],
   },
