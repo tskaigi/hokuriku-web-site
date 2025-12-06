@@ -73,6 +73,8 @@ export type Talk = {
   talkType: TalkType;
   overview: string[];
   time: string;
+  slideUrl?: string;
+  blogUrl?: string;
 };
 
 // トーク一覧
@@ -115,6 +117,7 @@ export const talkList: Talk[] = [
         additionalLink: "https://my.prairie.cards/u/shodai.suzuki",
       },
     ],
+    slideUrl: "https://speakerdeck.com/soarteclab/tskaigi-hokuriku-2025",
   },
   {
     id: "3",
@@ -469,6 +472,7 @@ TypeScriptを用いた開発としてはAngularやReact（TS）、vanilla-ts（C
         githubId: "higak926",
       },
     ],
+    slideUrl: "https://speakerdeck.com/higak9/denototypescriptnoguan-xi-nituitegai-metekao-etemiru",
   },
   {
     id: "19",
@@ -491,6 +495,7 @@ TypeScriptを用いた開発としてはAngularやReact（TS）、vanilla-ts（C
         position: "株式会社ナレッジワーク",
       },
     ],
+    slideUrl: "https://speakerdeck.com/kworkdev/type-challenges",
   },
   {
     id: "20",
@@ -520,6 +525,8 @@ TypeScriptを用いた開発としてはAngularやReact（TS）、vanilla-ts（C
         githubId: "seriseri-123",
       },
     ],
+    slideUrl: "https://speakerdeck.com/saka2jp/authz-with-casl",
+    blogUrl: "https://zenn.dev/peoplex_blog/articles/2511-authz-with-typescript-casl",
   },
   {
     id: "21",
@@ -558,6 +565,8 @@ TypeScriptを用いた開発としてはAngularやReact（TS）、vanilla-ts（C
         position: "株式会社ALGO ARTIS",
       },
     ],
+    slideUrl:
+      "https://speakerdeck.com/udon1206/arugorizumunozhuan-men-jia-totiao-muhurontoendoshi-zhuang-fu-za-narozitukuwozhi-erushe-ji-topahuomansuzui-shi-hua",
   },
   {
     id: "22",
@@ -623,6 +632,8 @@ TypeScriptを用いた開発としてはAngularやReact（TS）、vanilla-ts（C
         githubId: "tsukuha",
       },
     ],
+    slideUrl:
+      "https://speakerdeck.com/tsukuha/regasisisutemushua-xin-niokeru-typespec-sukimaqu-dong-kai-fa-nosu-me",
   },
   {
     id: "25",
@@ -645,6 +656,8 @@ TypeScriptを用いた開発としてはAngularやReact（TS）、vanilla-ts（C
         position: "株式会社サイバーエージェント",
       },
     ],
+    slideUrl:
+      "https://speakerdeck.com/auxissa/risukuzerodederibarisuru-open-feature-x-devcyclenoji-neng-jie-fang-zhan-lue",
   },
   {
     id: "26",
@@ -746,6 +759,8 @@ TC39のProposalを追うのも好きで、最近はproposal compositesが気に�
         position: "エムスリー株式会社",
       },
     ],
+    slideUrl:
+      "https://speakerdeck.com/jiko21/xing-qing-bao-woshou-zao-riji-seruji-shu-typescript-compiler-apiniyoruxing-jie-xi-shi-jian",
   },
   {
     id: "31",
@@ -779,6 +794,8 @@ TC39のProposalを追うのも好きで、最近はproposal compositesが気に�
         position: "株式会社ドワンゴ / 教育事業本部 / TechPM",
       },
     ],
+    slideUrl:
+      "https://speakerdeck.com/guvalif/welcome-to-the-fantasy-land-dai-shu-de-gou-zao-womegurumou-xian",
   },
   {
     id: "32",
@@ -804,6 +821,7 @@ AI何もわからん。`,
         position: "株式会社LayerX / Staff Software Engineer",
       },
     ],
+    slideUrl: "https://speakerdeck.com/izumin5210/building-ai-agents-with-typescript",
   },
   {
     id: "33",
@@ -839,6 +857,8 @@ AI何もわからん。`,
         position: "株式会社トグルホールディングス",
       },
     ],
+    slideUrl:
+      "https://speakerdeck.com/kurukuru1999/typescriptnoxing-sisutemuwohuo-yong-sitafu-he-ren-zheng-sisutemunoshe-ji-patan",
   },
   {
     id: "35",
@@ -861,6 +881,7 @@ AI何もわからん。`,
         position: "チームラボ / パッケージチーム フロントエンド班",
       },
     ],
+    slideUrl: "https://speakerdeck.com/teamlab/tskaigi_tc39_signals",
   },
   {
     id: "36",
@@ -882,6 +903,7 @@ AI何もわからん。`,
         githubId: "elecdeer",
       },
     ],
+    slideUrl: "https://speakerdeck.com/teamlab/tskaigi-oxc-transform",
   },
   {
     id: "37",
@@ -903,6 +925,7 @@ AI何もわからん。`,
         position: "チームラボ",
       },
     ],
+    slideUrl: "https://speakerdeck.com/teamlab/tskaigi-tsc-init",
   },
   {
     id: "38",
@@ -920,6 +943,8 @@ AI何もわからん。`,
         githubId: "takewell",
       },
     ],
+    slideUrl:
+      "https://speakerdeck.com/takewell/introduction-to-design-difference-extraction-using-typescript-asta",
   },
   {
     id: "39",
@@ -944,6 +969,7 @@ import defer のメリットと使い方を理解し、自身のプロジェク�
         additionalLink: "https://bicstone.me/",
       },
     ],
+    slideUrl: "https://speakerdeck.com/bicstone/typescript-import-defer",
   },
   {
     id: "40",
@@ -966,6 +992,7 @@ import defer のメリットと使い方を理解し、自身のプロジェク�
         position: "株式会社プレイド",
       },
     ],
+    slideUrl: "https://speakerdeck.com/jimbo/tskaigi-hokuriku-react-colorpicker",
   },
   {
     id: "41",
