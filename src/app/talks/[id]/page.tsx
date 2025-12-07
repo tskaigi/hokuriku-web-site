@@ -4,7 +4,7 @@ import { TrackBadge } from "@/components/talks/track-badge";
 import { TALK_TYPE, TRACK, talkList } from "@/constants/timetableEventData";
 import { getTalk } from "@/utils/getTalk";
 import { isSpeakerVisible } from "@/utils/isSpeakerVisible";
-import { CircleUserRound, LinkIcon } from "lucide-react";
+import { CircleUserRound, FileText, LinkIcon, Presentation } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -112,6 +112,30 @@ export default async function TalkDetailPage({ params }: { params: Promise<{ id:
           <h2 className="mt-2 text-2xl font-bold">{talk.title}</h2>
           <div className="text-lg font-bold">
             {talk.time} （{TRACK[talk.track].name}）
+          </div>
+          <div className="flex flex-wrap gap-6">
+            {talk.slideUrl && (
+              <a
+                className="mt-2 flex items-center gap-2 text-lg underline-offset-2 hover:underline"
+                href={talk.slideUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Presentation size={18} />
+                スライド
+              </a>
+            )}
+            {talk.blogUrl && (
+              <a
+                className="mt-2 flex items-center gap-2 text-lg underline-offset-2 hover:underline"
+                href={talk.blogUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FileText size={18} />
+                ブログ
+              </a>
+            )}
           </div>
         </div>
 
